@@ -1,0 +1,13 @@
+{
+  "metadata": {
+    "version": "2.0.0",
+    "lastUpdated": "2025-01-27",
+    "description": "Parcours complet d'orthographe française par la logique - Système Modulaire",
+    "targetAudience": "6e à Lycée",
+    "categories": ["orthographe", "conjugaison", "ponctuation", "syntaxe"],
+    "difficulties": ["debutant", "intermediaire", "avance", "expert"],
+    "migrationStatus": "completed",
+    "note": "Lessons are now loaded from the modular system in src/data/levels/"
+  },
+  "lessons": []
+}

@@ -1,0 +1,200 @@
+{
+  "id": "sv-accord-1",
+  "title": "L'accord Sujet-Verbe",
+  "level": 1,
+  "difficulty": "debutant",
+  "targetAudience": "CM1-CM2",
+  "category": "orthographe",
+  "passingScore": 70,
+  "prerequisites": [],
+  "rule": "Le verbe s'accorde toujours avec son sujet en nombre et en personne.",
+  "explanation": "Cette règle fondamentale existe car le verbe doit 'refléter' qui fait l'action. Si plusieurs personnes agissent, le verbe doit le montrer par sa terminaison. C'est comme un miroir grammatical : le verbe reflète son sujet.",
+  "etymology": "Cette règle vient du latin où l'accord était encore plus complexe. Les scribes du Moyen Âge ont simplifié le système, mais ont conservé cette logique d'accord pour maintenir la clarté du message.",
+  "mnemonics": "Pour trouver le sujet, posez la question 'Qui est-ce qui ?' ou 'Qu'est-ce qui ?' avant le verbe. Le sujet commande, le verbe obéit !",
+  "examples": [
+    "Le chat mange sa pâtée.",
+    "Les chats mangent leur pâtée.",
+    "Tu cours vite.",
+    "Vous courez ensemble.",
+    "Marie et Paul partent en vacances."
+  ],
+  "specialCases": [
+    {
+      "title": "Sujet inversé",
+      "description": "Quand le sujet est placé après le verbe, l'accord reste obligatoire.",
+      "examples": [
+        "Arrivent les vacances !",
+        "Que disent les journaux ?",
+        "Où vont ces enfants ?"
+      ],
+      "tip": "Même si l'ordre change, la règle d'accord ne change jamais."
+    },
+    {
+      "title": "Sujets multiples",
+      "description": "Plusieurs sujets singuliers = verbe au pluriel.",
+      "examples": [
+        "Paul et Marie partent.",
+        "Le chien et le chat jouent.",
+        "Toi et moi partons."
+      ],
+      "tip": "Additionnez les sujets : 1 + 1 = pluriel !"
+    }
+  ],
+  "literaryExamples": [
+    {
+      "text": "Les sanglots longs des violons de l'automne blessent mon cœur d'une langueur monotone.",
+      "author": "Paul Verlaine",
+      "work": "Chanson d'automne",
+      "explanation": "Ici, 'sanglots' (pluriel) commande l'accord de 'blessent' (pluriel). Verlaine respecte parfaitement la règle d'accord."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "sv-1-qcm-1",
+      "type": "qcm",
+      "sentence": "Les oiseaux ... dans le ciel.",
+      "options": ["vole", "voles", "volent"],
+      "answer": "volent",
+      "feedbackCorrect": "Excellent ! 'Les oiseaux' est pluriel, donc le verbe prend la terminaison du pluriel : -ent.",
+      "feedbackIncorrect": "Le sujet 'les oiseaux' est au pluriel, le verbe doit donc s'accorder au pluriel avec la terminaison -ent.",
+      "hint": "Qui est-ce qui vole ? Les oiseaux (pluriel) → verbe au pluriel"
+    },
+    {
+      "id": "sv-1-qcm-2",
+      "type": "qcm",
+      "sentence": "Tu ... un livre intéressant.",
+      "options": ["lis", "lit", "lisent"],
+      "answer": "lis",
+      "feedbackCorrect": "Parfait ! Avec 'tu', le verbe prend toujours un 's' à la fin.",
+      "feedbackIncorrect": "Avec le pronom 'tu' (2e personne du singulier), le verbe se termine par 's'.",
+      "hint": "Tu = 2e personne du singulier → terminaison en 's'"
+    },
+    {
+      "id": "sv-1-qcm-3",
+      "type": "qcm",
+      "sentence": "Marie et Paul ... au cinéma.",
+      "options": ["va", "vas", "vont"],
+      "answer": "vont",
+      "feedbackCorrect": "Bravo ! Deux sujets singuliers = un verbe au pluriel.",
+      "feedbackIncorrect": "Marie et Paul = deux personnes, donc le verbe doit être au pluriel : 'vont'.",
+      "hint": "Marie + Paul = ils → verbe au pluriel"
+    },
+    {
+      "id": "sv-1-fill-1",
+      "type": "fill-in-the-blank",
+      "sentence": "Le chien ___ (courir) dans le jardin.",
+      "answer": "court",
+      "feedbackCorrect": "Excellent ! 'Le chien' (singulier) → 'court' (singulier).",
+      "feedbackIncorrect": "Le sujet 'le chien' est singulier, le verbe doit donc être 'court'.",
+      "hint": "Qui court ? Le chien (singulier) → verbe au singulier"
+    },
+    {
+      "id": "sv-1-fill-2",
+      "type": "fill-in-the-blank",
+      "sentence": "Mes amis ___ (partir) en vacances.",
+      "answer": "partent",
+      "feedbackCorrect": "Parfait ! 'Mes amis' (pluriel) → 'partent' (pluriel).",
+      "feedbackIncorrect": "Le sujet 'mes amis' est au pluriel, le verbe doit donc être 'partent'.",
+      "hint": "Qui part ? Mes amis (pluriel) → verbe au pluriel"
+    },
+    {
+      "id": "sv-1-drag-1",
+      "type": "drag-drop",
+      "sentence": "Les enfants ___ dans la cour.",
+      "options": ["joue", "joues", "jouent"],
+      "answer": "jouent",
+      "feedbackCorrect": "Bravo ! Vous avez bien accordé le verbe avec le sujet pluriel.",
+      "feedbackIncorrect": "Le sujet 'les enfants' est pluriel, il faut donc 'jouent'.",
+      "hint": "Les enfants = ils → terminaison -ent"
+    },
+    {
+      "id": "sv-1-drag-2",
+      "type": "drag-drop",
+      "sentence": "Tu ___ très bien.",
+      "options": ["chante", "chantes", "chantent"],
+      "answer": "chantes",
+      "feedbackCorrect": "Excellent ! Avec 'tu', le verbe prend toujours un 's'.",
+      "feedbackIncorrect": "Avec 'tu', le verbe se termine par 's' : 'chantes'.",
+      "hint": "Tu → toujours un 's' à la fin du verbe"
+    },
+    {
+      "id": "sv-1-transform-1",
+      "type": "transformation",
+      "sentence": "Le chat mange.",
+      "instruction": "Mets au pluriel",
+      "answer": ["Les chats mangent.", "Les chats mangent"],
+      "feedbackCorrect": "Parfait ! Vous avez bien transformé le sujet ET le verbe au pluriel.",
+      "feedbackIncorrect": "Il faut changer à la fois le sujet (les chats) et le verbe (mangent).",
+      "hint": "Le → Les, et le verbe doit s'accorder avec le nouveau sujet"
+    },
+    {
+      "id": "sv-1-transform-2",
+      "type": "transformation",
+      "sentence": "Nous partons demain.",
+      "instruction": "Remplace 'nous' par 'je'",
+      "answer": ["Je pars demain.", "Je pars demain"],
+      "feedbackCorrect": "Excellent ! Le verbe s'accorde bien avec le nouveau sujet 'je'.",
+      "feedbackIncorrect": "Avec 'je', le verbe devient 'pars' (1re personne du singulier).",
+      "hint": "Je → 1re personne du singulier, terminaison différente"
+    },
+    {
+      "id": "sv-1-dictation-1",
+      "type": "dictation",
+      "sentence": "Les oiseaux chantent.",
+      "audioText": "Les oiseaux chantent.",
+      "answer": ["Les oiseaux chantent.", "Les oiseaux chantent"],
+      "feedbackCorrect": "Parfait ! Vous avez bien écrit la phrase avec l'accord correct.",
+      "feedbackIncorrect": "La phrase correcte est : 'Les oiseaux chantent.' (verbe au pluriel).",
+      "hint": "Écoutez bien : qui fait l'action ? Accordez le verbe en conséquence"
+    },
+    {
+      "id": "sv-1-dictation-2",
+      "type": "dictation",
+      "sentence": "Tu regardes la télévision.",
+      "audioText": "Tu regardes la télévision.",
+      "answer": ["Tu regardes la télévision.", "Tu regardes la télévision"],
+      "feedbackCorrect": "Excellent ! L'accord avec 'tu' est parfait.",
+      "feedbackIncorrect": "Avec 'tu', le verbe prend un 's' : 'Tu regardes la télévision.'",
+      "hint": "Tu → verbe avec 's' à la fin"
+    },
+    {
+      "id": "sv-1-qcm-4",
+      "type": "qcm",
+      "sentence": "Où ... mes clés ?",
+      "options": ["est", "es", "sont"],
+      "answer": "sont",
+      "feedbackCorrect": "Bravo ! 'Mes clés' est pluriel, donc 'sont'.",
+      "feedbackIncorrect": "Le sujet 'mes clés' est au pluriel, il faut donc 'sont'.",
+      "hint": "Qu'est-ce qui est quelque part ? Mes clés (pluriel)"
+    },
+    {
+      "id": "sv-1-fill-3",
+      "type": "fill-in-the-blank",
+      "sentence": "Vous ___ (être) très gentils.",
+      "answer": "êtes",
+      "feedbackCorrect": "Parfait ! Avec 'vous', le verbe être devient 'êtes'.",
+      "feedbackIncorrect": "Avec 'vous', le verbe être se conjugue 'êtes'.",
+      "hint": "Vous → forme spéciale du verbe être"
+    },
+    {
+      "id": "sv-1-drag-3",
+      "type": "drag-drop",
+      "sentence": "Pierre et Marie ___ ensemble.",
+      "options": ["travaille", "travailles", "travaillent"],
+      "answer": "travaillent",
+      "feedbackCorrect": "Excellent ! Deux sujets = verbe au pluriel.",
+      "feedbackIncorrect": "Pierre et Marie = ils, donc 'travaillent'.",
+      "hint": "Pierre + Marie = ils → pluriel"
+    },
+    {
+      "id": "sv-1-transform-3",
+      "type": "transformation",
+      "sentence": "Il mange une pomme.",
+      "instruction": "Remplace 'il' par 'ils'",
+      "answer": ["Ils mangent une pomme.", "Ils mangent une pomme"],
+      "feedbackCorrect": "Parfait ! Le verbe s'accorde bien au pluriel.",
+      "feedbackIncorrect": "Avec 'ils', le verbe devient 'mangent'.",
+      "hint": "Ils → terminaison -ent"
+    }
+  ]
+}

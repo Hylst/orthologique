@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OrthoLogique - Maîtrisez l'orthographe par la logique</title>
+    <meta name="description" content="Application éducative pour apprendre l'orthographe grammaticale française par la logique, spécialement conçue pour les personnes avec dysorthographie." />
+    
+    <!-- PWA Meta Tags -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#3B82F6" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="OrthoLogique" />
+    <meta name="msapplication-TileColor" content="#3B82F6" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
+    
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/icon-192x192.png" />
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/src/main.tsx" as="script" />
+    <link rel="preload" href="/src/data/lessons.json" as="fetch" crossorigin />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

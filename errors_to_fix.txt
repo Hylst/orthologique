@@ -1,0 +1,138 @@
+[{
+"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/App.tsx",
+"owner": "typescript",
+"code": "2322",
+"severity": 8,
+"message": "Type '{ id: string; title: string; level: number; difficulty: string; targetAudience: string; category: string; passingScore: number; prerequisites: string[]; rule: string; explanation: string; etymology: string; ... 4 more ...; exercises: ({ ...; } | ... 3 more ... | { ...; })[]; }[]' is not assignable to type 'Lesson[]'.\n  Type '{ id: string; title: string; level: number; difficulty: string; targetAudience: string; category: string; passingScore: number; prerequisites: string[]; rule: string; explanation: string; etymology: string; ... 4 more ...; exercises: ({ ...; } | ... 3 more ... | { ...; })[]; }' is missing the following properties from type 'Lesson': unlocked, completed",
+"source": "ts",
+"startLineNumber": 69,
+"startColumn": 11,
+"endLineNumber": 69,
+"endColumn": 21,
+"extensionID": "vscode.typescript-language-features"
+}]
+[{
+"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/data/index.ts",
+"owner": "typescript",
+"code": "2307",
+"severity": 8,
+"message": "Cannot find module './utils/lessonLoader' or its corresponding type declarations.",
+"source": "ts",
+"startLineNumber": 7,
+"startColumn": 30,
+"endLineNumber": 7,
+"endColumn": 52,
+"extensionID": "vscode.typescript-language-features"
+},{
+"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/data/index.ts",
+"owner": "typescript",
+"code": "2307",
+"severity": 8,
+"message": "Cannot find module './utils/lessonCache' or its corresponding type declarations.",
+"source": "ts",
+"startLineNumber": 8,
+"startColumn": 29,
+"endLineNumber": 8,
+"endColumn": 50,
+"extensionID": "vscode.typescript-language-features"
+},{
+"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/data/index.ts",
+"owner": "typescript",
+"code": "2322",
+"severity": 8,
+"message": "Type '{ unlocked: false; completed: false; id: string; title: string; level: number; difficulty: string; targetAudience: string; category: string; passingScore: number; prerequisites: string[]; rule: string; ... 6 more ...; exercises: ({ ...; } | ... 3 more ... | { ...; })[]; }[]' is not assignable to type 'Lesson[]'.\n  Type '{ unlocked: false; completed: false; id: string; title: string; level: number; difficulty: string; targetAudience: string; category: string; passingScore: number; prerequisites: string[]; rule: string; ... 6 more ...; exercises: ({ ...; } | ... 3 more ... | { ...; })[]; }' is not assignable to type 'Lesson'.\n    Types of property 'difficulty' are incompatible.\n      Type 'string' is not assignable to type '\"debutant\" | \"intermediaire\" | \"avance\" | \"expert\"'.",
+"source": "ts",
+"startLineNumber": 30,
+"startColumn": 7,
+"endLineNumber": 30,
+"endColumn": 13,
+"extensionID": "vscode.typescript-language-features"
+},{
+"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/data/index.ts",
+"owner": "typescript",
+"code": "7006",
+"severity": 8,
+"message": "Parameter 'lesson' implicitly has an 'any' type.",
+"source": "ts",
+"startLineNumber": 38,
+"startColumn": 24,
+"endLineNumber": 38,
+"endColumn": 30,
+"extensionID": "vscode.typescript-language-features"
+},{
+"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/data/index.ts",
+"owner": "typescript",
+"code": "2322",
+"severity": 8,
+"message": "Type '{ unlocked: false; completed: false; id: string; title: string; level: number; difficulty: string; targetAudience: string; category: string; passingScore: number; prerequisites: string[]; rule: string; ... 6 more ...; exercises: ({ ...; } | ... 3 more ... | { ...; })[]; }[]' is not assignable to type 'Lesson[]'.\n  Type '{ unlocked: false; completed: false; id: string; title: string; level: number; difficulty: string; targetAudience: string; category: string; passingScore: number; prerequisites: string[]; rule: string; ... 6 more ...; exercises: ({ ...; } | ... 3 more ... | { ...; })[]; }' is not assignable to type 'Lesson'.\n    Types of property 'difficulty' are incompatible.\n      Type 'string' is not assignable to type '\"debutant\" | \"intermediaire\" | \"avance\" | \"expert\"'.",
+"source": "ts",
+"startLineNumber": 50,
+"startColumn": 7,
+"endLineNumber": 50,
+"endColumn": 13,
+"extensionID": "vscode.typescript-language-features"
+},{
+"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/data/index.ts",
+"owner": "typescript",
+"code": "7006",
+"severity": 8,
+"message": "Parameter 'lesson' implicitly has an 'any' type.",
+"source": "ts",
+"startLineNumber": 60,
+"startColumn": 24,
+"endLineNumber": 60,
+"endColumn": 30,
+"extensionID": "vscode.typescript-language-features"
+},{
+"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/data/index.ts",
+"owner": "typescript",
+"code": "2322",
+"severity": 8,
+"message": "Type '{ unlocked: boolean; completed: boolean; id: string; title: string; level: number; difficulty: string; targetAudience: string; category: string; passingScore: number; prerequisites: string[]; rule: string; ... 6 more ...; exercises: ({ ...; } | ... 3 more ... | { ...; })[]; }' is not assignable to type 'Lesson'.\n  Types of property 'difficulty' are incompatible.\n    Type 'string' is not assignable to type '\"debutant\" | \"intermediaire\" | \"avance\" | \"expert\"'.",
+"source": "ts",
+"startLineNumber": 86,
+"startColumn": 9,
+"endLineNumber": 86,
+"endColumn": 15,
+"extensionID": "vscode.typescript-language-features"
+},{
+"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/data/index.ts",
+"owner": "typescript",
+"code": "2322",
+"severity": 8,
+"message": "Type '{ unlocked: false; completed: false; id: string; title: string; level: number; difficulty: string; targetAudience: string; category: string; passingScore: number; prerequisites: string[]; rule: string; ... 6 more ...; exercises: ({ ...; } | ... 3 more ... | { ...; })[]; }[]' is not assignable to type 'Lesson[]'.\n  Type '{ unlocked: false; completed: false; id: string; title: string; level: number; difficulty: string; targetAudience: string; category: string; passingScore: number; prerequisites: string[]; rule: string; ... 6 more ...; exercises: ({ ...; } | ... 3 more ... | { ...; })[]; }' is not assignable to type 'Lesson'.\n    Types of property 'difficulty' are incompatible.\n      Type 'string' is not assignable to type '\"debutant\" | \"intermediaire\" | \"avance\" | \"expert\"'.",
+"source": "ts",
+"startLineNumber": 109,
+"startColumn": 7,
+"endLineNumber": 109,
+"endColumn": 13,
+"extensionID": "vscode.typescript-language-features"
+},{
+"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/data/index.ts",
+"owner": "typescript",
+"code": "7006",
+"severity": 8,
+"message": "Parameter 'lesson' implicitly has an 'any' type.",
+"source": "ts",
+"startLineNumber": 119,
+"startColumn": 24,
+"endLineNumber": 119,
+"endColumn": 30,
+"extensionID": "vscode.typescript-language-features"
+}]
+[{
+"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/data/utils/lessonValidator.ts",
+"owner": "typescript",
+"code": "6192",
+"severity": 4,
+"message": "All imports in import declaration are unused.",
+"source": "ts",
+"startLineNumber": 6,
+"startColumn": 1,
+"endLineNumber": 6,
+"endColumn": 48,
+"tags": [
+1
+],
+"extensionID": "vscode.typescript-language-features"
+}]

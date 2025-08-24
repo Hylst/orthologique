@@ -1,0 +1,213 @@
+{
+  "id": "conditionnel-modes-temps-17",
+  "title": "Le Conditionnel : Modes et Temps",
+  "level": 17,
+  "difficulty": "expert",
+  "targetAudience": "Lycée",
+  "category": "conjugaison",
+  "passingScore": 85,
+  "prerequisites": ["subjonctif-present-16"],
+  "rule": "Le conditionnel exprime l'hypothèse, la politesse, l'information non confirmée. Formation : infinitif + terminaisons de l'imparfait (-ais, -ais, -ait, -ions, -iez, -aient).",
+  "explanation": "Le conditionnel est le mode de l'irréel et de l'atténuation. Il présente l'action comme dépendante d'une condition ou comme incertaine. Sa formation mélange futur (radical) et imparfait (terminaisons), symbolisant cette position entre présent et futur hypothétique.",
+  "etymology": "Le conditionnel français s'est formé au Moyen Âge par fusion de l'infinitif et de l'auxiliaire 'avoir' à l'imparfait : 'chanter + avais' → 'chanterais'. Cette origine explique sa double nature temporelle et modale.",
+  "mnemonics": "Conditionnel = HYPOTHÈSE, POLITESSE, INFORMATION DOUTEUSE. Formation : INFINITIF + terminaisons d'IMPARFAIT. Si + imparfait → conditionnel. 'Selon lui, il VIENDRAIT' (information non confirmée).",
+  "examples": [
+    "Si j'étais riche, j'achèterais une maison. (hypothèse)",
+    "Pourriez-vous m'aider ? (politesse)",
+    "Il serait malade, selon sa mère. (information non confirmée)",
+    "J'aimerais partir en vacances. (souhait atténué)",
+    "Tu devrais faire attention. (conseil)"
+  ],
+  "specialCases": [
+    {
+      "title": "Système hypothétique",
+      "description": "Si + imparfait → conditionnel présent. Si + plus-que-parfait → conditionnel passé.",
+      "examples": [
+        "Si j'avais de l'argent, j'achèterais une voiture.",
+        "Si j'avais eu de l'argent, j'aurais acheté une voiture.",
+        "Si tu venais, nous serions contents.",
+        "Si tu étais venu, nous aurions été contents."
+      ],
+      "tip": "Jamais de conditionnel après 'si' ! Toujours imparfait ou plus-que-parfait."
+    },
+    {
+      "title": "Conditionnel de politesse",
+      "description": "Atténue la demande ou l'affirmation pour être plus courtois.",
+      "examples": [
+        "Pourriez-vous m'aider ?",
+        "J'aimerais un café, s'il vous plaît.",
+        "Auriez-vous l'heure ?",
+        "Sauriez-vous où se trouve la gare ?"
+      ],
+      "tip": "Le conditionnel rend la demande moins directe, donc plus polie."
+    },
+    {
+      "title": "Conditionnel journalistique",
+      "description": "Exprime une information non vérifiée dans les médias.",
+      "examples": [
+        "Le ministre démissionnerait demain.",
+        "L'accident aurait fait trois victimes.",
+        "Les négociations reprendraient bientôt.",
+        "Il y aurait eu un tremblement de terre."
+      ],
+      "tip": "Ce conditionnel marque la prudence journalistique face aux rumeurs."
+    }
+  ],
+  "literaryExamples": [
+    {
+      "text": "Si j'étais roi, je donnerais aux pauvres, et les riches travailleraient pour gagner leur pain.",
+      "author": "Style utopique",
+      "work": "Conte philosophique",
+      "explanation": "Système hypothétique complet : 'si j'étais' (imparfait) → 'je donnerais' et 'travailleraient' (conditionnel)."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "cond-17-qcm-1",
+      "type": "qcm",
+      "sentence": "Si tu ... libre, nous ... au cinéma.",
+      "options": ["es, allons", "étais, irions", "serais, irons"],
+      "answer": "étais, irions",
+      "feedbackCorrect": "Parfait ! Si + imparfait → conditionnel : 'si tu étais' → 'nous irions'.",
+      "feedbackIncorrect": "Système hypothétique : si + imparfait, conditionnel dans la principale.",
+      "hint": "Si + imparfait → conditionnel"
+    },
+    {
+      "id": "cond-17-qcm-2",
+      "type": "qcm",
+      "sentence": "... -vous m'aider, s'il vous plaît ?",
+      "options": ["Pouvez", "Pourriez", "Pourrez"],
+      "answer": "Pourriez",
+      "feedbackCorrect": "Excellent ! Conditionnel de politesse : 'pourriez-vous' est plus courtois.",
+      "feedbackIncorrect": "Pour être poli, utilisez le conditionnel : 'pourriez-vous'.",
+      "hint": "Politesse → conditionnel"
+    },
+    {
+      "id": "cond-17-qcm-3",
+      "type": "qcm",
+      "sentence": "Selon les journaux, il ... démissionner.",
+      "options": ["va", "irait", "ira"],
+      "answer": "irait",
+      "feedbackCorrect": "Bravo ! Conditionnel journalistique : information non confirmée → 'irait'.",
+      "feedbackIncorrect": "Information non vérifiée → conditionnel journalistique : 'il irait'.",
+      "hint": "Information non confirmée → conditionnel"
+    },
+    {
+      "id": "cond-17-fill-1",
+      "type": "fill-in-the-blank",
+      "sentence": "Si j'___ (avoir) le temps, je ___ (venir) vous voir.",
+      "answer": ["avais", "viendrais"],
+      "feedbackCorrect": "Parfait ! 'Si j'avais' (imparfait) → 'je viendrais' (conditionnel).",
+      "feedbackIncorrect": "Si + imparfait, conditionnel : 'si j'avais', 'je viendrais'.",
+      "hint": "Si + imparfait → conditionnel"
+    },
+    {
+      "id": "cond-17-fill-2",
+      "type": "fill-in-the-blank",
+      "sentence": "J'___ (aimer) un café et vous ___ (pouvoir) prendre un thé.",
+      "answer": ["aimerais", "pourriez"],
+      "feedbackCorrect": "Excellent ! Conditionnel de politesse : 'aimerais' et 'pourriez'.",
+      "feedbackIncorrect": "Politesse → conditionnel : 'j'aimerais', 'vous pourriez'.",
+      "hint": "Politesse → conditionnel"
+    },
+    {
+      "id": "cond-17-drag-1",
+      "type": "drag-drop",
+      "sentence": "Si nous ___ en vacances, nous ___ nous reposer.",
+      "options": ["partions, pourrions", "partons, pouvons", "partirons, pourrons"],
+      "answer": "partions, pourrions",
+      "feedbackCorrect": "Bravo ! Système hypothétique : 'si nous partions' → 'nous pourrions'.",
+      "feedbackIncorrect": "Si + imparfait → conditionnel : 'si nous partions', 'nous pourrions'.",
+      "hint": "Si + imparfait → conditionnel"
+    },
+    {
+      "id": "cond-17-drag-2",
+      "type": "drag-drop",
+      "sentence": "Tu ___ faire attention et elle ___ t'écouter.",
+      "options": ["dois, doit", "devrais, devrait", "devras, devra"],
+      "answer": "devrais, devrait",
+      "feedbackCorrect": "Parfait ! Conditionnel de conseil : 'tu devrais' et 'elle devrait'.",
+      "feedbackIncorrect": "Conseil atténué → conditionnel : 'tu devrais', 'elle devrait'.",
+      "hint": "Conseil → conditionnel"
+    },
+    {
+      "id": "cond-17-transform-1",
+      "type": "transformation",
+      "sentence": "Il vient demain.",
+      "instruction": "Transforme en hypothèse : 'Si j'étais libre, il...'",
+      "answer": ["Si j'étais libre, il viendrait demain.", "Si j'étais libre, il viendrait demain"],
+      "feedbackCorrect": "Excellent ! Transformation indicatif → conditionnel dans l'hypothèse.",
+      "feedbackIncorrect": "Hypothèse → conditionnel : 'il viendrait'.",
+      "hint": "Hypothèse → conditionnel"
+    },
+    {
+      "id": "cond-17-transform-2",
+      "type": "transformation",
+      "sentence": "Pouvez-vous m'aider ?",
+      "instruction": "Rends plus poli avec le conditionnel",
+      "answer": ["Pourriez-vous m'aider ?", "Pourriez-vous m'aider ?"],
+      "feedbackCorrect": "Parfait ! Conditionnel de politesse : plus courtois que l'indicatif.",
+      "feedbackIncorrect": "Politesse → conditionnel : 'pourriez-vous'.",
+      "hint": "Politesse → conditionnel"
+    },
+    {
+      "id": "cond-17-dictation-1",
+      "type": "dictation",
+      "sentence": "Si tu étais sage, nous irions au parc.",
+      "audioText": "Si tu étais sage, nous irions au parc.",
+      "answer": ["Si tu étais sage, nous irions au parc.", "Si tu étais sage, nous irions au parc"],
+      "feedbackCorrect": "Parfait ! Système hypothétique complet : imparfait → conditionnel.",
+      "feedbackIncorrect": "'Si tu étais' (imparfait) → 'nous irions' (conditionnel).",
+      "hint": "Si + imparfait → conditionnel"
+    },
+    {
+      "id": "cond-17-dictation-2",
+      "type": "dictation",
+      "sentence": "Pourriez-vous me dire où se trouve la gare ?",
+      "audioText": "Pourriez-vous me dire où se trouve la gare ?",
+      "answer": ["Pourriez-vous me dire où se trouve la gare ?", "Pourriez-vous me dire où se trouve la gare ?"],
+      "feedbackCorrect": "Excellent ! Conditionnel de politesse dans une demande d'information.",
+      "feedbackIncorrect": "Demande polie → conditionnel : 'pourriez-vous'.",
+      "hint": "Demande polie → conditionnel"
+    },
+    {
+      "id": "cond-17-qcm-4",
+      "type": "qcm",
+      "sentence": "Selon lui, elle ... malade et ne ... pas venir.",
+      "options": ["est, peut", "serait, pourrait", "sera, pourra"],
+      "answer": "serait, pourrait",
+      "feedbackCorrect": "Bravo ! Information rapportée → conditionnel : 'serait' et 'pourrait'.",
+      "feedbackIncorrect": "Information non vérifiée → conditionnel : 'elle serait', 'ne pourrait'.",
+      "hint": "Information rapportée → conditionnel"
+    },
+    {
+      "id": "cond-17-fill-3",
+      "type": "fill-in-the-blank",
+      "sentence": "Si vous ___ (vouloir), nous ___ (pouvoir) partir ensemble.",
+      "answer": ["vouliez", "pourrions"],
+      "feedbackCorrect": "Parfait ! 'Si vous vouliez' (imparfait) → 'nous pourrions' (conditionnel).",
+      "feedbackIncorrect": "Si + imparfait → conditionnel : 'si vous vouliez', 'nous pourrions'.",
+      "hint": "Si + imparfait → conditionnel"
+    },
+    {
+      "id": "cond-17-drag-3",
+      "type": "drag-drop",
+      "sentence": "J'___ partir en vacances et tu ___ venir avec moi.",
+      "options": ["aimerais, pourrais", "aime, peux", "aimerai, pourras"],
+      "answer": "aimerais, pourrais",
+      "feedbackCorrect": "Excellent ! Souhait atténué → conditionnel : 'aimerais' et 'pourrais'.",
+      "feedbackIncorrect": "Souhait poli → conditionnel : 'j'aimerais', 'tu pourrais'.",
+      "hint": "Souhait atténué → conditionnel"
+    },
+    {
+      "id": "cond-17-transform-3",
+      "type": "transformation",
+      "sentence": "Il démissionne demain.",
+      "instruction": "Transforme en information non confirmée : 'Selon les rumeurs, il...'",
+      "answer": ["Selon les rumeurs, il démissionnerait demain.", "Selon les rumeurs, il démissionnerait demain"],
+      "feedbackCorrect": "Parfait ! Information non vérifiée → conditionnel journalistique.",
+      "feedbackIncorrect": "Information non confirmée → conditionnel : 'il démissionnerait'.",
+      "hint": "Information non confirmée → conditionnel"
+    }
+  ]
+}

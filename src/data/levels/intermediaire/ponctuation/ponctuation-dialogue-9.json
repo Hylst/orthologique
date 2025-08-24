@@ -1,0 +1,226 @@
+{
+  "id": "ponctuation-dialogue-9",
+  "title": "Ponctuation dans le Dialogue",
+  "level": 9,
+  "difficulty": "intermediaire",
+  "targetAudience": "6e-5e",
+  "category": "ponctuation",
+  "passingScore": 75,
+  "prerequisites": ["homophones-complexes-8"],
+  "rule": "Le dialogue utilise des tirets (—) pour marquer les prises de parole, des guillemets (« ») pour encadrer l'ensemble, et des virgules pour séparer les incises du narrateur.",
+  "explanation": "La ponctuation du dialogue organise visuellement la conversation. Les tirets marquent chaque changement d'interlocuteur, les guillemets délimitent la zone de dialogue, et les incises (dit-il, répondit-elle) s'intègrent avec des virgules pour fluidifier la lecture.",
+  "etymology": "Les guillemets français (« ») ont été inventés par l'imprimeur Guillaume (d'où leur nom) au 16e siècle. Les tirets de dialogue sont une spécificité française, d'autres langues utilisant des guillemets pour chaque réplique.",
+  "mnemonics": "Dialogue = Tirets pour les Tours de parole, Guillemets pour Globaliser, Virgules pour les Voix du narrateur. Pensez à TTG-V : Tirets-Tours, Guillemets-Global, Virgules-Voix.",
+  "examples": [
+    "« Bonjour ! dit Marie. Comment allez-vous ? »",
+    "« — Très bien, merci, répondit Paul. — Et vous ? »",
+    "« — Je vais bien, dit-elle en souriant. — Merci de demander. »",
+    "Il déclara : « Je reviendrai demain. »",
+    "« Attention ! cria-t-il. Regardez devant vous ! »"
+  ],
+  "specialCases": [
+    {
+      "title": "Incises du narrateur",
+      "description": "Les interventions du narrateur s'intègrent avec des virgules.",
+      "examples": [
+        "« Bonjour, dit-il, comment allez-vous ? »",
+        "« Je pense, répondit-elle, que c'est une bonne idée. »",
+        "« Attention ! cria-t-il. C'est dangereux ! »"
+      ],
+      "tip": "L'incise coupe la phrase : virgule avant et après si elle est au milieu."
+    },
+    {
+      "title": "Dialogue sans tirets",
+      "description": "Dans un récit, le dialogue peut être intégré sans tirets.",
+      "examples": [
+        "Il dit : « Je viendrai demain. »",
+        "Elle répondit : « C'est parfait ! »",
+        "« Où vas-tu ? » demanda-t-il."
+      ],
+      "tip": "Avec les deux-points, pas besoin de tirets."
+    },
+    {
+      "title": "Ponctuation finale",
+      "description": "La ponctuation de fin va avant le guillemet fermant.",
+      "examples": [
+        "« Quel beau temps ! »",
+        "« Viendras-tu demain ? »",
+        "« Je ne sais pas... »"
+      ],
+      "tip": "Point, virgule, point d'exclamation : AVANT le guillemet fermant."
+    }
+  ],
+  "literaryExamples": [
+    {
+      "text": "« — Que faites-vous là ? demanda le renard. — Je joue, répondit le petit prince. »",
+      "author": "Antoine de Saint-Exupéry",
+      "work": "Le Petit Prince",
+      "explanation": "Dialogue avec tirets pour chaque réplique, incises du narrateur intégrées avec des virgules, et guillemets englobants."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "dial-9-qcm-1",
+      "type": "qcm",
+      "sentence": "Quelle ponctuation pour : Bonjour dit Marie comment allez-vous",
+      "options": [
+        "« Bonjour dit Marie comment allez-vous »",
+        "« Bonjour, dit Marie, comment allez-vous ? »",
+        "« Bonjour ! dit Marie comment allez-vous »"
+      ],
+      "answer": "« Bonjour, dit Marie, comment allez-vous ? »",
+      "feedbackCorrect": "Parfait ! Incise encadrée de virgules et point d'interrogation final.",
+      "feedbackIncorrect": "L'incise 'dit Marie' doit être encadrée de virgules, et la question finit par '?'.",
+      "hint": "Incise = virgules avant et après + ponctuation de la question"
+    },
+    {
+      "id": "dial-9-qcm-2",
+      "type": "qcm",
+      "sentence": "Comment ponctuer un dialogue à deux personnages ?",
+      "options": [
+        "« — Bonjour ! — Salut ! »",
+        "« Bonjour ! Salut ! »",
+        "« — Bonjour ! » « — Salut ! »"
+      ],
+      "answer": "« — Bonjour ! — Salut ! »",
+      "feedbackCorrect": "Excellent ! Tirets pour chaque réplique, guillemets englobants.",
+      "feedbackIncorrect": "Chaque réplique commence par un tiret, le tout dans des guillemets.",
+      "hint": "Tirets pour les répliques + guillemets pour l'ensemble"
+    },
+    {
+      "id": "dial-9-qcm-3",
+      "type": "qcm",
+      "sentence": "Où placer le point d'exclamation dans : Attention cria-t-il",
+      "options": [
+        "« Attention ! cria-t-il »",
+        "« Attention cria-t-il ! »",
+        "« Attention ! » cria-t-il"
+      ],
+      "answer": "« Attention ! cria-t-il »",
+      "feedbackCorrect": "Bravo ! Le point d'exclamation suit directement la parole.",
+      "feedbackIncorrect": "La ponctuation de la parole (!) vient juste après, puis l'incise.",
+      "hint": "Ponctuation de la parole + incise du narrateur"
+    },
+    {
+      "id": "dial-9-fill-1",
+      "type": "fill-in-the-blank",
+      "sentence": "___ Où vas-tu ___ demanda-t-il ___ Au marché ___ répondit-elle ___",
+      "answer": ["«", ",", ".", "", "»"],
+      "feedbackCorrect": "Parfait ! Guillemets ouvrants, virgule après la question, point après l'incise, guillemets fermants.",
+      "feedbackIncorrect": "« pour ouvrir, virgule après la question, point après l'incise, » pour fermer.",
+      "hint": "Guillemets + virgule après question + point après incise"
+    },
+    {
+      "id": "dial-9-fill-2",
+      "type": "fill-in-the-blank",
+      "sentence": "___ ___ Bonjour Paul ___ ___ Salut Marie ___ comment vas-tu ___",
+      "answer": ["«", "—", "!", "—", "!", "»"],
+      "feedbackCorrect": "Excellent ! Dialogue avec tirets et ponctuations expressives.",
+      "feedbackIncorrect": "« pour ouvrir, — pour chaque réplique, ! pour l'expression, » pour fermer.",
+      "hint": "Guillemets + tirets + ponctuation expressive"
+    },
+    {
+      "id": "dial-9-drag-1",
+      "type": "drag-drop",
+      "sentence": "___ Je pense ___ dit-elle ___ que c'est une bonne idée ___",
+      "options": ["« , . »", "« , , »", "« . , »"],
+      "answer": "« , , »",
+      "feedbackCorrect": "Bravo ! Incise au milieu de la phrase = virgules avant et après.",
+      "feedbackIncorrect": "L'incise 'dit-elle' coupe la phrase : virgule avant et après.",
+      "hint": "Incise au milieu = virgules de chaque côté"
+    },
+    {
+      "id": "dial-9-drag-2",
+      "type": "drag-drop",
+      "sentence": "Il déclara ___ ___ Je reviendrai demain ___",
+      "options": [": « . »", ", « . »", ": « » ."],
+      "answer": ": « . »",
+      "feedbackCorrect": "Parfait ! Deux-points pour introduire, point avant le guillemet fermant.",
+      "feedbackIncorrect": "Deux-points pour introduire la parole, point final avant ».",
+      "hint": "Introduction par : + point final avant »"
+    },
+    {
+      "id": "dial-9-transform-1",
+      "type": "transformation",
+      "sentence": "Marie dit bonjour à Paul",
+      "instruction": "Transforme en dialogue direct",
+      "answer": ["Marie dit : « Bonjour Paul ! »", "« Bonjour Paul ! » dit Marie."],
+      "feedbackCorrect": "Excellent ! Transformation réussie en paroles directes.",
+      "feedbackIncorrect": "Paroles directes entre guillemets avec ponctuation appropriée.",
+      "hint": "Paroles directes = guillemets + ponctuation"
+    },
+    {
+      "id": "dial-9-transform-2",
+      "type": "transformation",
+      "sentence": "« Viens ici ! » cria maman.",
+      "instruction": "Transforme en discours indirect",
+      "answer": ["Maman cria de venir ici.", "Maman lui cria de venir."],
+      "feedbackCorrect": "Parfait ! Transformation en discours rapporté indirect.",
+      "feedbackIncorrect": "Discours indirect : pas de guillemets, transformation de l'impératif.",
+      "hint": "Discours indirect = pas de guillemets + transformation"
+    },
+    {
+      "id": "dial-9-dictation-1",
+      "type": "dictation",
+      "sentence": "« — Bonjour ! dit Pierre. — Salut ! répondit Anne. »",
+      "audioText": "Bonjour ! dit Pierre. Salut ! répondit Anne.",
+      "answer": ["« — Bonjour ! dit Pierre. — Salut ! répondit Anne. »", "« — Bonjour ! dit Pierre. — Salut ! répondit Anne. »"],
+      "feedbackCorrect": "Parfait ! Dialogue complet avec toute la ponctuation.",
+      "feedbackIncorrect": "« pour ouvrir, — pour chaque réplique, incises avec points, » pour fermer.",
+      "hint": "Dialogue complet = guillemets + tirets + incises"
+    },
+    {
+      "id": "dial-9-dictation-2",
+      "type": "dictation",
+      "sentence": "« Où allez-vous ? demanda le policier. Au cinéma ! »",
+      "audioText": "Où allez-vous ? demanda le policier. Au cinéma !",
+      "answer": ["« Où allez-vous ? demanda le policier. Au cinéma ! »", "« Où allez-vous ? demanda le policier. Au cinéma ! »"],
+      "feedbackCorrect": "Excellent ! Question avec incise et réponse exclamative.",
+      "feedbackIncorrect": "Question ?, incise avec point, réponse avec ! avant ».",
+      "hint": "Question + incise + réponse exclamative"
+    },
+    {
+      "id": "dial-9-qcm-4",
+      "type": "qcm",
+      "sentence": "Comment ponctuer : Attention cria-t-il en courant c'est dangereux",
+      "options": [
+        "« Attention ! cria-t-il en courant, c'est dangereux ! »",
+        "« Attention cria-t-il en courant ! C'est dangereux ! »",
+        "« Attention ! » cria-t-il en courant « c'est dangereux ! »"
+      ],
+      "answer": "« Attention ! cria-t-il en courant, c'est dangereux ! »",
+      "feedbackCorrect": "Bravo ! Incise longue avec virgule pour séparer les deux exclamations.",
+      "feedbackIncorrect": "Première exclamation, incise longue, virgule, deuxième exclamation.",
+      "hint": "Deux exclamations séparées par une incise longue"
+    },
+    {
+      "id": "dial-9-fill-3",
+      "type": "fill-in-the-blank",
+      "sentence": "___ Que veux-tu ___ murmura-t-elle ___ Rien ___ répondit-il tristement ___",
+      "answer": ["«", "?", ".", "", ".»"],
+      "feedbackCorrect": "Parfait ! Question, incise, point, réponse, incise, point final.",
+      "feedbackIncorrect": "? après la question, . après l'incise, . après l'incise finale, » pour fermer.",
+      "hint": "Question + incise + réponse + incise + fermeture"
+    },
+    {
+      "id": "dial-9-drag-3",
+      "type": "drag-drop",
+      "sentence": "___ ___ Partons ___ dit Paul ___ ___ D'accord ___ répondit Marie ___",
+      "options": ["« — ! . — ! »", "« — . ! — . »", "« — ! , — ! »"],
+      "answer": "« — ! . — ! »",
+      "feedbackCorrect": "Excellent ! Exclamation, incise avec point, tiret, exclamation, fermeture.",
+      "feedbackIncorrect": "! après 'Partons', . après l'incise, — pour la 2e réplique, ! final.",
+      "hint": "Exclamation + incise + nouvelle réplique + exclamation"
+    },
+    {
+      "id": "dial-9-transform-3",
+      "type": "transformation",
+      "sentence": "« — Viens-tu ? — Oui, j'arrive ! »",
+      "instruction": "Supprime les tirets",
+      "answer": ["« Viens-tu ? dit-il. Oui, j'arrive ! répondit-elle. »", "« Viens-tu ? Oui, j'arrive ! »"],
+      "feedbackCorrect": "Parfait ! Dialogue sans tirets avec ou sans incises.",
+      "feedbackIncorrect": "Sans tirets : soit incises ajoutées, soit dialogue direct simple.",
+      "hint": "Sans tirets = incises ou dialogue simple"
+    }
+  ]
+}

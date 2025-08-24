@@ -1,0 +1,51 @@
+{
+  "version": "1.1.0",
+  "lastUpdated": "2025-01-27",
+  "totalLessons": 20,
+  "totalExercises": 300,
+  "description": "Parcours complet d'orthographe française par la logique",
+  "targetAudience": "CM1 à Lycée",
+  "categories": ["orthographe", "conjugaison", "ponctuation", "syntaxe"],
+  "difficulties": ["debutant", "intermediaire", "avance", "expert"],
+  "structure": {
+    "debutant": {
+      "levels": [1, 2, 3, 4, 5],
+      "targetAudience": "CM1-CM2",
+      "categories": ["orthographe"],
+      "totalLessons": 5
+    },
+    "intermediaire": {
+      "levels": [6, 7, 8, 9],
+      "targetAudience": "6e-5e",
+      "categories": ["orthographe", "conjugaison", "ponctuation"],
+      "totalLessons": 4
+    },
+    "avance": {
+      "levels": [10, 11, 12, 13],
+      "targetAudience": "4e-3e",
+      "categories": ["orthographe", "conjugaison"],
+      "totalLessons": 4
+    },
+    "expert": {
+      "levels": [14, 15, 16, 17, 18, 19, 20],
+      "targetAudience": "Lycée",
+      "categories": ["orthographe", "conjugaison", "syntaxe"],
+      "totalLessons": 7
+    }
+  },
+  "migration": {
+    "status": "completed",
+    "migratedLevels": ["debutant", "intermediaire", "avance", "expert"],
+    "migratedLessons": 20,
+    "totalLessonsToMigrate": 20,
+    "completionPercentage": 100,
+    "backupCreated": true,
+    "compatibilityMode": false,
+    "phases": {
+      "phase1_debutant": "completed",
+      "phase2_intermediaire": "completed",
+      "phase3_avance": "completed",
+      "phase4_expert": "completed"
+    }
+  }
+}

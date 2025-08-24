@@ -1,0 +1,211 @@
+{
+  "id": "accord-gn-5",
+  "title": "L'accord dans le Groupe Nominal",
+  "level": 5,
+  "difficulty": "debutant",
+  "targetAudience": "CM1-CM2",
+  "category": "orthographe",
+  "passingScore": 70,
+  "prerequisites": ["homophone-son-sont-4"],
+  "rule": "Dans un groupe nominal, l'adjectif s'accorde en genre (masculin/féminin) et en nombre (singulier/pluriel) avec le nom qu'il qualifie.",
+  "explanation": "L'accord dans le groupe nominal suit une logique simple : l'adjectif est comme un miroir du nom. Si le nom est féminin pluriel, l'adjectif devient féminin pluriel. Cette règle assure la cohérence et la clarté du message.",
+  "etymology": "Cette règle d'accord vient du latin où les adjectifs avaient de nombreuses terminaisons selon le genre, le nombre et la fonction. Le français a simplifié ce système mais a conservé l'accord de base pour maintenir la précision de l'expression.",
+  "mnemonics": "L'adjectif est un caméléon : il prend toujours la couleur (genre et nombre) du nom qu'il accompagne. Posez-vous la question : 'De qui ou de quoi parle-t-on ?' puis accordez l'adjectif en conséquence.",
+  "examples": [
+    "Un chat noir → Une chatte noire",
+    "Des chats noirs → Des chattes noires",
+    "Un livre intéressant → Une histoire intéressante",
+    "Des livres intéressants → Des histoires intéressantes",
+    "Le petit garçon → La petite fille"
+  ],
+  "specialCases": [
+    {
+      "title": "Adjectifs invariables",
+      "description": "Certains adjectifs ne changent jamais de forme.",
+      "examples": [
+        "Une voiture marron",
+        "Des chaussures marron",
+        "Un pull orange",
+        "Des fleurs orange"
+      ],
+      "tip": "Les adjectifs de couleur issus de noms (orange, marron, rose) sont souvent invariables."
+    },
+    {
+      "title": "Adjectifs en -eux",
+      "description": "Les adjectifs masculins en -eux font leur féminin en -euse.",
+      "examples": [
+        "Heureux → heureuse",
+        "Courageux → courageuse",
+        "Paresseux → paresseuse"
+      ],
+      "tip": "Pensez à 'dangereux → dangereuse' pour retenir la règle."
+    },
+    {
+      "title": "Adjectifs en -er",
+      "description": "Les adjectifs en -er font leur féminin en -ère.",
+      "examples": [
+        "Premier → première",
+        "Dernier → dernière",
+        "Étranger → étrangère"
+      ],
+      "tip": "Comme 'boulanger → boulangère'."
+    }
+  ],
+  "literaryExamples": [
+    {
+      "text": "Dans les grandes plaines désertes, les vents froids soufflaient sans relâche.",
+      "author": "Style littéraire",
+      "work": "Description classique",
+      "explanation": "'Grandes' s'accorde avec 'plaines' (féminin pluriel), 'désertes' aussi, et 'froids' s'accorde avec 'vents' (masculin pluriel)."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "gn-5-qcm-1",
+      "type": "qcm",
+      "sentence": "Une maison ... avec des volets ...",
+      "options": ["blanc, vert", "blanche, verts", "blanche, vertes"],
+      "answer": "blanche, verts",
+      "feedbackCorrect": "Parfait ! 'Blanche' s'accorde avec 'maison' (féminin), 'verts' avec 'volets' (masculin pluriel).",
+      "feedbackIncorrect": "'Maison' est féminin → 'blanche'. 'Volets' est masculin pluriel → 'verts'.",
+      "hint": "Maison = féminin, volets = masculin pluriel"
+    },
+    {
+      "id": "gn-5-qcm-2",
+      "type": "qcm",
+      "sentence": "Des fleurs ... dans un vase ...",
+      "options": ["rouge, blanc", "rouges, blanc", "rouges, blancs"],
+      "answer": "rouges, blanc",
+      "feedbackCorrect": "Excellent ! 'Rouges' s'accorde avec 'fleurs' (féminin pluriel), 'blanc' avec 'vase' (masculin singulier).",
+      "feedbackIncorrect": "'Fleurs' est féminin pluriel → 'rouges'. 'Vase' est masculin singulier → 'blanc'.",
+      "hint": "Fleurs = féminin pluriel, vase = masculin singulier"
+    },
+    {
+      "id": "gn-5-qcm-3",
+      "type": "qcm",
+      "sentence": "La ... fille porte une robe ...",
+      "options": ["petit, bleu", "petite, bleue", "petites, bleues"],
+      "answer": "petite, bleue",
+      "feedbackCorrect": "Bravo ! 'Petite' et 'bleue' s'accordent avec 'fille' et 'robe' (féminin singulier).",
+      "feedbackIncorrect": "'Fille' et 'robe' sont féminins singuliers → 'petite' et 'bleue'.",
+      "hint": "Fille et robe = féminin singulier"
+    },
+    {
+      "id": "gn-5-fill-1",
+      "type": "fill-in-the-blank",
+      "sentence": "Les grand___ maisons blanc___ sont magnifiques.",
+      "answer": ["es", "hes"],
+      "feedbackCorrect": "Parfait ! 'Grandes' et 'blanches' s'accordent avec 'maisons' (féminin pluriel).",
+      "feedbackIncorrect": "'Maisons' est féminin pluriel → 'grandes' et 'blanches'.",
+      "hint": "Maisons = féminin pluriel → -es"
+    },
+    {
+      "id": "gn-5-fill-2",
+      "type": "fill-in-the-blank",
+      "sentence": "Un petit___ chat noir___ dort sur le lit.",
+      "answer": ["", ""],
+      "feedbackCorrect": "Excellent ! 'Petit' et 'noir' restent au masculin singulier comme 'chat'.",
+      "feedbackIncorrect": "'Chat' est masculin singulier → pas de terminaison supplémentaire.",
+      "hint": "Chat = masculin singulier → pas de changement"
+    },
+    {
+      "id": "gn-5-drag-1",
+      "type": "drag-drop",
+      "sentence": "Des enfants ___ jouent avec des balles ___.",
+      "options": ["heureux, rouge", "heureuses, rouges", "heureux, rouges"],
+      "answer": "heureux, rouges",
+      "feedbackCorrect": "Bravo ! 'Heureux' (masculin pluriel) et 'rouges' (pluriel).",
+      "feedbackIncorrect": "'Enfants' est masculin pluriel → 'heureux'. 'Balles' est pluriel → 'rouges'.",
+      "hint": "Enfants = masculin pluriel, balles = pluriel"
+    },
+    {
+      "id": "gn-5-drag-2",
+      "type": "drag-drop",
+      "sentence": "Une ___ voiture ___ roule vite.",
+      "options": ["nouveau, rouge", "nouvelle, rouge", "nouvelles, rouges"],
+      "answer": "nouvelle, rouge",
+      "feedbackCorrect": "Parfait ! 'Nouvelle' et 'rouge' s'accordent avec 'voiture' (féminin singulier).",
+      "feedbackIncorrect": "'Voiture' est féminin singulier → 'nouvelle' et 'rouge'.",
+      "hint": "Voiture = féminin singulier"
+    },
+    {
+      "id": "gn-5-transform-1",
+      "type": "transformation",
+      "sentence": "Un grand arbre vert.",
+      "instruction": "Mets au féminin",
+      "answer": ["Une grande plante verte.", "Une grande fleur verte."],
+      "feedbackCorrect": "Excellent ! Transformation complète au féminin.",
+      "feedbackIncorrect": "Au féminin : 'une grande' et l'adjectif prend un 'e'.",
+      "hint": "Masculin → féminin : ajout du 'e'"
+    },
+    {
+      "id": "gn-5-transform-2",
+      "type": "transformation",
+      "sentence": "Des petites filles sages.",
+      "instruction": "Mets au masculin",
+      "answer": ["Des petits garçons sages.", "Des petits enfants sages."],
+      "feedbackCorrect": "Parfait ! Transformation au masculin réussie.",
+      "feedbackIncorrect": "Au masculin : 'des petits' (sans 'e').",
+      "hint": "Féminin → masculin : suppression du 'e'"
+    },
+    {
+      "id": "gn-5-dictation-1",
+      "type": "dictation",
+      "sentence": "Les belles fleurs jaunes sentent bon.",
+      "audioText": "Les belles fleurs jaunes sentent bon.",
+      "answer": ["Les belles fleurs jaunes sentent bon.", "Les belles fleurs jaunes sentent bon"],
+      "feedbackCorrect": "Parfait ! Tous les accords sont corrects.",
+      "feedbackIncorrect": "'Fleurs' est féminin pluriel → 'belles' et 'jaunes'.",
+      "hint": "Fleurs = féminin pluriel"
+    },
+    {
+      "id": "gn-5-dictation-2",
+      "type": "dictation",
+      "sentence": "Un gros chien noir aboie fort.",
+      "audioText": "Un gros chien noir aboie fort.",
+      "answer": ["Un gros chien noir aboie fort.", "Un gros chien noir aboie fort"],
+      "feedbackCorrect": "Excellent ! Accords masculin singulier parfaits.",
+      "feedbackIncorrect": "'Chien' est masculin singulier → 'gros' et 'noir'.",
+      "hint": "Chien = masculin singulier"
+    },
+    {
+      "id": "gn-5-qcm-4",
+      "type": "qcm",
+      "sentence": "Ces ... livres ... sont passionnants.",
+      "options": ["nouveau, français", "nouveaux, français", "nouvelles, françaises"],
+      "answer": "nouveaux, français",
+      "feedbackCorrect": "Bravo ! 'Nouveaux' et 'français' s'accordent avec 'livres' (masculin pluriel).",
+      "feedbackIncorrect": "'Livres' est masculin pluriel → 'nouveaux' et 'français'.",
+      "hint": "Livres = masculin pluriel"
+    },
+    {
+      "id": "gn-5-fill-3",
+      "type": "fill-in-the-blank",
+      "sentence": "Une jolie___ robe vert___ et des chaussures noir___.",
+      "answer": ["", "e", "es"],
+      "feedbackCorrect": "Parfait ! 'Jolie' (féminin), 'verte' (féminin), 'noires' (féminin pluriel).",
+      "feedbackIncorrect": "'Robe' est féminin → 'verte'. 'Chaussures' est féminin pluriel → 'noires'.",
+      "hint": "Robe = féminin, chaussures = féminin pluriel"
+    },
+    {
+      "id": "gn-5-drag-3",
+      "type": "drag-drop",
+      "sentence": "Des ___ histoires ___ nous font rire.",
+      "options": ["drôle, amusant", "drôles, amusantes", "drôles, amusants"],
+      "answer": "drôles, amusantes",
+      "feedbackCorrect": "Excellent ! Accord avec 'histoires' (féminin pluriel).",
+      "feedbackIncorrect": "'Histoires' est féminin pluriel → 'drôles' et 'amusantes'.",
+      "hint": "Histoires = féminin pluriel"
+    },
+    {
+      "id": "gn-5-transform-3",
+      "type": "transformation",
+      "sentence": "Le premier étudiant intelligent.",
+      "instruction": "Mets au féminin pluriel",
+      "answer": ["Les premières étudiantes intelligentes.", "Les premières élèves intelligentes."],
+      "feedbackCorrect": "Parfait ! Transformation complète au féminin pluriel.",
+      "feedbackIncorrect": "Féminin pluriel : 'les premières' et 'intelligentes'.",
+      "hint": "Masculin singulier → féminin pluriel"
+    }
+  ]
+}

@@ -1,0 +1,213 @@
+{
+  "id": "homophones-avances-15",
+  "title": "Homophones Avancés",
+  "level": 15,
+  "difficulty": "expert",
+  "targetAudience": "Lycée",
+  "category": "orthographe",
+  "passingScore": 85,
+  "prerequisites": ["adjectif-couleur-14"],
+  "rule": "on/ont : 'on' = pronom personnel (= il), 'ont' = verbe avoir (3e pluriel). la/là/l'a : 'la' = article/pronom, 'là' = adverbe de lieu, 'l'a' = le/la + avoir.",
+  "explanation": "Ces homophones avancés demandent une analyse grammaticale fine. 'On' remplace un sujet, 'ont' exprime la possession. 'La' détermine ou remplace, 'là' situe, 'l'a' combine pronom et auxiliaire. Chaque forme a sa fonction précise dans la phrase.",
+  "etymology": "'On' vient du latin 'homo' (homme), 'ont' de 'habent' (ils ont). 'Là' vient de 'illac' (en ce lieu), 'la' de 'illa' (celle-là). Ces évolutions phonétiques ont créé ces homophones complexes du français moderne.",
+  "mnemonics": "ON = il (remplacez par 'il'). ONT = avaient (remplacez par 'avaient'). LA = une (remplacez par 'une'). LÀ = ici (remplacez par 'ici'). L'A = l'avait (remplacez par 'l'avait').",
+  "examples": [
+    "On mange. (il mange ✓)",
+    "Ils ont faim. (ils avaient faim ✓)",
+    "La maison. (une maison ✓)",
+    "Il est là. (il est ici ✓)",
+    "Il l'a vue. (il l'avait vue ✓)"
+  ],
+  "specialCases": [
+    {
+      "title": "On = nous familier",
+      "description": "'On' peut remplacer 'nous' dans la langue familière.",
+      "examples": [
+        "On va au cinéma. (= nous allons)",
+        "On a bien rigolé. (= nous avons)",
+        "On se dépêche ! (= nous nous dépêchons)",
+        "On y va ? (= nous y allons ?)"
+      ],
+      "tip": "Dans ce cas, 'on' reste singulier grammaticalement mais pluriel par le sens."
+    },
+    {
+      "title": "Là dans les expressions",
+      "description": "'Là' entre dans de nombreuses expressions figées.",
+      "examples": [
+        "Là-bas, là-haut, là-dedans",
+        "Par là, jusque-là",
+        "Çà et là",
+        "Là où tu vas"
+      ],
+      "tip": "Dans les expressions composées, 'là' garde toujours son accent."
+    },
+    {
+      "title": "L'a avec d'autres auxiliaires",
+      "description": "'L'a' peut se combiner avec d'autres formes d'avoir.",
+      "examples": [
+        "Il l'a fait. (passé composé)",
+        "Elle l'a eu. (passé composé)",
+        "On l'a dit. (passé composé)",
+        "Qui l'a pris ? (passé composé)"
+      ],
+      "tip": "Vérifiez toujours : peut-on dire 'l'avait' à la place ?"
+    }
+  ],
+  "literaryExamples": [
+    {
+      "text": "Là où ils ont vécu, on trouve encore la maison qu'il l'a construite.",
+      "author": "Style narratif",
+      "work": "Roman régionaliste",
+      "explanation": "'Là' (lieu), 'ont vécu' (verbe avoir), 'on trouve' (pronom), 'la maison' (article), 'l'a construite' (pronom + auxiliaire)."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "homo-adv-15-qcm-1",
+      "type": "qcm",
+      "sentence": "... mange ... ... il habite.",
+      "options": ["On, là, la", "Ont, la, là", "On, là, là"],
+      "answer": "On, là, là",
+      "feedbackCorrect": "Parfait ! 'On mange' (il mange), 'là' (lieu), 'là' (lieu d'habitation).",
+      "feedbackIncorrect": "'Il mange' → ON, 'à cet endroit' → LÀ, 'à cet endroit' → LÀ.",
+      "hint": "Pronom sujet + lieu + lieu"
+    },
+    {
+      "id": "homo-adv-15-qcm-2",
+      "type": "qcm",
+      "sentence": "Ils ... vu ... fille qui était ...",
+      "options": ["ont, la, là", "on, là, la", "ont, là, la"],
+      "answer": "ont, la, là",
+      "feedbackCorrect": "Excellent ! 'Ont vu' (ils avaient vu), 'la fille' (une fille), 'était là' (ici).",
+      "feedbackIncorrect": "'Ils avaient vu' → ONT, 'une fille' → LA, 'était ici' → LÀ.",
+      "hint": "Verbe avoir + article + lieu"
+    },
+    {
+      "id": "homo-adv-15-qcm-3",
+      "type": "qcm",
+      "sentence": "... voiture qu'il ... achetée est ...",
+      "options": ["La, l'a, là", "Là, la, l'a", "La, là, l'a"],
+      "answer": "La, l'a, là",
+      "feedbackCorrect": "Bravo ! 'La voiture' (une voiture), 'l'a achetée' (l'avait achetée), 'est là' (ici).",
+      "feedbackIncorrect": "'Une voiture' → LA, 'il l'avait achetée' → L'A, 'est ici' → LÀ.",
+      "hint": "Article + pronom+auxiliaire + lieu"
+    },
+    {
+      "id": "homo-adv-15-fill-1",
+      "type": "fill-in-the-blank",
+      "sentence": "___ dit qu'ils ___ trouvé ___ solution ___.",
+      "answer": ["On", "ont", "la", "là"],
+      "feedbackCorrect": "Parfait ! 'On dit' (il dit), 'ont trouvé' (avaient trouvé), 'la solution' (une solution), 'là' (ici).",
+      "feedbackIncorrect": "'Il dit' → ON, 'ils avaient trouvé' → ONT, 'une solution' → LA, 'ici' → LÀ.",
+      "hint": "Pronom + verbe avoir + article + lieu"
+    },
+    {
+      "id": "homo-adv-15-fill-2",
+      "type": "fill-in-the-blank",
+      "sentence": "___ maison qu'___ voit ___ est celle qu'il ___ construite.",
+      "answer": ["La", "on", "là", "l'a"],
+      "feedbackCorrect": "Excellent ! 'La maison' (une maison), 'on voit' (il voit), 'là' (ici), 'l'a construite' (l'avait construite).",
+      "feedbackIncorrect": "'Une maison' → LA, 'il voit' → ON, 'ici' → LÀ, 'il l'avait construite' → L'A.",
+      "hint": "Article + pronom + lieu + pronom+auxiliaire"
+    },
+    {
+      "id": "homo-adv-15-drag-1",
+      "type": "drag-drop",
+      "sentence": "___ ne sait pas où ils ___ mis ___ clé ___.",
+      "options": ["On, ont, la, là", "Ont, on, là, la", "On, on, la, là"],
+      "answer": "On, ont, la, là",
+      "feedbackCorrect": "Bravo ! 'On ne sait pas' (il ne sait pas), 'ont mis' (avaient mis), 'la clé' (une clé), 'là' (ici).",
+      "feedbackIncorrect": "'Il ne sait pas' → ON, 'ils avaient mis' → ONT, 'une clé' → LA, 'ici' → LÀ.",
+      "hint": "Pronom + verbe avoir + article + lieu"
+    },
+    {
+      "id": "homo-adv-15-drag-2",
+      "type": "drag-drop",
+      "sentence": "___ personne qu'il ___ rencontrée ___ travaille ___.",
+      "options": ["La, l'a, on, là", "Là, la, ont, l'a", "La, l'a, ont, là"],
+      "answer": "La, l'a, ont, là",
+      "feedbackCorrect": "Parfait ! 'La personne' (une personne), 'l'a rencontrée' (l'avait rencontrée), 'ont' (verbe avoir), 'là' (ici).",
+      "feedbackIncorrect": "'Une personne' → LA, 'il l'avait rencontrée' → L'A, 'ils avaient' → ONT, 'ici' → LÀ.",
+      "hint": "Article + pronom+auxiliaire + verbe avoir + lieu"
+    },
+    {
+      "id": "homo-adv-15-transform-1",
+      "type": "transformation",
+      "sentence": "Il a vu la fille là.",
+      "instruction": "Remplace 'il a vu' par 'il l'a vue'",
+      "answer": ["Il l'a vue là.", "Il l'a vue là"],
+      "feedbackCorrect": "Excellent ! 'L'a vue' (l'avait vue) et 'là' (lieu) inchangé.",
+      "feedbackIncorrect": "'Il l'avait vue' → L'A, 'ici' → LÀ.",
+      "hint": "Pronom + auxiliaire + lieu"
+    },
+    {
+      "id": "homo-adv-15-transform-2",
+      "type": "transformation",
+      "sentence": "Nous mangeons là.",
+      "instruction": "Remplace 'nous' par 'on'",
+      "answer": ["On mange là.", "On mange là"],
+      "feedbackCorrect": "Parfait ! 'On mange' (il mange) et 'là' (lieu) inchangé.",
+      "feedbackIncorrect": "'Il mange' → ON, 'ici' → LÀ.",
+      "hint": "Pronom + lieu inchangé"
+    },
+    {
+      "id": "homo-adv-15-dictation-1",
+      "type": "dictation",
+      "sentence": "On sait qu'ils ont trouvé la solution là.",
+      "audioText": "On sait qu'ils ont trouvé la solution là.",
+      "answer": ["On sait qu'ils ont trouvé la solution là.", "On sait qu'ils ont trouvé la solution là"],
+      "feedbackCorrect": "Parfait ! Tous les homophones sont correctement identifiés.",
+      "feedbackIncorrect": "'Il sait' → ON, 'ils avaient trouvé' → ONT, 'une solution' → LA, 'ici' → LÀ.",
+      "hint": "Pronom + verbe avoir + article + lieu"
+    },
+    {
+      "id": "homo-adv-15-dictation-2",
+      "type": "dictation",
+      "sentence": "La voiture qu'il l'a achetée est garée là.",
+      "audioText": "La voiture qu'il l'a achetée est garée là.",
+      "answer": ["La voiture qu'il l'a achetée est garée là.", "La voiture qu'il l'a achetée est garée là"],
+      "feedbackCorrect": "Excellent ! Phrase complexe avec tous les homophones maîtrisés.",
+      "feedbackIncorrect": "'Une voiture' → LA, 'il l'avait achetée' → L'A, 'garée ici' → LÀ.",
+      "hint": "Article + pronom+auxiliaire + lieu"
+    },
+    {
+      "id": "homo-adv-15-qcm-4",
+      "type": "qcm",
+      "sentence": "... ... dit qu'ils ... perdu ... clé ...-bas.",
+      "options": ["On, l'a, ont, la, là", "Ont, la, on, là, l'a", "On, la, ont, l'a, là"],
+      "answer": "On, l'a, ont, la, là",
+      "feedbackCorrect": "Bravo ! Phrase complexe parfaitement analysée.",
+      "feedbackIncorrect": "'Il l'avait dit' → ON L'A, 'ils avaient perdu' → ONT, 'une clé' → LA, 'ici-bas' → LÀ.",
+      "hint": "Pronom + pronom+auxiliaire + verbe avoir + article + lieu"
+    },
+    {
+      "id": "homo-adv-15-fill-3",
+      "type": "fill-in-the-blank",
+      "sentence": "___ maison où ___ habite est ___ où ils ___ vécu.",
+      "answer": ["La", "on", "là", "ont"],
+      "feedbackCorrect": "Parfait ! 'La maison' (une maison), 'on habite' (il habite), 'là' (ici), 'ont vécu' (avaient vécu).",
+      "feedbackIncorrect": "'Une maison' → LA, 'il habite' → ON, 'ici' → LÀ, 'ils avaient vécu' → ONT.",
+      "hint": "Article + pronom + lieu + verbe avoir"
+    },
+    {
+      "id": "homo-adv-15-drag-3",
+      "type": "drag-drop",
+      "sentence": "___ fille qu'___ voit ___ est celle qu'ils ___ invitée.",
+      "options": ["La, on, là, ont", "Là, ont, la, on", "La, ont, là, on"],
+      "answer": "La, on, là, ont",
+      "feedbackCorrect": "Excellent ! Analyse grammaticale complexe parfaitement maîtrisée.",
+      "feedbackIncorrect": "'Une fille' → LA, 'il voit' → ON, 'ici' → LÀ, 'ils avaient invitée' → ONT.",
+      "hint": "Article + pronom + lieu + verbe avoir"
+    },
+    {
+      "id": "homo-adv-15-transform-3",
+      "type": "transformation",
+      "sentence": "Ils ont vu la maison là.",
+      "instruction": "Remplace 'ils ont vu' par 'on l'a vue'",
+      "answer": ["On l'a vue là.", "On l'a vue là"],
+      "feedbackCorrect": "Parfait ! Transformation complexe avec changement de tous les éléments sauf le lieu.",
+      "feedbackIncorrect": "'Il l'avait vue' → ON L'A, 'ici' → LÀ.",
+      "hint": "Pronom + pronom+auxiliaire + lieu"
+    }
+  ]
+}

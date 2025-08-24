@@ -1,0 +1,215 @@
+{
+  "id": "adjectif-couleur-14",
+  "title": "Accord de l'Adjectif de Couleur",
+  "level": 14,
+  "difficulty": "expert",
+  "targetAudience": "Lycée",
+  "category": "orthographe",
+  "passingScore": 85,
+  "prerequisites": ["terminaisons-e-er-ez-13"],
+  "rule": "Les adjectifs de couleur s'accordent, sauf s'ils viennent d'un nom (orange, marron) ou sont composés (bleu foncé). Exception : rose, mauve, fauve s'accordent.",
+  "explanation": "Cette règle distingue les 'vraies' couleurs (adjectifs d'origine) des couleurs issues de noms d'objets. Les couleurs composées restent invariables car elles forment un concept unique. Les exceptions (rose, mauve, fauve) sont des adjectifs anciens intégrés à la langue.",
+  "etymology": "Les couleurs venant de noms (orange du fruit, marron du châtaignier) gardent leur nature nominale, donc invariable. 'Rose' vient du latin 'rosa' mais s'est adjectivé très tôt. Cette règle reflète l'histoire de chaque mot dans la langue.",
+  "mnemonics": "Couleurs SIMPLES → accord (rouge, bleu, vert). Couleurs de NOMS → invariables (orange, marron, cerise). Couleurs COMPOSÉES → invariables (bleu clair). EXCEPTIONS qui s'accordent : rose, mauve, fauve, écarlate, pourpre.",
+  "examples": [
+    "Des fleurs rouges (adjectif simple → accord)",
+    "Des voitures orange (nom de fruit → invariable)",
+    "Des yeux bleu clair (composé → invariable)",
+    "Des robes roses (exception → accord)",
+    "Des chaussures marron (nom → invariable)"
+  ],
+  "specialCases": [
+    {
+      "title": "Couleurs simples",
+      "description": "Les adjectifs de couleur simples s'accordent normalement.",
+      "examples": [
+        "rouge → des roses rouges",
+        "bleu → des yeux bleus",
+        "vert → des feuilles vertes",
+        "noir → des cheveux noirs",
+        "blanc → des nuages blancs"
+      ],
+      "tip": "Si c'est un adjectif 'pur', il s'accorde comme tout adjectif."
+    },
+    {
+      "title": "Couleurs composées",
+      "description": "Deux couleurs ensemble restent invariables.",
+      "examples": [
+        "Des yeux bleu-vert",
+        "Des cheveux châtain clair",
+        "Des fleurs rouge vif",
+        "Des robes vert pomme"
+      ],
+      "tip": "Dès qu'il y a deux mots de couleur, tout reste invariable."
+    },
+    {
+      "title": "Exceptions qui s'accordent",
+      "description": "Quelques couleurs issues de noms s'accordent par usage ancien.",
+      "examples": [
+        "rose → des joues roses",
+        "mauve → des fleurs mauves",
+        "fauve → des lions fauves",
+        "écarlate → des tissus écarlates",
+        "pourpre → des manteaux pourpres"
+      ],
+      "tip": "Ces cinq exceptions sont à mémoriser : elles s'accordent malgré leur origine nominale."
+    }
+  ],
+  "literaryExamples": [
+    {
+      "text": "Ses yeux bleu-vert reflétaient la mer, tandis que ses lèvres roses contrastaient avec sa peau dorée.",
+      "author": "Style descriptif",
+      "work": "Roman contemporain",
+      "explanation": "'Bleu-vert' (composé → invariable), 'roses' (exception → accord), 'dorée' (adjectif simple → accord)."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "coul-14-qcm-1",
+      "type": "qcm",
+      "sentence": "Elle porte des chaussures ... et une robe ...",
+      "options": ["marrons, roses", "marron, rose", "marron, roses"],
+      "answer": "marron, roses",
+      "feedbackCorrect": "Parfait ! 'Marron' (nom → invariable) et 'roses' (exception → accord).",
+      "feedbackIncorrect": "'Marron' vient du châtaignier (invariable), 'rose' est une exception qui s'accorde.",
+      "hint": "Marron = nom → invariable, rose = exception → accord"
+    },
+    {
+      "id": "coul-14-qcm-2",
+      "type": "qcm",
+      "sentence": "Des yeux ... et des cheveux ...",
+      "options": ["bleu clair, châtains clairs", "bleus clairs, châtain clair", "bleu clair, châtain clair"],
+      "answer": "bleu clair, châtain clair",
+      "feedbackCorrect": "Excellent ! Couleurs composées → tout reste invariable.",
+      "feedbackIncorrect": "Dès qu'il y a deux mots de couleur ensemble, tout reste invariable.",
+      "hint": "Couleurs composées = invariables"
+    },
+    {
+      "id": "coul-14-qcm-3",
+      "type": "qcm",
+      "sentence": "Des fleurs ... dans un vase ...",
+      "options": ["mauves, orange", "mauve, oranges", "mauves, oranges"],
+      "answer": "mauves, orange",
+      "feedbackCorrect": "Bravo ! 'Mauves' (exception → accord) et 'orange' (fruit → invariable).",
+      "feedbackIncorrect": "'Mauve' s'accorde (exception), 'orange' vient du fruit (invariable).",
+      "hint": "Mauve = exception → accord, orange = fruit → invariable"
+    },
+    {
+      "id": "coul-14-fill-1",
+      "type": "fill-in-the-blank",
+      "sentence": "Des robes vert___ et des sacs marron___.",
+      "answer": ["es", ""],
+      "feedbackCorrect": "Parfait ! 'Vertes' (adjectif simple) et 'marron' (nom → invariable).",
+      "feedbackIncorrect": "'Vert' est un adjectif simple → accord, 'marron' vient d'un nom → invariable.",
+      "hint": "Vert = adjectif → accord, marron = nom → invariable"
+    },
+    {
+      "id": "coul-14-fill-2",
+      "type": "fill-in-the-blank",
+      "sentence": "Des tissus pourpre___ et des rubans orange___.",
+      "answer": ["s", ""],
+      "feedbackCorrect": "Excellent ! 'Pourpres' (exception → accord) et 'orange' (fruit → invariable).",
+      "feedbackIncorrect": "'Pourpre' est une exception qui s'accorde, 'orange' reste invariable.",
+      "hint": "Pourpre = exception → accord, orange = fruit → invariable"
+    },
+    {
+      "id": "coul-14-drag-1",
+      "type": "drag-drop",
+      "sentence": "Des yeux ___ et des lèvres ___.",
+      "options": ["bleus, roses", "bleu, rose", "bleus, rose"],
+      "answer": "bleus, roses",
+      "feedbackCorrect": "Bravo ! 'Bleus' (adjectif simple) et 'roses' (exception) s'accordent.",
+      "feedbackIncorrect": "'Bleu' et 'rose' sont tous deux des exceptions qui s'accordent.",
+      "hint": "Bleu = adjectif → accord, rose = exception → accord"
+    },
+    {
+      "id": "coul-14-drag-2",
+      "type": "drag-drop",
+      "sentence": "Des voitures ___ et des motos ___.",
+      "options": ["rouge vif, noires", "rouges vives, noire", "rouge vif, noir"],
+      "answer": "rouge vif, noires",
+      "feedbackCorrect": "Parfait ! 'Rouge vif' (composé → invariable) et 'noires' (simple → accord).",
+      "feedbackIncorrect": "Couleur composée → invariable, couleur simple → accord.",
+      "hint": "Rouge vif = composé → invariable, noir = simple → accord"
+    },
+    {
+      "id": "coul-14-transform-1",
+      "type": "transformation",
+      "sentence": "Un pull orange.",
+      "instruction": "Mets au pluriel",
+      "answer": ["Des pulls orange.", "Des pulls orange"],
+      "feedbackCorrect": "Excellent ! 'Orange' reste invariable (vient du fruit).",
+      "feedbackIncorrect": "'Orange' vient du nom du fruit, donc reste invariable.",
+      "hint": "Orange = fruit → invariable"
+    },
+    {
+      "id": "coul-14-transform-2",
+      "type": "transformation",
+      "sentence": "Une fleur rose.",
+      "instruction": "Mets au pluriel",
+      "answer": ["Des fleurs roses.", "Des fleurs roses"],
+      "feedbackCorrect": "Parfait ! 'Rose' est une exception qui s'accorde.",
+      "feedbackIncorrect": "'Rose' fait partie des exceptions qui s'accordent.",
+      "hint": "Rose = exception → accord"
+    },
+    {
+      "id": "coul-14-dictation-1",
+      "type": "dictation",
+      "sentence": "Des chaussures marron et des chaussettes roses.",
+      "audioText": "Des chaussures marron et des chaussettes roses.",
+      "answer": ["Des chaussures marron et des chaussettes roses.", "Des chaussures marron et des chaussettes roses"],
+      "feedbackCorrect": "Parfait ! 'Marron' (invariable) et 'roses' (exception qui s'accorde).",
+      "feedbackIncorrect": "'Marron' reste invariable, 'roses' s'accorde (exception).",
+      "hint": "Marron = invariable, rose = exception"
+    },
+    {
+      "id": "coul-14-dictation-2",
+      "type": "dictation",
+      "sentence": "Ses yeux bleu-vert et ses cheveux châtain clair.",
+      "audioText": "Ses yeux bleu-vert et ses cheveux châtain clair.",
+      "answer": ["Ses yeux bleu-vert et ses cheveux châtain clair.", "Ses yeux bleu-vert et ses cheveux châtain clair"],
+      "feedbackCorrect": "Excellent ! Couleurs composées → tout reste invariable.",
+      "feedbackIncorrect": "Couleurs composées : 'bleu-vert' et 'châtain clair' invariables.",
+      "hint": "Couleurs composées = invariables"
+    },
+    {
+      "id": "coul-14-qcm-4",
+      "type": "qcm",
+      "sentence": "Des manteaux ... et des écharpes ...",
+      "options": ["écarlates, orange", "écarlate, oranges", "écarlates, oranges"],
+      "answer": "écarlates, orange",
+      "feedbackCorrect": "Bravo ! 'Écarlates' (exception → accord) et 'orange' (fruit → invariable).",
+      "feedbackIncorrect": "'Écarlate' s'accorde (exception), 'orange' reste invariable (fruit).",
+      "hint": "Écarlate = exception → accord, orange = fruit → invariable"
+    },
+    {
+      "id": "coul-14-fill-3",
+      "type": "fill-in-the-blank",
+      "sentence": "Des lions fauve___ et des tigres orange___.",
+      "answer": ["s", ""],
+      "feedbackCorrect": "Parfait ! 'Fauves' (exception → accord) et 'orange' (invariable).",
+      "feedbackIncorrect": "'Fauve' est une exception qui s'accorde, 'orange' reste invariable.",
+      "hint": "Fauve = exception → accord, orange = invariable"
+    },
+    {
+      "id": "coul-14-drag-3",
+      "type": "drag-drop",
+      "sentence": "Des fleurs ___ dans des pots ___.",
+      "options": ["rouge vif, verts", "rouges vives, vert", "rouge vif, vert"],
+      "answer": "rouge vif, verts",
+      "feedbackCorrect": "Excellent ! 'Rouge vif' (composé → invariable) et 'verts' (simple → accord).",
+      "feedbackIncorrect": "Couleur composée invariable, couleur simple qui s'accorde.",
+      "hint": "Rouge vif = composé → invariable, vert = simple → accord"
+    },
+    {
+      "id": "coul-14-transform-3",
+      "type": "transformation",
+      "sentence": "Des yeux vert pomme.",
+      "instruction": "Remplace par 'des yeux verts'",
+      "answer": ["Des yeux verts.", "Des yeux verts"],
+      "feedbackCorrect": "Parfait ! 'Verts' (adjectif simple) s'accorde normalement.",
+      "feedbackIncorrect": "Couleur simple → accord normal avec le nom.",
+      "hint": "Couleur simple → accord"
+    }
+  ]
+}

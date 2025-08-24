@@ -1,0 +1,215 @@
+{
+  "id": "conjugaison-irreguliers-10",
+  "title": "Conjugaison Présent : Verbes Irréguliers",
+  "level": 10,
+  "difficulty": "avance",
+  "targetAudience": "4e-3e",
+  "category": "conjugaison",
+  "passingScore": 80,
+  "prerequisites": ["ponctuation-dialogue-9"],
+  "rule": "Les verbes irréguliers changent de radical selon les personnes : pouvoir (peux/pouvons), vouloir (veux/voulons), venir (viens/venons), tenir (tiens/tenons), prendre (prends/prenons).",
+  "explanation": "Ces verbes ont conservé des formes anciennes du latin et du français médiéval. Leurs changements de radical suivent des patterns logiques : radical court pour je/tu/il/ils, radical long pour nous/vous. Cette alternance facilite la prononciation.",
+  "etymology": "Ces irrégularités viennent de l'évolution phonétique du latin. 'Pouvoir' vient de 'potere', 'vouloir' de 'velle', 'venir' de 'venire'. Les changements de radical reflètent l'usure naturelle de la langue parlée au fil des siècles.",
+  "mnemonics": "Retenez les couples : PEUX/POUVONS, VEUX/VOULONS, VIENS/VENONS, TIENS/TENONS, PRENDS/PRENONS. Les formes courtes (1 syllabe) pour je/tu/il/ils, les formes longues (2 syllabes) pour nous/vous.",
+  "examples": [
+    "Je peux → nous pouvons",
+    "Tu veux → vous voulez",
+    "Il vient → nous venons",
+    "Elle tient → vous tenez",
+    "Je prends → nous prenons"
+  ],
+  "specialCases": [
+    {
+      "title": "Verbe pouvoir",
+      "description": "Alternance peux/peut/peuvent et pouvons/pouvez.",
+      "examples": [
+        "Je peux partir",
+        "Tu peux venir",
+        "Il peut réussir",
+        "Nous pouvons essayer",
+        "Vous pouvez partir",
+        "Ils peuvent gagner"
+      ],
+      "tip": "Radical 'peu-' pour les personnes du singulier et 3e pluriel, 'pouv-' pour nous/vous."
+    },
+    {
+      "title": "Verbes en -enir",
+      "description": "Venir, tenir et leurs composés suivent le même modèle.",
+      "examples": [
+        "venir : je viens, nous venons",
+        "tenir : tu tiens, vous tenez",
+        "devenir : il devient, nous devenons",
+        "retenir : elle retient, vous retenez"
+      ],
+      "tip": "Radical court en 'ien' + s/s/t, radical long en 'en' + ons/ez/iennent."
+    },
+    {
+      "title": "Verbe prendre et composés",
+      "description": "Prendre, apprendre, comprendre, surprendre suivent le même modèle.",
+      "examples": [
+        "prendre : je prends, nous prenons",
+        "apprendre : tu apprends, vous apprenez",
+        "comprendre : il comprend, nous comprenons",
+        "surprendre : elle surprend, vous surprenez"
+      ],
+      "tip": "Radical 'prend' pour singulier, 'pren' pour nous/vous, 'prenn' pour ils/elles."
+    }
+  ],
+  "literaryExamples": [
+    {
+      "text": "Je veux que tu viennes, que nous tenions parole et que vous preniez vos responsabilités.",
+      "author": "Style soutenu",
+      "work": "Prose classique",
+      "explanation": "Exemple montrant les différents radicaux : 'veux' (vouloir), 'viennes' (venir au subjonctif), 'tenions' (tenir au subjonctif), 'preniez' (prendre au subjonctif)."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "irreg-10-qcm-1",
+      "type": "qcm",
+      "sentence": "Nous ... partir mais vous ne ... pas.",
+      "options": ["pouvons, voulez", "pouvons, voulons", "pouvez, voulez"],
+      "answer": "pouvons, voulez",
+      "feedbackCorrect": "Parfait ! 'Nous pouvons' (radical long) et 'vous voulez' (radical long).",
+      "feedbackIncorrect": "'Nous pouvons' (pouvoir) et 'vous voulez' (vouloir) avec les radicaux longs.",
+      "hint": "Nous/vous = radicaux longs (pouv-, voul-)"
+    },
+    {
+      "id": "irreg-10-qcm-2",
+      "type": "qcm",
+      "sentence": "Tu ... ton livre et il ... le sien.",
+      "options": ["tiens, tient", "tiens, tiens", "tient, tient"],
+      "answer": "tiens, tient",
+      "feedbackCorrect": "Excellent ! 'Tu tiens' (2e personne) et 'il tient' (3e personne).",
+      "feedbackIncorrect": "'Tu tiens' (avec s) et 'il tient' (avec t) au présent.",
+      "hint": "Tu = -s, il = -t avec le radical court"
+    },
+    {
+      "id": "irreg-10-qcm-3",
+      "type": "qcm",
+      "sentence": "Elles ... de Paris et ... nous voir.",
+      "options": ["viennent, veulent", "venons, voulons", "vient, veut"],
+      "answer": "viennent, veulent",
+      "feedbackCorrect": "Bravo ! 'Elles viennent' (3e pluriel) et 'veulent' (3e pluriel).",
+      "feedbackIncorrect": "'Elles viennent' (venir 3e pluriel) et 'veulent' (vouloir 3e pluriel).",
+      "hint": "Elles = 3e personne du pluriel"
+    },
+    {
+      "id": "irreg-10-fill-1",
+      "type": "fill-in-the-blank",
+      "sentence": "Je ___ (pouvoir) t'aider si tu ___ (vouloir).",
+      "answer": ["peux", "veux"],
+      "feedbackCorrect": "Parfait ! 'Je peux' (radical court) et 'tu veux' (radical court).",
+      "feedbackIncorrect": "'Je peux' (pouvoir 1re personne) et 'tu veux' (vouloir 2e personne).",
+      "hint": "Je/tu = radicaux courts (peu-, veu-)"
+    },
+    {
+      "id": "irreg-10-fill-2",
+      "type": "fill-in-the-blank",
+      "sentence": "Nous ___ (venir) vous voir et vous ___ (tenir) vos promesses.",
+      "answer": ["venons", "tenez"],
+      "feedbackCorrect": "Excellent ! 'Nous venons' (radical long) et 'vous tenez' (radical long).",
+      "feedbackIncorrect": "'Nous venons' (venir) et 'vous tenez' (tenir) avec radicaux longs.",
+      "hint": "Nous/vous = radicaux longs (ven-, ten-)"
+    },
+    {
+      "id": "irreg-10-drag-1",
+      "type": "drag-drop",
+      "sentence": "Il ___ son manteau et ___ sortir.",
+      "options": ["prend, veut", "prends, veux", "prenons, voulons"],
+      "answer": "prend, veut",
+      "feedbackCorrect": "Bravo ! 'Il prend' (3e personne) et 'veut' (3e personne).",
+      "feedbackIncorrect": "'Il prend' (prendre 3e personne) et 'veut' (vouloir 3e personne).",
+      "hint": "Il = 3e personne du singulier"
+    },
+    {
+      "id": "irreg-10-drag-2",
+      "type": "drag-drop",
+      "sentence": "Vous ___ bien et nous ___ vous féliciter.",
+      "options": ["tenez, pouvons", "tiens, peux", "tient, peut"],
+      "answer": "tenez, pouvons",
+      "feedbackCorrect": "Parfait ! 'Vous tenez' (tenir) et 'nous pouvons' (pouvoir).",
+      "feedbackIncorrect": "'Vous tenez' (tenir 2e pluriel) et 'nous pouvons' (pouvoir 1re pluriel).",
+      "hint": "Vous/nous = radicaux longs"
+    },
+    {
+      "id": "irreg-10-transform-1",
+      "type": "transformation",
+      "sentence": "Je veux partir.",
+      "instruction": "Mets à la 1re personne du pluriel",
+      "answer": ["Nous voulons partir.", "Nous voulons partir"],
+      "feedbackCorrect": "Excellent ! Changement de radical : 'veux' → 'voulons'.",
+      "feedbackIncorrect": "'Nous voulons' avec le radical long 'voul-'.",
+      "hint": "Je → nous = radical court → radical long"
+    },
+    {
+      "id": "irreg-10-transform-2",
+      "type": "transformation",
+      "sentence": "Vous pouvez réussir.",
+      "instruction": "Mets à la 3e personne du singulier",
+      "answer": ["Il peut réussir.", "Elle peut réussir."],
+      "feedbackCorrect": "Parfait ! Changement de radical : 'pouvez' → 'peut'.",
+      "feedbackIncorrect": "'Il/elle peut' avec le radical court 'peu-'.",
+      "hint": "Vous → il/elle = radical long → radical court"
+    },
+    {
+      "id": "irreg-10-dictation-1",
+      "type": "dictation",
+      "sentence": "Tu viens avec nous si tu peux.",
+      "audioText": "Tu viens avec nous si tu peux.",
+      "answer": ["Tu viens avec nous si tu peux.", "Tu viens avec nous si tu peux"],
+      "feedbackCorrect": "Parfait ! 'Tu viens' (venir) et 'tu peux' (pouvoir) au présent.",
+      "feedbackIncorrect": "'Tu viens' (venir 2e personne) et 'tu peux' (pouvoir 2e personne).",
+      "hint": "Tu = 2e personne avec radicaux courts"
+    },
+    {
+      "id": "irreg-10-dictation-2",
+      "type": "dictation",
+      "sentence": "Nous tenons nos promesses et vous prenez vos responsabilités.",
+      "audioText": "Nous tenons nos promesses et vous prenez vos responsabilités.",
+      "answer": ["Nous tenons nos promesses et vous prenez vos responsabilités.", "Nous tenons nos promesses et vous prenez vos responsabilités"],
+      "feedbackCorrect": "Excellent ! 'Tenons' (tenir) et 'prenez' (prendre) avec radicaux longs.",
+      "feedbackIncorrect": "'Nous tenons' (tenir) et 'vous prenez' (prendre) aux bonnes personnes.",
+      "hint": "Nous/vous = radicaux longs"
+    },
+    {
+      "id": "irreg-10-qcm-4",
+      "type": "qcm",
+      "sentence": "Ils ... de loin et ... nous rejoindre.",
+      "options": ["viennent, veulent", "venons, voulons", "vient, veut"],
+      "answer": "viennent, veulent",
+      "feedbackCorrect": "Bravo ! 'Ils viennent' (venir 3e pluriel) et 'veulent' (vouloir 3e pluriel).",
+      "feedbackIncorrect": "'Ils viennent' (venir) et 'veulent' (vouloir) à la 3e personne du pluriel.",
+      "hint": "Ils = 3e personne du pluriel"
+    },
+    {
+      "id": "irreg-10-fill-3",
+      "type": "fill-in-the-blank",
+      "sentence": "Elle ___ (prendre) son temps et ___ (pouvoir) réussir.",
+      "answer": ["prend", "peut"],
+      "feedbackCorrect": "Parfait ! 'Elle prend' (prendre 3e personne) et 'peut' (pouvoir 3e personne).",
+      "feedbackIncorrect": "'Elle prend' (prendre) et 'peut' (pouvoir) à la 3e personne du singulier.",
+      "hint": "Elle = 3e personne du singulier"
+    },
+    {
+      "id": "irreg-10-drag-3",
+      "type": "drag-drop",
+      "sentence": "Je ___ mes affaires et ___ partir maintenant.",
+      "options": ["prends, veux", "prend, veut", "prenons, voulons"],
+      "answer": "prends, veux",
+      "feedbackCorrect": "Excellent ! 'Je prends' (prendre 1re personne) et 'veux' (vouloir 1re personne).",
+      "feedbackIncorrect": "'Je prends' (prendre) et 'veux' (vouloir) à la 1re personne du singulier.",
+      "hint": "Je = 1re personne du singulier"
+    },
+    {
+      "id": "irreg-10-transform-3",
+      "type": "transformation",
+      "sentence": "Nous venons vous aider.",
+      "instruction": "Mets à la 2e personne du singulier",
+      "answer": ["Tu viens nous aider.", "Tu viens m'aider."],
+      "feedbackCorrect": "Parfait ! Changement de radical : 'venons' → 'viens'.",
+      "feedbackIncorrect": "'Tu viens' avec le radical court 'vien-'.",
+      "hint": "Nous → tu = radical long → radical court"
+    }
+  ]
+}

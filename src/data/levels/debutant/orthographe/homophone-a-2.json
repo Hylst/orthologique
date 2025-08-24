@@ -1,0 +1,201 @@
+{
+  "id": "homophone-a-2",
+  "title": "Homophones a / à",
+  "level": 2,
+  "difficulty": "debutant",
+  "targetAudience": "CM1-CM2",
+  "category": "orthographe",
+  "passingScore": 70,
+  "prerequisites": ["sv-accord-1"],
+  "rule": "'a' sans accent = verbe avoir (3e personne). 'à' avec accent = préposition (lieu, temps, manière).",
+  "explanation": "Ces deux mots se prononcent pareil mais ont des rôles différents. 'a' est une forme du verbe avoir qui exprime la possession ou une action accomplie. 'à' est un petit mot qui relie et indique une direction, un lieu, un moment.",
+  "etymology": "En ancien français, ces deux mots avaient des prononciations différentes. L'accent grave sur 'à' a été ajouté au 16e siècle par les imprimeurs pour distinguer la préposition du verbe, évitant ainsi les confusions à l'écrit.",
+  "mnemonics": "Remplacez par 'avait' : si ça marche, c'est 'a' sans accent. Sinon, c'est 'à' avec accent. Exemple : 'Il a faim' → 'Il avait faim' ✓ donc 'a'. 'Il va à Paris' → 'Il va avait Paris' ✗ donc 'à'.",
+  "examples": [
+    "Il a un chien. (avait un chien ✓)",
+    "Elle va à l'école. (va avait l'école ✗)",
+    "Paul a mangé. (avait mangé ✓)",
+    "Rendez-vous à midi. (rendez-vous avait midi ✗)",
+    "Marie a de la chance. (avait de la chance ✓)"
+  ],
+  "specialCases": [
+    {
+      "title": "Expressions figées avec 'à'",
+      "description": "Certaines expressions utilisent toujours 'à' avec accent.",
+      "examples": [
+        "À bientôt !",
+        "À demain !",
+        "À tout à l'heure !",
+        "À plus tard !"
+      ],
+      "tip": "Dans les formules de politesse, c'est presque toujours 'à' avec accent."
+    },
+    {
+      "title": "Verbe avoir au passé composé",
+      "description": "Dans 'il a mangé', 'a' est l'auxiliaire avoir, donc sans accent.",
+      "examples": [
+        "Elle a fini ses devoirs.",
+        "Il a couru très vite.",
+        "On a bien rigolé."
+      ],
+      "tip": "Si vous pouvez dire 'avait' à la place, c'est 'a' sans accent."
+    }
+  ],
+  "literaryExamples": [
+    {
+      "text": "Maître Corbeau, sur un arbre perché, tenait à son bec un fromage.",
+      "author": "Jean de La Fontaine",
+      "work": "Le Corbeau et le Renard",
+      "explanation": "Ici, 'à son bec' indique le lieu où le fromage est tenu. C'est bien 'à' avec accent car on ne peut pas dire 'tenait avait son bec'."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "a-2-qcm-1",
+      "type": "qcm",
+      "sentence": "Il ... un vélo rouge.",
+      "options": ["a", "à", "as"],
+      "answer": "a",
+      "feedbackCorrect": "Parfait ! On peut dire 'Il avait un vélo rouge', donc c'est 'a' sans accent.",
+      "feedbackIncorrect": "Essayez de remplacer par 'avait' : 'Il avait un vélo rouge' fonctionne, donc c'est 'a' sans accent.",
+      "hint": "Remplacez par 'avait' pour vérifier"
+    },
+    {
+      "id": "a-2-qcm-2",
+      "type": "qcm",
+      "sentence": "Elle va ... la piscine.",
+      "options": ["a", "à", "as"],
+      "answer": "à",
+      "feedbackCorrect": "Excellent ! 'À la piscine' indique le lieu, c'est donc 'à' avec accent.",
+      "feedbackIncorrect": "'Va avait la piscine' ne fonctionne pas, donc c'est 'à' avec accent (lieu).",
+      "hint": "Où va-t-elle ? → lieu → 'à' avec accent"
+    },
+    {
+      "id": "a-2-qcm-3",
+      "type": "qcm",
+      "sentence": "Mon frère ... mangé tout le gâteau.",
+      "options": ["a", "à", "as"],
+      "answer": "a",
+      "feedbackCorrect": "Bravo ! 'A mangé' est du passé composé avec l'auxiliaire avoir.",
+      "feedbackIncorrect": "Dans 'a mangé', 'a' est l'auxiliaire avoir, donc sans accent.",
+      "hint": "Passé composé = auxiliaire avoir → 'a' sans accent"
+    },
+    {
+      "id": "a-2-fill-1",
+      "type": "fill-in-the-blank",
+      "sentence": "Papa ___ acheté du pain.",
+      "answer": "a",
+      "feedbackCorrect": "Parfait ! 'A acheté' = passé composé avec avoir.",
+      "feedbackIncorrect": "C'est du passé composé : 'Papa avait acheté' fonctionne, donc 'a' sans accent.",
+      "hint": "Passé composé → auxiliaire avoir"
+    },
+    {
+      "id": "a-2-fill-2",
+      "type": "fill-in-the-blank",
+      "sentence": "Rendez-vous ___ 15 heures.",
+      "answer": "à",
+      "feedbackCorrect": "Excellent ! 'À 15 heures' indique le moment.",
+      "feedbackIncorrect": "'Rendez-vous avait 15 heures' ne marche pas, donc 'à' avec accent.",
+      "hint": "Indication de temps → 'à' avec accent"
+    },
+    {
+      "id": "a-2-drag-1",
+      "type": "drag-drop",
+      "sentence": "Marie ___ une belle robe.",
+      "options": ["a", "à", "as"],
+      "answer": "a",
+      "feedbackCorrect": "Bravo ! Marie possède une robe, c'est le verbe avoir.",
+      "feedbackIncorrect": "'Marie avait une belle robe' fonctionne, donc 'a' sans accent.",
+      "hint": "Possession → verbe avoir → 'a'"
+    },
+    {
+      "id": "a-2-drag-2",
+      "type": "drag-drop",
+      "sentence": "Je vais ___ Paris.",
+      "options": ["a", "à", "as"],
+      "answer": "à",
+      "feedbackCorrect": "Parfait ! 'À Paris' indique la destination.",
+      "feedbackIncorrect": "'Je vais avait Paris' ne marche pas, donc 'à' avec accent.",
+      "hint": "Destination → 'à' avec accent"
+    },
+    {
+      "id": "a-2-transform-1",
+      "type": "transformation",
+      "sentence": "Il a faim.",
+      "instruction": "Mets à l'imparfait",
+      "answer": ["Il avait faim.", "Il avait faim"],
+      "feedbackCorrect": "Excellent ! Cela confirme que 'a' était bien le verbe avoir.",
+      "feedbackIncorrect": "À l'imparfait, 'a' devient 'avait'.",
+      "hint": "Verbe avoir à l'imparfait = avait"
+    },
+    {
+      "id": "a-2-transform-2",
+      "type": "transformation",
+      "sentence": "Elle va à la mer.",
+      "instruction": "Remplace 'elle' par 'nous'",
+      "answer": ["Nous allons à la mer.", "Nous allons à la mer"],
+      "feedbackCorrect": "Parfait ! 'À' reste inchangé car c'est une préposition.",
+      "feedbackIncorrect": "La préposition 'à' ne change jamais, seul le verbe 'aller' se conjugue.",
+      "hint": "Les prépositions ne changent jamais"
+    },
+    {
+      "id": "a-2-dictation-1",
+      "type": "dictation",
+      "sentence": "Il a pris le train à midi.",
+      "audioText": "Il a pris le train à midi.",
+      "answer": ["Il a pris le train à midi.", "Il a pris le train à midi"],
+      "feedbackCorrect": "Parfait ! 'A pris' (verbe) et 'à midi' (temps).",
+      "feedbackIncorrect": "'A pris' = verbe avoir, 'à midi' = moment (préposition).",
+      "hint": "Verbe avoir + indication de temps"
+    },
+    {
+      "id": "a-2-dictation-2",
+      "type": "dictation",
+      "sentence": "Marie a donné un cadeau à Paul.",
+      "audioText": "Marie a donné un cadeau à Paul.",
+      "answer": ["Marie a donné un cadeau à Paul.", "Marie a donné un cadeau à Paul"],
+      "feedbackCorrect": "Excellent ! 'A donné' (verbe) et 'à Paul' (destinataire).",
+      "feedbackIncorrect": "'A donné' = passé composé, 'à Paul' = destinataire.",
+      "hint": "Action passée + destinataire"
+    },
+    {
+      "id": "a-2-qcm-4",
+      "type": "qcm",
+      "sentence": "Tu ... raison de partir ... temps.",
+      "options": ["a, a", "à, à", "a, à"],
+      "answer": "a, à",
+      "feedbackCorrect": "Bravo ! 'As raison' (verbe) et 'à temps' (moment).",
+      "feedbackIncorrect": "'Tu avais raison' marche (verbe), 'à temps' indique le moment.",
+      "hint": "Première case : verbe avoir. Deuxième : moment"
+    },
+    {
+      "id": "a-2-fill-3",
+      "type": "fill-in-the-blank",
+      "sentence": "Le chat ___ grimpé ___ l'arbre.",
+      "answer": ["a", "à"],
+      "feedbackCorrect": "Parfait ! 'A grimpé' (action) et 'à l'arbre' (lieu).",
+      "feedbackIncorrect": "'A grimpé' = passé composé, 'à l'arbre' = direction.",
+      "hint": "Action passée + direction"
+    },
+    {
+      "id": "a-2-drag-3",
+      "type": "drag-drop",
+      "sentence": "Maman ___ préparé le dîner ___ 19h.",
+      "options": ["a, a", "à, à", "a, à"],
+      "answer": "a, à",
+      "feedbackCorrect": "Excellent ! Action passée + moment précis.",
+      "feedbackIncorrect": "'A préparé' = verbe, 'à 19h' = heure.",
+      "hint": "Verbe avoir + indication d'heure"
+    },
+    {
+      "id": "a-2-transform-3",
+      "type": "transformation",
+      "sentence": "J'ai mal à la tête.",
+      "instruction": "Remplace 'j'ai' par 'tu as'",
+      "answer": ["Tu as mal à la tête.", "Tu as mal à la tête"],
+      "feedbackCorrect": "Parfait ! 'As' (verbe) et 'à la tête' (localisation).",
+      "feedbackIncorrect": "'Tu as' = verbe avoir, 'à la tête' = lieu de la douleur.",
+      "hint": "Verbe avoir conjugué + localisation"
+    }
+  ]
+}

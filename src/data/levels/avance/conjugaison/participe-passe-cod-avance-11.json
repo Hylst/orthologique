@@ -1,0 +1,213 @@
+{
+  "id": "participe-passe-cod-avance-11",
+  "title": "Accord du Participe Passé avec COD Avancé",
+  "level": 11,
+  "difficulty": "avance",
+  "targetAudience": "4e-3e",
+  "category": "conjugaison",
+  "passingScore": 80,
+  "prerequisites": ["conjugaison-irreguliers-10"],
+  "rule": "Avec l'auxiliaire avoir, le participe passé s'accorde avec le COD seulement s'il est placé avant le verbe. Cas complexes : pronoms, propositions relatives, verbes pronominaux.",
+  "explanation": "Cette règle avancée gère les cas subtils : pronoms COD (le, la, les, que), COD dans les relatives, verbes pronominaux (accord avec le sujet sauf si COD). La logique reste la même : on accorde avec ce qui est mis en valeur (placé avant).",
+  "etymology": "Cette règle complexe s'est fixée au 17e siècle avec Vaugelas et l'Académie française. Elle reflète l'importance accordée à l'ordre des mots en français : ce qui est placé en tête de phrase mérite un accord particulier.",
+  "mnemonics": "COD AVANT = ACCORD. Cherchez d'abord le COD, puis sa position. Pronoms le/la/les/que = toujours avant. Verbes pronominaux : si le pronom = COD, pas d'accord ; si le pronom ≠ COD, accord avec le sujet.",
+  "examples": [
+    "Les fleurs que j'ai cueillies. (que = COD avant)",
+    "Je les ai vues. (les = COD avant)",
+    "Elle s'est lavée. (se = COD, accord)",
+    "Elle s'est lavé les mains. (se ≠ COD, pas d'accord)",
+    "Combien en as-tu pris ? (en = COD partiel, pas d'accord)"
+  ],
+  "specialCases": [
+    {
+      "title": "Pronoms COD",
+      "description": "Les pronoms le, la, les, que sont toujours placés avant et déclenchent l'accord.",
+      "examples": [
+        "Cette histoire, je l'ai lue.",
+        "Ces livres, je les ai lus.",
+        "La personne que j'ai rencontrée.",
+        "Les enfants qu'elle a vus."
+      ],
+      "tip": "Identifiez ce que représente le pronom pour faire l'accord correct."
+    },
+    {
+      "title": "Verbes pronominaux",
+      "description": "Accord avec le sujet sauf si le pronom réfléchi n'est pas COD.",
+      "examples": [
+        "Elle s'est coupée. (se = COD → accord)",
+        "Elle s'est coupé le doigt. (se ≠ COD → pas d'accord)",
+        "Ils se sont parlé. (se = COI → pas d'accord)",
+        "Elles se sont rencontrées. (se = COD → accord)"
+      ],
+      "tip": "Demandez-vous : le pronom réfléchi est-il COD ou COI ?"
+    },
+    {
+      "title": "Cas particuliers",
+      "description": "Certains cas ne suivent pas la règle générale.",
+      "examples": [
+        "Les efforts qu'il a fallu. (falloir impersonnel → pas d'accord)",
+        "Les années qu'il a vécu. (vivre intransitif → pas d'accord)",
+        "Les 100 euros que ça a coûté. (coûter → pas d'accord)",
+        "Combien en as-tu acheté ? (en partitif → pas d'accord)"
+      ],
+      "tip": "Attention aux verbes impersonnels et aux compléments de mesure."
+    }
+  ],
+  "literaryExamples": [
+    {
+      "text": "Les lettres qu'elle avait écrites, elle les avait relues avec émotion.",
+      "author": "Style littéraire",
+      "work": "Roman du 19e siècle",
+      "explanation": "'Écrites' s'accorde avec 'que' (= les lettres), 'relues' s'accorde avec 'les' (= les lettres). Double accord avec le même antécédent."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "cod-11-qcm-1",
+      "type": "qcm",
+      "sentence": "Les pommes que j'ai ... étaient délicieuses.",
+      "options": ["mangé", "mangée", "mangées"],
+      "answer": "mangées",
+      "feedbackCorrect": "Parfait ! 'Que' représente 'les pommes' (féminin pluriel) placé avant.",
+      "feedbackIncorrect": "'Que' = les pommes (féminin pluriel) et est avant le verbe → 'mangées'.",
+      "hint": "Que = les pommes (féminin pluriel) avant le verbe"
+    },
+    {
+      "id": "cod-11-qcm-2",
+      "type": "qcm",
+      "sentence": "Cette histoire, je l'ai ...",
+      "options": ["lu", "lue", "lues"],
+      "answer": "lue",
+      "feedbackCorrect": "Excellent ! 'L'' représente 'cette histoire' (féminin singulier) placé avant.",
+      "feedbackIncorrect": "'L'' = cette histoire (féminin singulier) et est avant → 'lue'.",
+      "hint": "L' = cette histoire (féminin singulier) avant"
+    },
+    {
+      "id": "cod-11-qcm-3",
+      "type": "qcm",
+      "sentence": "Elle s'est ... les cheveux.",
+      "options": ["lavé", "lavée", "lavés"],
+      "answer": "lavé",
+      "feedbackCorrect": "Bravo ! 'Se' n'est pas COD (les cheveux = COD), donc pas d'accord.",
+      "feedbackIncorrect": "COD = 'les cheveux' (après le verbe), 'se' = COI → pas d'accord.",
+      "hint": "Se = COI, les cheveux = COD après → pas d'accord"
+    },
+    {
+      "id": "cod-11-fill-1",
+      "type": "fill-in-the-blank",
+      "sentence": "Les fleurs qu'il a offert___ sont magnifiques.",
+      "answer": "es",
+      "feedbackCorrect": "Parfait ! 'Qu'' = les fleurs (féminin pluriel) avant le verbe.",
+      "feedbackIncorrect": "'Qu'' représente 'les fleurs' (féminin pluriel) → 'offertes'.",
+      "hint": "Qu' = les fleurs (féminin pluriel) avant"
+    },
+    {
+      "id": "cod-11-fill-2",
+      "type": "fill-in-the-blank",
+      "sentence": "Elles se sont rencontré___ au marché.",
+      "answer": "es",
+      "feedbackCorrect": "Excellent ! 'Se' = COD (elles ont rencontré qui ? elles-mêmes) → accord.",
+      "feedbackIncorrect": "'Se rencontrer' : se = COD → accord avec le sujet 'elles'.",
+      "hint": "Se = COD dans 'se rencontrer' → accord"
+    },
+    {
+      "id": "cod-11-drag-1",
+      "type": "drag-drop",
+      "sentence": "Ces livres, je les ai tous ___.",
+      "options": ["lu", "lue", "lus"],
+      "answer": "lus",
+      "feedbackCorrect": "Bravo ! 'Les' représente 'ces livres' (masculin pluriel) avant le verbe.",
+      "feedbackIncorrect": "'Les' = ces livres (masculin pluriel) et est avant → 'lus'.",
+      "hint": "Les = ces livres (masculin pluriel) avant"
+    },
+    {
+      "id": "cod-11-drag-2",
+      "type": "drag-drop",
+      "sentence": "La voiture qu'elle a ___ est neuve.",
+      "options": ["acheté", "achetée", "achetés"],
+      "answer": "achetée",
+      "feedbackCorrect": "Parfait ! 'Qu'' = la voiture (féminin singulier) avant le verbe.",
+      "feedbackIncorrect": "'Qu'' représente 'la voiture' (féminin singulier) → 'achetée'.",
+      "hint": "Qu' = la voiture (féminin singulier) avant"
+    },
+    {
+      "id": "cod-11-transform-1",
+      "type": "transformation",
+      "sentence": "J'ai vu cette femme.",
+      "instruction": "Transforme avec 'que' : 'La femme que...'",
+      "answer": ["La femme que j'ai vue.", "La femme que j'ai vue"],
+      "feedbackCorrect": "Excellent ! COD antéposé 'que' (= la femme) → accord 'vue'.",
+      "feedbackIncorrect": "'Que' = la femme (féminin singulier) avant → 'vue'.",
+      "hint": "COD antéposé → accord obligatoire"
+    },
+    {
+      "id": "cod-11-transform-2",
+      "type": "transformation",
+      "sentence": "Il a pris ses clés.",
+      "instruction": "Transforme avec pronom : 'Il les a...'",
+      "answer": ["Il les a prises.", "Il les a prises"],
+      "feedbackCorrect": "Parfait ! 'Les' (= ses clés, féminin pluriel) avant → 'prises'.",
+      "feedbackIncorrect": "'Les' représente 'ses clés' (féminin pluriel) → 'prises'.",
+      "hint": "Les = ses clés (féminin pluriel) avant"
+    },
+    {
+      "id": "cod-11-dictation-1",
+      "type": "dictation",
+      "sentence": "Les lettres qu'elle a écrites, elle les a relues.",
+      "audioText": "Les lettres qu'elle a écrites, elle les a relues.",
+      "answer": ["Les lettres qu'elle a écrites, elle les a relues.", "Les lettres qu'elle a écrites, elle les a relues"],
+      "feedbackCorrect": "Parfait ! Double accord : 'que' et 'les' représentent 'les lettres'.",
+      "feedbackIncorrect": "'Qu'' = les lettres → 'écrites', 'les' = les lettres → 'relues'.",
+      "hint": "Double COD avant avec le même antécédent"
+    },
+    {
+      "id": "cod-11-dictation-2",
+      "type": "dictation",
+      "sentence": "Elle s'est coupé le doigt mais s'est soignée.",
+      "audioText": "Elle s'est coupé le doigt mais s'est soignée.",
+      "answer": ["Elle s'est coupé le doigt mais s'est soignée.", "Elle s'est coupé le doigt mais s'est soignée"],
+      "feedbackCorrect": "Excellent ! 'Coupé' (se = COI), 'soignée' (se = COD).",
+      "feedbackIncorrect": "1er : se = COI → pas d'accord. 2e : se = COD → accord.",
+      "hint": "Deux cas différents de verbes pronominaux"
+    },
+    {
+      "id": "cod-11-qcm-4",
+      "type": "qcm",
+      "sentence": "Combien de fautes as-tu ... ?",
+      "options": ["fait", "faite", "faites"],
+      "answer": "fait",
+      "feedbackCorrect": "Bravo ! 'Combien' exprime la quantité, pas un COD précis → pas d'accord.",
+      "feedbackIncorrect": "'Combien' n'est pas un COD précis → pas d'accord avec 'fait'.",
+      "hint": "Combien = quantité imprécise → pas d'accord"
+    },
+    {
+      "id": "cod-11-fill-3",
+      "type": "fill-in-the-blank",
+      "sentence": "La robe qu'elle a mis___ lui va bien.",
+      "answer": "e",
+      "feedbackCorrect": "Parfait ! 'Qu'' = la robe (féminin singulier) avant le verbe.",
+      "feedbackIncorrect": "'Qu'' représente 'la robe' (féminin singulier) → 'mise'.",
+      "hint": "Qu' = la robe (féminin singulier) avant"
+    },
+    {
+      "id": "cod-11-drag-3",
+      "type": "drag-drop",
+      "sentence": "Ils se sont ___ des lettres.",
+      "options": ["écrit", "écrite", "écrits"],
+      "answer": "écrit",
+      "feedbackCorrect": "Excellent ! 'Se' = COI (écrire à quelqu'un), COD = 'des lettres' après.",
+      "feedbackIncorrect": "'Se écrire' : se = COI → pas d'accord, même avec sujet pluriel.",
+      "hint": "Se = COI dans 'se écrire' → pas d'accord"
+    },
+    {
+      "id": "cod-11-transform-3",
+      "type": "transformation",
+      "sentence": "Elle a acheté des fleurs.",
+      "instruction": "Transforme avec 'en' : 'Elle en a acheté'",
+      "answer": ["Elle en a acheté.", "Elle en a acheté"],
+      "feedbackCorrect": "Parfait ! 'En' = pronom partitif → pas d'accord.",
+      "feedbackIncorrect": "'En' exprime une partie indéterminée → pas d'accord.",
+      "hint": "En = pronom partitif → pas d'accord"
+    }
+  ]
+}

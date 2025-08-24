@@ -1,0 +1,201 @@
+{
+  "id": "homophone-son-sont-4",
+  "title": "Homophones son / sont",
+  "level": 4,
+  "difficulty": "debutant",
+  "targetAudience": "CM1-CM2",
+  "category": "orthographe",
+  "passingScore": 70,
+  "prerequisites": ["homophone-est-et-3"],
+  "rule": "'son' = déterminant possessif (masculin singulier). 'sont' = verbe être (3e personne du pluriel).",
+  "explanation": "'Son' indique la possession (à qui appartient quelque chose), tandis que 'sont' exprime un état ou une caractéristique de plusieurs personnes ou choses. C'est la différence entre 'posséder' et 'être'.",
+  "etymology": "'Son' vient du latin 'suus' (sien), tandis que 'sont' vient du latin 'sunt' (ils sont). Ces mots avaient des prononciations différentes en ancien français, mais ont convergé vers le même son en français moderne.",
+  "mnemonics": "Remplacez 'son' par 'sa' ou 'ses' : si ça marche, c'est 'son'. Remplacez 'sont' par 'étaient' : si ça marche, c'est 'sont'. Exemple : 'son chien' → 'sa chienne' ✓. 'Ils sont contents' → 'Ils étaient contents' ✓.",
+  "examples": [
+    "Il prend son vélo. (sa bicyclette ✓)",
+    "Les enfants sont sages. (étaient sages ✓)",
+    "Voici son livre. (sa revue ✓)",
+    "Mes parents sont partis. (étaient partis ✓)",
+    "Elle aime son chat. (sa chatte ✓)"
+  ],
+  "specialCases": [
+    {
+      "title": "Son devant voyelle",
+      "description": "'Son' s'utilise aussi devant un nom féminin commençant par une voyelle.",
+      "examples": [
+        "Son amie (et non 'sa amie')",
+        "Son école",
+        "Son histoire",
+        "Son idée"
+      ],
+      "tip": "Devant une voyelle, on dit toujours 'son', même pour le féminin."
+    },
+    {
+      "title": "Sont dans les questions",
+      "description": "'Sont' peut être en début de phrase dans les questions.",
+      "examples": [
+        "Sont-ils arrivés ?",
+        "Sont-elles contentes ?",
+        "Où sont mes clés ?"
+      ],
+      "tip": "Dans les questions, 'sont' peut changer de place mais reste le verbe être."
+    }
+  ],
+  "literaryExamples": [
+    {
+      "text": "Ses yeux sont deux étoiles qui brillent dans son visage.",
+      "author": "Exemple littéraire",
+      "work": "Poésie classique",
+      "explanation": "'Sont' exprime l'état des yeux (verbe être), tandis que 'son visage' indique la possession (déterminant possessif)."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "son-sont-4-qcm-1",
+      "type": "qcm",
+      "sentence": "Paul range ... livre car ses amis ... partis.",
+      "options": ["son, son", "sont, sont", "son, sont"],
+      "answer": "son, sont",
+      "feedbackCorrect": "Parfait ! 'Son livre' (possession) et 'sont partis' (état).",
+      "feedbackIncorrect": "'Sa revue' marche (possession), 'étaient partis' marche (état).",
+      "hint": "Possession + état de plusieurs personnes"
+    },
+    {
+      "id": "son-sont-4-qcm-2",
+      "type": "qcm",
+      "sentence": "Les fleurs ... dans ... jardin.",
+      "options": ["son, son", "sont, sont", "sont, son"],
+      "answer": "sont, son",
+      "feedbackCorrect": "Excellent ! 'Sont' (localisation) et 'son jardin' (possession).",
+      "feedbackIncorrect": "'Étaient dans' marche (verbe être), 'sa cour' marche (possession).",
+      "hint": "Localisation de plusieurs choses + possession"
+    },
+    {
+      "id": "son-sont-4-qcm-3",
+      "type": "qcm",
+      "sentence": "... chaussures ... neuves.",
+      "options": ["Son, son", "Sont, sont", "Son, sont"],
+      "answer": "Son, sont",
+      "feedbackCorrect": "Bravo ! 'Ses chaussures' (possession) et 'sont neuves' (état).",
+      "feedbackIncorrect": "'Ses chaussures' marche (possession), 'étaient neuves' marche (état).",
+      "hint": "Possession + état de plusieurs objets"
+    },
+    {
+      "id": "son-sont-4-fill-1",
+      "type": "fill-in-the-blank",
+      "sentence": "Marie cherche ___ sac car ses clés ___ dedans.",
+      "answer": ["son", "sont"],
+      "feedbackCorrect": "Parfait ! Possession du sac + localisation des clés.",
+      "feedbackIncorrect": "'Sa valise' (possession) et 'étaient dedans' (localisation).",
+      "hint": "À qui est le sac ? + Où sont les clés ?"
+    },
+    {
+      "id": "son-sont-4-fill-2",
+      "type": "fill-in-the-blank",
+      "sentence": "Les oiseaux ___ sur ___ arbre.",
+      "answer": ["sont", "son"],
+      "feedbackCorrect": "Excellent ! Localisation des oiseaux + possession de l'arbre.",
+      "feedbackIncorrect": "'Étaient sur' (localisation) et 'sa plante' (possession).",
+      "hint": "Où sont les oiseaux ? + À qui est l'arbre ?"
+    },
+    {
+      "id": "son-sont-4-drag-1",
+      "type": "drag-drop",
+      "sentence": "Mes cousins ___ chez leur grand-mère avec ___ chien.",
+      "options": ["son, son", "sont, sont", "sont, son"],
+      "answer": "sont, son",
+      "feedbackCorrect": "Bravo ! Localisation des cousins + possession du chien.",
+      "feedbackIncorrect": "'Étaient chez' (localisation) et 'sa chienne' (possession).",
+      "hint": "Où sont les cousins ? + À qui est le chien ?"
+    },
+    {
+      "id": "son-sont-4-drag-2",
+      "type": "drag-drop",
+      "sentence": "Pierre lit ___ journal pendant que ses enfants ___ à l'école.",
+      "options": ["son, son", "sont, sont", "son, sont"],
+      "answer": "son, sont",
+      "feedbackCorrect": "Parfait ! Possession du journal + localisation des enfants.",
+      "feedbackIncorrect": "'Sa revue' (possession) et 'étaient à l'école' (localisation).",
+      "hint": "À qui est le journal ? + Où sont les enfants ?"
+    },
+    {
+      "id": "son-sont-4-transform-1",
+      "type": "transformation",
+      "sentence": "Son ami est content.",
+      "instruction": "Mets au pluriel",
+      "answer": ["Ses amis sont contents.", "Ses amis sont contents"],
+      "feedbackCorrect": "Excellent ! 'Son' devient 'ses' et 'est' devient 'sont'.",
+      "feedbackIncorrect": "Au pluriel : 'ses amis' (possession plurielle) et 'sont' (verbe être pluriel).",
+      "hint": "Possession plurielle + verbe être pluriel"
+    },
+    {
+      "id": "son-sont-4-transform-2",
+      "type": "transformation",
+      "sentence": "Les livres sont sur son bureau.",
+      "instruction": "Mets au singulier",
+      "answer": ["Le livre est sur son bureau.", "Le livre est sur son bureau"],
+      "feedbackCorrect": "Parfait ! 'Sont' devient 'est', 'son' reste identique.",
+      "feedbackIncorrect": "Au singulier : 'le livre est'. 'Son bureau' ne change pas.",
+      "hint": "Verbe être au singulier, possession inchangée"
+    },
+    {
+      "id": "son-sont-4-dictation-1",
+      "type": "dictation",
+      "sentence": "Les élèves sont dans son école.",
+      "audioText": "Les élèves sont dans son école.",
+      "answer": ["Les élèves sont dans son école.", "Les élèves sont dans son école"],
+      "feedbackCorrect": "Parfait ! Localisation des élèves + possession de l'école.",
+      "feedbackIncorrect": "'Étaient dans' (localisation) et 'sa classe' (possession).",
+      "hint": "Où sont les élèves ? + À qui est l'école ?"
+    },
+    {
+      "id": "son-sont-4-dictation-2",
+      "type": "dictation",
+      "sentence": "Son frère et sa sœur sont jumeaux.",
+      "audioText": "Son frère et sa sœur sont jumeaux.",
+      "answer": ["Son frère et sa sœur sont jumeaux.", "Son frère et sa sœur sont jumeaux"],
+      "feedbackCorrect": "Excellent ! Possession des membres de famille + leur état.",
+      "feedbackIncorrect": "'Sa sœur' (possession) et 'étaient jumeaux' (état).",
+      "hint": "Famille + caractéristique commune"
+    },
+    {
+      "id": "son-sont-4-qcm-4",
+      "type": "qcm",
+      "sentence": "Où ... les clés de ... voiture ?",
+      "options": ["son, son", "sont, sont", "sont, son"],
+      "answer": "sont, son",
+      "feedbackCorrect": "Bravo ! Question sur la localisation + possession de la voiture.",
+      "feedbackIncorrect": "'Où étaient' (localisation) et 'sa moto' (possession).",
+      "hint": "Question de lieu + possession"
+    },
+    {
+      "id": "son-sont-4-fill-3",
+      "type": "fill-in-the-blank",
+      "sentence": "Ses jouets ___ rangés dans ___ coffre.",
+      "answer": ["sont", "son"],
+      "feedbackCorrect": "Parfait ! État des jouets + possession du coffre.",
+      "feedbackIncorrect": "'Étaient rangés' (état) et 'sa boîte' (possession).",
+      "hint": "État des objets + possession du contenant"
+    },
+    {
+      "id": "son-sont-4-drag-3",
+      "type": "drag-drop",
+      "sentence": "Les photos ___ dans ___ album.",
+      "options": ["son, son", "sont, sont", "sont, son"],
+      "answer": "sont, son",
+      "feedbackCorrect": "Excellent ! Localisation des photos + possession de l'album.",
+      "feedbackIncorrect": "'Étaient dans' (localisation) et 'sa pochette' (possession).",
+      "hint": "Où sont les photos ? + À qui est l'album ?"
+    },
+    {
+      "id": "son-sont-4-transform-3",
+      "type": "transformation",
+      "sentence": "Son chat et son chien sont amis.",
+      "instruction": "Remplace 'son' par 'mes'",
+      "answer": ["Mes chat et mon chien sont amis.", "Mon chat et mon chien sont amis"],
+      "feedbackCorrect": "Parfait ! Changement de possesseur, 'sont' reste identique.",
+      "feedbackIncorrect": "Avec 'mes' : 'mon chat et mon chien'. Le verbe 'sont' ne change pas.",
+      "hint": "Changement de possesseur seulement"
+    }
+  ]
+}

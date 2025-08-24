@@ -1,0 +1,215 @@
+{
+  "id": "temps-composes-avances-20",
+  "title": "Temps Composés Avancés",
+  "level": 20,
+  "difficulty": "expert",
+  "targetAudience": "Lycée",
+  "category": "conjugaison",
+  "passingScore": 85,
+  "prerequisites": ["participe-passe-pronominaux-19"],
+  "rule": "Les temps composés associent auxiliaire (être/avoir) + participe passé. Choix de l'auxiliaire : ÊTRE pour les verbes de mouvement et d'état, AVOIR pour les autres. Concordance des temps selon le contexte.",
+  "explanation": "Les temps composés expriment l'aspect accompli : l'action est vue comme terminée. Le choix de l'auxiliaire suit une logique sémantique : ÊTRE pour les changements d'état ou de lieu (je suis parti), AVOIR pour les actions transitives (j'ai mangé). La concordance des temps assure la cohérence temporelle du récit.",
+  "etymology": "Les temps composés se sont développés en français médiéval par grammaticalisation des auxiliaires. 'Être' exprimait l'état résultant, 'avoir' la possession du résultat. Cette distinction s'est progressivement figée en règles grammaticales.",
+  "mnemonics": "ÊTRE : DR MRS VANDERTRAMP + verbes pronominaux. AVOIR : tous les autres. Concordance : passé → plus-que-parfait, présent → passé composé, futur → futur antérieur. Temps surcomposés : auxiliaire au passé composé (j'ai eu fini).",
+  "examples": [
+    "Je suis parti hier. (mouvement → être)",
+    "J'ai mangé ce matin. (action → avoir)",
+    "Quand il eut fini, il partit. (antériorité)",
+    "J'ai eu terminé avant toi. (surcomposé)",
+    "Elle sera arrivée demain soir. (futur antérieur)"
+  ],
+  "specialCases": [
+    {
+      "title": "Verbes à double auxiliaire",
+      "description": "Certains verbes changent de sens selon l'auxiliaire.",
+      "examples": [
+        "Il a monté les escaliers. (action)",
+        "Il est monté au grenier. (mouvement)",
+        "Elle a sorti son livre. (action)",
+        "Elle est sortie de la maison. (mouvement)",
+        "J'ai passé un examen. (action)",
+        "Je suis passé chez toi. (mouvement)"
+      ],
+      "tip": "Avec complément d'objet → avoir. Sans complément → être."
+    },
+    {
+      "title": "Concordance des temps",
+      "description": "L'auxiliaire s'accorde au temps du contexte.",
+      "examples": [
+        "Il dit qu'il a fini. (présent → passé composé)",
+        "Il disait qu'il avait fini. (imparfait → plus-que-parfait)",
+        "Il dira qu'il aura fini. (futur → futur antérieur)",
+        "Il dirait qu'il aurait fini. (conditionnel → conditionnel passé)"
+      ],
+      "tip": "L'auxiliaire suit le temps de la principale."
+    },
+    {
+      "title": "Temps surcomposés",
+      "description": "Auxiliaire au passé composé pour exprimer l'antériorité dans le passé.",
+      "examples": [
+        "Quand j'ai eu fini, je suis parti.",
+        "Dès qu'elle a eu compris, elle a agi.",
+        "Après qu'il a eu parlé, nous avons décidé.",
+        "Une fois qu'ils ont eu mangé, ils sont sortis."
+      ],
+      "tip": "Exprime une action accomplie avant une autre action passée."
+    }
+  ],
+  "literaryExamples": [
+    {
+      "text": "Quand il eut achevé son discours, un silence profond s'était établi dans l'assemblée.",
+      "author": "Style soutenu",
+      "work": "Prose oratoire",
+      "explanation": "'Eut achevé' (passé antérieur), 's'était établi' (plus-que-parfait) marquent la succession temporelle dans le récit au passé."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "comp-20-qcm-1",
+      "type": "qcm",
+      "sentence": "Il ... les escaliers puis ... dans sa chambre.",
+      "options": ["a monté, a entré", "est monté, est entré", "a monté, est entré"],
+      "answer": "a monté, est entré",
+      "feedbackCorrect": "Parfait ! 'A monté' (avec COD = escaliers), 'est entré' (mouvement sans COD).",
+      "feedbackIncorrect": "Avec COD → avoir : 'a monté'. Sans COD → être : 'est entré'.",
+      "hint": "Avec COD → avoir, sans COD → être"
+    },
+    {
+      "id": "comp-20-qcm-2",
+      "type": "qcm",
+      "sentence": "Quand il ... fini, il ... se reposer.",
+      "options": ["a eu, est allé", "avait, a allé", "eut, alla"],
+      "answer": "eut, alla",
+      "feedbackCorrect": "Excellent ! Passé antérieur + passé simple pour la succession rapide.",
+      "feedbackIncorrect": "Succession rapide au passé : passé antérieur 'eut fini' + passé simple 'alla'.",
+      "hint": "Succession rapide → passé antérieur + passé simple"
+    },
+    {
+      "id": "comp-20-qcm-3",
+      "type": "qcm",
+      "sentence": "Il dit qu'il ... et qu'elle ... demain.",
+      "options": ["a fini, viendra", "avait fini, viendrait", "aura fini, sera venue"],
+      "answer": "aura fini, sera venue",
+      "feedbackCorrect": "Bravo ! Futur antérieur pour exprimer l'antériorité par rapport au futur.",
+      "feedbackIncorrect": "Antériorité dans le futur → futur antérieur : 'aura fini', 'sera venue'.",
+      "hint": "Antériorité future → futur antérieur"
+    },
+    {
+      "id": "comp-20-fill-1",
+      "type": "fill-in-the-blank",
+      "sentence": "Elle ___ (sortir) son livre puis ___ (sortir) de la classe.",
+      "answer": ["a sorti", "est sortie"],
+      "feedbackCorrect": "Parfait ! 'A sorti' (avec COD), 'est sortie' (mouvement).",
+      "feedbackIncorrect": "Avec COD → avoir, mouvement → être : 'a sorti', 'est sortie'.",
+      "hint": "Même verbe, auxiliaires différents selon le sens"
+    },
+    {
+      "id": "comp-20-fill-2",
+      "type": "fill-in-the-blank",
+      "sentence": "Quand j'___ (avoir) terminé, je ___ (partir).",
+      "answer": ["ai eu", "suis parti"],
+      "feedbackCorrect": "Excellent ! Temps surcomposé 'ai eu terminé' + passé composé.",
+      "feedbackIncorrect": "Antériorité récente → surcomposé : 'ai eu terminé', puis 'suis parti'.",
+      "hint": "Antériorité récente → temps surcomposé"
+    },
+    {
+      "id": "comp-20-drag-1",
+      "type": "drag-drop",
+      "sentence": "Il ___ son examen et ___ chez lui.",
+      "options": ["a passé, est rentré", "est passé, a rentré", "a passé, a rentré"],
+      "answer": "a passé, est rentré",
+      "feedbackCorrect": "Bravo ! 'A passé' (passer un examen), 'est rentré' (mouvement).",
+      "feedbackIncorrect": "'Passer un examen' → avoir, 'rentrer' (mouvement) → être.",
+      "hint": "Action → avoir, mouvement → être"
+    },
+    {
+      "id": "comp-20-drag-2",
+      "type": "drag-drop",
+      "sentence": "Dès qu'elle ___ compris, elle ___ la solution.",
+      "options": ["a eu, a trouvé", "avait, trouvait", "eut, trouva"],
+      "answer": "a eu, a trouvé",
+      "feedbackCorrect": "Parfait ! Temps surcomposé pour l'antériorité immédiate.",
+      "feedbackIncorrect": "Antériorité immédiate → surcomposé : 'a eu compris', puis 'a trouvé'.",
+      "hint": "Antériorité immédiate → surcomposé"
+    },
+    {
+      "id": "comp-20-transform-1",
+      "type": "transformation",
+      "sentence": "Il finit puis il part.",
+      "instruction": "Exprime l'antériorité avec le passé antérieur",
+      "answer": ["Quand il eut fini, il partit.", "Dès qu'il eut fini, il partit."],
+      "feedbackCorrect": "Excellent ! Passé antérieur pour l'antériorité dans le récit au passé.",
+      "feedbackIncorrect": "Antériorité au passé → passé antérieur : 'eut fini', puis passé simple.",
+      "hint": "Antériorité passée → passé antérieur"
+    },
+    {
+      "id": "comp-20-transform-2",
+      "type": "transformation",
+      "sentence": "Je pense qu'il a fini.",
+      "instruction": "Mets au futur : 'Je penserai qu'il...'",
+      "answer": ["Je penserai qu'il aura fini.", "Je penserai qu'il aura fini"],
+      "feedbackCorrect": "Parfait ! Concordance : futur → futur antérieur.",
+      "feedbackIncorrect": "Concordance des temps : futur principal → futur antérieur subordonné.",
+      "hint": "Futur → futur antérieur"
+    },
+    {
+      "id": "comp-20-dictation-1",
+      "type": "dictation",
+      "sentence": "Elle a descendu sa valise puis est descendue au salon.",
+      "audioText": "Elle a descendu sa valise puis est descendue au salon.",
+      "answer": ["Elle a descendu sa valise puis est descendue au salon.", "Elle a descendu sa valise puis est descendue au salon"],
+      "feedbackCorrect": "Parfait ! 'A descendu' (avec COD), 'est descendue' (mouvement).",
+      "feedbackIncorrect": "Avec COD → avoir, mouvement → être : 'a descendu', 'est descendue'.",
+      "hint": "Même verbe, sens différents"
+    },
+    {
+      "id": "comp-20-dictation-2",
+      "type": "dictation",
+      "sentence": "Quand j'ai eu fini mes devoirs, j'ai regardé la télé.",
+      "audioText": "Quand j'ai eu fini mes devoirs, j'ai regardé la télé.",
+      "answer": ["Quand j'ai eu fini mes devoirs, j'ai regardé la télé.", "Quand j'ai eu fini mes devoirs, j'ai regardé la télé"],
+      "feedbackCorrect": "Excellent ! Temps surcomposé pour l'antériorité dans le passé récent.",
+      "feedbackIncorrect": "Antériorité récente → surcomposé : 'ai eu fini', puis passé composé.",
+      "hint": "Antériorité récente → surcomposé"
+    },
+    {
+      "id": "comp-20-qcm-4",
+      "type": "qcm",
+      "sentence": "Il disait qu'il ... et qu'elle ... le voir.",
+      "options": ["avait fini, était venue", "a fini, est venue", "aura fini, sera venue"],
+      "answer": "avait fini, était venue",
+      "feedbackCorrect": "Bravo ! Concordance : imparfait → plus-que-parfait.",
+      "feedbackIncorrect": "Concordance des temps : imparfait principal → plus-que-parfait subordonné.",
+      "hint": "Imparfait → plus-que-parfait"
+    },
+    {
+      "id": "comp-20-fill-3",
+      "type": "fill-in-the-blank",
+      "sentence": "Demain, quand tu ___ (arriver), j'___ (finir) mon travail.",
+      "answer": ["arriveras", "aurai fini"],
+      "feedbackCorrect": "Parfait ! Futur simple + futur antérieur pour l'antériorité future.",
+      "feedbackIncorrect": "Antériorité future : futur simple 'arriveras', futur antérieur 'aurai fini'.",
+      "hint": "Antériorité future → futur antérieur"
+    },
+    {
+      "id": "comp-20-drag-3",
+      "type": "drag-drop",
+      "sentence": "Elle ___ sa voiture au garage et ___ à pied.",
+      "options": ["a rentré, est rentrée", "est rentrée, a rentré", "a rentré, a rentré"],
+      "answer": "a rentré, est rentrée",
+      "feedbackCorrect": "Excellent ! 'A rentré' (avec COD), 'est rentrée' (mouvement).",
+      "feedbackIncorrect": "Avec COD → avoir, mouvement → être : 'a rentré', 'est rentrée'.",
+      "hint": "Action → avoir, mouvement → être"
+    },
+    {
+      "id": "comp-20-transform-3",
+      "type": "transformation",
+      "sentence": "Il dit qu'il viendra quand il aura fini.",
+      "instruction": "Mets au passé : 'Il disait qu'il...'",
+      "answer": ["Il disait qu'il viendrait quand il aurait fini.", "Il disait qu'il viendrait quand il aurait fini"],
+      "feedbackCorrect": "Parfait ! Concordance : imparfait → conditionnel et conditionnel passé.",
+      "feedbackIncorrect": "Concordance au passé : imparfait → conditionnel présent et passé.",
+      "hint": "Concordance au passé → conditionnel"
+    }
+  ]
+}

@@ -1,0 +1,213 @@
+{
+  "id": "terminaisons-e-er-ez-13",
+  "title": "Terminaisons é/er/ez",
+  "level": 13,
+  "difficulty": "avance",
+  "targetAudience": "4e-3e",
+  "category": "conjugaison",
+  "passingScore": 80,
+  "prerequisites": ["mots-invariables-12"],
+  "rule": "É = participe passé, ER = infinitif, EZ = 2e personne du pluriel. Méthode : remplacez par un verbe du 3e groupe (prendre → pris/prendre/prenez).",
+  "explanation": "Ces trois terminaisons se prononcent pareil mais ont des fonctions différentes. É exprime l'accompli, ER l'action pure, EZ l'action faite par 'vous'. La substitution par un verbe du 3e groupe révèle immédiatement la bonne terminaison.",
+  "etymology": "Ces terminaisons viennent de l'évolution du latin : É de '-atus' (participe), ER de '-are' (infinitif), EZ de '-atis' (2e pluriel). Leur prononciation identique en français moderne crée cette difficulté orthographique.",
+  "mnemonics": "Méthode de substitution : remplacez par PRENDRE. Si vous pouvez dire PRIS → É, PRENDRE → ER, PRENEZ → EZ. Autre astuce : après AVOIR → É, après ALLER/VENIR/POUR → ER, avec VOUS → EZ.",
+  "examples": [
+    "Il a mangé. (il a pris → É)",
+    "Il va manger. (il va prendre → ER)",
+    "Vous mangez. (vous prenez → EZ)",
+    "Pour réussir, il faut travailler. (pour prendre → ER)",
+    "Ayant terminé, il part. (ayant pris → É)"
+  ],
+  "specialCases": [
+    {
+      "title": "Après les auxiliaires",
+      "description": "Après avoir/être, c'est toujours le participe passé (É).",
+      "examples": [
+        "Il a chanté toute la soirée.",
+        "Elle est arrivée en retard.",
+        "Nous avons terminé nos devoirs.",
+        "Ils sont partés tôt."
+      ],
+      "tip": "AVOIR/ÊTRE + participe passé = toujours É (ou autre terminaison selon le verbe)."
+    },
+    {
+      "title": "Après les prépositions",
+      "description": "Après pour, sans, avant de, après, c'est l'infinitif (ER).",
+      "examples": [
+        "Pour réussir, il faut étudier.",
+        "Sans regarder, il traverse.",
+        "Avant de partir, il salue.",
+        "Après avoir mangé, il dort."
+      ],
+      "tip": "Préposition + verbe = infinitif ER."
+    },
+    {
+      "title": "Avec le pronom VOUS",
+      "description": "Avec vous, c'est la 2e personne du pluriel (EZ).",
+      "examples": [
+        "Vous chantez très bien.",
+        "Vous pouvez partir maintenant.",
+        "Vous devez faire attention.",
+        "Vous allez réussir."
+      ],
+      "tip": "VOUS + verbe conjugué = EZ (sauf exceptions comme 'vous êtes', 'vous faites')."
+    }
+  ],
+  "literaryExamples": [
+    {
+      "text": "Vous devez étudier pour réussir, car vous avez déjà échoué une fois.",
+      "author": "Style didactique",
+      "work": "Manuel scolaire",
+      "explanation": "'Devez' (vous → EZ), 'étudier' (pour → ER), 'réussir' (pour → ER), 'avez' (vous → EZ), 'échoué' (avoir → É)."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ter-13-qcm-1",
+      "type": "qcm",
+      "sentence": "Vous dev... étudi... pour réussir.",
+      "options": ["ez, er", "é, é", "er, ez"],
+      "answer": "ez, er",
+      "feedbackCorrect": "Parfait ! 'Vous devez' (2e pluriel) et 'étudier' (après pour = infinitif).",
+      "feedbackIncorrect": "'Vous prenez' → EZ, 'pour prendre' → ER.",
+      "hint": "Vous + verbe = EZ, pour + verbe = ER"
+    },
+    {
+      "id": "ter-13-qcm-2",
+      "type": "qcm",
+      "sentence": "Il a termin... et va repos...",
+      "options": ["é, er", "er, é", "ez, ez"],
+      "answer": "é, er",
+      "feedbackCorrect": "Excellent ! 'A terminé' (auxiliaire avoir) et 'va reposer' (aller + infinitif).",
+      "feedbackIncorrect": "'Il a pris' → É, 'il va prendre' → ER.",
+      "hint": "Avoir + participe = É, aller + infinitif = ER"
+    },
+    {
+      "id": "ter-13-qcm-3",
+      "type": "qcm",
+      "sentence": "Vous pouv... commenc... maintenant.",
+      "options": ["ez, er", "é, é", "er, ez"],
+      "answer": "ez, er",
+      "feedbackCorrect": "Bravo ! 'Vous pouvez' (2e pluriel) et 'commencer' (pouvoir + infinitif).",
+      "feedbackIncorrect": "'Vous prenez' → EZ, 'pouvoir prendre' → ER.",
+      "hint": "Vous + verbe = EZ, pouvoir + infinitif = ER"
+    },
+    {
+      "id": "ter-13-fill-1",
+      "type": "fill-in-the-blank",
+      "sentence": "Après avoir mang___, il va se repos___.",
+      "answer": ["é", "er"],
+      "feedbackCorrect": "Parfait ! 'Avoir mangé' (participe passé) et 'va reposer' (infinitif).",
+      "feedbackIncorrect": "'Après avoir pris' → É, 'va prendre' → ER.",
+      "hint": "Avoir + participe, aller + infinitif"
+    },
+    {
+      "id": "ter-13-fill-2",
+      "type": "fill-in-the-blank",
+      "sentence": "Vous aim___ chant___ le soir.",
+      "answer": ["ez", "er"],
+      "feedbackCorrect": "Excellent ! 'Vous aimez' (2e pluriel) et 'chanter' (aimer + infinitif).",
+      "feedbackIncorrect": "'Vous prenez' → EZ, 'aimer prendre' → ER.",
+      "hint": "Vous + verbe = EZ, aimer + infinitif = ER"
+    },
+    {
+      "id": "ter-13-drag-1",
+      "type": "drag-drop",
+      "sentence": "Il faut étudi___ pour réussir, vous le sav___.",
+      "options": ["er, ez", "é, é", "ez, er"],
+      "answer": "er, ez",
+      "feedbackCorrect": "Bravo ! 'Étudier' (il faut + infinitif) et 'vous savez' (2e pluriel).",
+      "feedbackIncorrect": "'Il faut prendre' → ER, 'vous prenez' → EZ.",
+      "hint": "Il faut + infinitif = ER, vous + verbe = EZ"
+    },
+    {
+      "id": "ter-13-drag-2",
+      "type": "drag-drop",
+      "sentence": "Ayant termin___, vous pouv___ sort___.",
+      "options": ["é, ez, er", "er, é, ez", "ez, er, é"],
+      "answer": "é, ez, er",
+      "feedbackCorrect": "Parfait ! 'Ayant terminé' (participe), 'vous pouvez' (2e pluriel), 'sortir' (infinitif).",
+      "feedbackIncorrect": "'Ayant pris' → É, 'vous prenez' → EZ, 'pouvoir prendre' → ER.",
+      "hint": "Participe + vous + infinitif"
+    },
+    {
+      "id": "ter-13-transform-1",
+      "type": "transformation",
+      "sentence": "Il mange et va dormir.",
+      "instruction": "Mets au passé composé : 'Il a...'",
+      "answer": ["Il a mangé et va dormir.", "Il a mangé et est allé dormir."],
+      "feedbackCorrect": "Excellent ! 'A mangé' (auxiliaire avoir + participe passé).",
+      "feedbackIncorrect": "Avec 'avoir' → participe passé en É.",
+      "hint": "Avoir + participe passé = É"
+    },
+    {
+      "id": "ter-13-transform-2",
+      "type": "transformation",
+      "sentence": "Tu travailles pour réussir.",
+      "instruction": "Remplace 'tu' par 'vous'",
+      "answer": ["Vous travaillez pour réussir.", "Vous travaillez pour réussir"],
+      "feedbackCorrect": "Parfait ! 'Vous travaillez' (2e pluriel) et 'réussir' (infinitif inchangé).",
+      "feedbackIncorrect": "'Vous' → EZ, l'infinitif ne change pas.",
+      "hint": "Vous + verbe = EZ"
+    },
+    {
+      "id": "ter-13-dictation-1",
+      "type": "dictation",
+      "sentence": "Vous devez étudier car vous avez échoué.",
+      "audioText": "Vous devez étudier car vous avez échoué.",
+      "answer": ["Vous devez étudier car vous avez échoué.", "Vous devez étudier car vous avez échoué"],
+      "feedbackCorrect": "Parfait ! 'Devez' (vous), 'étudier' (infinitif), 'avez' (vous), 'échoué' (participe).",
+      "feedbackIncorrect": "'Vous prenez' → EZ, 'prendre' → ER, 'vous prenez' → EZ, 'pris' → É.",
+      "hint": "Vous + infinitif + vous + participe"
+    },
+    {
+      "id": "ter-13-dictation-2",
+      "type": "dictation",
+      "sentence": "Après avoir mangé, il va se reposer.",
+      "audioText": "Après avoir mangé, il va se reposer.",
+      "answer": ["Après avoir mangé, il va se reposer.", "Après avoir mangé, il va se reposer"],
+      "feedbackCorrect": "Excellent ! 'Mangé' (avoir + participe) et 'reposer' (aller + infinitif).",
+      "feedbackIncorrect": "'Avoir pris' → É, 'va prendre' → ER.",
+      "hint": "Avoir + participe, aller + infinitif"
+    },
+    {
+      "id": "ter-13-qcm-4",
+      "type": "qcm",
+      "sentence": "Sans regard..., vous risqu... de tomb...",
+      "options": ["er, ez, er", "é, é, é", "ez, er, ez"],
+      "answer": "er, ez, er",
+      "feedbackCorrect": "Bravo ! 'Regarder' (sans + infinitif), 'risquez' (vous), 'tomber' (de + infinitif).",
+      "feedbackIncorrect": "'Sans prendre' → ER, 'vous prenez' → EZ, 'de prendre' → ER.",
+      "hint": "Sans + infinitif, vous + verbe, de + infinitif"
+    },
+    {
+      "id": "ter-13-fill-3",
+      "type": "fill-in-the-blank",
+      "sentence": "Vous av___ oubli___ de ferm___ la porte.",
+      "answer": ["ez", "é", "er"],
+      "feedbackCorrect": "Parfait ! 'Avez' (vous), 'oublié' (avoir + participe), 'fermer' (de + infinitif).",
+      "feedbackIncorrect": "'Vous prenez' → EZ, 'avoir pris' → É, 'de prendre' → ER.",
+      "hint": "Vous + avoir + participe + de + infinitif"
+    },
+    {
+      "id": "ter-13-drag-3",
+      "type": "drag-drop",
+      "sentence": "Il a décid___ de vous aid___ à réuss___.",
+      "options": ["é, er, er", "er, ez, é", "ez, é, er"],
+      "answer": "é, er, er",
+      "feedbackCorrect": "Excellent ! 'Décidé' (avoir + participe), 'aider' (de + infinitif), 'réussir' (à + infinitif).",
+      "feedbackIncorrect": "'A pris' → É, 'de prendre' → ER, 'à prendre' → ER.",
+      "hint": "Avoir + participe + de + infinitif + à + infinitif"
+    },
+    {
+      "id": "ter-13-transform-3",
+      "type": "transformation",
+      "sentence": "Il doit partir pour travailler.",
+      "instruction": "Remplace 'il' par 'vous'",
+      "answer": ["Vous devez partir pour travailler.", "Vous devez partir pour travailler"],
+      "feedbackCorrect": "Parfait ! 'Vous devez' (2e pluriel), les infinitifs restent inchangés.",
+      "feedbackIncorrect": "'Vous' → EZ, les infinitifs ne changent pas.",
+      "hint": "Vous + verbe = EZ, infinitifs inchangés"
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "id": "homophone-est-et-3",
+  "title": "Homophones est / et",
+  "level": 3,
+  "difficulty": "debutant",
+  "targetAudience": "CM1-CM2",
+  "category": "orthographe",
+  "passingScore": 70,
+  "prerequisites": ["homophone-a-2"],
+  "rule": "'est' = verbe être (3e personne). 'et' = conjonction de coordination (relie deux éléments).",
+  "explanation": "Ces homophones ont des fonctions grammaticales opposées : 'est' exprime un état ou une caractéristique (verbe être), tandis que 'et' sert à additionner, à relier des éléments entre eux. C'est la différence entre 'être' et 'ajouter'.",
+  "etymology": "Le mot 'est' vient du latin 'est' (il est), tandis que 'et' vient du latin 'et' (et). Leur forme n'a pratiquement pas changé depuis l'Antiquité, mais leur prononciation s'est rapprochée en français moderne, créant cette homophonie.",
+  "mnemonics": "Remplacez par 'était' : si ça marche, c'est 'est'. Remplacez par 'et puis' : si ça marche, c'est 'et'. Exemple : 'Il est grand' → 'Il était grand' ✓. 'Paul et Marie' → 'Paul et puis Marie' ✓.",
+  "examples": [
+    "Le ciel est bleu. (était bleu ✓)",
+    "Paul et Marie arrivent. (Paul et puis Marie ✓)",
+    "C'est difficile. (c'était difficile ✓)",
+    "Rouge et blanc. (rouge et puis blanc ✓)",
+    "Elle est fatiguée. (était fatiguée ✓)"
+  ],
+  "specialCases": [
+    {
+      "title": "C'est / Ce sont",
+      "description": "Expressions courantes avec le verbe être.",
+      "examples": [
+        "C'est mon ami.",
+        "C'est formidable !",
+        "Ce sont mes parents.",
+        "C'est à dire..."
+      ],
+      "tip": "Dans 'c'est', on peut toujours remplacer par 'c'était'."
+    },
+    {
+      "title": "Énumérations avec 'et'",
+      "description": "'Et' relie le dernier élément d'une liste.",
+      "examples": [
+        "Rouge, blanc et bleu.",
+        "Lire, écrire et compter.",
+        "Papa, maman et moi."
+      ],
+      "tip": "'Et' remplace la virgule avant le dernier élément."
+    }
+  ],
+  "literaryExamples": [
+    {
+      "text": "Il était une fois un roi et une reine qui étaient si fâchés de n'avoir point d'enfants.",
+      "author": "Charles Perrault",
+      "work": "La Belle au bois dormant",
+      "explanation": "'Et' relie 'un roi' et 'une reine' (addition), tandis que 'étaient' exprime leur état (verbe être à l'imparfait)."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "est-et-3-qcm-1",
+      "type": "qcm",
+      "sentence": "Le chat ... noir ... blanc.",
+      "options": ["est, est", "et, et", "est, et"],
+      "answer": "est, et",
+      "feedbackCorrect": "Parfait ! 'Est' (état) et 'et' (addition de couleurs).",
+      "feedbackIncorrect": "'Le chat était noir' marche (verbe être), 'noir et puis blanc' marche (addition).",
+      "hint": "État du chat + addition de couleurs"
+    },
+    {
+      "id": "est-et-3-qcm-2",
+      "type": "qcm",
+      "sentence": "Paul ... Marie sont amis.",
+      "options": ["est", "et", "es"],
+      "answer": "et",
+      "feedbackCorrect": "Excellent ! 'Et' relie Paul et Marie.",
+      "feedbackIncorrect": "'Paul et puis Marie' fonctionne, donc c'est 'et'.",
+      "hint": "Qui sont amis ? Paul + Marie → addition"
+    },
+    {
+      "id": "est-et-3-qcm-3",
+      "type": "qcm",
+      "sentence": "C'... très amusant !",
+      "options": ["est", "et", "es"],
+      "answer": "est",
+      "feedbackCorrect": "Bravo ! 'C'est' = 'c'était', donc verbe être.",
+      "feedbackIncorrect": "'C'était très amusant' fonctionne, donc c'est 'est'.",
+      "hint": "C'est = c'était → verbe être"
+    },
+    {
+      "id": "est-et-3-fill-1",
+      "type": "fill-in-the-blank",
+      "sentence": "Mon chien ___ gentil ___ obéissant.",
+      "answer": ["est", "et"],
+      "feedbackCorrect": "Parfait ! État du chien + addition de qualités.",
+      "feedbackIncorrect": "'Mon chien était gentil' (verbe être) et 'gentil et puis obéissant' (addition).",
+      "hint": "Qualité + addition de qualités"
+    },
+    {
+      "id": "est-et-3-fill-2",
+      "type": "fill-in-the-blank",
+      "sentence": "Pierre ___ Paul jouent ensemble.",
+      "answer": "et",
+      "feedbackCorrect": "Excellent ! 'Et' relie Pierre et Paul.",
+      "feedbackIncorrect": "'Pierre et puis Paul' marche, donc c'est 'et'.",
+      "hint": "Qui joue ? Pierre + Paul → liaison"
+    },
+    {
+      "id": "est-et-3-drag-1",
+      "type": "drag-drop",
+      "sentence": "La maison ___ grande ___ belle.",
+      "options": ["est, est", "et, et", "est, et"],
+      "answer": "est, et",
+      "feedbackCorrect": "Bravo ! État de la maison + addition de qualités.",
+      "feedbackIncorrect": "'La maison était grande' (état) et 'grande et puis belle' (addition).",
+      "hint": "État + addition de caractéristiques"
+    },
+    {
+      "id": "est-et-3-drag-2",
+      "type": "drag-drop",
+      "sentence": "Maman ___ papa partent en voyage.",
+      "options": ["est", "et", "es"],
+      "answer": "et",
+      "feedbackCorrect": "Parfait ! 'Et' unit maman et papa.",
+      "feedbackIncorrect": "Qui part ? Maman + papa, donc 'et' pour les relier.",
+      "hint": "Deux personnes qui font la même action → liaison"
+    },
+    {
+      "id": "est-et-3-transform-1",
+      "type": "transformation",
+      "sentence": "Il est content et heureux.",
+      "instruction": "Mets à l'imparfait",
+      "answer": ["Il était content et heureux.", "Il était content et heureux"],
+      "feedbackCorrect": "Excellent ! 'Est' devient 'était', 'et' ne change pas.",
+      "feedbackIncorrect": "Seul le verbe être change : 'était'. 'Et' reste identique.",
+      "hint": "Seuls les verbes se conjuguent, pas les conjonctions"
+    },
+    {
+      "id": "est-et-3-transform-2",
+      "type": "transformation",
+      "sentence": "Paul et Marie sont là.",
+      "instruction": "Remplace par 'Pierre et Lucie'",
+      "answer": ["Pierre et Lucie sont là.", "Pierre et Lucie sont là"],
+      "feedbackCorrect": "Parfait ! 'Et' reste pour relier les nouveaux prénoms.",
+      "feedbackIncorrect": "'Et' ne change jamais, il relie toujours deux éléments.",
+      "hint": "La conjonction 'et' ne change jamais"
+    },
+    {
+      "id": "est-et-3-dictation-1",
+      "type": "dictation",
+      "sentence": "Le soleil est chaud et brillant.",
+      "audioText": "Le soleil est chaud et brillant.",
+      "answer": ["Le soleil est chaud et brillant.", "Le soleil est chaud et brillant"],
+      "feedbackCorrect": "Parfait ! État du soleil + addition de qualités.",
+      "feedbackIncorrect": "'Le soleil était chaud' (état) et 'chaud et puis brillant' (addition).",
+      "hint": "État + addition de caractéristiques"
+    },
+    {
+      "id": "est-et-3-dictation-2",
+      "type": "dictation",
+      "sentence": "C'est mon frère et ma sœur.",
+      "audioText": "C'est mon frère et ma sœur.",
+      "answer": ["C'est mon frère et ma sœur.", "C'est mon frère et ma sœur"],
+      "feedbackCorrect": "Excellent ! 'C'est' (présentation) et 'et' (liaison).",
+      "feedbackIncorrect": "'C'était mon frère' (verbe être) et 'frère et puis sœur' (liaison).",
+      "hint": "Présentation + liaison de personnes"
+    },
+    {
+      "id": "est-et-3-qcm-4",
+      "type": "qcm",
+      "sentence": "Ton livre ... sur la table ... dans le sac.",
+      "options": ["est, est", "et, et", "est, et"],
+      "answer": "est, et",
+      "feedbackCorrect": "Bravo ! Localisation + alternative de lieux.",
+      "feedbackIncorrect": "'Ton livre était sur la table' (localisation) et 'table et puis sac' (alternative).",
+      "hint": "Où est le livre ? + choix entre deux endroits"
+    },
+    {
+      "id": "est-et-3-fill-3",
+      "type": "fill-in-the-blank",
+      "sentence": "Ce gâteau ___ délicieux ___ sucré.",
+      "answer": ["est", "et"],
+      "feedbackCorrect": "Parfait ! Goût du gâteau + addition de saveurs.",
+      "feedbackIncorrect": "'Ce gâteau était délicieux' (goût) et 'délicieux et puis sucré' (addition).",
+      "hint": "Goût + addition de caractéristiques"
+    },
+    {
+      "id": "est-et-3-drag-3",
+      "type": "drag-drop",
+      "sentence": "L'histoire ___ longue ___ ennuyeuse.",
+      "options": ["est, est", "et, et", "est, et"],
+      "answer": "est, et",
+      "feedbackCorrect": "Excellent ! Caractéristique + addition de défauts.",
+      "feedbackIncorrect": "'L'histoire était longue' (caractéristique) et 'longue et puis ennuyeuse' (addition).",
+      "hint": "Caractéristique + addition de qualités"
+    },
+    {
+      "id": "est-et-3-transform-3",
+      "type": "transformation",
+      "sentence": "Le film est drôle et intéressant.",
+      "instruction": "Mets au futur",
+      "answer": ["Le film sera drôle et intéressant.", "Le film sera drôle et intéressant"],
+      "feedbackCorrect": "Parfait ! 'Est' devient 'sera', 'et' reste identique.",
+      "feedbackIncorrect": "Au futur : 'sera'. La conjonction 'et' ne change jamais.",
+      "hint": "Verbe être au futur = sera"
+    }
+  ]
+}

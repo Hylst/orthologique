@@ -1,0 +1,204 @@
+{
+  "id": "participe-passe-etre-avoir-7",
+  "title": "Participe Passé avec Être et Avoir",
+  "level": 7,
+  "difficulty": "intermediaire",
+  "targetAudience": "6e-5e",
+  "category": "conjugaison",
+  "passingScore": 75,
+  "prerequisites": ["pluriels-noms-6"],
+  "rule": "Avec ÊTRE : le participe passé s'accorde avec le sujet. Avec AVOIR : le participe passé s'accorde avec le COD placé AVANT le verbe.",
+  "explanation": "Cette règle suit une logique simple : avec être, on décrit l'état du sujet (donc accord). Avec avoir, on décrit l'action sur un objet : si cet objet est mentionné avant (COD antéposé), on fait l'accord pour montrer qu'on en a déjà parlé.",
+  "etymology": "Cette distinction vient de l'évolution du français : 'être' exprimait l'état résultant d'une action, d'où l'accord avec le sujet. 'Avoir' exprimait la possession du résultat de l'action, d'où l'accord avec l'objet quand il est mis en valeur (placé avant).",
+  "mnemonics": "ÊTRE = accord automatique avec le sujet. AVOIR = cherchez le COD : s'il est AVANT le verbe, accordez ; s'il est APRÈS ou absent, n'accordez pas. Astuce : 'Elle est partie' (état) vs 'Elle a mangé' (action).",
+  "examples": [
+    "Elle est partie. (sujet féminin → accord)",
+    "Ils sont arrivés. (sujet masculin pluriel → accord)",
+    "Elle a mangé. (pas de COD → pas d'accord)",
+    "Les pommes qu'elle a mangées. (COD 'que' avant → accord)",
+    "Elle a mangé des pommes. (COD après → pas d'accord)"
+  ],
+  "specialCases": [
+    {
+      "title": "Verbes de mouvement avec être",
+      "description": "Certains verbes se conjuguent toujours avec être et s'accordent avec le sujet.",
+      "examples": [
+        "aller → Elle est allée",
+        "venir → Ils sont venus",
+        "partir → Elles sont parties",
+        "arriver → Il est arrivé",
+        "mourir → Elle est morte",
+        "naître → Ils sont nés"
+      ],
+      "tip": "Mémorisez : DR MRS VANDERTRAMP (Devenir, Revenir, Mourir, Retourner, Sortir, Venir, Aller, Naître, Descendre, Entrer, Rentrer, Tomber, Rester, Arriver, Monter, Partir)."
+    },
+    {
+      "title": "COD avec avoir",
+      "description": "L'accord se fait seulement si le COD est placé avant le verbe.",
+      "examples": [
+        "J'ai vu Marie. → Je l'ai vue.",
+        "Il a pris les clés. → Il les a prises.",
+        "Nous avons lu des livres. → Les livres que nous avons lus.",
+        "Tu as fait tes devoirs. → Tu les as faits."
+      ],
+      "tip": "Posez la question 'quoi ?' ou 'qui ?' après le verbe pour trouver le COD."
+    }
+  ],
+  "literaryExamples": [
+    {
+      "text": "Les fleurs que j'ai cueillies dans le jardin sont fanées.",
+      "author": "Style littéraire",
+      "work": "Description poétique",
+      "explanation": "'Cueillies' s'accorde avec 'que' (= les fleurs, COD féminin pluriel placé avant). 'Fanées' s'accorde avec 'fleurs' (sujet féminin pluriel avec être sous-entendu)."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "pp-7-qcm-1",
+      "type": "qcm",
+      "sentence": "Marie est ... hier soir.",
+      "options": ["parti", "partie", "parties"],
+      "answer": "partie",
+      "feedbackCorrect": "Parfait ! Avec 'être', le participe s'accorde avec le sujet 'Marie' (féminin singulier).",
+      "feedbackIncorrect": "Avec l'auxiliaire 'être', accordez avec le sujet : 'Marie' est féminin singulier → 'partie'.",
+      "hint": "ÊTRE + sujet féminin → accord féminin"
+    },
+    {
+      "id": "pp-7-qcm-2",
+      "type": "qcm",
+      "sentence": "Les enfants ont ... leurs devoirs.",
+      "options": ["fini", "finie", "finis"],
+      "answer": "fini",
+      "feedbackCorrect": "Excellent ! Avec 'avoir', pas de COD avant le verbe → pas d'accord.",
+      "feedbackIncorrect": "Avec 'avoir', le COD 'devoirs' est après le verbe → pas d'accord : 'fini'.",
+      "hint": "AVOIR + COD après → pas d'accord"
+    },
+    {
+      "id": "pp-7-qcm-3",
+      "type": "qcm",
+      "sentence": "Les lettres qu'il a ...",
+      "options": ["écrit", "écrite", "écrites"],
+      "answer": "écrites",
+      "feedbackCorrect": "Bravo ! Le COD 'que' (= les lettres, féminin pluriel) est avant le verbe → accord.",
+      "feedbackIncorrect": "Le COD 'que' représente 'les lettres' (féminin pluriel) et est placé avant → 'écrites'.",
+      "hint": "AVOIR + COD avant (que = les lettres) → accord"
+    },
+    {
+      "id": "pp-7-fill-1",
+      "type": "fill-in-the-blank",
+      "sentence": "Elles sont arrivé___ en retard.",
+      "answer": "es",
+      "feedbackCorrect": "Parfait ! 'Elles' (féminin pluriel) avec 'être' → 'arrivées'.",
+      "feedbackIncorrect": "Avec 'être', accordez avec le sujet : 'elles' (féminin pluriel) → 'arrivées'.",
+      "hint": "ÊTRE + elles → féminin pluriel"
+    },
+    {
+      "id": "pp-7-fill-2",
+      "type": "fill-in-the-blank",
+      "sentence": "J'ai rencontré___ tes amies. Je les ai trouvé___ sympathiques.",
+      "answer": ["", "es"],
+      "feedbackCorrect": "Excellent ! 'Rencontré' (COD après), 'trouvées' (COD 'les' avant = tes amies).",
+      "feedbackIncorrect": "1er : COD après → pas d'accord. 2e : 'les' (= tes amies, féminin pluriel) avant → accord.",
+      "hint": "1er : COD après, 2e : COD avant"
+    },
+    {
+      "id": "pp-7-drag-1",
+      "type": "drag-drop",
+      "sentence": "Les garçons sont ___ jouer dehors.",
+      "options": ["allé", "allée", "allés"],
+      "answer": "allés",
+      "feedbackCorrect": "Bravo ! 'Les garçons' (masculin pluriel) avec 'être' → 'allés'.",
+      "feedbackIncorrect": "Avec 'être', accordez avec le sujet : 'les garçons' (masculin pluriel) → 'allés'.",
+      "hint": "ÊTRE + les garçons → masculin pluriel"
+    },
+    {
+      "id": "pp-7-drag-2",
+      "type": "drag-drop",
+      "sentence": "La tarte que maman a ___ est délicieuse.",
+      "options": ["fait", "faite", "faites"],
+      "answer": "faite",
+      "feedbackCorrect": "Parfait ! Le COD 'que' (= la tarte, féminin singulier) est avant → accord.",
+      "feedbackIncorrect": "'Que' représente 'la tarte' (féminin singulier) et est avant le verbe → 'faite'.",
+      "hint": "AVOIR + que (= la tarte) avant → accord féminin"
+    },
+    {
+      "id": "pp-7-transform-1",
+      "type": "transformation",
+      "sentence": "Paul est parti en voyage.",
+      "instruction": "Remplace 'Paul' par 'Marie'",
+      "answer": ["Marie est partie en voyage.", "Marie est partie en voyage"],
+      "feedbackCorrect": "Excellent ! Changement de genre du sujet → changement d'accord.",
+      "feedbackIncorrect": "Avec 'Marie' (féminin), le participe devient 'partie'.",
+      "hint": "Changement de genre du sujet"
+    },
+    {
+      "id": "pp-7-transform-2",
+      "type": "transformation",
+      "sentence": "Il a lu des livres.",
+      "instruction": "Remplace par 'Les livres qu'il a lus'",
+      "answer": ["Les livres qu'il a lus.", "Les livres qu'il a lus"],
+      "feedbackCorrect": "Parfait ! COD antéposé → accord avec 'livres' (masculin pluriel).",
+      "feedbackIncorrect": "Avec 'que' (= les livres) avant le verbe, accordez : 'lus'.",
+      "hint": "COD avant → accord nécessaire"
+    },
+    {
+      "id": "pp-7-dictation-1",
+      "type": "dictation",
+      "sentence": "Les filles sont venues et ont chanté.",
+      "audioText": "Les filles sont venues et ont chanté.",
+      "answer": ["Les filles sont venues et ont chanté.", "Les filles sont venues et ont chanté"],
+      "feedbackCorrect": "Parfait ! 'Venues' (être + sujet féminin pluriel), 'chanté' (avoir sans COD avant).",
+      "feedbackIncorrect": "'Sont venues' (être → accord), 'ont chanté' (avoir → pas d'accord).",
+      "hint": "ÊTRE → accord, AVOIR sans COD avant → pas d'accord"
+    },
+    {
+      "id": "pp-7-dictation-2",
+      "type": "dictation",
+      "sentence": "La chanson qu'elle a apprise est belle.",
+      "audioText": "La chanson qu'elle a apprise est belle.",
+      "answer": ["La chanson qu'elle a apprise est belle.", "La chanson qu'elle a apprise est belle"],
+      "feedbackCorrect": "Excellent ! 'Apprise' s'accorde avec 'que' (= la chanson, féminin singulier).",
+      "feedbackIncorrect": "'Que' représente 'la chanson' (féminin) et est avant → 'apprise'.",
+      "hint": "COD 'que' avant → accord avec l'antécédent"
+    },
+    {
+      "id": "pp-7-qcm-4",
+      "type": "qcm",
+      "sentence": "Nous sommes ... et nous avons ... nos amis.",
+      "options": ["rentré, retrouvé", "rentrés, retrouvé", "rentrés, retrouvés"],
+      "answer": "rentrés, retrouvé",
+      "feedbackCorrect": "Bravo ! 'Rentrés' (être + nous), 'retrouvé' (avoir + COD après).",
+      "feedbackIncorrect": "'Sommes rentrés' (être → accord), 'avons retrouvé' (avoir + COD après → pas d'accord).",
+      "hint": "ÊTRE → accord, AVOIR + COD après → pas d'accord"
+    },
+    {
+      "id": "pp-7-fill-3",
+      "type": "fill-in-the-blank",
+      "sentence": "Les pommes que j'ai mangé___ étaient délicieuses.",
+      "answer": "es",
+      "feedbackCorrect": "Parfait ! 'Que' (= les pommes, féminin pluriel) avant le verbe → 'mangées'.",
+      "feedbackIncorrect": "'Que' représente 'les pommes' (féminin pluriel) et est avant → 'mangées'.",
+      "hint": "COD 'que' (= les pommes) avant → accord"
+    },
+    {
+      "id": "pp-7-drag-3",
+      "type": "drag-drop",
+      "sentence": "Elles ont ___ leurs valises et sont ___ en vacances.",
+      "options": ["fait, parti", "faites, parties", "fait, parties"],
+      "answer": "fait, parties",
+      "feedbackCorrect": "Excellent ! 'Fait' (avoir + COD après), 'parties' (être + sujet féminin pluriel).",
+      "feedbackIncorrect": "'Ont fait' (COD après → pas d'accord), 'sont parties' (être → accord).",
+      "hint": "AVOIR + COD après, puis ÊTRE + sujet féminin pluriel"
+    },
+    {
+      "id": "pp-7-transform-3",
+      "type": "transformation",
+      "sentence": "Il a pris sa voiture.",
+      "instruction": "Transforme avec 'que' : 'La voiture qu'il a...'",
+      "answer": ["La voiture qu'il a prise.", "La voiture qu'il a prise"],
+      "feedbackCorrect": "Parfait ! COD antéposé 'que' (= la voiture) → accord 'prise'.",
+      "feedbackIncorrect": "Avec 'que' (= la voiture, féminin) avant le verbe → 'prise'.",
+      "hint": "COD antéposé → accord obligatoire"
+    }
+  ]
+}

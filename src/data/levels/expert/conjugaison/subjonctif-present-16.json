@@ -1,0 +1,217 @@
+{
+  "id": "subjonctif-present-16",
+  "title": "Le Subjonctif Présent",
+  "level": 16,
+  "difficulty": "expert",
+  "targetAudience": "Lycée",
+  "category": "conjugaison",
+  "passingScore": 85,
+  "prerequisites": ["homophones-avances-15"],
+  "rule": "Le subjonctif exprime le doute, la volonté, l'émotion, la nécessité. Formation : radical de la 3e personne du pluriel + terminaisons -e, -es, -e, -ions, -iez, -ent.",
+  "explanation": "Le subjonctif est le mode de la subjectivité : il exprime ce qui n'est pas certain, ce qui dépend d'une volonté ou d'une émotion. Sa formation suit une logique : on part du radical le plus stable (3e pluriel de l'indicatif) et on ajoute des terminaisons spécifiques.",
+  "etymology": "Le subjonctif vient du latin 'subjunctivus' (qui unit, qui subordonne). Ce mode existait déjà en latin pour exprimer l'incertitude et la dépendance. Le français a conservé cette fonction tout en simplifiant les formes.",
+  "mnemonics": "Subjonctif = DOUTE, VOLONTÉ, ÉMOTION, NÉCESSITÉ. Formation : ILS FINISS-ENT → que je finiss-E. Verbes irréguliers à retenir : ÊTRE (sois), AVOIR (aie), ALLER (aille), FAIRE (fasse), POUVOIR (puisse), SAVOIR (sache).",
+  "examples": [
+    "Il faut que tu viennes. (nécessité)",
+    "Je doute qu'il réussisse. (doute)",
+    "Je veux qu'elle parte. (volonté)",
+    "Je suis content qu'ils soient là. (émotion)",
+    "Bien qu'il pleuve, nous sortons. (concession)"
+  ],
+  "specialCases": [
+    {
+      "title": "Verbes irréguliers courants",
+      "description": "Quelques verbes ont des formes particulières au subjonctif.",
+      "examples": [
+        "être → que je sois, que nous soyons",
+        "avoir → que j'aie, que nous ayons",
+        "aller → que j'aille, que nous allions",
+        "faire → que je fasse, que nous fassions",
+        "pouvoir → que je puisse, que nous puissions",
+        "savoir → que je sache, que nous sachions"
+      ],
+      "tip": "Ces formes irrégulières sont à mémoriser par cœur."
+    },
+    {
+      "title": "Expressions déclenchant le subjonctif",
+      "description": "Certaines expressions imposent automatiquement le subjonctif.",
+      "examples": [
+        "Il faut que...",
+        "Je doute que...",
+        "Je veux que...",
+        "Bien que...",
+        "Pour que...",
+        "Avant que..."
+      ],
+      "tip": "Mémorisez ces expressions : elles appellent toujours le subjonctif."
+    },
+    {
+      "title": "Alternance indicatif/subjonctif",
+      "description": "Certains verbes changent de sens selon le mode.",
+      "examples": [
+        "Je pense qu'il vient. (certitude → indicatif)",
+        "Je ne pense pas qu'il vienne. (doute → subjonctif)",
+        "Je dis qu'il est là. (fait → indicatif)",
+        "Je ne dis pas qu'il soit là. (doute → subjonctif)"
+      ],
+      "tip": "La négation transforme souvent la certitude en doute."
+    }
+  ],
+  "literaryExamples": [
+    {
+      "text": "Bien qu'il soit tard et que nous soyons fatigués, il faut que nous finissions ce travail.",
+      "author": "Style soutenu",
+      "work": "Prose administrative",
+      "explanation": "'Soit' (être au subjonctif), 'soyons' (être au subjonctif), 'finissions' (finir au subjonctif) après les expressions de concession et de nécessité."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "subj-16-qcm-1",
+      "type": "qcm",
+      "sentence": "Il faut que tu ... et que nous ...",
+      "options": ["viens, venons", "viennes, venions", "vient, venons"],
+      "answer": "viennes, venions",
+      "feedbackCorrect": "Parfait ! 'Il faut que' impose le subjonctif : 'viennes' et 'venions'.",
+      "feedbackIncorrect": "Après 'il faut que', utilisez le subjonctif : 'que tu viennes', 'que nous venions'.",
+      "hint": "Il faut que + subjonctif"
+    },
+    {
+      "id": "subj-16-qcm-2",
+      "type": "qcm",
+      "sentence": "Je doute qu'il ... et qu'elle ... réussir.",
+      "options": ["peut, va", "puisse, aille", "pourra, ira"],
+      "answer": "puisse, aille",
+      "feedbackCorrect": "Excellent ! 'Je doute que' exprime le doute → subjonctif : 'puisse' et 'aille'.",
+      "feedbackIncorrect": "Le doute appelle le subjonctif : 'qu'il puisse', 'qu'elle aille'.",
+      "hint": "Doute → subjonctif"
+    },
+    {
+      "id": "subj-16-qcm-3",
+      "type": "qcm",
+      "sentence": "Bien qu'il ... tard, nous ... partir.",
+      "options": ["est, devons", "soit, devions", "sera, devrons"],
+      "answer": "soit, devions",
+      "feedbackCorrect": "Bravo ! 'Bien que' exprime la concession → subjonctif : 'soit' et 'devions'.",
+      "feedbackIncorrect": "'Bien que' impose le subjonctif : 'qu'il soit', 'nous devions'.",
+      "hint": "Bien que + subjonctif"
+    },
+    {
+      "id": "subj-16-fill-1",
+      "type": "fill-in-the-blank",
+      "sentence": "Je veux que vous ___ (être) à l'heure et que tu ___ (faire) attention.",
+      "answer": ["soyez", "fasses"],
+      "feedbackCorrect": "Parfait ! 'Soyez' (être au subjonctif) et 'fasses' (faire au subjonctif).",
+      "feedbackIncorrect": "Volonté → subjonctif : 'que vous soyez', 'que tu fasses'.",
+      "hint": "Volonté → subjonctif"
+    },
+    {
+      "id": "subj-16-fill-2",
+      "type": "fill-in-the-blank",
+      "sentence": "Il est possible qu'elle ___ (venir) et qu'ils ___ (pouvoir) nous aider.",
+      "answer": ["vienne", "puissent"],
+      "feedbackCorrect": "Excellent ! 'Vienne' (venir au subjonctif) et 'puissent' (pouvoir au subjonctif).",
+      "feedbackIncorrect": "Possibilité → subjonctif : 'qu'elle vienne', 'qu'ils puissent'.",
+      "hint": "Possibilité → subjonctif"
+    },
+    {
+      "id": "subj-16-drag-1",
+      "type": "drag-drop",
+      "sentence": "Pour qu'il ___ et que nous ___ réussir, il faut travailler.",
+      "options": ["comprenne, puissions", "comprend, pouvons", "comprendra, pourrons"],
+      "answer": "comprenne, puissions",
+      "feedbackCorrect": "Bravo ! 'Pour que' exprime le but → subjonctif : 'comprenne' et 'puissions'.",
+      "feedbackIncorrect": "'Pour que' impose le subjonctif : 'qu'il comprenne', 'que nous puissions'.",
+      "hint": "Pour que + subjonctif"
+    },
+    {
+      "id": "subj-16-drag-2",
+      "type": "drag-drop",
+      "sentence": "Je ne pense pas qu'elle ___ et qu'ils ___ la vérité.",
+      "options": ["vient, savent", "vienne, sachent", "viendra, sauront"],
+      "answer": "vienne, sachent",
+      "feedbackCorrect": "Parfait ! Négation + opinion → subjonctif : 'vienne' et 'sachent'.",
+      "feedbackIncorrect": "Négation de l'opinion → subjonctif : 'qu'elle vienne', 'qu'ils sachent'.",
+      "hint": "Négation + opinion → subjonctif"
+    },
+    {
+      "id": "subj-16-transform-1",
+      "type": "transformation",
+      "sentence": "Il vient demain.",
+      "instruction": "Transforme avec 'Il faut que'",
+      "answer": ["Il faut qu'il vienne demain.", "Il faut qu'il vienne demain"],
+      "feedbackCorrect": "Excellent ! Transformation à l'indicatif → subjonctif avec 'il faut que'.",
+      "feedbackIncorrect": "'Il faut que' impose le subjonctif : 'qu'il vienne'.",
+      "hint": "Il faut que + subjonctif"
+    },
+    {
+      "id": "subj-16-transform-2",
+      "type": "transformation",
+      "sentence": "Nous pouvons partir.",
+      "instruction": "Transforme avec 'Je doute que'",
+      "answer": ["Je doute que nous puissions partir.", "Je doute que nous puissions partir"],
+      "feedbackCorrect": "Parfait ! Transformation indicatif → subjonctif avec expression de doute.",
+      "feedbackIncorrect": "'Je doute que' exprime le doute → subjonctif : 'que nous puissions'.",
+      "hint": "Doute → subjonctif"
+    },
+    {
+      "id": "subj-16-dictation-1",
+      "type": "dictation",
+      "sentence": "Bien qu'il soit malade, il faut qu'il vienne.",
+      "audioText": "Bien qu'il soit malade, il faut qu'il vienne.",
+      "answer": ["Bien qu'il soit malade, il faut qu'il vienne.", "Bien qu'il soit malade, il faut qu'il vienne"],
+      "feedbackCorrect": "Parfait ! 'Soit' (concession) et 'vienne' (nécessité) au subjonctif.",
+      "feedbackIncorrect": "'Bien que' et 'il faut que' imposent le subjonctif.",
+      "hint": "Concession + nécessité → subjonctif"
+    },
+    {
+      "id": "subj-16-dictation-2",
+      "type": "dictation",
+      "sentence": "Je veux que vous fassiez attention et que tu sois sage.",
+      "audioText": "Je veux que vous fassiez attention et que tu sois sage.",
+      "answer": ["Je veux que vous fassiez attention et que tu sois sage.", "Je veux que vous fassiez attention et que tu sois sage"],
+      "feedbackCorrect": "Excellent ! 'Fassiez' (faire) et 'sois' (être) au subjonctif après volonté.",
+      "feedbackIncorrect": "Volonté → subjonctif : 'que vous fassiez', 'que tu sois'.",
+      "hint": "Volonté → subjonctif"
+    },
+    {
+      "id": "subj-16-qcm-4",
+      "type": "qcm",
+      "sentence": "Avant qu'il ... et que nous ... partir, préparons-nous.",
+      "options": ["arrive, devons", "arrivera, devrons", "arrive, devions"],
+      "answer": "arrive, devions",
+      "feedbackCorrect": "Bravo ! 'Avant que' exprime l'antériorité → subjonctif : 'arrive' et 'devions'.",
+      "feedbackIncorrect": "'Avant que' impose le subjonctif : 'qu'il arrive', 'que nous devions'.",
+      "hint": "Avant que + subjonctif"
+    },
+    {
+      "id": "subj-16-fill-3",
+      "type": "fill-in-the-blank",
+      "sentence": "Je suis content que tu ___ (avoir) réussi et qu'elle ___ (être) heureuse.",
+      "answer": ["aies", "soit"],
+      "feedbackCorrect": "Parfait ! 'Aies' (avoir au subjonctif) et 'soit' (être au subjonctif).",
+      "feedbackIncorrect": "Émotion → subjonctif : 'que tu aies', 'qu'elle soit'.",
+      "hint": "Émotion → subjonctif"
+    },
+    {
+      "id": "subj-16-drag-3",
+      "type": "drag-drop",
+      "sentence": "Quoiqu'il ___ et que nous ___ des difficultés, continuons.",
+      "options": ["dit, avons", "dise, ayons", "dira, aurons"],
+      "answer": "dise, ayons",
+      "feedbackCorrect": "Excellent ! 'Quoique' exprime la concession → subjonctif : 'dise' et 'ayons'.",
+      "feedbackIncorrect": "'Quoique' impose le subjonctif : 'qu'il dise', 'que nous ayons'.",
+      "hint": "Quoique + subjonctif"
+    },
+    {
+      "id": "subj-16-transform-3",
+      "type": "transformation",
+      "sentence": "Elle sait la vérité.",
+      "instruction": "Transforme avec 'Je ne crois pas que'",
+      "answer": ["Je ne crois pas qu'elle sache la vérité.", "Je ne crois pas qu'elle sache la vérité"],
+      "feedbackCorrect": "Parfait ! Négation + opinion → subjonctif : 'qu'elle sache'.",
+      "feedbackIncorrect": "Négation de l'opinion → subjonctif : 'qu'elle sache'.",
+      "hint": "Négation + opinion → subjonctif"
+    }
+  ]
+}

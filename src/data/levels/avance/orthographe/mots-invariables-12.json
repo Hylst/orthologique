@@ -1,0 +1,217 @@
+{
+  "id": "mots-invariables-12",
+  "title": "Mots Invariables Courants",
+  "level": 12,
+  "difficulty": "avance",
+  "targetAudience": "4e-3e",
+  "category": "orthographe",
+  "passingScore": 80,
+  "prerequisites": ["participe-passe-cod-avance-11"],
+  "rule": "Les mots invariables (adverbes, prépositions, conjonctions) ne changent jamais d'orthographe. Il faut mémoriser leur forme exacte.",
+  "explanation": "Ces mots sont les 'outils' de la langue : ils relient, précisent, nuancent mais ne désignent pas d'objets concrets. Leur orthographe fixe assure la stabilité du système linguistique. Beaucoup viennent du latin et ont gardé leur forme ancienne.",
+  "etymology": "La plupart des mots invariables viennent directement du latin : 'avec' de 'apud hoc', 'toujours' de 'totum dies', 'beaucoup' de 'bellus colpus'. Leur orthographe s'est fixée au Moyen Âge et n'a plus évolué.",
+  "mnemonics": "Groupez par familles : TEMPS (toujours, jamais, souvent), LIEU (dessus, dessous, dedans), MANIÈRE (ainsi, ensemble, exprès), QUANTITÉ (beaucoup, trop, assez). Mémorisez les pièges : 'parmi' (sans s), 'malgré' (é final).",
+  "examples": [
+    "Il vient toujours avec ses amis.",
+    "Elle travaille beaucoup mais reste parmi nous.",
+    "Nous partons ensemble malgré la pluie.",
+    "Tu arrives souvent en retard, hélas !",
+    "Ils marchent lentement vers la sortie."
+  ],
+  "specialCases": [
+    {
+      "title": "Adverbes en -ment",
+      "description": "Formation régulière : adjectif féminin + -ment.",
+      "examples": [
+        "lent → lentement",
+        "heureux → heureusement",
+        "facile → facilement",
+        "vrai → vraiment (exception)"
+      ],
+      "tip": "Partez de l'adjectif au féminin pour former l'adverbe."
+    },
+    {
+      "title": "Pièges orthographiques",
+      "description": "Mots souvent mal orthographiés à mémoriser.",
+      "examples": [
+        "parmi (sans s final)",
+        "malgré (avec é)",
+        "exprès (avec s)",
+        "volontiers (avec s)",
+        "néanmoins (é-a-o)",
+        "désormais (é-o-a)"
+      ],
+      "tip": "Ces mots ont des lettres muettes ou des accents particuliers."
+    },
+    {
+      "title": "Locutions figées",
+      "description": "Expressions invariables à connaître.",
+      "examples": [
+        "tout à coup",
+        "tout de suite",
+        "en effet",
+        "par conséquent",
+        "cependant",
+        "néanmoins"
+      ],
+      "tip": "Apprenez ces expressions comme des blocs indissociables."
+    }
+  ],
+  "literaryExamples": [
+    {
+      "text": "Cependant, malgré ses efforts, il arrivait toujours en retard, hélas !",
+      "author": "Style narratif",
+      "work": "Prose classique",
+      "explanation": "Accumulation de mots invariables : 'cependant' (opposition), 'malgré' (concession), 'toujours' (temps), 'hélas' (exclamation)."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "inv-12-qcm-1",
+      "type": "qcm",
+      "sentence": "Il vient ... nous voir ... la pluie.",
+      "options": ["toujour, malgré", "toujours, malgré", "toujours, malgrés"],
+      "answer": "toujours, malgré",
+      "feedbackCorrect": "Parfait ! 'Toujours' (avec s) et 'malgré' (avec é) sont invariables.",
+      "feedbackIncorrect": "'Toujours' prend toujours un s, 'malgré' se termine par é.",
+      "hint": "Mots invariables : orthographe fixe"
+    },
+    {
+      "id": "inv-12-qcm-2",
+      "type": "qcm",
+      "sentence": "Elle travaille ... et reste ... ses amis.",
+      "options": ["beaucoup, parmis", "beaucoup, parmi", "beaucous, parmi"],
+      "answer": "beaucoup, parmi",
+      "feedbackCorrect": "Excellent ! 'Beaucoup' (avec p) et 'parmi' (sans s final).",
+      "feedbackIncorrect": "'Beaucoup' se termine par p, 'parmi' n'a pas de s final.",
+      "hint": "Beaucoup = -p final, parmi = sans s"
+    },
+    {
+      "id": "inv-12-qcm-3",
+      "type": "qcm",
+      "sentence": "Nous partons ... ... il pleut.",
+      "options": ["ensemble, malgré", "ensembles, malgré", "ensemble, malgrés"],
+      "answer": "ensemble, malgré",
+      "feedbackCorrect": "Bravo ! 'Ensemble' (sans s) et 'malgré' (avec é) sont invariables.",
+      "feedbackIncorrect": "'Ensemble' est invariable (pas de s), 'malgré' se termine par é.",
+      "hint": "Mots invariables ne prennent jamais de marques de pluriel"
+    },
+    {
+      "id": "inv-12-fill-1",
+      "type": "fill-in-the-blank",
+      "sentence": "Il arrive _______ en retard, _______ !",
+      "answer": ["toujours", "hélas"],
+      "feedbackCorrect": "Parfait ! 'Toujours' (temps) et 'hélas' (exclamation) invariables.",
+      "feedbackIncorrect": "'Toujours' avec s, 'hélas' avec s aussi (exclamation).",
+      "hint": "Adverbe de temps + exclamation"
+    },
+    {
+      "id": "inv-12-fill-2",
+      "type": "fill-in-the-blank",
+      "sentence": "Elle marche _______ vers la sortie _______ ses amis.",
+      "answer": ["lentement", "avec"],
+      "feedbackCorrect": "Excellent ! 'Lentement' (adverbe en -ment) et 'avec' (préposition).",
+      "feedbackIncorrect": "'Lentement' (lent + e + ment), 'avec' (préposition simple).",
+      "hint": "Adverbe de manière + préposition"
+    },
+    {
+      "id": "inv-12-drag-1",
+      "type": "drag-drop",
+      "sentence": "_______, il fait ses devoirs _______ ses parents.",
+      "options": ["Désormais, avec", "Désormait, avec", "Désormais, avecs"],
+      "answer": "Désormais, avec",
+      "feedbackCorrect": "Bravo ! 'Désormais' (é-o-a-i-s) et 'avec' (préposition invariable).",
+      "feedbackIncorrect": "'Désormais' : dés-or-mais, 'avec' reste invariable.",
+      "hint": "Adverbe de temps + préposition"
+    },
+    {
+      "id": "inv-12-drag-2",
+      "type": "drag-drop",
+      "sentence": "Il travaille _______ mais réussit _______.",
+      "options": ["beaucoup, néanmoins", "beaucous, néanmoins", "beaucoup, néanmoin"],
+      "answer": "beaucoup, néanmoins",
+      "feedbackCorrect": "Parfait ! 'Beaucoup' (-p final) et 'néanmoins' (é-a-o-i-s).",
+      "feedbackIncorrect": "'Beaucoup' avec p, 'néanmoins' : né-an-moins.",
+      "hint": "Adverbe de quantité + adverbe d'opposition"
+    },
+    {
+      "id": "inv-12-transform-1",
+      "type": "transformation",
+      "sentence": "Il vient souvent.",
+      "instruction": "Ajoute 'avec ses amis'",
+      "answer": ["Il vient souvent avec ses amis.", "Il vient souvent avec ses amis"],
+      "feedbackCorrect": "Excellent ! 'Souvent' et 'avec' restent invariables.",
+      "feedbackIncorrect": "Les mots invariables ne changent jamais d'orthographe.",
+      "hint": "Mots invariables = orthographe fixe"
+    },
+    {
+      "id": "inv-12-transform-2",
+      "type": "transformation",
+      "sentence": "Elle part seule.",
+      "instruction": "Remplace 'seule' par 'ensemble'",
+      "answer": ["Elle part ensemble.", "Elles partent ensemble."],
+      "feedbackCorrect": "Parfait ! 'Ensemble' reste invariable même au pluriel.",
+      "feedbackIncorrect": "'Ensemble' est toujours invariable, pas de s ajouté.",
+      "hint": "Ensemble = toujours invariable"
+    },
+    {
+      "id": "inv-12-dictation-1",
+      "type": "dictation",
+      "sentence": "Cependant, malgré tout, il réussit toujours.",
+      "audioText": "Cependant, malgré tout, il réussit toujours.",
+      "answer": ["Cependant, malgré tout, il réussit toujours.", "Cependant, malgré tout, il réussit toujours"],
+      "feedbackCorrect": "Parfait ! Tous les mots invariables sont correctement orthographiés.",
+      "feedbackIncorrect": "'Cependant', 'malgré', 'tout', 'toujours' : orthographe fixe.",
+      "hint": "Succession de mots invariables"
+    },
+    {
+      "id": "inv-12-dictation-2",
+      "type": "dictation",
+      "sentence": "Elle travaille beaucoup, néanmoins elle reste parmi nous.",
+      "audioText": "Elle travaille beaucoup, néanmoins elle reste parmi nous.",
+      "answer": ["Elle travaille beaucoup, néanmoins elle reste parmi nous.", "Elle travaille beaucoup, néanmoins elle reste parmi nous"],
+      "feedbackCorrect": "Excellent ! 'Beaucoup', 'néanmoins', 'parmi' bien orthographiés.",
+      "feedbackIncorrect": "'Beaucoup' (-p), 'néanmoins' (é-a-o), 'parmi' (sans s).",
+      "hint": "Mots invariables avec pièges orthographiques"
+    },
+    {
+      "id": "inv-12-qcm-4",
+      "type": "qcm",
+      "sentence": "Il fait ses devoirs ... et les réussit ...",
+      "options": ["exprès, volontier", "exprès, volontiers", "expré, volontiers"],
+      "answer": "exprès, volontiers",
+      "feedbackCorrect": "Bravo ! 'Exprès' (avec s) et 'volontiers' (avec s) invariables.",
+      "feedbackIncorrect": "'Exprès' se termine par s, 'volontiers' aussi.",
+      "hint": "Deux mots avec s final"
+    },
+    {
+      "id": "inv-12-fill-3",
+      "type": "fill-in-the-blank",
+      "sentence": "_______, il arrive _______ en retard.",
+      "answer": ["Hélas", "encore"],
+      "feedbackCorrect": "Parfait ! 'Hélas' (exclamation) et 'encore' (temps) invariables.",
+      "feedbackIncorrect": "'Hélas' avec s, 'encore' orthographe fixe.",
+      "hint": "Exclamation + adverbe de temps"
+    },
+    {
+      "id": "inv-12-drag-3",
+      "type": "drag-drop",
+      "sentence": "Il part _______ _______ la pluie.",
+      "options": ["quand même, malgré", "quand mêmes, malgré", "quand même, malgrés"],
+      "answer": "quand même, malgré",
+      "feedbackCorrect": "Excellent ! 'Quand même' et 'malgré' sont des locutions invariables.",
+      "feedbackIncorrect": "'Quand même' (locution figée), 'malgré' (avec é).",
+      "hint": "Locution figée + préposition"
+    },
+    {
+      "id": "inv-12-transform-3",
+      "type": "transformation",
+      "sentence": "Ils viennent souvent ensemble.",
+      "instruction": "Ajoute 'malgré la distance'",
+      "answer": ["Ils viennent souvent ensemble malgré la distance.", "Ils viennent souvent ensemble, malgré la distance."],
+      "feedbackCorrect": "Parfait ! Tous les mots invariables gardent leur orthographe.",
+      "feedbackIncorrect": "'Souvent', 'ensemble', 'malgré' restent invariables.",
+      "hint": "Accumulation de mots invariables"
+    }
+  ]
+}
