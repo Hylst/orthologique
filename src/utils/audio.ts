@@ -189,7 +189,7 @@ export const getBestFrenchVoice = (): SpeechSynthesisVoice | null => {
 
 // Enhanced speak function with better voice selection and error handling
 export const speak = (text: string, lang: string = 'fr-FR', config?: Partial<SpeechConfig>): Promise<void> => {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     if (!('speechSynthesis' in window)) {
       console.warn('Speech synthesis not supported');
       resolve();
@@ -220,36 +220,51 @@ export const speak = (text: string, lang: string = 'fr-FR', config?: Partial<Spe
       }
     }
 
-    // Event handlers
-    utterance.onend = () => resolve();
-    utterance.onerror = (event) => {
-      console.error('Speech synthesis error:', event.error);
-      reject(new Error(`Speech synthesis failed: ${event.error}`));
-    };
+    let isResolved = false;
     
     // Add a timeout to prevent hanging
     const timeout = setTimeout(() => {
-      speechSynthesis.cancel();
-      reject(new Error('Speech synthesis timeout'));
+      if (!isResolved) {
+        isResolved = true;
+        speechSynthesis.cancel();
+        resolve(); // Resolve instead of reject for timeout
+      }
     }, 30000); // 30 second timeout
     
+    // Event handlers
     utterance.onend = () => {
-      clearTimeout(timeout);
-      resolve();
+      if (!isResolved) {
+        isResolved = true;
+        clearTimeout(timeout);
+        resolve();
+      }
     };
     
     utterance.onerror = (event) => {
-      clearTimeout(timeout);
-      console.error('Speech synthesis error:', event.error);
-      reject(new Error(`Speech synthesis failed: ${event.error}`));
+      if (!isResolved) {
+        isResolved = true;
+        clearTimeout(timeout);
+        
+        // Don't throw error for 'interrupted' - it's expected when canceling
+        if (event.error === 'interrupted') {
+          console.log('Speech synthesis interrupted (expected)');
+          resolve();
+        } else {
+          console.error('Speech synthesis error:', event.error);
+          resolve(); // Resolve instead of reject to prevent unhandled errors
+        }
+      }
     };
 
     try {
       speechSynthesis.speak(utterance);
     } catch (error) {
-      clearTimeout(timeout);
-      console.error('Failed to start speech synthesis:', error);
-      reject(error);
+      if (!isResolved) {
+        isResolved = true;
+        clearTimeout(timeout);
+        console.error('Failed to start speech synthesis:', error);
+        resolve(); // Resolve instead of reject
+      }
     }
   });
 };

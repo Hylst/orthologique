@@ -1,14 +1,22 @@
 import React from 'react';
-import { Play, RotateCcw, Trophy, BookOpen, Target, Volume2, Lock, CheckCircle, LogIn } from 'lucide-react';
+import { Play, RotateCcw, Trophy, BookOpen, Target, Volume2, Lock, CheckCircle, LogIn, Settings, Database, BarChart3 } from 'lucide-react';
 import { Lesson, UserProgress, UserProfile } from '../types';
 import { ProgressManager } from '../utils/progressManager';
 import Logo from './Logo';
 import UserMenu from './UserMenu';
 import AuthModal from './AuthModal';
+import SimpleAuthModal from './SimpleAuthModal';
 import ProfileModal from './ProfileModal';
+import DataManagement from './DataManagement';
+import AdvancedDashboard from './AdvancedDashboard';
+import OneHandModeToggle from './OneHandModeToggle';
+import MobileNavigation from './MobileNavigation';
+import { useTouchGestures } from '../hooks/useTouchGestures';
+import { MobileViewport, OneHandMode } from '../utils/mobileInteractions';
 import ProgressBar from './ProgressBar';
 import PWAInstallButton from './PWAInstallButton';
 import OfflineIndicator from './OfflineIndicator';
+import VisualProgress from './VisualProgress';
 import { speak } from '../utils/audio';
 import { getCurrentUser } from '../utils/storage';
 import { 
@@ -58,10 +66,54 @@ const Dashboard: React.FC<DashboardProps> = ({
   const [isResetting, setIsResetting] = React.useState(false);
   const [currentUser, setCurrentUser] = React.useState<UserProfile | null>(getCurrentUser());
   const [showAuthModal, setShowAuthModal] = React.useState(false);
+  const [showSimpleAuthModal, setShowSimpleAuthModal] = React.useState(false);
   const [authMode, setAuthMode] = React.useState<'signin' | 'signup'>('signin');
   const [showProfileModal, setShowProfileModal] = React.useState(false);
+  const [showDataManagement, setShowDataManagement] = React.useState(false);
+  const [showAdvancedDashboard, setShowAdvancedDashboard] = React.useState(false);
+  const [isMobile, setIsMobile] = React.useState(false);
+  const [isOneHandMode, setIsOneHandMode] = React.useState(false);
+  const [currentView, setCurrentView] = React.useState<'dashboard' | 'lesson' | 'exercise' | 'results' | 'profile' | 'settings'>('dashboard');
+  
+  // Mobile detection and one-hand mode
+  React.useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(MobileViewport.isMobile());
+      setIsOneHandMode(OneHandMode.isActive());
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    window.addEventListener('orientationchange', checkMobile);
+    
+    return () => {
+      window.removeEventListener('resize', checkMobile);
+      window.removeEventListener('orientationchange', checkMobile);
+    };
+  }, []);
+  
+  // Touch gestures for mobile navigation
+  const { onTouchStart, onTouchMove, onTouchEnd } = useTouchGestures({
+    onSwipeLeft: () => {
+      if (isMobile && currentView === 'dashboard') {
+        setCurrentView('lesson');
+      }
+    },
+    onSwipeRight: () => {
+      if (isMobile && currentView === 'lesson') {
+        setCurrentView('dashboard');
+      }
+    },
+    onSwipeUp: () => {
+      if (isMobile && !showAdvancedDashboard) {
+        setShowAdvancedDashboard(true);
+      }
+    }
+  });
   const [selectedDifficulty, setSelectedDifficulty] = React.useState<string>('all');
   const [selectedCategory, setSelectedCategory] = React.useState<string>('all');
+  const [showSuccessTree, setShowSuccessTree] = React.useState(true);
+  const [showProgressCompanion, setShowProgressCompanion] = React.useState(true);
   
   React.useEffect(() => {
     setCurrentUser(getCurrentUser());
@@ -74,6 +126,9 @@ const Dashboard: React.FC<DashboardProps> = ({
 
   const stats = progressManager.getProgressStats(lessons);
   const nextLesson = progressManager.getNextLesson(lessons);
+  
+  // Check if user has completed at least one lesson
+  const hasCompletedFirstLesson = userProgress.completedLessons.length > 0;
 
   // Mise à jour des leçons avec les statuts de déblocage corrects
   const processedLessons = lessons.map(lesson => ({
@@ -169,7 +224,14 @@ const Dashboard: React.FC<DashboardProps> = ({
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50">
+    <div 
+      className={`min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 ${
+        isOneHandMode ? 'one-hand-mode' : ''
+      } ${isMobile ? 'safe-area-top safe-area-bottom' : ''}`}
+      onTouchStart={onTouchStart}
+      onTouchMove={onTouchMove}
+      onTouchEnd={onTouchEnd}
+    >
       <div className="max-w-6xl mx-auto px-4 py-8">
         {/* Header */}
         <header className="text-center mb-12">
@@ -179,6 +241,32 @@ const Dashboard: React.FC<DashboardProps> = ({
             {/* User Menu or Login Button */}
             <div className="flex items-center gap-4">
               <PWAInstallButton />
+              
+              {/* Data Management Button */}
+              <button
+                onClick={() => setShowDataManagement(true)}
+                className="flex items-center gap-2 px-3 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors"
+                {...getButtonAriaAttributes('Ouvrir la gestion des données')}
+                title="Gestion des données (RGPD)"
+              >
+                <Database className="w-4 h-4" />
+              </button>
+              
+              {/* Advanced Dashboard Button */}
+              <button
+                onClick={() => setShowAdvancedDashboard(true)}
+                className="flex items-center gap-2 px-3 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-200 shadow-md hover:shadow-lg"
+                {...getButtonAriaAttributes('Ouvrir les tableaux de bord avancés')}
+                title="Tableaux de Bord Avancés - Analytics et Métriques"
+              >
+                <BarChart3 className="w-4 h-4" />
+              </button>
+              
+              {/* One Hand Mode Toggle - Mobile Only */}
+              {isMobile && (
+                <OneHandModeToggle />
+              )}
+              
               {currentUser && currentUser.id !== 'guest' ? (
                 <UserMenu 
                   user={currentUser}
@@ -186,14 +274,24 @@ const Dashboard: React.FC<DashboardProps> = ({
                   onEditProfile={() => setShowProfileModal(true)}
                 />
               ) : (
-                <button
-                onClick={() => setShowAuthModal(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
-                {...getButtonAriaAttributes('Ouvrir la modal de connexion')}
-              >
-                <LogIn className="w-4 h-4" />
-                Se connecter
-              </button>
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={() => setShowSimpleAuthModal(true)}
+                    className="flex items-center gap-2 px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors"
+                    {...getButtonAriaAttributes('Connexion simple avec avatar et nom')}
+                  >
+                    <LogIn className="w-4 h-4" />
+                    Connexion simple
+                  </button>
+                  <button
+                    onClick={() => setShowAuthModal(true)}
+                    className="flex items-center gap-2 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+                    {...getButtonAriaAttributes('Ouvrir la modal de connexion complète')}
+                  >
+                    <Settings className="w-4 h-4" />
+                    Connexion complète
+                  </button>
+                </div>
               )}
             </div>
           </div>
@@ -317,6 +415,73 @@ const Dashboard: React.FC<DashboardProps> = ({
           <h3 className="font-semibold text-gray-800 mb-4">Progression générale</h3>
           <ProgressBar current={stats.completedCount} total={stats.totalLessons} />
         </div>
+
+        {/* Visual Progress Elements - Only show after completing first lesson */}
+        {hasCompletedFirstLesson && (
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+            {/* Success Tree */}
+            {showSuccessTree && (
+              <div className="bg-white rounded-xl shadow-lg p-6 relative">
+                <div className="flex justify-between items-center mb-4">
+                  <h3 className="font-semibold text-gray-800 text-center flex-1">Arbre de la réussite</h3>
+                  <button
+                    onClick={() => setShowSuccessTree(false)}
+                    className="text-gray-400 hover:text-gray-600 transition-colors p-1 rounded"
+                    title="Masquer l'arbre de la réussite"
+                    aria-label="Masquer l'arbre de la réussite"
+                  >
+                    ✕
+                  </button>
+                </div>
+                <div className="aspect-square max-w-sm mx-auto">
+                  <VisualProgress userProgress={userProgress} type="tree" />
+                </div>
+              </div>
+            )}
+            
+            {/* Progress Companion */}
+            {showProgressCompanion && (
+              <div className="bg-white rounded-xl shadow-lg p-6 relative">
+                <div className="flex justify-between items-center mb-4">
+                  <h3 className="font-semibold text-gray-800 text-center flex-1">Compagnon de progression</h3>
+                  <button
+                    onClick={() => setShowProgressCompanion(false)}
+                    className="text-gray-400 hover:text-gray-600 transition-colors p-1 rounded"
+                    title="Masquer le compagnon de progression"
+                    aria-label="Masquer le compagnon de progression"
+                  >
+                    ✕
+                  </button>
+                </div>
+                <div className="aspect-square max-w-sm mx-auto">
+                  <VisualProgress userProgress={userProgress} type="cat" />
+                </div>
+              </div>
+            )}
+            
+            {/* Show buttons to restore hidden components */}
+            {(!showSuccessTree || !showProgressCompanion) && (
+              <div className="col-span-full flex justify-center gap-4">
+                {!showSuccessTree && (
+                  <button
+                    onClick={() => setShowSuccessTree(true)}
+                    className="bg-green-100 text-green-800 px-4 py-2 rounded-lg hover:bg-green-200 transition-colors"
+                  >
+                    🌳 Afficher l'arbre de la réussite
+                  </button>
+                )}
+                {!showProgressCompanion && (
+                  <button
+                    onClick={() => setShowProgressCompanion(true)}
+                    className="bg-orange-100 text-orange-800 px-4 py-2 rounded-lg hover:bg-orange-200 transition-colors"
+                  >
+                    🐱 Afficher le compagnon de progression
+                  </button>
+                )}
+              </div>
+            )}
+          </div>
+        )}
 
         {/* Filtres */}
         <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
@@ -535,6 +700,22 @@ const Dashboard: React.FC<DashboardProps> = ({
         onModeChange={setAuthMode}
       />
 
+      <SimpleAuthModal
+        isOpen={showSimpleAuthModal}
+        onClose={() => setShowSimpleAuthModal(false)}
+        onSuccess={handleAuthSuccess}
+      />
+
+      <DataManagement
+        isOpen={showDataManagement}
+        onClose={() => setShowDataManagement(false)}
+      />
+
+      <AdvancedDashboard
+        isOpen={showAdvancedDashboard}
+        onClose={() => setShowAdvancedDashboard(false)}
+      />
+
       {currentUser && currentUser.id !== 'guest' && (
         <ProfileModal
           isOpen={showProfileModal}
@@ -545,6 +726,19 @@ const Dashboard: React.FC<DashboardProps> = ({
       )}
 
       <OfflineIndicator />
+      
+      {/* Mobile Navigation - Only show on mobile */}
+      {isMobile && (
+        <MobileNavigation
+          currentView={currentView}
+          onNavigate={(view: string) => {
+            const validViews = ['dashboard', 'lesson', 'exercise', 'results', 'profile', 'settings'] as const;
+            if (validViews.includes(view as any)) {
+              setCurrentView(view as typeof currentView);
+            }
+          }}
+        />
+      )}
     </div>
   );
 };

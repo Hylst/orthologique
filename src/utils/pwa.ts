@@ -1,4 +1,11 @@
 // Utilitaires PWA pour OrthoLogique
+import type { NotificationAction } from '../types';
+
+// Extended NotificationOptions to include vibrate property
+interface ExtendedNotificationOptions extends NotificationOptions {
+  vibrate?: number[];
+  actions?: NotificationAction[];
+}
 
 interface BeforeInstallPromptEvent extends Event {
   readonly platforms: string[];
@@ -19,6 +26,13 @@ class PWAManager {
   }
 
   private async init() {
+    // Attendre que le document soit complètement chargé
+    if (document.readyState !== 'complete') {
+      await new Promise(resolve => {
+        window.addEventListener('load', resolve, { once: true });
+      });
+    }
+    
     // Vérifier si l'app est déjà installée
     this.checkInstallStatus();
     
@@ -40,8 +54,11 @@ class PWAManager {
   }
 
   private async registerServiceWorker() {
-    if ('serviceWorker' in navigator) {
+    if ('serviceWorker' in navigator && document.readyState === 'complete') {
       try {
+        // Wait a bit to ensure the document is fully loaded
+        await new Promise(resolve => setTimeout(resolve, 100));
+        
         this.swRegistration = await navigator.serviceWorker.register('/sw.js');
         console.log('[PWA] Service Worker enregistré:', this.swRegistration);
         
@@ -62,8 +79,14 @@ class PWAManager {
                            window.location.hostname.includes('webcontainer') ||
                            (error as Error).message.includes('not yet supported');
         
+        // Vérifier si c'est une erreur InvalidStateError
+        const isInvalidStateError = (error as Error).name === 'InvalidStateError' ||
+                                   (error as Error).message.includes('invalid state');
+        
         if (isStackBlitz) {
           console.warn('[PWA] Service Workers ne sont pas supportés dans cet environnement de développement (StackBlitz/WebContainer). Les fonctionnalités PWA seront limitées.');
+        } else if (isInvalidStateError) {
+          console.warn('[PWA] Service Worker ne peut pas être enregistré dans l\'état actuel du document. Ceci est normal dans certains contextes.');
         } else {
           console.error('[PWA] Erreur lors de l\'enregistrement du SW:', error);
         }
@@ -143,22 +166,27 @@ class PWAManager {
     return permission === 'granted';
   }
 
-  public async showNotification(title: string, options: NotificationOptions = {}) {
+  public async showNotification(title: string, options: ExtendedNotificationOptions = {}, actions?: NotificationAction[]) {
     if (!await this.requestNotificationPermission()) {
       return;
     }
 
-    const defaultOptions: NotificationOptions = {
+    const defaultOptions: ExtendedNotificationOptions = {
       icon: '/icons/icon-192x192.png',
       badge: '/icons/icon-72x72.png',
-      vibrate: [100, 50, 100],
       ...options
     };
 
     if (this.swRegistration) {
+      // Actions are only supported for persistent notifications via service worker
+      if (actions && actions.length > 0) {
+        defaultOptions.actions = actions;
+      }
       await this.swRegistration.showNotification(title, defaultOptions);
     } else {
-      new Notification(title, defaultOptions);
+      // Regular notifications don't support actions, so we exclude them
+      const { actions: _, ...optionsWithoutActions } = defaultOptions;
+      new Notification(title, optionsWithoutActions);
     }
   }
 
@@ -256,6 +284,6 @@ export const pwaManager = new PWAManager();
 export const installApp = () => pwaManager.installApp();
 export const canInstall = () => pwaManager.canInstall();
 export const isAppInstalled = () => pwaManager.isAppInstalled();
-export const showNotification = (title: string, options?: NotificationOptions) => 
-  pwaManager.showNotification(title, options);
+export const showNotification = (title: string, options?: ExtendedNotificationOptions, actions?: NotificationAction[]) => 
+  pwaManager.showNotification(title, options, actions);
 export const requestNotificationPermission = () => pwaManager.requestNotificationPermission();

@@ -11,6 +11,12 @@
   "explanation": "Ces homophones ont des fonctions grammaticales opposées : 'est' exprime un état ou une caractéristique (verbe être), tandis que 'et' sert à additionner, à relier des éléments entre eux. C'est la différence entre 'être' et 'ajouter'.",
   "etymology": "Le mot 'est' vient du latin 'est' (il est), tandis que 'et' vient du latin 'et' (et). Leur forme n'a pratiquement pas changé depuis l'Antiquité, mais leur prononciation s'est rapprochée en français moderne, créant cette homophonie.",
   "mnemonics": "Remplacez par 'était' : si ça marche, c'est 'est'. Remplacez par 'et puis' : si ça marche, c'est 'et'. Exemple : 'Il est grand' → 'Il était grand' ✓. 'Paul et Marie' → 'Paul et puis Marie' ✓.",
+  "tips": [
+    "Astuce du doigt : pointez vers la personne ou la chose quand vous dites 'est' (il EST là), faites un geste d'addition avec 'et' (Paul ET Marie).",
+    "Truc de la voix : 'est' se dit avec une voix qui affirme quelque chose, 'et' se dit en énumérant comme une liste.",
+    "Méthode des questions : 'est' répond à 'comment il est ?', 'et' répond à 'avec qui ?' ou 'quoi d'autre ?'.",
+    "Astuce visuelle : imaginez 'est' comme un signe = (égal), et 'et' comme un signe + (plus)."
+  ],
   "examples": [
     "Le ciel est bleu. (était bleu ✓)",
     "Paul et Marie arrivent. (Paul et puis Marie ✓)",
@@ -153,9 +159,9 @@
       "type": "dictation",
       "sentence": "C'est mon frère et ma sœur.",
       "audioText": "C'est mon frère et ma sœur.",
-      "answer": ["C'est mon frère et ma sœur.", "C'est mon frère et ma sœur"],
+      "answer": ["C'est mon frère et ma sœur."],
       "feedbackCorrect": "Excellent ! 'C'est' (présentation) et 'et' (liaison).",
-      "feedbackIncorrect": "'C'était mon frère' (verbe être) et 'frère et puis sœur' (liaison).",
+      "feedbackIncorrect": "'C'est mon frère' (verbe être au présent) et 'frère et ma sœur' (liaison). Attention à l'orthographe de 'sœur' avec œ.",
       "hint": "Présentation + liaison de personnes"
     },
     {

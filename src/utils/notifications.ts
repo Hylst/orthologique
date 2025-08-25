@@ -1,4 +1,10 @@
 import { pwaManager } from './pwa';
+import type { NotificationAction } from '../types';
+
+// Extended NotificationOptions to include vibrate property
+interface ExtendedNotificationOptions extends NotificationOptions {
+  vibrate?: number[];
+}
 
 export interface NotificationConfig {
   title: string;
@@ -61,19 +67,18 @@ export class NotificationManager {
       return false;
     }
 
-    const options: NotificationOptions = {
+    const options: ExtendedNotificationOptions = {
       body: config.body,
       icon: config.icon || '/icons/icon-192x192.png',
       badge: config.badge || '/icons/icon-72x72.png',
       tag: config.tag,
       requireInteraction: config.requireInteraction || false,
       silent: config.silent || false,
-      vibrate: config.vibrate || [100, 50, 100],
-      actions: config.actions || []
+      vibrate: config.vibrate || [100, 50, 100]
     };
 
     try {
-      await pwaManager.showNotification(config.title, options);
+      await pwaManager.showNotification(config.title, options, config.actions);
       return true;
     } catch (error) {
       console.error('Erreur lors de l\'affichage de la notification:', error);

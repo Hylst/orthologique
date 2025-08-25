@@ -98,6 +98,11 @@ textarea {
   padding: 0.75rem;
   font-size: 1rem;
   transition: border-color 0.2s ease-in-out;
+  /* Mobile touch improvements */
+  min-height: 44px;
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 input[type="text"]:focus, 
@@ -105,6 +110,16 @@ input[type="email"]:focus,
 textarea:focus {
   border-color: #3B82F6;
   box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Mobile-specific input improvements */
+@media (max-width: 768px) {
+  input[type="text"], 
+  input[type="email"], 
+  textarea {
+    font-size: 16px; /* Prevents zoom on iOS */
+    padding: 1rem;
+  }
 }
 
 /* Styles pour les alertes et notifications */
@@ -137,4 +152,585 @@ textarea:focus {
   background-color: #EFF6FF;
   border-color: #3B82F6;
   color: #1D4ED8;
+}
+
+/* Mobile UX Improvements */
+
+/* Touch-friendly buttons */
+.touch-button {
+  min-height: 44px;
+  min-width: 44px;
+  padding: 12px;
+  margin: 4px;
+  border-radius: 8px;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* Touch feedback */
+.touch-feedback {
+  transition: transform 0.1s ease, opacity 0.1s ease;
+}
+
+.touch-feedback:active {
+  transform: scale(0.95);
+  opacity: 0.8;
+}
+
+/* One-hand mode styles */
+.one-hand-mode {
+  --thumb-zone-height: 60vh;
+}
+
+.one-hand-mode .main-content {
+  padding-bottom: 120px; /* Space for bottom navigation */
+}
+
+.one-hand-mode .floating-action {
+  bottom: 80px; /* Above navigation */
+  right: 16px;
+}
+
+.one-hand-mode .modal-content {
+  margin-top: auto;
+  margin-bottom: 0;
+  border-radius: 16px 16px 0 0;
+  max-height: var(--thumb-zone-height);
+}
+
+/* Safe area support for devices with notches */
+.safe-area-top {
+  padding-top: env(safe-area-inset-top);
+}
+
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.safe-area-left {
+  padding-left: env(safe-area-inset-left);
+}
+
+.safe-area-right {
+  padding-right: env(safe-area-inset-right);
+}
+
+/* Mobile-specific improvements */
+@media (max-width: 768px) {
+  /* Larger touch targets */
+  button, .button {
+    min-height: 44px;
+    padding: 12px 16px;
+  }
+
+  /* Better spacing for mobile */
+  .card {
+    margin: 8px;
+    padding: 16px;
+  }
+
+  /* Improved modal positioning */
+  .modal {
+    margin: 16px;
+  }
+
+  /* Better text sizing */
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.25rem; }
+  
+  /* Improved form spacing */
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  /* Better list item spacing */
+  .list-item {
+    padding: 16px;
+    margin-bottom: 8px;
+  }
+}
+
+/* Landscape mobile optimizations */
+@media (max-width: 768px) and (orientation: landscape) {
+  .one-hand-mode .modal-content {
+    max-height: 80vh;
+  }
+  
+  .mobile-nav {
+    padding: 8px 16px;
+  }
+}
+
+/* High DPI display optimizations */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .icon {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Dark mode improvements for mobile */
+@media (prefers-color-scheme: dark) {
+  .touch-button {
+    background-color: #374151;
+    color: #F9FAFB;
+  }
+  
+  .one-hand-mode .modal-content {
+    background-color: #1F2937;
+    border-color: #374151;
+  }
+}
+
+/* Swipe indicators */
+.swipe-indicator {
+  position: relative;
+  overflow: hidden;
+}
+
+.swipe-indicator::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(to bottom, transparent, #9CA3AF, transparent);
+  border-radius: 2px;
+  transform: translateY(-50%);
+  opacity: 0.5;
+}
+
+/* Pull-to-refresh indicator */
+.pull-to-refresh {
+  position: relative;
+}
+
+.pull-to-refresh.pulling::before {
+  content: '↓';
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  color: #6B7280;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-5px);
+  }
+}
+
+/* Loading states for mobile */
+.mobile-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.mobile-loading::after {
+  content: '';
+  width: 32px;
+  height: 32px;
+  border: 3px solid #E5E7EB;
+  border-top: 3px solid #3B82F6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Mobile Performance Optimizations */
+.low-performance {
+  --animation-duration: 0s;
+  --transition-duration: 0s;
+}
+
+.low-performance * {
+  animation-duration: 0s !important;
+  transition-duration: 0s !important;
+}
+
+.reduce-motion {
+  --animation-duration: 0.1s;
+  --transition-duration: 0.1s;
+}
+
+.reduce-motion * {
+  animation-duration: 0.1s !important;
+  transition-duration: 0.1s !important;
+}
+
+/* WCAG 2.1 AA Accessibility Styles */
+
+/* Screen reader only content */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Skip links for keyboard navigation */
+.skip-links {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  z-index: 1000;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  z-index: 1001;
+  transition: top 0.3s;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* High contrast mode support */
+.high-contrast {
+  --bg-primary: #000000;
+  --text-primary: #ffffff;
+  --bg-secondary: #1a1a1a;
+  --text-secondary: #e0e0e0;
+  --accent-color: #ffff00;
+  --border-color: #ffffff;
+  --error-color: #ff6b6b;
+  --success-color: #51cf66;
+}
+
+.high-contrast * {
+  border-color: var(--border-color) !important;
+}
+
+.high-contrast button,
+.high-contrast .touch-button {
+  background: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+  border: 2px solid var(--border-color) !important;
+}
+
+.high-contrast button:hover,
+.high-contrast .touch-button:hover {
+  background: var(--accent-color) !important;
+  color: var(--bg-primary) !important;
+}
+
+/* Focus indicators for keyboard navigation */
+*:focus {
+  outline: 3px solid #4f46e5;
+  outline-offset: 2px;
+}
+
+.high-contrast *:focus {
+  outline: 3px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+/* Enhanced focus for interactive elements */
+button:focus,
+a:focus,
+input:focus,
+select:focus,
+textarea:focus,
+[tabindex]:focus {
+  outline: 3px solid #4f46e5;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 6px rgba(79, 70, 229, 0.2);
+}
+
+.high-contrast button:focus,
+.high-contrast a:focus,
+.high-contrast input:focus,
+.high-contrast select:focus,
+.high-contrast textarea:focus,
+.high-contrast [tabindex]:focus {
+  outline: 3px solid var(--accent-color);
+  box-shadow: 0 0 0 6px rgba(255, 255, 0, 0.3);
+}
+
+/* Error states with proper contrast */
+.error-message {
+  color: #dc2626;
+  font-weight: 600;
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.high-contrast .error-message {
+  color: var(--error-color);
+  background: var(--bg-secondary);
+  padding: 8px;
+  border: 2px solid var(--error-color);
+  border-radius: 4px;
+}
+
+.error-message::before {
+  content: '⚠️';
+  font-size: 16px;
+}
+
+/* Success states */
+.success-message {
+  color: #16a34a;
+  font-weight: 600;
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.high-contrast .success-message {
+  color: var(--success-color);
+  background: var(--bg-secondary);
+  padding: 8px;
+  border: 2px solid var(--success-color);
+  border-radius: 4px;
+}
+
+.success-message::before {
+  content: '✅';
+  font-size: 16px;
+}
+
+/* Accessible form controls */
+input[aria-invalid="true"],
+select[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+.high-contrast input[aria-invalid="true"],
+.high-contrast select[aria-invalid="true"],
+.high-contrast textarea[aria-invalid="true"] {
+  border-color: var(--error-color);
+  box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.3);
+}
+
+/* Progress indicators with proper ARIA support */
+.progress-indicator {
+  position: relative;
+  background: #e5e7eb;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.progress-indicator::after {
+  content: attr(aria-valuenow) '%';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.high-contrast .progress-indicator {
+  background: var(--bg-secondary);
+  border: 2px solid var(--border-color);
+}
+
+.high-contrast .progress-indicator::after {
+  color: var(--text-primary);
+}
+
+/* Accessible modal dialogs */
+[role="dialog"] {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.high-contrast [role="dialog"] {
+  background: var(--bg-primary);
+  border: 3px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+/* Modal backdrop */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.high-contrast .modal-backdrop {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Accessible buttons with proper states */
+button[aria-pressed="true"] {
+  background: #4f46e5;
+  color: white;
+}
+
+.high-contrast button[aria-pressed="true"] {
+  background: var(--accent-color);
+  color: var(--bg-primary);
+}
+
+button[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.high-contrast button[aria-disabled="true"] {
+  background: var(--bg-secondary);
+  color: #666;
+  border-color: #666;
+}
+
+/* Accessible navigation landmarks */
+[role="navigation"] {
+  position: relative;
+}
+
+[role="navigation"]::before {
+  content: 'Navigation';
+  position: absolute;
+  top: -40px;
+  left: 0;
+  font-size: 0;
+  color: transparent;
+}
+
+/* Accessible headings hierarchy */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+}
+
+h1 { font-size: 2.25rem; }
+h2 { font-size: 1.875rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+h5 { font-size: 1.125rem; }
+h6 { font-size: 1rem; }
+
+.high-contrast h1,
+.high-contrast h2,
+.high-contrast h3,
+.high-contrast h4,
+.high-contrast h5,
+.high-contrast h6 {
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 4px;
+}
+
+/* Accessible link styles */
+a {
+  color: #4f46e5;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #3730a3;
+}
+
+a:visited {
+  color: #7c3aed;
+}
+
+.high-contrast a {
+  color: var(--accent-color);
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.high-contrast a:hover {
+  background: var(--accent-color);
+  color: var(--bg-primary);
+  padding: 2px 4px;
+  border-radius: 2px;
+}
+
+/* Accessible tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #d1d5db;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+th {
+  background: #f3f4f6;
+  font-weight: 600;
+}
+
+.high-contrast table {
+  border: 2px solid var(--border-color);
+}
+
+.high-contrast th,
+.high-contrast td {
+  border: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+.high-contrast th {
+  background: var(--bg-primary);
+  color: var(--accent-color);
+  font-weight: bold;
 }

@@ -2,12 +2,16 @@ import React from 'react';
 import { Lesson, AppState, UserProfile } from './types';
 import { ProgressManager } from './utils/progressManager';
 import { initAudio, initializeVoices } from './utils/audio';
-import { getCurrentUser } from './utils/storage';
+import { getCurrentUser, getGDPRConsent, saveGDPRConsent } from './utils/storage';
 import Dashboard from './components/Dashboard';
 import LessonView from './components/LessonView';
 import ExerciseView from './components/ExerciseView';
 import ResultsView from './components/ResultsView';
 import ErrorBoundary from './components/ErrorBoundary';
+import GDPRConsent from './components/GDPRConsent';
+import Footer from './components/Footer';
+import MobileOptimizer from './components/MobileOptimizer';
+import AccessibilityProvider from './components/AccessibilityProvider';
 import { showLessonCompleted } from './utils/notifications';
 import { ModularLessonSystem } from './data/index';
 import { lessonLazyLoader } from './utils/lazyLoader';
@@ -34,11 +38,50 @@ const App: React.FC = () => {
     }
   });
 
+  // GDPR Consent state
+  const [showGDPRConsent, setShowGDPRConsent] = React.useState(false);
+
+  /**
+   * Handle GDPR consent acceptance
+   */
+  const handleConsentGiven = (preferences: any) => {
+    console.log('GDPR Consent given:', preferences);
+    const consentData = {
+      analytics: preferences.analytics || false,
+      cookies: preferences.functional || false,
+      dataProcessing: preferences.essential || true,
+      timestamp: new Date().toISOString()
+    };
+    saveGDPRConsent(consentData);
+    setShowGDPRConsent(false);
+  };
+
+  /**
+   * Handle GDPR consent decline
+   */
+  const handleConsentDeclined = () => {
+    console.log('GDPR Consent declined');
+    const minimalConsent = {
+      analytics: false,
+      cookies: false,
+      dataProcessing: true,
+      timestamp: new Date().toISOString()
+    };
+    saveGDPRConsent(minimalConsent);
+    setShowGDPRConsent(false);
+  };
+
   const [exerciseScore, setExerciseScore] = React.useState<number>(0);
 
   React.useEffect(() => {
     const initializeApp = async () => {
       try {
+        // Check GDPR consent first
+        const gdprConsent = getGDPRConsent();
+        if (!gdprConsent) {
+          setShowGDPRConsent(true);
+        }
+
         // Initialize the new modular lesson system with lazy loading
         const lessonSystem = new ModularLessonSystem();
         
@@ -313,13 +356,28 @@ const App: React.FC = () => {
     default:
       return (
         <ErrorBoundary>
-          <Dashboard
-            lessons={processedLessons}
-            userProgress={appState.userProgress}
-            onStartLesson={handleStartLesson}
-            onResetProgress={handleResetProgress}
-            onUpdateUserProfile={handleUpdateUserProfile}
-          />
+          <AccessibilityProvider>
+            <MobileOptimizer>
+              <div className="min-h-screen flex flex-col">
+                <Dashboard
+                  lessons={processedLessons}
+                  userProgress={appState.userProgress}
+                  onStartLesson={handleStartLesson}
+                  onResetProgress={handleResetProgress}
+                  onUpdateUserProfile={handleUpdateUserProfile}
+                />
+                <Footer />
+              </div>
+              
+              {/* GDPR Consent Modal */}
+              {showGDPRConsent && (
+                <GDPRConsent 
+                  onConsentGiven={handleConsentGiven}
+                  onConsentDeclined={handleConsentDeclined}
+                />
+              )}
+            </MobileOptimizer>
+          </AccessibilityProvider>
         </ErrorBoundary>
       );
   }

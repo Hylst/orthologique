@@ -13,6 +13,12 @@
   "explanation": "Ces homophones ont des fonctions grammaticales précises. Chaque mot a son rôle : 'ou' relie des alternatives, 'où' situe dans l'espace ou le temps, 'ce' désigne, 'se' renvoie au sujet, 'ces' montre au pluriel, 'ses' possède au pluriel.",
   "etymology": "'Ou' vient du latin 'aut' (ou bien), 'où' de 'ubi' (où). 'Ce' vient de 'ecce' (voici), 'se' de 'se' (soi). L'accent sur 'où' a été ajouté pour distinguer les deux mots à l'écrit.",
   "mnemonics": "OU = ou bien (remplacez par 'ou bien'). OÙ = lieu/temps (remplacez par 'à quel endroit'). CE = cela (remplacez par 'cela'). SE = soi-même (avec un verbe pronominal). CES = ces choses-là (pluriel). SES = ses affaires (possession).",
+  "tips": [
+    "Pour ou/où : si vous pouvez dire 'ou bien', c'est 'ou' sans accent. Si vous pouvez dire 'à quel endroit' ou 'quand', c'est 'où' avec accent.",
+    "Pour ce/se : 'ce' peut être remplacé par 'cela', 'se' accompagne toujours un verbe (il se lave, elle se coiffe).",
+    "Pour ces/ses : remplacez par le singulier. 'Ces livres' → 'ce livre' (démonstratif). 'Ses livres' → 'son livre' (possession).",
+    "Astuce de l'accent : l'accent sur 'où' indique une question ou une précision de lieu/temps, comme un point d'interrogation."
+  ],
   "examples": [
     "Thé ou café ? (ou bien café ✓)",
     "Où vas-tu ? (à quel endroit ✓)",

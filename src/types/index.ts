@@ -23,6 +23,7 @@ export interface Lesson {
   etymology?: string; // Contexte historique/étymologique
   specialCases?: SpecialCase[]; // Cas particuliers et exceptions
   mnemonics: string;
+  tips?: string[]; // Astuces et conseils pratiques
   examples: string[];
   literaryExamples?: LiteraryExample[]; // Exemples tirés de textes
   exercises: Exercise[];
@@ -98,4 +99,10 @@ export interface ProgressStats {
   averageScore: number;
   progressPercentage: number;
   totalScore: number;
+}
+
+export interface NotificationAction {
+  action: string;
+  title: string;
+  icon?: string;
 }

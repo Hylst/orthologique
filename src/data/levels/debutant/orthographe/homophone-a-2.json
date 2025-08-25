@@ -162,11 +162,11 @@
       "id": "a-2-qcm-4",
       "type": "qcm",
       "sentence": "Tu ... raison de partir ... temps.",
-      "options": ["a, a", "à, à", "a, à"],
-      "answer": "a, à",
-      "feedbackCorrect": "Bravo ! 'As raison' (verbe) et 'à temps' (moment).",
-      "feedbackIncorrect": "'Tu avais raison' marche (verbe), 'à temps' indique le moment.",
-      "hint": "Première case : verbe avoir. Deuxième : moment"
+      "options": ["as, à", "a, à", "à, as"],
+      "answer": "as, à",
+      "feedbackCorrect": "Bravo ! 'As raison' (verbe avoir 2e personne) et 'à temps' (moment).",
+      "feedbackIncorrect": "'Tu as raison' (verbe avoir conjugué), 'à temps' indique le moment.",
+      "hint": "Première case : verbe avoir 2e personne. Deuxième : moment"
     },
     {
       "id": "a-2-fill-3",

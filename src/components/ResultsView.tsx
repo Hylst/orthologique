@@ -1,6 +1,8 @@
 import React from 'react';
 import { Trophy, RotateCcw, Home, Star, Volume2, Target, BookOpen } from 'lucide-react';
 import { speak, playProgressSound, clearSoundQueue } from '../utils/audio';
+import { playVictorySound } from '../utils/victoryAudio';
+import ConfettiAnimation from './ConfettiAnimation';
 
 interface ResultsViewProps {
   lessonTitle: string;
@@ -22,19 +24,39 @@ const ResultsView: React.FC<ResultsViewProps> = ({
   const percentage = score;
   const correctAnswers = Math.round((score / 100) * totalExercises);
   const hasPassed = percentage >= passingScore;
+  const isPerfectScore = percentage === 100;
+  
+  const [showConfetti, setShowConfetti] = React.useState(false);
 
   React.useEffect(() => {
     // Vide la file d'attente des sons précédents
     clearSoundQueue();
     
-    playProgressSound();
-    const message = hasPassed 
-      ? `Félicitations ! Vous avez réussi la leçon ${lessonTitle} avec ${score}%`
-      : `Vous avez obtenu ${score}% à la leçon ${lessonTitle}. Continuez vos efforts !`;
-    setTimeout(() => speak(message), 1000);
-  }, [score, lessonTitle, hasPassed]);
+    // Play victory celebration for perfect scores
+    if (isPerfectScore) {
+      setShowConfetti(true);
+      playVictorySound().catch(() => {
+        console.warn('Victory sound failed to play');
+      });
+      
+      const message = `Fantastique ! Score parfait de 100% pour la leçon ${lessonTitle} ! Vous êtes un champion !`;
+      setTimeout(() => speak(message), 1500);
+    } else {
+      playProgressSound();
+      const message = hasPassed 
+        ? `Félicitations ! Vous avez réussi la leçon ${lessonTitle} avec ${score}%`
+        : `Vous avez obtenu ${score}% à la leçon ${lessonTitle}. Continuez vos efforts !`;
+      setTimeout(() => speak(message), 1000);
+    }
+  }, [score, lessonTitle, hasPassed, isPerfectScore]);
 
   const getScoreMessage = () => {
+    if (percentage === 100) return { 
+      message: "🎉 PARFAIT ! Score de 100% ! Vous êtes un véritable champion ! 🎉", 
+      color: "text-purple-600", 
+      bgColor: "bg-gradient-to-r from-purple-50 to-pink-50",
+      stars: 4 
+    };
     if (percentage >= 90) return { 
       message: "Excellent ! Vous maîtrisez parfaitement cette règle !", 
       color: "text-green-600", 
@@ -64,7 +86,13 @@ const ResultsView: React.FC<ResultsViewProps> = ({
   const scoreData = getScoreMessage();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 flex items-center justify-center">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 flex items-center justify-center relative">
+      {/* Confetti Animation for Perfect Scores */}
+      <ConfettiAnimation 
+        isActive={showConfetti} 
+        onComplete={() => setShowConfetti(false)}
+      />
+      
       <div className="max-w-2xl mx-auto px-4 py-8">
         <div className="bg-white rounded-xl shadow-lg p-8 text-center">
           {/* Trophy */}
@@ -81,10 +109,10 @@ const ResultsView: React.FC<ResultsViewProps> = ({
               )}
             </div>
             <div className="flex justify-center gap-1 mb-4">
-              {[...Array(3)].map((_, i) => (
+              {[...Array(isPerfectScore ? 4 : 3)].map((_, i) => (
                 <Star 
                   key={i} 
-                  className={`w-6 h-6 ${i < scoreData.stars ? 'text-yellow-400 fill-current' : 'text-gray-300'}`} 
+                  className={`w-6 h-6 ${i < scoreData.stars ? (isPerfectScore ? 'text-purple-400 fill-current' : 'text-yellow-400 fill-current') : 'text-gray-300'}`} 
                 />
               ))}
             </div>

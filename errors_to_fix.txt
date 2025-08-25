@@ -1,138 +1,433 @@
 [{
-"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/App.tsx",
+"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/components/Dashboard.tsx",
+"owner": "typescript",
+"code": "2345",
+"severity": 8,
+"message": "Argument of type '\"lessons\"' is not assignable to parameter of type 'SetStateAction<\"lesson\" | \"dashboard\" | \"exercise\" | \"results\" | \"profile\" | \"settings\">'.",
+"source": "ts",
+"startLineNumber": 99,
+"startColumn": 24,
+"endLineNumber": 99,
+"endColumn": 33,
+"extensionID": "vscode.typescript-language-features"
+},{
+"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/components/Dashboard.tsx",
 "owner": "typescript",
 "code": "2322",
 "severity": 8,
-"message": "Type '{ id: string; title: string; level: number; difficulty: string; targetAudience: string; category: string; passingScore: number; prerequisites: string[]; rule: string; explanation: string; etymology: string; ... 4 more ...; exercises: ({ ...; } | ... 3 more ... | { ...; })[]; }[]' is not assignable to type 'Lesson[]'.\n  Type '{ id: string; title: string; level: number; difficulty: string; targetAudience: string; category: string; passingScore: number; prerequisites: string[]; rule: string; explanation: string; etymology: string; ... 4 more ...; exercises: ({ ...; } | ... 3 more ... | { ...; })[]; }' is missing the following properties from type 'Lesson': unlocked, completed",
+"message": "Type 'Dispatch<SetStateAction<\"lesson\" | \"dashboard\" | \"exercise\" | \"results\" | \"profile\" | \"settings\">>' is not assignable to type '(view: string) => void'.\n  Types of parameters 'value' and 'view' are incompatible.\n    Type 'string' is not assignable to type 'SetStateAction<\"lesson\" | \"dashboard\" | \"exercise\" | \"results\" | \"profile\" | \"settings\">'.",
 "source": "ts",
-"startLineNumber": 69,
+"startLineNumber": 734,
 "startColumn": 11,
-"endLineNumber": 69,
+"endLineNumber": 734,
 "endColumn": 21,
+"relatedInformation": [
+{
+"startLineNumber": 11,
+"startColumn": 3,
+"endLineNumber": 11,
+"endColumn": 13,
+"message": "The expected type comes from property 'onNavigate' which is declared here on type 'IntrinsicAttributes & MobileNavigationProps'",
+"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/components/MobileNavigation.tsx"
+}
+],
 "extensionID": "vscode.typescript-language-features"
 }]
 [{
-"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/data/index.ts",
+"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/utils/mobileInteractions.ts",
 "owner": "typescript",
-"code": "2307",
+"code": "2503",
 "severity": 8,
-"message": "Cannot find module './utils/lessonLoader' or its corresponding type declarations.",
+"message": "Cannot find namespace 'NodeJS'.",
 "source": "ts",
-"startLineNumber": 7,
-"startColumn": 30,
-"endLineNumber": 7,
-"endColumn": 52,
+"startLineNumber": 368,
+"startColumn": 20,
+"endLineNumber": 368,
+"endColumn": 26,
 "extensionID": "vscode.typescript-language-features"
 },{
-"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/data/index.ts",
+"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/utils/mobileInteractions.ts",
 "owner": "typescript",
-"code": "2307",
+"code": "2503",
 "severity": 8,
-"message": "Cannot find module './utils/lessonCache' or its corresponding type declarations.",
+"message": "Cannot find namespace 'NodeJS'.",
 "source": "ts",
-"startLineNumber": 8,
-"startColumn": 29,
-"endLineNumber": 8,
-"endColumn": 50,
+"startLineNumber": 386,
+"startColumn": 20,
+"endLineNumber": 386,
+"endColumn": 26,
 "extensionID": "vscode.typescript-language-features"
 },{
-"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/data/index.ts",
+"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/utils/mobileInteractions.ts",
 "owner": "typescript",
 "code": "2322",
 "severity": 8,
-"message": "Type '{ unlocked: false; completed: false; id: string; title: string; level: number; difficulty: string; targetAudience: string; category: string; passingScore: number; prerequisites: string[]; rule: string; ... 6 more ...; exercises: ({ ...; } | ... 3 more ... | { ...; })[]; }[]' is not assignable to type 'Lesson[]'.\n  Type '{ unlocked: false; completed: false; id: string; title: string; level: number; difficulty: string; targetAudience: string; category: string; passingScore: number; prerequisites: string[]; rule: string; ... 6 more ...; exercises: ({ ...; } | ... 3 more ... | { ...; })[]; }' is not assignable to type 'Lesson'.\n    Types of property 'difficulty' are incompatible.\n      Type 'string' is not assignable to type '\"debutant\" | \"intermediaire\" | \"avance\" | \"expert\"'.",
+"message": "Type '((callback: FrameRequestCallback) => number) & ((callback: FrameRequestCallback) => number)' is not assignable to type 'number'.",
 "source": "ts",
-"startLineNumber": 30,
-"startColumn": 7,
-"endLineNumber": 30,
-"endColumn": 13,
+"startLineNumber": 397,
+"startColumn": 12,
+"endLineNumber": 399,
+"endColumn": 81,
+"relatedInformation": [
+{
+"startLineNumber": 397,
+"startColumn": 12,
+"endLineNumber": 399,
+"endColumn": 81,
+"message": "Did you mean to call this expression?",
+"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/utils/mobileInteractions.ts"
+}
+],
 "extensionID": "vscode.typescript-language-features"
 },{
-"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/data/index.ts",
+"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/utils/mobileInteractions.ts",
 "owner": "typescript",
-"code": "7006",
+"code": "2551",
 "severity": 8,
-"message": "Parameter 'lesson' implicitly has an 'any' type.",
+"message": "Property 'webkitRequestAnimationFrame' does not exist on type 'Window & typeof globalThis'. Did you mean 'requestAnimationFrame'?",
 "source": "ts",
-"startLineNumber": 38,
-"startColumn": 24,
-"endLineNumber": 38,
-"endColumn": 30,
+"startLineNumber": 398,
+"startColumn": 19,
+"endLineNumber": 398,
+"endColumn": 46,
 "extensionID": "vscode.typescript-language-features"
 },{
-"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/data/index.ts",
+"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/utils/mobileInteractions.ts",
 "owner": "typescript",
-"code": "2322",
-"severity": 8,
-"message": "Type '{ unlocked: false; completed: false; id: string; title: string; level: number; difficulty: string; targetAudience: string; category: string; passingScore: number; prerequisites: string[]; rule: string; ... 6 more ...; exercises: ({ ...; } | ... 3 more ... | { ...; })[]; }[]' is not assignable to type 'Lesson[]'.\n  Type '{ unlocked: false; completed: false; id: string; title: string; level: number; difficulty: string; targetAudience: string; category: string; passingScore: number; prerequisites: string[]; rule: string; ... 6 more ...; exercises: ({ ...; } | ... 3 more ... | { ...; })[]; }' is not assignable to type 'Lesson'.\n    Types of property 'difficulty' are incompatible.\n      Type 'string' is not assignable to type '\"debutant\" | \"intermediaire\" | \"avance\" | \"expert\"'.",
-"source": "ts",
-"startLineNumber": 50,
-"startColumn": 7,
-"endLineNumber": 50,
-"endColumn": 13,
-"extensionID": "vscode.typescript-language-features"
-},{
-"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/data/index.ts",
-"owner": "typescript",
-"code": "7006",
-"severity": 8,
-"message": "Parameter 'lesson' implicitly has an 'any' type.",
-"source": "ts",
-"startLineNumber": 60,
-"startColumn": 24,
-"endLineNumber": 60,
-"endColumn": 30,
-"extensionID": "vscode.typescript-language-features"
-},{
-"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/data/index.ts",
-"owner": "typescript",
-"code": "2322",
-"severity": 8,
-"message": "Type '{ unlocked: boolean; completed: boolean; id: string; title: string; level: number; difficulty: string; targetAudience: string; category: string; passingScore: number; prerequisites: string[]; rule: string; ... 6 more ...; exercises: ({ ...; } | ... 3 more ... | { ...; })[]; }' is not assignable to type 'Lesson'.\n  Types of property 'difficulty' are incompatible.\n    Type 'string' is not assignable to type '\"debutant\" | \"intermediaire\" | \"avance\" | \"expert\"'.",
-"source": "ts",
-"startLineNumber": 86,
-"startColumn": 9,
-"endLineNumber": 86,
-"endColumn": 15,
-"extensionID": "vscode.typescript-language-features"
-},{
-"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/data/index.ts",
-"owner": "typescript",
-"code": "2322",
-"severity": 8,
-"message": "Type '{ unlocked: false; completed: false; id: string; title: string; level: number; difficulty: string; targetAudience: string; category: string; passingScore: number; prerequisites: string[]; rule: string; ... 6 more ...; exercises: ({ ...; } | ... 3 more ... | { ...; })[]; }[]' is not assignable to type 'Lesson[]'.\n  Type '{ unlocked: false; completed: false; id: string; title: string; level: number; difficulty: string; targetAudience: string; category: string; passingScore: number; prerequisites: string[]; rule: string; ... 6 more ...; exercises: ({ ...; } | ... 3 more ... | { ...; })[]; }' is not assignable to type 'Lesson'.\n    Types of property 'difficulty' are incompatible.\n      Type 'string' is not assignable to type '\"debutant\" | \"intermediaire\" | \"avance\" | \"expert\"'.",
-"source": "ts",
-"startLineNumber": 109,
-"startColumn": 7,
-"endLineNumber": 109,
-"endColumn": 13,
-"extensionID": "vscode.typescript-language-features"
-},{
-"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/data/index.ts",
-"owner": "typescript",
-"code": "7006",
-"severity": 8,
-"message": "Parameter 'lesson' implicitly has an 'any' type.",
-"source": "ts",
-"startLineNumber": 119,
-"startColumn": 24,
-"endLineNumber": 119,
-"endColumn": 30,
-"extensionID": "vscode.typescript-language-features"
-}]
-[{
-"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/data/utils/lessonValidator.ts",
-"owner": "typescript",
-"code": "6192",
+"code": "6133",
 "severity": 4,
-"message": "All imports in import declaration are unused.",
+"message": "'distance' is declared but its value is never read.",
 "source": "ts",
-"startLineNumber": 6,
-"startColumn": 1,
-"endLineNumber": 6,
-"endColumn": 48,
+"startLineNumber": 97,
+"startColumn": 25,
+"endLineNumber": 97,
+"endColumn": 33,
 "tags": [
 1
 ],
 "extensionID": "vscode.typescript-language-features"
+},{
+"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/utils/mobileInteractions.ts",
+"owner": "typescript",
+"code": "6133",
+"severity": 4,
+"message": "'velocity' is declared but its value is never read.",
+"source": "ts",
+"startLineNumber": 97,
+"startColumn": 43,
+"endLineNumber": 97,
+"endColumn": 51,
+"tags": [
+1
+],
+"extensionID": "vscode.typescript-language-features"
+},{
+"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/utils/mobileInteractions.ts",
+"owner": "typescript",
+"code": "6133",
+"severity": 4,
+"message": "'distance' is declared but its value is never read.",
+"source": "ts",
+"startLineNumber": 98,
+"startColumn": 26,
+"endLineNumber": 98,
+"endColumn": 34,
+"tags": [
+1
+],
+"extensionID": "vscode.typescript-language-features"
+},{
+"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/utils/mobileInteractions.ts",
+"owner": "typescript",
+"code": "6133",
+"severity": 4,
+"message": "'velocity' is declared but its value is never read.",
+"source": "ts",
+"startLineNumber": 98,
+"startColumn": 44,
+"endLineNumber": 98,
+"endColumn": 52,
+"tags": [
+1
+],
+"extensionID": "vscode.typescript-language-features"
+},{
+"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/utils/mobileInteractions.ts",
+"owner": "typescript",
+"code": "6133",
+"severity": 4,
+"message": "'distance' is declared but its value is never read.",
+"source": "ts",
+"startLineNumber": 99,
+"startColumn": 23,
+"endLineNumber": 99,
+"endColumn": 31,
+"tags": [
+1
+],
+"extensionID": "vscode.typescript-language-features"
+},{
+"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/utils/mobileInteractions.ts",
+"owner": "typescript",
+"code": "6133",
+"severity": 4,
+"message": "'velocity' is declared but its value is never read.",
+"source": "ts",
+"startLineNumber": 99,
+"startColumn": 41,
+"endLineNumber": 99,
+"endColumn": 49,
+"tags": [
+1
+],
+"extensionID": "vscode.typescript-language-features"
+},{
+"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/utils/mobileInteractions.ts",
+"owner": "typescript",
+"code": "6133",
+"severity": 4,
+"message": "'distance' is declared but its value is never read.",
+"source": "ts",
+"startLineNumber": 100,
+"startColumn": 25,
+"endLineNumber": 100,
+"endColumn": 33,
+"tags": [
+1
+],
+"extensionID": "vscode.typescript-language-features"
+},{
+"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/utils/mobileInteractions.ts",
+"owner": "typescript",
+"code": "6133",
+"severity": 4,
+"message": "'velocity' is declared but its value is never read.",
+"source": "ts",
+"startLineNumber": 100,
+"startColumn": 43,
+"endLineNumber": 100,
+"endColumn": 51,
+"tags": [
+1
+],
+"extensionID": "vscode.typescript-language-features"
+},{
+"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/utils/mobileInteractions.ts",
+"owner": "typescript",
+"code": "6133",
+"severity": 4,
+"message": "'x' is declared but its value is never read.",
+"source": "ts",
+"startLineNumber": 101,
+"startColumn": 25,
+"endLineNumber": 101,
+"endColumn": 26,
+"tags": [
+1
+],
+"extensionID": "vscode.typescript-language-features"
+},{
+"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/utils/mobileInteractions.ts",
+"owner": "typescript",
+"code": "6133",
+"severity": 4,
+"message": "'y' is declared but its value is never read.",
+"source": "ts",
+"startLineNumber": 101,
+"startColumn": 36,
+"endLineNumber": 101,
+"endColumn": 37,
+"tags": [
+1
+],
+"extensionID": "vscode.typescript-language-features"
+},{
+"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/utils/mobileInteractions.ts",
+"owner": "typescript",
+"code": "6133",
+"severity": 4,
+"message": "'callback' is declared but its value is never read.",
+"source": "ts",
+"startLineNumber": 396,
+"startColumn": 27,
+"endLineNumber": 396,
+"endColumn": 35,
+"tags": [
+1
+],
+"extensionID": "vscode.typescript-language-features"
+}]
+[{
+"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/components/AccessibilityProvider.tsx",
+"owner": "typescript",
+"code": "6133",
+"severity": 4,
+"message": "'visualAccessibility' is declared but its value is never read.",
+"source": "ts",
+"startLineNumber": 11,
+"startColumn": 3,
+"endLineNumber": 11,
+"endColumn": 22,
+"tags": [
+1
+],
+"extensionID": "vscode.typescript-language-features"
+}]
+[{
+"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/components/AdvancedDashboard.tsx",
+"owner": "typescript",
+"code": "6133",
+"severity": 4,
+"message": "'lessonId' is declared but its value is never read.",
+"source": "ts",
+"startLineNumber": 106,
+"startColumn": 42,
+"endLineNumber": 106,
+"endColumn": 50,
+"tags": [
+1
+],
+"extensionID": "vscode.typescript-language-features"
+},{
+"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/components/AdvancedDashboard.tsx",
+"owner": "typescript",
+"code": "6133",
+"severity": 4,
+"message": "'exerciseId' is declared but its value is never read.",
+"source": "ts",
+"startLineNumber": 108,
+"startColumn": 58,
+"endLineNumber": 108,
+"endColumn": 68,
+"tags": [
+1
+],
+"extensionID": "vscode.typescript-language-features"
+},{
+"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/components/AdvancedDashboard.tsx",
+"owner": "typescript",
+"code": "6133",
+"severity": 4,
+"message": "'user' is declared but its value is never read.",
+"source": "ts",
+"startLineNumber": 145,
+"startColumn": 13,
+"endLineNumber": 145,
+"endColumn": 17,
+"tags": [
+1
+],
+"extensionID": "vscode.typescript-language-features"
+}]
+[{
+"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/components/Footer.tsx",
+"owner": "typescript",
+"code": "6133",
+"severity": 4,
+"message": "'ExternalLink' is declared but its value is never read.",
+"source": "ts",
+"startLineNumber": 2,
+"startColumn": 35,
+"endLineNumber": 2,
+"endColumn": 47,
+"tags": [
+1
+],
+"extensionID": "vscode.typescript-language-features"
+}]
+[{
+"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/components/OneHandModeToggle.tsx",
+"owner": "typescript",
+"code": "6133",
+"severity": 4,
+"message": "'Smartphone' is declared but its value is never read.",
+"source": "ts",
+"startLineNumber": 2,
+"startColumn": 10,
+"endLineNumber": 2,
+"endColumn": 20,
+"tags": [
+1
+],
+"extensionID": "vscode.typescript-language-features"
+},{
+"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/components/OneHandModeToggle.tsx",
+"owner": "typescript",
+"code": "6133",
+"severity": 4,
+"message": "'ChevronUp' is declared but its value is never read.",
+"source": "ts",
+"startLineNumber": 2,
+"startColumn": 28,
+"endLineNumber": 2,
+"endColumn": 37,
+"tags": [
+1
+],
+"extensionID": "vscode.typescript-language-features"
+}]
+[{
+"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/components/SimpleAuthModal.tsx",
+"owner": "typescript",
+"code": "6133",
+"severity": 4,
+"message": "'createDefaultProfile' is declared but its value is never read.",
+"source": "ts",
+"startLineNumber": 7,
+"startColumn": 3,
+"endLineNumber": 7,
+"endColumn": 23,
+"tags": [
+1
+],
+"extensionID": "vscode.typescript-language-features"
+}]
+[{
+"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/index.css",
+"owner": "_generated_diagnostic_collection_name_#4",
+"code": "unknownAtRules",
+"severity": 4,
+"message": "Unknown at rule @tailwind",
+"source": "css",
+"startLineNumber": 4,
+"startColumn": 1,
+"endLineNumber": 4,
+"endColumn": 10,
+"extensionID": "vscode.css-language-features"
+},{
+"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/index.css",
+"owner": "_generated_diagnostic_collection_name_#4",
+"code": "unknownAtRules",
+"severity": 4,
+"message": "Unknown at rule @tailwind",
+"source": "css",
+"startLineNumber": 5,
+"startColumn": 1,
+"endLineNumber": 5,
+"endColumn": 10,
+"extensionID": "vscode.css-language-features"
+},{
+"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/index.css",
+"owner": "_generated_diagnostic_collection_name_#4",
+"code": "unknownAtRules",
+"severity": 4,
+"message": "Unknown at rule @tailwind",
+"source": "css",
+"startLineNumber": 6,
+"startColumn": 1,
+"endLineNumber": 6,
+"endColumn": 10,
+"extensionID": "vscode.css-language-features"
+},{
+"resource": "/d:/0CODE/BOLT/Orthologique/Orthologique/src/index.css",
+"owner": "_generated_diagnostic_collection_name_#4",
+"code": "vendorPrefix",
+"severity": 4,
+"message": "Also define the standard property 'appearance' for compatibility",
+"source": "css",
+"startLineNumber": 103,
+"startColumn": 3,
+"endLineNumber": 103,
+"endColumn": 21,
+"extensionID": "vscode.css-language-features"
 }]

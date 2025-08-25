@@ -4,6 +4,51 @@ import { Exercise, Lesson } from '../types';
 import { playSuccessSound, playErrorSound, speak } from '../utils/audio';
 import ProgressBar from './ProgressBar';
 
+/**
+ * Enhanced input handler for French special characters
+ * Provides real-time suggestions and auto-corrections for common character substitutions
+ */
+const enhanceInputForFrench = (value: string): string => {
+  // Common French character replacements
+  const replacements: { [key: string]: string } = {
+    'oe': 'œ',
+    'OE': 'Œ',
+    'ae': 'æ',
+    'AE': 'Æ',
+    'a`': 'à',
+    'e`': 'è',
+    'e^': 'ê',
+    'i^': 'î',
+    'o^': 'ô',
+    'u^': 'û',
+    'c,': 'ç'
+  };
+  
+  let enhanced = value;
+  Object.entries(replacements).forEach(([pattern, replacement]) => {
+    enhanced = enhanced.replace(new RegExp(pattern, 'g'), replacement);
+  });
+  
+  return enhanced;
+};
+
+/**
+ * Real-time input handler that processes character conversion immediately
+ */
+const handleRealTimeInput = (e: React.FormEvent<HTMLInputElement>, setUserAnswer: (value: string) => void) => {
+  const target = e.target as HTMLInputElement;
+  const cursorPosition = target.selectionStart || 0;
+  const enhanced = enhanceInputForFrench(target.value);
+  
+  if (enhanced !== target.value) {
+    setUserAnswer(enhanced);
+    // Restore cursor position after enhancement
+    setTimeout(() => {
+      target.setSelectionRange(cursorPosition, cursorPosition);
+    }, 0);
+  }
+};
+
 interface ExerciseViewProps {
   lesson: Lesson;
   exercises: Exercise[];
@@ -49,6 +94,7 @@ const ExerciseView: React.FC<ExerciseViewProps> = ({
   /**
    * Handle answer submission with flexible validation
    * Normalizes text by removing punctuation and extra spaces
+   * Supports multiple word answers for fill-in-the-blank exercises
    */
   const handleSubmit = () => {
     if (userAnswer.trim() === '') return;
@@ -62,9 +108,25 @@ const ExerciseView: React.FC<ExerciseViewProps> = ({
 
     const normalizedUserAnswer = normalizeText(userAnswer);
 
-    const correct = Array.isArray(currentExercise.answer)
-      ? currentExercise.answer.some(answer => normalizeText(answer) === normalizedUserAnswer)
-      : normalizeText(currentExercise.answer) === normalizedUserAnswer;
+    let correct = false;
+
+    if (Array.isArray(currentExercise.answer)) {
+      // For exercises with multiple answers (like fill-in-the-blank with multiple blanks)
+      if (currentExercise.type === 'fill-in-the-blank' && currentExercise.sentence.includes('___')) {
+        // Split user answer by spaces and compare with expected answers
+        const userWords = normalizedUserAnswer.split(' ').filter(word => word.length > 0);
+        const expectedAnswers = currentExercise.answer.map(answer => normalizeText(answer));
+        
+        // Check if user provided the right number of words and they match
+        correct = userWords.length === expectedAnswers.length && 
+                 userWords.every((word, index) => word === expectedAnswers[index]);
+      } else {
+        // For other exercise types with multiple valid answers
+        correct = currentExercise.answer.some(answer => normalizeText(answer) === normalizedUserAnswer);
+      }
+    } else {
+      correct = normalizeText(currentExercise.answer) === normalizedUserAnswer;
+    }
 
     setIsCorrect(correct);
     setIsAnswered(true);
@@ -96,10 +158,9 @@ const ExerciseView: React.FC<ExerciseViewProps> = ({
     setAttemptCount(prev => prev + 1);
     setUserAnswer(option);
     
-    const answerToCompare = Array.isArray(currentExercise.answer) 
-      ? currentExercise.answer[0] 
-      : currentExercise.answer;
-    const correct = option.toLowerCase() === answerToCompare.toLowerCase();
+    const correct = Array.isArray(currentExercise.answer)
+      ? currentExercise.answer.some(answer => option.toLowerCase() === answer.toLowerCase())
+      : option.toLowerCase() === currentExercise.answer.toLowerCase();
     setIsCorrect(correct);
     setIsAnswered(true);
     setShowFeedback(true);
@@ -147,10 +208,9 @@ const ExerciseView: React.FC<ExerciseViewProps> = ({
     setAttemptCount(prev => prev + 1);
     setUserAnswer(droppedItem);
     
-    const answerToCompare = Array.isArray(currentExercise.answer) 
-      ? currentExercise.answer[0] 
-      : currentExercise.answer;
-    const correct = droppedItem.toLowerCase() === answerToCompare.toLowerCase();
+    const correct = Array.isArray(currentExercise.answer)
+      ? currentExercise.answer.some(answer => droppedItem.toLowerCase() === answer.toLowerCase())
+      : droppedItem.toLowerCase() === currentExercise.answer.toLowerCase();
     setIsCorrect(correct);
     setIsAnswered(true);
     setShowFeedback(true);
@@ -197,7 +257,9 @@ const ExerciseView: React.FC<ExerciseViewProps> = ({
                     disabled={isAnswered}
                     className={`p-3 rounded-lg border-2 transition-all ${
                       isAnswered
-                        ? option === currentExercise.answer
+                        ? (Array.isArray(currentExercise.answer) 
+                            ? currentExercise.answer.includes(option)
+                            : option === currentExercise.answer)
                           ? 'bg-green-100 border-green-500 text-green-800'
                           : userAnswer === option
                           ? 'bg-red-100 border-red-500 text-red-800'
@@ -224,11 +286,16 @@ const ExerciseView: React.FC<ExerciseViewProps> = ({
                 <input
                   type="text"
                   value={userAnswer}
-                  onChange={(e) => setUserAnswer(e.target.value)}
+                  onChange={(e) => setUserAnswer(enhanceInputForFrench(e.target.value))}
+                  onInput={(e) => handleRealTimeInput(e, setUserAnswer)}
                   className="flex-1 p-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
-                  placeholder="Tapez votre réponse..."
+                  placeholder="Tapez votre réponse... (oe→œ, e^→ê, c,→ç)"
                   disabled={isAnswered}
                   onKeyPress={(e) => e.key === 'Enter' && !isAnswered && handleSubmit()}
+                  autoCorrect="on"
+                  autoCapitalize="sentences"
+                  spellCheck="true"
+                  title="Raccourcis: oe→œ, ae→æ, e^→ê, a`→à, c,→ç"
                 />
                 <button
                   onClick={handleSubmit}
@@ -327,11 +394,16 @@ const ExerciseView: React.FC<ExerciseViewProps> = ({
                 <input
                   type="text"
                   value={userAnswer}
-                  onChange={(e) => setUserAnswer(e.target.value)}
+                  onChange={(e) => setUserAnswer(enhanceInputForFrench(e.target.value))}
+                  onInput={(e) => handleRealTimeInput(e, setUserAnswer)}
                   className="flex-1 p-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
-                  placeholder="Écris ta transformation..."
+                  placeholder="Écris ta transformation... (oe→œ, e^→ê, c,→ç)"
                   disabled={isAnswered}
                   onKeyPress={(e) => e.key === 'Enter' && !isAnswered && handleSubmit()}
+                  autoCorrect="on"
+                  autoCapitalize="sentences"
+                  spellCheck="true"
+                  title="Raccourcis: oe→œ, ae→æ, e^→ê, a`→à, c,→ç"
                 />
                 <button
                   onClick={handleSubmit}
@@ -365,11 +437,16 @@ const ExerciseView: React.FC<ExerciseViewProps> = ({
                 <input
                   type="text"
                   value={userAnswer}
-                  onChange={(e) => setUserAnswer(e.target.value)}
+                  onChange={(e) => setUserAnswer(enhanceInputForFrench(e.target.value))}
+                  onInput={(e) => handleRealTimeInput(e, setUserAnswer)}
                   className="flex-1 p-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
-                  placeholder="Écris ce que tu entends..."
+                  placeholder="Écris ce que tu entends... (oe→œ, e^→ê, c,→ç)"
                   disabled={isAnswered}
                   onKeyPress={(e) => e.key === 'Enter' && !isAnswered && handleSubmit()}
+                  autoCorrect="on"
+                  autoCapitalize="sentences"
+                  spellCheck="true"
+                  title="Raccourcis: oe→œ, ae→æ, e^→ê, a`→à, c,→ç"
                 />
                 <button
                   onClick={handleSubmit}
@@ -482,7 +559,13 @@ const ExerciseView: React.FC<ExerciseViewProps> = ({
               </p>
               {!isCorrect && (
                 <p className="text-gray-600 mt-2">
-                  <strong>Bonne réponse :</strong> {Array.isArray(currentExercise.answer) ? currentExercise.answer[0] : currentExercise.answer}
+                  <strong>Bonne réponse :</strong> {
+                    Array.isArray(currentExercise.answer) 
+                      ? currentExercise.type === 'fill-in-the-blank' && currentExercise.sentence.includes('___')
+                        ? currentExercise.answer.join(' ')
+                        : currentExercise.answer.join(' ou ')
+                      : currentExercise.answer
+                  }
                 </p>
               )}
               {!isCorrect && attemptCount === 1 && (
