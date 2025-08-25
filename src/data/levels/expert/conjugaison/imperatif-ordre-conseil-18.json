@@ -6,7 +6,9 @@
   "targetAudience": "Lycée",
   "category": "conjugaison",
   "passingScore": 85,
-  "prerequisites": ["conditionnel-modes-temps-17"],
+  "prerequisites": [
+    "conditionnel-modes-temps-17"
+  ],
   "rule": "L'impératif exprime l'ordre, le conseil, la prière. Pas de pronom sujet. Verbes en -er : pas de 's' à la 2e personne (mange, mais vas-y). Formes : tu/nous/vous.",
   "explanation": "L'impératif est le mode de l'action directe : il s'adresse à quelqu'un pour qu'il agisse. Sa particularité est l'absence de pronom sujet (on sait à qui on parle). La suppression du 's' pour les verbes en -er facilite la prononciation, sauf devant 'y' et 'en'.",
   "etymology": "L'impératif vient du latin 'imperativus' (qui commande). Cette forme directe existait déjà en latin. La règle du 's' supprimé pour les verbes en -er est une spécificité française apparue au Moyen Âge.",
@@ -66,7 +68,11 @@
       "id": "imp-18-qcm-1",
       "type": "qcm",
       "sentence": "... ta chambre et ... tes devoirs !",
-      "options": ["Ranges, fais", "Range, fait", "Range, fais"],
+      "options": [
+        "Ranges, fais",
+        "Range, fait",
+        "Range, fais"
+      ],
       "answer": "Range, fais",
       "feedbackCorrect": "Parfait ! 'Range' (verbe en -er sans 's') et 'fais' (faire à l'impératif).",
       "feedbackIncorrect": "Verbe en -er → pas de 's' : 'range'. 'Faire' → 'fais'.",
@@ -76,7 +82,11 @@
       "id": "imp-18-qcm-2",
       "type": "qcm",
       "sentence": "... prudent et ... attention !",
-      "options": ["Sois, fais", "Soit, fait", "Es, fais"],
+      "options": [
+        "Sois, fais",
+        "Soit, fait",
+        "Es, fais"
+      ],
       "answer": "Sois, fais",
       "feedbackCorrect": "Excellent ! 'Sois' (être à l'impératif) et 'fais' (faire à l'impératif).",
       "feedbackIncorrect": "Être → 'sois', faire → 'fais' à l'impératif.",
@@ -86,7 +96,11 @@
       "id": "imp-18-qcm-3",
       "type": "qcm",
       "sentence": "... ! ... de ce gâteau !",
-      "options": ["Va-y, Mange-en", "Vas-y, Manges-en", "Vas-y, Mange-en"],
+      "options": [
+        "Va-y, Mange-en",
+        "Vas-y, Manges-en",
+        "Vas-y, Mange-en"
+      ],
       "answer": "Vas-y, Manges-en",
       "feedbackCorrect": "Bravo ! Exceptions : 'vas-y' et 'manges-en' (s ajouté devant y et en).",
       "feedbackIncorrect": "Devant 'y' et 'en', on remet le 's' : 'vas-y', 'manges-en'.",
@@ -96,7 +110,10 @@
       "id": "imp-18-fill-1",
       "type": "fill-in-the-blank",
       "sentence": "___ (être) sage et ___ (avoir) confiance !",
-      "answer": ["Sois", "aie"],
+      "answer": [
+        "Sois",
+        "aie"
+      ],
       "feedbackCorrect": "Parfait ! 'Sois' (être) et 'aie' (avoir) à l'impératif.",
       "feedbackIncorrect": "Être → 'sois', avoir → 'aie' à l'impératif.",
       "hint": "Être → sois, avoir → aie"
@@ -105,7 +122,10 @@
       "id": "imp-18-fill-2",
       "type": "fill-in-the-blank",
       "sentence": "___ (parler) moins fort et ___ (écouter) mieux !",
-      "answer": ["Parle", "écoute"],
+      "answer": [
+        "Parle",
+        "écoute"
+      ],
       "feedbackCorrect": "Excellent ! 'Parle' et 'écoute' (verbes en -er sans 's').",
       "feedbackIncorrect": "Verbes en -er → pas de 's' : 'parle', 'écoute'.",
       "hint": "Verbes en -er → pas de s"
@@ -114,7 +134,11 @@
       "id": "imp-18-drag-1",
       "type": "drag-drop",
       "sentence": "___ tes leçons et ___ tes exercices !",
-      "options": ["Apprends, finis", "Apprend, fini", "Apprends, finit"],
+      "options": [
+        "Apprends, finis",
+        "Apprend, fini",
+        "Apprends, finit"
+      ],
       "answer": "Apprends, finis",
       "feedbackCorrect": "Bravo ! 'Apprends' (3e groupe avec 's') et 'finis' (2e groupe avec 's').",
       "feedbackIncorrect": "Verbes des 2e et 3e groupes gardent le 's' : 'apprends', 'finis'.",
@@ -124,7 +148,11 @@
       "id": "imp-18-drag-2",
       "type": "drag-drop",
       "sentence": "___ patient et ___ du courage !",
-      "options": ["Sois, aies", "Soit, aie", "Sois, aie"],
+      "options": [
+        "Sois, aies",
+        "Soit, aie",
+        "Sois, aie"
+      ],
       "answer": "Sois, aie",
       "feedbackCorrect": "Parfait ! 'Sois' (être) et 'aie' (avoir) à l'impératif 2e personne.",
       "feedbackIncorrect": "Être → 'sois', avoir → 'aie' (pas de 's' final).",
@@ -135,7 +163,9 @@
       "type": "transformation",
       "sentence": "Tu manges ta soupe.",
       "instruction": "Transforme à l'impératif",
-      "answer": ["Mange ta soupe !", "Mange ta soupe !"],
+      "answer": [
+        "Mange ta soupe !"
+      ],
       "feedbackCorrect": "Excellent ! Suppression du pronom et du 's' : 'mange'.",
       "feedbackIncorrect": "Impératif : pas de pronom, pas de 's' pour les verbes en -er.",
       "hint": "Pas de pronom, pas de s pour -er"
@@ -145,7 +175,9 @@
       "type": "transformation",
       "sentence": "Vous êtes prudents.",
       "instruction": "Transforme à l'impératif",
-      "answer": ["Soyez prudents !", "Soyez prudents !"],
+      "answer": [
+        "Soyez prudents !"
+      ],
       "feedbackCorrect": "Parfait ! 'Soyez' (être à l'impératif 2e pluriel).",
       "feedbackIncorrect": "Être → 'soyez' à l'impératif pluriel.",
       "hint": "Être → soyez au pluriel"
@@ -155,7 +187,9 @@
       "type": "dictation",
       "sentence": "Mange ta soupe et finis tes devoirs !",
       "audioText": "Mange ta soupe et finis tes devoirs !",
-      "answer": ["Mange ta soupe et finis tes devoirs !", "Mange ta soupe et finis tes devoirs !"],
+      "answer": [
+        "Mange ta soupe et finis tes devoirs !"
+      ],
       "feedbackCorrect": "Parfait ! 'Mange' (1er groupe sans 's') et 'finis' (2e groupe avec 's').",
       "feedbackIncorrect": "'Manger' → 'mange' (sans s), 'finir' → 'finis' (avec s).",
       "hint": "1er groupe → sans s, 2e groupe → avec s"
@@ -165,7 +199,9 @@
       "type": "dictation",
       "sentence": "Vas-y et parles-en à tes parents !",
       "audioText": "Vas-y et parles-en à tes parents !",
-      "answer": ["Vas-y et parles-en à tes parents !", "Vas-y et parles-en à tes parents !"],
+      "answer": [
+        "Vas-y et parles-en à tes parents !"
+      ],
       "feedbackCorrect": "Excellent ! Exceptions avec 'y' et 'en' : 's' ajouté pour la liaison.",
       "feedbackIncorrect": "Devant 'y' et 'en', on remet le 's' : 'vas-y', 'parles-en'.",
       "hint": "Devant y et en → s ajouté"
@@ -174,7 +210,11 @@
       "id": "imp-18-qcm-4",
       "type": "qcm",
       "sentence": "... la vérité et ... confiance !",
-      "options": ["Saches, aies", "Sache, aie", "Sais, as"],
+      "options": [
+        "Saches, aies",
+        "Sache, aie",
+        "Sais, as"
+      ],
       "answer": "Sache, aie",
       "feedbackCorrect": "Bravo ! 'Sache' (savoir) et 'aie' (avoir) à l'impératif.",
       "feedbackIncorrect": "Savoir → 'sache', avoir → 'aie' à l'impératif.",
@@ -184,7 +224,10 @@
       "id": "imp-18-fill-3",
       "type": "fill-in-the-blank",
       "sentence": "___ (penser) à moi et ___ (écrire)-moi !",
-      "answer": ["Pense", "écris"],
+      "answer": [
+        "Pense",
+        "écris"
+      ],
       "feedbackCorrect": "Parfait ! 'Pense' (1er groupe sans 's') et 'écris' (3e groupe avec 's').",
       "feedbackIncorrect": "'Penser' → 'pense' (sans s), 'écrire' → 'écris' (avec s).",
       "hint": "1er groupe → sans s, 3e groupe → avec s"
@@ -193,7 +236,11 @@
       "id": "imp-18-drag-3",
       "type": "drag-drop",
       "sentence": "___ de ce livre et ___ !",
-      "options": ["Parle-en, va-y", "Parles-en, vas-y", "Parles-en, va-y"],
+      "options": [
+        "Parle-en, va-y",
+        "Parles-en, vas-y",
+        "Parles-en, va-y"
+      ],
       "answer": "Parles-en, vas-y",
       "feedbackCorrect": "Excellent ! 'Parles-en' et 'vas-y' avec 's' devant 'en' et 'y'.",
       "feedbackIncorrect": "Devant 'en' et 'y', on ajoute le 's' : 'parles-en', 'vas-y'.",
@@ -204,7 +251,9 @@
       "type": "transformation",
       "sentence": "Tu ne parles pas si fort.",
       "instruction": "Transforme à l'impératif négatif",
-      "answer": ["Ne parle pas si fort !", "Ne parle pas si fort !"],
+      "answer": [
+        "Ne parle pas si fort !"
+      ],
       "feedbackCorrect": "Parfait ! Impératif négatif : 'ne parle pas' (sans 's').",
       "feedbackIncorrect": "Impératif négatif : 'ne' + verbe sans s + 'pas'.",
       "hint": "Impératif négatif → ne + verbe + pas"

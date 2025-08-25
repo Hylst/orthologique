@@ -122,7 +122,7 @@
       "type": "transformation",
       "sentence": "Le chat mange.",
       "instruction": "Mets au pluriel",
-      "answer": ["Les chats mangent.", "Les chats mangent"],
+      "answer": ["Les chats mangent."],
       "feedbackCorrect": "Parfait ! Vous avez bien transformé le sujet ET le verbe au pluriel.",
       "feedbackIncorrect": "Il faut changer à la fois le sujet (les chats) et le verbe (mangent).",
       "hint": "Le → Les, et le verbe doit s'accorder avec le nouveau sujet"
@@ -132,7 +132,7 @@
       "type": "transformation",
       "sentence": "Nous partons demain.",
       "instruction": "Remplace 'nous' par 'je'",
-      "answer": ["Je pars demain.", "Je pars demain"],
+      "answer": ["Je pars demain."],
       "feedbackCorrect": "Excellent ! Le verbe s'accorde bien avec le nouveau sujet 'je'.",
       "feedbackIncorrect": "Avec 'je', le verbe devient 'pars' (1re personne du singulier).",
       "hint": "Je → 1re personne du singulier, terminaison différente"
@@ -142,7 +142,7 @@
       "type": "dictation",
       "sentence": "Les oiseaux chantent.",
       "audioText": "Les oiseaux chantent.",
-      "answer": ["Les oiseaux chantent.", "Les oiseaux chantent"],
+      "answer": ["Les oiseaux chantent."],
       "feedbackCorrect": "Parfait ! Vous avez bien écrit la phrase avec l'accord correct.",
       "feedbackIncorrect": "La phrase correcte est : 'Les oiseaux chantent.' (verbe au pluriel).",
       "hint": "Écoutez bien : qui fait l'action ? Accordez le verbe en conséquence"

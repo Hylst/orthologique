@@ -5,6 +5,117 @@ Toutes les modifications notables de ce projet seront documentées dans ce fichi
 Le format est basé sur [Keep a Changelog](https://keepachangelog.com/fr/1.0.0/),
 et ce projet adhère au [Versioning Sémantique](https://semver.org/lang/fr/).
 
+## [1.2.8] - 2025-01-27 🐛 CORRECTIONS CRITIQUES
+
+### 🐛 Corrections de Bugs
+
+#### ✅ Corrigé
+- **Validation d'Exercices Améliorée**:
+  - Correction de la validation des réponses pour les exercices de transformation
+  - Normalisation du texte : suppression automatique de la ponctuation et des espaces supplémentaires
+  - Validation flexible : "Les chats mangent" et "Les chats mangent." sont maintenant acceptés
+  - Amélioration de la logique de comparaison pour les réponses multiples
+  - Fonction de normalisation robuste pour une comparaison de texte plus flexible
+
+- **Erreur TypeScript Corrigée**:
+  - Résolution du problème de type `boolean | 0` dans Dashboard.tsx
+  - Conversion explicite en booléen pour `hasPassingScore`
+  - Amélioration de la cohérence des types dans les attributs ARIA
+  - Gestion des types améliorée pour éviter les incompatibilités TypeScript
+
+### 🔧 Améliorations Techniques
+
+#### ✅ Amélioré
+- **Validation de Texte Robuste**:
+  - Fonction de normalisation pour une comparaison de texte plus flexible
+  - Gestion des cas de ponctuation et d'espacement variables
+  - Amélioration de l'expérience utilisateur dans les exercices de transformation
+
+## [1.2.7] - 2025-01-27 🚀 AMÉLIORATIONS QUALITÉ & ACCESSIBILITÉ
+
+### ✨ Nouvelles Fonctionnalités
+
+#### ✅ Ajouté
+- **Synthèse Vocale Améliorée**:
+  - Amélioration de la qualité des voix text-to-speech avec options avancées
+  - Configuration de voix préférées (français, anglais) avec fallback automatique
+  - Gestion asynchrone des promesses pour une meilleure performance
+  - Gestion d'erreurs robuste dans les composants Dashboard et LessonView
+
+### 🔧 Améliorations
+
+#### ✅ Amélioré
+- **Accessibilité**:
+  - Ajout d'attributs ARIA complets pour une meilleure navigation au clavier
+  - Support des lecteurs d'écran avec descriptions appropriées
+  - Gestion des événements clavier pour l'activation des éléments interactifs
+  - Attributs ARIA pour les boutons, cartes de leçons et contrôles audio
+
+- **Performance**:
+  - Optimisation du chargement des données JSON volumineuses avec lazy loading
+  - Chargement différé des leçons pour améliorer le temps de démarrage
+  - Réduction de l'empreinte mémoire initiale
+
+- **Qualité du Code**:
+  - Élimination des duplications dans types/index.ts (propriétés instruction et audioText)
+  - Correction de l'assignation dupliquée de la propriété lessons dans App.tsx
+  - Gestion d'erreurs robuste dans les composants critiques
+  - Code plus maintenable et modulaire
+
+### 🐛 Corrections de Bugs
+
+#### ✅ Corrigé
+- **Duplications de Code**:
+  - Suppression des propriétés dupliquées dans l'interface Exercise
+  - Nettoyage des assignations redondantes dans le composant principal
+  - Amélioration de la cohérence du code TypeScript
+
+## [1.2.6] - 2025-01-27 🔧 CORRECTIONS TYPESCRIPT
+
+### 🐛 Corrections de Bugs
+
+#### ✅ Corrigé
+- **Erreurs TypeScript dans le Code**:
+  - Correction des erreurs `toLowerCase` dans `ExerciseView.tsx` pour gérer les types `string | string[]`
+  - Ajout de vérification de type pour les réponses d'exercices (array vs string)
+  - Correction des erreurs de conversion de type dans `debutant/index.ts` et `intermediaire/index.ts`
+  - Ajout des propriétés manquantes `unlocked` et `completed` aux objets Lesson
+  - Suppression de la variable inutilisée `compatibilityMode` dans `data/index.ts`
+  - Suppression de la méthode `setCompatibilityMode` de `ModularLessonSystem` car `compatibilityMode` n'existe plus
+  - **Code plus robuste** : Gestion appropriée des types et élimination des avertissements TypeScript
+
+## [1.2.5] - 2025-01-27 🔧 CORRECTIONS AFFICHAGE EXERCICES
+
+### 🐛 Corrections de Bugs
+
+#### ✅ Corrigé
+- **Affichage des Réponses Dupliquées dans les Exercices**:
+  - Résolution du problème d'affichage des réponses dupliquées dans les exercices de transformation et dictée
+  - Mise à jour d'`ExerciseView.tsx` pour gérer correctement les tableaux de réponses en affichant uniquement la première réponse valide
+  - Correction automatique des entrées dupliquées dans les fichiers JSON de leçons sur 7 fichiers (20 fichiers traités au total)
+  - Correction des tableaux de réponses dans les exercices des niveaux `expert`, `intermediaire`, et `debutant`
+  - Les exercices affichent maintenant des réponses correctes uniques au lieu de réponses dupliquées
+  - **Interface utilisateur améliorée** : Affichage propre et cohérent des réponses dans tous les types d'exercices
+
+## [1.2.4] - 2025-01-27 🔧 CORRECTIONS CHARGEMENT LEÇONS
+
+### 🐛 Corrections de Bugs
+
+#### ✅ Corrigé
+- **Système de Chargement des Leçons**:
+  - Correction des fichiers d'index de niveau pour importer les fichiers JSON de leçons réels au lieu des métadonnées uniquement
+  - Correction des extensions d'import de `.js` vers `.ts` dans `lessonLoader.ts` pour un chargement de module TypeScript approprié
+  - Mise à jour du niveau débutant : Modification de `src/data/levels/debutant/index.ts` pour exporter des objets de leçons complets
+  - Mise à jour du niveau intermédiaire : Modification de `src/data/levels/intermediaire/index.ts` pour exporter des objets de leçons complets
+  - Suppression des fonctions utilitaires obsolètes : Nettoyage des fonctions d'aide spécifiques aux niveaux qui ne sont plus nécessaires
+  - **Résolution du problème d'affichage** : L'application charge et affiche maintenant correctement les leçons de tous les niveaux de difficulté
+  - **Serveur de développement fonctionnel** : Application accessible à http://localhost:5175/ avec contenu de leçons approprié
+
+### ✅ Vérifié
+- Build réussi avec `npm run build` sans erreurs TypeScript
+- Chargement correct des leçons depuis le système modulaire
+- Interface utilisateur fonctionnelle avec navigation entre les leçons
+
 ## [1.2.3] - 2025-01-27 ✨ MIGRATION SYSTÈME MODULAIRE COMPLÈTE
 
 ### ✨ Nouvelles Fonctionnalités
@@ -41,6 +152,28 @@ et ce projet adhère au [Versioning Sémantique](https://semver.org/lang/fr/).
   - Élimination complète de la dépendance au système legacy lessons.json
   - Amélioration des performances avec chargement modulaire par difficulté
   - Correction du bug Dashboard avec gestion des exercices undefined
+
+### 📚 Documentation
+
+#### ✅ Terminé
+- **Mise à jour complète de la documentation**:
+  - <mcfile name="README.md" path="README.md"></mcfile> : Mise à jour architecture modulaire, structure projet, gestion données
+  - <mcfile name="structure.md" path="structure.md"></mcfile> : Documentation complète du système modulaire, performance, migration
+  - Ajout section "Architecture Modulaire Avancée" avec fonctionnalités cache et validation
+  - Mise à jour version 1.2.3 et badges de statut
+  - Documentation des nouveaux utilitaires modulaires et tests
+  - Guide d'ajout de contenu adapté au système modulaire
+- **Nettoyage de la documentation**:
+  - Suppression de <mcfile name="MIGRATION_REPORT.md" path="MIGRATION_REPORT.md"></mcfile> (obsolète - migration 100% complète)
+  - Vérification et validation de <mcfile name="NOTICE.md" path="NOTICE.md"></mcfile>, <mcfile name="structure.md" path="structure.md"></mcfile>, et <mcfile name="todo.md" path="todo.md"></mcfile>
+
+- **Résolution des conflits d'imports**:
+  - Suppression des imports statiques de `lessons.json` dans `index.ts`
+  - Conversion vers des imports dynamiques dans `migrationValidator.ts`
+  - Suppression complète des références à `legacyLessons` dans toutes les méthodes
+  - Correction des erreurs TypeScript "Cannot find name 'legacyLessons'"
+  - Résolution des erreurs de build Vite liées au code splitting
+  - Tests réussis: `npm run build` et `npm run dev` fonctionnent correctement
 
 ### 🐛 Corrections de Bugs
 
@@ -328,6 +461,15 @@ et ce projet adhère au [Versioning Sémantique](https://semver.org/lang/fr/).
 - Tests unitaires avec Vitest
 - Documentation technique complète
 - Optimisations de performance
+
+### ✅ Ajouté
+- **Roadmap complète d'améliorations** : Plus de 150 suggestions d'améliorations UI/UX, contenu et fonctionnalités ajoutées à todo.md
+  - 🎯 **Améliorations UI/UX spécifiques** : Dashboard, navigation, exercices, feedback, accessibilité, personnalisation, mobile
+  - 📚 **Contenu pédagogique enrichi** : Nouveaux types d'exercices, contenu thématique, méthodes innovantes
+  - 🎮 **Fonctionnalités ludiques** : Modes de jeu, récompenses, gamification avancée
+  - 🧠 **Intelligence artificielle** : Personnalisation IA, analytics pédagogiques, coaching virtuel
+  - 🔧 **Améliorations techniques** : Architecture, performance, sécurité, PWA, conformité
+  - Priorisation en 3 phases (court, moyen, long terme) pour une roadmap claire
 
 ## [1.1.0] - 📅 RÉALISÉ (Phase 2)
 

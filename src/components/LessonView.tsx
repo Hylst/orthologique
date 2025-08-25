@@ -41,9 +41,10 @@ const LessonView: React.FC<LessonViewProps> = ({ lesson, onBack, onStartExercise
                   Le saviez-vous ?
                 </h3>
                 <button
-                  onClick={() => handleSpeak(lesson.etymology)}
+                  onClick={() => lesson.etymology && handleSpeak(lesson.etymology)}
                   className="p-1 text-amber-600 hover:text-amber-800 transition-colors"
                   title="Écouter l'étymologie"
+                  disabled={!lesson.etymology}
                 >
                   <Volume2 className="w-4 h-4" />
                 </button>
@@ -212,8 +213,13 @@ const LessonView: React.FC<LessonViewProps> = ({ lesson, onBack, onStartExercise
     }
   ];
 
-  const handleSpeak = (text: string) => {
-    speak(text);
+  const handleSpeak = async (text: string) => {
+    try {
+      await speak(text);
+    } catch (error) {
+      console.error('Speech synthesis failed:', error);
+      // Optionally show a user-friendly message
+    }
   };
 
   return (

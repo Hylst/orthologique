@@ -46,14 +46,25 @@ const ExerciseView: React.FC<ExerciseViewProps> = ({
     setDropZoneActive(false);
   }, [currentIndex]);
 
+  /**
+   * Handle answer submission with flexible validation
+   * Normalizes text by removing punctuation and extra spaces
+   */
   const handleSubmit = () => {
     if (userAnswer.trim() === '') return;
 
     setAttemptCount(prev => prev + 1);
 
+    // Normalize user answer: remove punctuation and extra spaces
+    const normalizeText = (text: string) => {
+      return text.toLowerCase().trim().replace(/[.,!?;:]/g, '').replace(/\s+/g, ' ');
+    };
+
+    const normalizedUserAnswer = normalizeText(userAnswer);
+
     const correct = Array.isArray(currentExercise.answer)
-      ? currentExercise.answer.includes(userAnswer.toLowerCase().trim())
-      : userAnswer.toLowerCase().trim() === currentExercise.answer.toLowerCase();
+      ? currentExercise.answer.some(answer => normalizeText(answer) === normalizedUserAnswer)
+      : normalizeText(currentExercise.answer) === normalizedUserAnswer;
 
     setIsCorrect(correct);
     setIsAnswered(true);
@@ -85,7 +96,10 @@ const ExerciseView: React.FC<ExerciseViewProps> = ({
     setAttemptCount(prev => prev + 1);
     setUserAnswer(option);
     
-    const correct = option.toLowerCase() === currentExercise.answer.toLowerCase();
+    const answerToCompare = Array.isArray(currentExercise.answer) 
+      ? currentExercise.answer[0] 
+      : currentExercise.answer;
+    const correct = option.toLowerCase() === answerToCompare.toLowerCase();
     setIsCorrect(correct);
     setIsAnswered(true);
     setShowFeedback(true);
@@ -133,7 +147,10 @@ const ExerciseView: React.FC<ExerciseViewProps> = ({
     setAttemptCount(prev => prev + 1);
     setUserAnswer(droppedItem);
     
-    const correct = droppedItem.toLowerCase() === currentExercise.answer.toLowerCase();
+    const answerToCompare = Array.isArray(currentExercise.answer) 
+      ? currentExercise.answer[0] 
+      : currentExercise.answer;
+    const correct = droppedItem.toLowerCase() === answerToCompare.toLowerCase();
     setIsCorrect(correct);
     setIsAnswered(true);
     setShowFeedback(true);
@@ -465,7 +482,7 @@ const ExerciseView: React.FC<ExerciseViewProps> = ({
               </p>
               {!isCorrect && (
                 <p className="text-gray-600 mt-2">
-                  <strong>Bonne réponse :</strong> {currentExercise.answer}
+                  <strong>Bonne réponse :</strong> {Array.isArray(currentExercise.answer) ? currentExercise.answer[0] : currentExercise.answer}
                 </p>
               )}
               {!isCorrect && attemptCount === 1 && (

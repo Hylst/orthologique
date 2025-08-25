@@ -6,7 +6,9 @@
   "targetAudience": "Lycée",
   "category": "conjugaison",
   "passingScore": 85,
-  "prerequisites": ["imperatif-ordre-conseil-18"],
+  "prerequisites": [
+    "imperatif-ordre-conseil-18"
+  ],
   "rule": "Verbes pronominaux : accord avec le sujet SI le pronom réfléchi est COD. Si le pronom est COI ou s'il y a un COD après le verbe, pas d'accord.",
   "explanation": "Cette règle complexe analyse la fonction du pronom réfléchi. S'il représente le COD (elle se lave = elle lave elle-même), accord avec le sujet. S'il est COI (elle se parle = elle parle à elle-même) ou s'il y a un autre COD, pas d'accord. C'est une extension logique de la règle générale du COD.",
   "etymology": "Cette règle s'est fixée au 17e siècle par analogie avec l'accord du participe passé avec avoir. Les grammairiens ont voulu maintenir la cohérence : accord seulement quand le COD précède le verbe, même dans les verbes pronominaux.",
@@ -67,7 +69,11 @@
       "id": "pron-19-qcm-1",
       "type": "qcm",
       "sentence": "Elle s'est ... et s'est ... les cheveux.",
-      "options": ["lavée, lavée", "lavé, lavé", "lavée, lavé"],
+      "options": [
+        "lavée, lavée",
+        "lavé, lavé",
+        "lavée, lavé"
+      ],
       "answer": "lavée, lavé",
       "feedbackCorrect": "Parfait ! 'Lavée' (se = COD), 'lavé' (se = COI, cheveux = COD).",
       "feedbackIncorrect": "1er : se = COD → accord. 2e : COD = cheveux → pas d'accord.",
@@ -77,7 +83,11 @@
       "id": "pron-19-qcm-2",
       "type": "qcm",
       "sentence": "Ils se sont ... au téléphone.",
-      "options": ["parlé", "parlés", "parlées"],
+      "options": [
+        "parlé",
+        "parlés",
+        "parlées"
+      ],
       "answer": "parlé",
       "feedbackCorrect": "Excellent ! 'Se parler' : se = COI (parler à quelqu'un) → pas d'accord.",
       "feedbackIncorrect": "'Se parler' = parler à quelqu'un → se = COI → pas d'accord.",
@@ -87,7 +97,11 @@
       "id": "pron-19-qcm-3",
       "type": "qcm",
       "sentence": "Elles se sont ... dans la rue.",
-      "options": ["rencontré", "rencontrée", "rencontrées"],
+      "options": [
+        "rencontré",
+        "rencontrée",
+        "rencontrées"
+      ],
       "answer": "rencontrées",
       "feedbackCorrect": "Bravo ! 'Se rencontrer' : se = COD (rencontrer quelqu'un) → accord.",
       "feedbackIncorrect": "'Se rencontrer' = rencontrer quelqu'un → se = COD → accord avec 'elles'.",
@@ -97,7 +111,10 @@
       "id": "pron-19-fill-1",
       "type": "fill-in-the-blank",
       "sentence": "Elle s'est blessé___ et s'est soigné___ la blessure.",
-      "answer": ["e", ""],
+      "answer": [
+        "e",
+        ""
+      ],
       "feedbackCorrect": "Parfait ! 'Blessée' (se = COD), 'soigné' (COD = la blessure).",
       "feedbackIncorrect": "1er : se = COD → accord. 2e : COD = la blessure → pas d'accord.",
       "hint": "Se blesser = COD, COD après = pas d'accord"
@@ -106,7 +123,9 @@
       "id": "pron-19-fill-2",
       "type": "fill-in-the-blank",
       "sentence": "Ils se sont battu___ puis se sont réconcilié___.",
-      "answer": ["s", "s"],
+      "answer": [
+        "s"
+      ],
       "feedbackCorrect": "Excellent ! 'Battus' et 'réconciliés' (se = COD dans les deux cas).",
       "feedbackIncorrect": "'Se battre' et 'se réconcilier' : se = COD → accord avec 'ils'.",
       "hint": "Se battre et se réconcilier = COD → accord"
@@ -115,7 +134,11 @@
       "id": "pron-19-drag-1",
       "type": "drag-drop",
       "sentence": "Elle s'est ___ une robe et s'est ___.",
-      "options": ["acheté, habillée", "achetée, habillé", "acheté, habillé"],
+      "options": [
+        "acheté, habillée",
+        "achetée, habillé",
+        "acheté, habillé"
+      ],
       "answer": "acheté, habillée",
       "feedbackCorrect": "Bravo ! 'Acheté' (COD = une robe), 'habillée' (se = COD).",
       "feedbackIncorrect": "1er : COD = une robe → pas d'accord. 2e : se = COD → accord.",
@@ -125,7 +148,11 @@
       "id": "pron-19-drag-2",
       "type": "drag-drop",
       "sentence": "Elles se sont ___ des lettres et se sont ___.",
-      "options": ["écrit, retrouvées", "écrites, retrouvé", "écrit, retrouvé"],
+      "options": [
+        "écrit, retrouvées",
+        "écrites, retrouvé",
+        "écrit, retrouvé"
+      ],
       "answer": "écrit, retrouvées",
       "feedbackCorrect": "Parfait ! 'Écrit' (se = COI, lettres = COD), 'retrouvées' (se = COD).",
       "feedbackIncorrect": "1er : se = COI → pas d'accord. 2e : se = COD → accord.",
@@ -136,7 +163,10 @@
       "type": "transformation",
       "sentence": "Elle lave ses cheveux.",
       "instruction": "Transforme avec 'se laver' : 'Elle s'est lavé...'",
-      "answer": ["Elle s'est lavé les cheveux.", "Elle s'est lavé les cheveux"],
+      "answer": [
+        "Elle s'est lavé les cheveux.",
+        "Elle s'est lavé les cheveux"
+      ],
       "feedbackCorrect": "Excellent ! COD = les cheveux → se devient COI → pas d'accord.",
       "feedbackIncorrect": "Avec COD après le verbe, pas d'accord : 'lavé'.",
       "hint": "COD après → pas d'accord"
@@ -146,7 +176,10 @@
       "type": "transformation",
       "sentence": "Ils rencontrent leurs amis.",
       "instruction": "Transforme avec 'se rencontrer' : 'Ils se sont rencontrés'",
-      "answer": ["Ils se sont rencontrés.", "Ils se sont rencontrés"],
+      "answer": [
+        "Ils se sont rencontrés.",
+        "Ils se sont rencontrés"
+      ],
       "feedbackCorrect": "Parfait ! 'Se rencontrer' : se = COD → accord avec le sujet.",
       "feedbackIncorrect": "'Se rencontrer' : se = COD → accord avec 'ils'.",
       "hint": "Se rencontrer = COD → accord"
@@ -156,7 +189,10 @@
       "type": "dictation",
       "sentence": "Elle s'est regardée dans le miroir et s'est coiffé les cheveux.",
       "audioText": "Elle s'est regardée dans le miroir et s'est coiffé les cheveux.",
-      "answer": ["Elle s'est regardée dans le miroir et s'est coiffé les cheveux.", "Elle s'est regardée dans le miroir et s'est coiffé les cheveux"],
+      "answer": [
+        "Elle s'est regardée dans le miroir et s'est coiffé les cheveux.",
+        "Elle s'est regardée dans le miroir et s'est coiffé les cheveux"
+      ],
       "feedbackCorrect": "Parfait ! 'Regardée' (se = COD), 'coiffé' (COD = les cheveux).",
       "feedbackIncorrect": "1er : se = COD → accord. 2e : COD = cheveux → pas d'accord.",
       "hint": "Se regarder = COD, COD après = pas d'accord"
@@ -166,7 +202,10 @@
       "type": "dictation",
       "sentence": "Ils se sont téléphoné puis se sont retrouvés au café.",
       "audioText": "Ils se sont téléphoné puis se sont retrouvés au café.",
-      "answer": ["Ils se sont téléphoné puis se sont retrouvés au café.", "Ils se sont téléphoné puis se sont retrouvés au café"],
+      "answer": [
+        "Ils se sont téléphoné puis se sont retrouvés au café.",
+        "Ils se sont téléphoné puis se sont retrouvés au café"
+      ],
       "feedbackCorrect": "Excellent ! 'Téléphoné' (se = COI), 'retrouvés' (se = COD).",
       "feedbackIncorrect": "'Se téléphoner' = COI → pas d'accord. 'Se retrouver' = COD → accord.",
       "hint": "Se téléphoner = COI, se retrouver = COD"
@@ -175,7 +214,11 @@
       "id": "pron-19-qcm-4",
       "type": "qcm",
       "sentence": "Elle s'est ... de cette histoire.",
-      "options": ["souvenu", "souvenue", "souvenus"],
+      "options": [
+        "souvenu",
+        "souvenue",
+        "souvenus"
+      ],
       "answer": "souvenue",
       "feedbackCorrect": "Bravo ! 'Se souvenir' est essentiellement pronominal → accord automatique.",
       "feedbackIncorrect": "Verbe essentiellement pronominal → accord avec le sujet 'elle'.",
@@ -185,7 +228,9 @@
       "id": "pron-19-fill-3",
       "type": "fill-in-the-blank",
       "sentence": "Elles se sont méfié___ et se sont éloigné___.",
-      "answer": ["es", "es"],
+      "answer": [
+        "es"
+      ],
       "feedbackCorrect": "Parfait ! Verbes essentiellement pronominaux → accord automatique.",
       "feedbackIncorrect": "'Se méfier' et 's'éloigner' sont essentiellement pronominaux → accord.",
       "hint": "Verbes essentiellement pronominaux → accord"
@@ -194,7 +239,11 @@
       "id": "pron-19-drag-3",
       "type": "drag-drop",
       "sentence": "Elle s'est ___ la jambe et s'est ___.",
-      "options": ["cassé, évanouie", "cassée, évanoui", "cassé, évanoui"],
+      "options": [
+        "cassé, évanouie",
+        "cassée, évanoui",
+        "cassé, évanoui"
+      ],
       "answer": "cassé, évanouie",
       "feedbackCorrect": "Excellent ! 'Cassé' (COD = la jambe), 'évanouie' (verbe essentiellement pronominal).",
       "feedbackIncorrect": "1er : COD = la jambe → pas d'accord. 2e : verbe essentiellement pronominal → accord.",
@@ -205,7 +254,10 @@
       "type": "transformation",
       "sentence": "Elle achète une voiture.",
       "instruction": "Transforme avec 'se' : 'Elle s'est acheté...'",
-      "answer": ["Elle s'est acheté une voiture.", "Elle s'est acheté une voiture"],
+      "answer": [
+        "Elle s'est acheté une voiture.",
+        "Elle s'est acheté une voiture"
+      ],
       "feedbackCorrect": "Parfait ! 'S'acheter' avec COD après → se = COI → pas d'accord.",
       "feedbackIncorrect": "COD = une voiture → se = COI → pas d'accord : 'acheté'.",
       "hint": "COD après → se = COI → pas d'accord"

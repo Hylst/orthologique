@@ -6,7 +6,9 @@
   "targetAudience": "6e-5e",
   "category": "orthographe",
   "passingScore": 75,
-  "prerequisites": ["participe-passe-etre-avoir-7"],
+  "prerequisites": [
+    "participe-passe-etre-avoir-7"
+  ],
   "rule": "ou/où : 'ou' = choix, 'où' = lieu/temps. ce/se : 'ce' = déterminant/pronom, 'se' = pronom réfléchi. ces/ses : 'ces' = pluriel de 'ce', 'ses' = pluriel de 'son'.",
   "explanation": "Ces homophones ont des fonctions grammaticales précises. Chaque mot a son rôle : 'ou' relie des alternatives, 'où' situe dans l'espace ou le temps, 'ce' désigne, 'se' renvoie au sujet, 'ces' montre au pluriel, 'ses' possède au pluriel.",
   "etymology": "'Ou' vient du latin 'aut' (ou bien), 'où' de 'ubi' (où). 'Ce' vient de 'ecce' (voici), 'se' de 'se' (soi). L'accent sur 'où' a été ajouté pour distinguer les deux mots à l'écrit.",
@@ -67,7 +69,11 @@
       "id": "homo-8-qcm-1",
       "type": "qcm",
       "sentence": "... préfères-tu : thé ... café ?",
-      "options": ["Ou, ou", "Où, où", "Où, ou"],
+      "options": [
+        "Ou, ou",
+        "Où, où",
+        "Où, ou"
+      ],
       "answer": "Où, ou",
       "feedbackCorrect": "Parfait ! 'Où' (dans quoi) et 'ou' (choix entre deux options).",
       "feedbackIncorrect": "'Où' exprime le choix dans une question, 'ou' relie les alternatives.",
@@ -77,7 +83,11 @@
       "id": "homo-8-qcm-2",
       "type": "qcm",
       "sentence": "... enfant ... lave ... mains.",
-      "options": ["Ce, se, ces", "Ce, se, ses", "Ces, ce, ses"],
+      "options": [
+        "Ce, se, ces",
+        "Ce, se, ses",
+        "Ces, ce, ses"
+      ],
       "answer": "Ce, se, ses",
       "feedbackCorrect": "Excellent ! 'Ce' (cet), 'se' (lui-même), 'ses' (ses propres).",
       "feedbackIncorrect": "'Ce enfant' (cela), 'se lave' (lui-même), 'ses mains' (possession).",
@@ -87,7 +97,11 @@
       "id": "homo-8-qcm-3",
       "type": "qcm",
       "sentence": "... fleurs ... trouvent dans le jardin ... il joue.",
-      "options": ["Ces, se, ou", "Ces, se, où", "Ses, ce, où"],
+      "options": [
+        "Ces, se, ou",
+        "Ces, se, où",
+        "Ses, ce, où"
+      ],
       "answer": "Ces, se, où",
       "feedbackCorrect": "Bravo ! 'Ces' (ces choses-là), 'se' (elles-mêmes), 'où' (lieu).",
       "feedbackIncorrect": "'Ces fleurs' (pluriel de ce), 'se trouvent' (elles-mêmes), 'où' (lieu).",
@@ -97,7 +111,11 @@
       "id": "homo-8-fill-1",
       "type": "fill-in-the-blank",
       "sentence": "___ livre ___ trouve ___ tu l'as mis.",
-      "answer": ["Ce", "se", "où"],
+      "answer": [
+        "Ce",
+        "se",
+        "où"
+      ],
       "feedbackCorrect": "Parfait ! 'Ce livre' (cela), 'se trouve' (lui-même), 'où' (lieu).",
       "feedbackIncorrect": "'Ce' (cela), 'se trouve' (action réfléchie), 'où' (à quel endroit).",
       "hint": "Désignation + action réfléchie + lieu"
@@ -106,7 +124,10 @@
       "id": "homo-8-fill-2",
       "type": "fill-in-the-blank",
       "sentence": "Il range ___ affaires ___ il veut.",
-      "answer": ["ses", "où"],
+      "answer": [
+        "ses",
+        "où"
+      ],
       "feedbackCorrect": "Excellent ! 'Ses affaires' (possession) et 'où' (lieu).",
       "feedbackIncorrect": "'Ses' (ses propres affaires), 'où' (à l'endroit où).",
       "hint": "Possession + lieu"
@@ -115,7 +136,11 @@
       "id": "homo-8-drag-1",
       "type": "drag-drop",
       "sentence": "___ sont ___ amis qui ___ préparent pour la fête.",
-      "options": ["Ce, ces, se", "Ce, ses, se", "Ces, ses, se"],
+      "options": [
+        "Ce, ces, se",
+        "Ce, ses, se",
+        "Ces, ses, se"
+      ],
       "answer": "Ce, ses, se",
       "feedbackCorrect": "Bravo ! 'Ce sont' (cela), 'ses amis' (possession), 'se préparent' (eux-mêmes).",
       "feedbackIncorrect": "'Ce sont' (présentation), 'ses amis' (ses propres), 'se préparent' (réfléchi).",
@@ -125,7 +150,11 @@
       "id": "homo-8-drag-2",
       "type": "drag-drop",
       "sentence": "Dans la ville ___ il habite, ___ magasins ___ ferment tôt.",
-      "options": ["ou, ces, se", "où, ces, se", "où, ses, ce"],
+      "options": [
+        "ou, ces, se",
+        "où, ces, se",
+        "où, ses, ce"
+      ],
       "answer": "où, ces, se",
       "feedbackCorrect": "Parfait ! 'Où' (lieu), 'ces magasins' (pluriel de ce), 'se ferment' (eux-mêmes).",
       "feedbackIncorrect": "'Où' (lieu d'habitation), 'ces' (ces choses-là), 'se ferment' (action réfléchie).",
@@ -136,7 +165,10 @@
       "type": "transformation",
       "sentence": "Ce garçon range son livre.",
       "instruction": "Mets au pluriel",
-      "answer": ["Ces garçons rangent leurs livres.", "Ces garçons rangent ses livres."],
+      "answer": [
+        "Ces garçons rangent leurs livres.",
+        "Ces garçons rangent ses livres."
+      ],
       "feedbackCorrect": "Excellent ! 'Ce' devient 'ces' au pluriel.",
       "feedbackIncorrect": "Au pluriel : 'ces garçons' (pluriel de ce).",
       "hint": "Ce → ces au pluriel"
@@ -146,7 +178,10 @@
       "type": "transformation",
       "sentence": "Il se demande où aller.",
       "instruction": "Remplace 'il' par 'elle'",
-      "answer": ["Elle se demande où aller.", "Elle se demande où aller"],
+      "answer": [
+        "Elle se demande où aller.",
+        "Elle se demande où aller"
+      ],
       "feedbackCorrect": "Parfait ! 'Se' et 'où' restent inchangés.",
       "feedbackIncorrect": "'Se' (pronom réfléchi) et 'où' (lieu) ne changent pas.",
       "hint": "Les pronoms réfléchis et les adverbes ne changent pas"
@@ -156,7 +191,9 @@
       "type": "dictation",
       "sentence": "Où se trouvent ces livres ou ses cahiers ?",
       "audioText": "Où se trouvent ces livres ou ses cahiers ?",
-      "answer": ["Où se trouvent ces livres ou ses cahiers ?", "Où se trouvent ces livres ou ses cahiers ?"],
+      "answer": [
+        "Où se trouvent ces livres ou ses cahiers ?"
+      ],
       "feedbackCorrect": "Parfait ! Tous les homophones sont correctement orthographiés.",
       "feedbackIncorrect": "'Où' (lieu), 'se' (réfléchi), 'ces' (pluriel de ce), 'ou' (choix), 'ses' (possession).",
       "hint": "Lieu + réfléchi + pluriel de ce + choix + possession"
@@ -166,7 +203,10 @@
       "type": "dictation",
       "sentence": "Ce jour-là, il se souvient où ses amis se cachaient.",
       "audioText": "Ce jour-là, il se souvient où ses amis se cachaient.",
-      "answer": ["Ce jour-là, il se souvient où ses amis se cachaient.", "Ce jour-là, il se souvient où ses amis se cachaient"],
+      "answer": [
+        "Ce jour-là, il se souvient où ses amis se cachaient.",
+        "Ce jour-là, il se souvient où ses amis se cachaient"
+      ],
       "feedbackCorrect": "Excellent ! Tous les homophones dans un contexte narratif.",
       "feedbackIncorrect": "'Ce' (ce moment-là), 'se souvient' (réfléchi), 'où' (lieu), 'ses' (possession), 'se cachaient' (réfléchi).",
       "hint": "Moment + souvenir + lieu + possession + action"
@@ -175,7 +215,11 @@
       "id": "homo-8-qcm-4",
       "type": "qcm",
       "sentence": "... sera difficile de savoir ... ... amis ... trouvent.",
-      "options": ["Ce, ou, ses, se", "Ce, où, ses, se", "Se, où, ces, ce"],
+      "options": [
+        "Ce, ou, ses, se",
+        "Ce, où, ses, se",
+        "Se, où, ces, ce"
+      ],
       "answer": "Ce, où, ses, se",
       "feedbackCorrect": "Bravo ! 'Ce sera' (cela), 'où' (lieu), 'ses amis' (possession), 'se trouvent' (réfléchi).",
       "feedbackIncorrect": "'Ce sera' (cela sera), 'où' (à quel endroit), 'ses amis' (ses propres), 'se trouvent' (eux-mêmes).",
@@ -185,7 +229,12 @@
       "id": "homo-8-fill-3",
       "type": "fill-in-the-blank",
       "sentence": "Dans ___ région ___ il vit, ___ habitants ___ rassemblent le soir.",
-      "answer": ["cette", "où", "ces", "se"],
+      "answer": [
+        "cette",
+        "où",
+        "ces",
+        "se"
+      ],
       "feedbackCorrect": "Parfait ! 'Cette région' (féminin de ce), 'où' (lieu), 'ces habitants' (pluriel), 'se rassemblent' (réfléchi).",
       "feedbackIncorrect": "'Cette' (féminin de ce), 'où' (lieu de vie), 'ces' (ces gens-là), 'se rassemblent' (eux-mêmes).",
       "hint": "Féminin de ce + lieu + pluriel de ce + réfléchi"
@@ -194,7 +243,11 @@
       "id": "homo-8-drag-3",
       "type": "drag-drop",
       "sentence": "Il ne sait pas ___ choisir : ___ livre-ci ___ ___ livre-là.",
-      "options": ["ou, ce, ou, se", "où, ce, ou, ce", "ou, ce, ou, ce"],
+      "options": [
+        "ou, ce, ou, se",
+        "où, ce, ou, ce",
+        "ou, ce, ou, ce"
+      ],
       "answer": "ou, ce, ou, ce",
       "feedbackCorrect": "Excellent ! 'Ou' (choix), 'ce livre-ci' (désignation), 'ou' (alternative), 'ce livre-là' (désignation).",
       "feedbackIncorrect": "'Ou' (choix/alternative), 'ce' (désignation) répété pour les deux livres.",
@@ -205,7 +258,10 @@
       "type": "transformation",
       "sentence": "Ces enfants se lavent les mains.",
       "instruction": "Mets au singulier",
-      "answer": ["Cet enfant se lave les mains.", "Ce enfant se lave les mains."],
+      "answer": [
+        "Cet enfant se lave les mains.",
+        "Ce enfant se lave les mains."
+      ],
       "feedbackCorrect": "Parfait ! 'Ces' devient 'cet/ce', 'se' reste identique.",
       "feedbackIncorrect": "Au singulier : 'cet enfant' (masculin) ou 'ce', 'se lave' (réfléchi inchangé).",
       "hint": "Ces → cet/ce, se reste identique"

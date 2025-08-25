@@ -6,7 +6,9 @@
   "targetAudience": "6e-5e",
   "category": "orthographe",
   "passingScore": 75,
-  "prerequisites": ["accord-gn-5"],
+  "prerequisites": [
+    "accord-gn-5"
+  ],
   "rule": "La plupart des noms prennent un 's' au pluriel, mais il existe des règles spécifiques selon leur terminaison.",
   "explanation": "Le pluriel français suit des règles logiques héritées du latin. Chaque terminaison a sa propre règle pour éviter les difficultés de prononciation et maintenir l'harmonie sonore de la langue.",
   "etymology": "Les règles de pluriel viennent du latin où les terminaisons variaient selon la déclinaison. Le français a simplifié ce système mais a gardé certaines spécificités pour préserver l'euphonie (beauté sonore) de la langue.",
@@ -69,7 +71,11 @@
       "id": "pluriel-6-qcm-1",
       "type": "qcm",
       "sentence": "Les ... mangent des ... dans leurs ...",
-      "options": ["chevaux, choux, prés", "chevaus, chous, prés", "chevaux, chous, prées"],
+      "options": [
+        "chevaux, choux, prés",
+        "chevaus, chous, prés",
+        "chevaux, chous, prées"
+      ],
       "answer": "chevaux, choux, prés",
       "feedbackCorrect": "Parfait ! 'Chevaux' (-al→aux), 'choux' (exception -ou→x), 'prés' (règle générale).",
       "feedbackIncorrect": "'Cheval' devient 'chevaux', 'chou' devient 'choux' (exception), 'pré' devient 'prés'.",
@@ -79,7 +85,11 @@
       "id": "pluriel-6-qcm-2",
       "type": "qcm",
       "sentence": "Dans les ... se cachent des ...",
-      "options": ["buissons, hibous", "buissons, hiboux", "buissous, hiboux"],
+      "options": [
+        "buissons, hibous",
+        "buissons, hiboux",
+        "buissous, hiboux"
+      ],
       "answer": "buissons, hiboux",
       "feedbackCorrect": "Excellent ! 'Buissons' (règle générale) et 'hiboux' (exception -ou→x).",
       "feedbackIncorrect": "'Buisson' prend un 's', 'hibou' prend un 'x' (exception).",
@@ -89,7 +99,11 @@
       "id": "pluriel-6-qcm-3",
       "type": "qcm",
       "sentence": "Les ... organisent des ... dans leurs ...",
-      "options": ["directeurs, festivals, bureaus", "directeurs, festivals, bureaux", "directeures, festivaux, bureaux"],
+      "options": [
+        "directeurs, festivals, bureaus",
+        "directeurs, festivals, bureaux",
+        "directeures, festivaux, bureaux"
+      ],
       "answer": "directeurs, festivals, bureaux",
       "feedbackCorrect": "Bravo ! 'Directeurs' (règle générale), 'festivals' (exception -al), 'bureaux' (-eau→eaux).",
       "feedbackIncorrect": "'Directeur' → 'directeurs', 'festival' → 'festivals' (exception), 'bureau' → 'bureaux'.",
@@ -99,7 +113,9 @@
       "id": "pluriel-6-fill-1",
       "type": "fill-in-the-blank",
       "sentence": "Les enfants jouent avec leurs bijou___ et leurs joujou___.",
-      "answer": ["x", "x"],
+      "answer": [
+        "x"
+      ],
       "feedbackCorrect": "Parfait ! 'Bijoux' et 'joujoux' sont des exceptions en -ou qui prennent un 'x'.",
       "feedbackIncorrect": "'Bijou' et 'joujou' font partie des 7 exceptions en -ou qui prennent un 'x'.",
       "hint": "Bijou et joujou = exceptions en -ou → x"
@@ -108,7 +124,10 @@
       "id": "pluriel-6-fill-2",
       "type": "fill-in-the-blank",
       "sentence": "Les oiseau___ construisent leurs nid___ dans les arbre___.",
-      "answer": ["x", "s", "s"],
+      "answer": [
+        "x",
+        "s"
+      ],
       "feedbackCorrect": "Excellent ! 'Oiseaux' (-eau→x), 'nids' et 'arbres' (règle générale).",
       "feedbackIncorrect": "'Oiseau' → 'oiseaux', 'nid' et 'arbre' prennent un 's'.",
       "hint": "Oiseau (-eau), nid et arbre (règle générale)"
@@ -117,7 +136,11 @@
       "id": "pluriel-6-drag-1",
       "type": "drag-drop",
       "sentence": "Les ___ portent des ___ sur leurs ___.",
-      "options": ["chevaux, fardeaus, dos", "chevaux, fardeaux, dos", "chevaus, fardeaux, dos"],
+      "options": [
+        "chevaux, fardeaus, dos",
+        "chevaux, fardeaux, dos",
+        "chevaus, fardeaux, dos"
+      ],
       "answer": "chevaux, fardeaux, dos",
       "feedbackCorrect": "Bravo ! 'Chevaux' (-al→aux), 'fardeaux' (-eau→eaux), 'dos' (invariable).",
       "feedbackIncorrect": "'Cheval' → 'chevaux', 'fardeau' → 'fardeaux', 'dos' ne change pas.",
@@ -127,7 +150,11 @@
       "id": "pluriel-6-drag-2",
       "type": "drag-drop",
       "sentence": "Dans les ___, les ___ protègent leurs ___.",
-      "options": ["bois, hibous, petits", "bois, hiboux, petits", "bois, hiboux, petit"],
+      "options": [
+        "bois, hibous, petits",
+        "bois, hiboux, petits",
+        "bois, hiboux, petit"
+      ],
       "answer": "bois, hiboux, petits",
       "feedbackCorrect": "Parfait ! 'Bois' (invariable), 'hiboux' (exception), 'petits' (règle générale).",
       "feedbackIncorrect": "'Bois' ne change pas, 'hibou' → 'hiboux' (exception), 'petit' → 'petits'.",
@@ -138,7 +165,10 @@
       "type": "transformation",
       "sentence": "Un beau château avec un grand portail.",
       "instruction": "Mets au pluriel",
-      "answer": ["De beaux châteaux avec de grands portails.", "Des beaux châteaux avec des grands portails."],
+      "answer": [
+        "De beaux châteaux avec de grands portails.",
+        "Des beaux châteaux avec des grands portails."
+      ],
       "feedbackCorrect": "Excellent ! Tous les pluriels sont corrects.",
       "feedbackIncorrect": "'Château' → 'châteaux', 'portail' → 'portails' (exception -al).",
       "hint": "Château (-eau), portail (exception -al)"
@@ -148,7 +178,10 @@
       "type": "transformation",
       "sentence": "Le genou du cheval fait mal.",
       "instruction": "Mets au pluriel",
-      "answer": ["Les genoux des chevaux font mal.", "Les genoux du cheval font mal."],
+      "answer": [
+        "Les genoux des chevaux font mal.",
+        "Les genoux du cheval font mal."
+      ],
       "feedbackCorrect": "Parfait ! 'Genoux' (exception) et 'chevaux' (-al→aux).",
       "feedbackIncorrect": "'Genou' → 'genoux' (exception), 'cheval' → 'chevaux'.",
       "hint": "Genou (exception), cheval (-al)"
@@ -158,7 +191,10 @@
       "type": "dictation",
       "sentence": "Les bijoux et les cailloux brillent dans leurs écrins.",
       "audioText": "Les bijoux et les cailloux brillent dans leurs écrins.",
-      "answer": ["Les bijoux et les cailloux brillent dans leurs écrins.", "Les bijoux et les cailloux brillent dans leurs écrins"],
+      "answer": [
+        "Les bijoux et les cailloux brillent dans leurs écrins.",
+        "Les bijoux et les cailloux brillent dans leurs écrins"
+      ],
       "feedbackCorrect": "Parfait ! Toutes les exceptions en -ou sont correctes.",
       "feedbackIncorrect": "'Bijou' et 'caillou' → 'bijoux' et 'cailloux' (exceptions).",
       "hint": "Bijou et caillou = exceptions en -ou"
@@ -168,7 +204,10 @@
       "type": "dictation",
       "sentence": "Les jeux et les feux illuminent les châteaux.",
       "audioText": "Les jeux et les feux illuminent les châteaux.",
-      "answer": ["Les jeux et les feux illuminent les châteaux.", "Les jeux et les feux illuminent les châteaux"],
+      "answer": [
+        "Les jeux et les feux illuminent les châteaux.",
+        "Les jeux et les feux illuminent les châteaux"
+      ],
       "feedbackCorrect": "Excellent ! Tous les pluriels en -eu et -eau sont corrects.",
       "feedbackIncorrect": "'Jeu' → 'jeux', 'feu' → 'feux', 'château' → 'châteaux'.",
       "hint": "Jeu et feu (-eu), château (-eau)"

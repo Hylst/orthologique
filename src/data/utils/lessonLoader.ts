@@ -35,7 +35,7 @@ export class LessonLoader {
 
     try {
       // Dynamic import based on difficulty level
-      const difficultyModule = await import(`../levels/${difficulty}/index.js`);
+      const difficultyModule = await import(`../levels/${difficulty}/index.ts`);
       const lessons = difficultyModule.default || difficultyModule.lessons;
       
       // Cache loaded lessons

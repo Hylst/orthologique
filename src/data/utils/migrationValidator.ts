@@ -4,7 +4,6 @@
  */
 
 import { Lesson } from '../../types';
-import { ModularLessonSystem } from '../index';
 
 export interface ValidationResult {
   isValid: boolean;
@@ -20,10 +19,8 @@ export interface ValidationResult {
 }
 
 export class MigrationValidator {
-  private modularSystem: ModularLessonSystem;
-
   constructor() {
-    this.modularSystem = new ModularLessonSystem();
+    // ModularLessonSystem will be loaded dynamically when needed
   }
 
   /**
@@ -53,20 +50,27 @@ export class MigrationValidator {
       }));
       result.stats.totalLessons = allLegacyLessons.length;
 
-      // Load modular lessons
+      // Load modular lessons using dynamic import
       const modularLessons: Lesson[] = [];
       
-      // Try to load from each difficulty level
-      const difficulties = ['debutant', 'intermediaire', 'avance', 'expert'];
-      
-      for (const difficulty of difficulties) {
-        try {
-          const lessons = await this.modularSystem.getLessonsByDifficulty(difficulty);
-          modularLessons.push(...lessons);
-          result.stats.migratedLessons += lessons.length;
-        } catch (error) {
-          result.warnings.push(`Could not load ${difficulty} lessons: ${error}`);
+      try {
+        const { ModularLessonSystem } = await import('../index');
+        const modularSystem = new ModularLessonSystem();
+        
+        // Try to load from each difficulty level
+        const difficulties = ['debutant', 'intermediaire', 'avance', 'expert'];
+        
+        for (const difficulty of difficulties) {
+          try {
+            const lessons = await modularSystem.getLessonsByDifficulty(difficulty);
+            modularLessons.push(...lessons);
+            result.stats.migratedLessons += lessons.length;
+          } catch (error) {
+            result.warnings.push(`Could not load ${difficulty} lessons: ${error}`);
+          }
         }
+      } catch (error) {
+        result.errors.push(`Failed to load modular system: ${error}`);
       }
 
       // Compare lessons

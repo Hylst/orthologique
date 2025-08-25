@@ -11,6 +11,12 @@ import PWAInstallButton from './PWAInstallButton';
 import OfflineIndicator from './OfflineIndicator';
 import { speak } from '../utils/audio';
 import { getCurrentUser } from '../utils/storage';
+import { 
+  getButtonAriaAttributes, 
+  getLessonCardAriaAttributes, 
+  getAudioControlAriaAttributes,
+  handleKeyboardActivation
+} from '../utils/accessibility';
 
 interface DashboardProps {
   lessons: Lesson[];
@@ -146,8 +152,13 @@ const Dashboard: React.FC<DashboardProps> = ({
     onUpdateUserProfile(profile);
   };
 
-  const handleSpeak = (text: string) => {
-    speak(text);
+  const handleSpeak = async (text: string) => {
+    try {
+      await speak(text);
+    } catch (error) {
+      console.error('Speech synthesis failed:', error);
+      // Optionally show a user-friendly message
+    }
   };
 
   const handleStartLesson = (lessonId: string) => {
@@ -176,12 +187,13 @@ const Dashboard: React.FC<DashboardProps> = ({
                 />
               ) : (
                 <button
-                  onClick={() => setShowAuthModal(true)}
-                  className="flex items-center gap-2 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
-                >
-                  <LogIn className="w-4 h-4" />
-                  Se connecter
-                </button>
+                onClick={() => setShowAuthModal(true)}
+                className="flex items-center gap-2 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+                {...getButtonAriaAttributes('Ouvrir la modal de connexion')}
+              >
+                <LogIn className="w-4 h-4" />
+                Se connecter
+              </button>
               )}
             </div>
           </div>
@@ -193,7 +205,7 @@ const Dashboard: React.FC<DashboardProps> = ({
             <button
               onClick={() => handleSpeak(currentUser ? `Bonjour, ${currentUser.name} !` : 'Bienvenue dans OrthoLogique !')}
               className="p-1 text-gray-500 hover:text-blue-500 transition-colors"
-              title="Écouter"
+              {...getAudioControlAriaAttributes(currentUser ? `Bonjour, ${currentUser.name} !` : 'Bienvenue dans OrthoLogique !')}
             >
               <Volume2 className="w-5 h-5" />
             </button>
@@ -208,6 +220,7 @@ const Dashboard: React.FC<DashboardProps> = ({
               <button
                 onClick={() => handleStartLesson(nextLesson.id)}
                 className="flex items-center gap-2 mx-auto px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+                {...getButtonAriaAttributes(`Commencer la leçon recommandée: ${nextLesson.title}`)}
               >
                 <Play className="w-4 h-4" />
                 {nextLesson.title}
@@ -217,42 +230,48 @@ const Dashboard: React.FC<DashboardProps> = ({
         </header>
 
         {/* Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-          <div className="bg-white rounded-xl shadow-lg p-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8" role="region" aria-label="Statistiques de progression">
+          <div className="bg-white rounded-xl shadow-lg p-6" role="article" aria-labelledby="lessons-completed-title">
             <div className="flex items-center gap-3 mb-3">
-              <BookOpen className="w-6 h-6 text-blue-500" />
-              <h3 className="font-semibold text-gray-800">Leçons terminées</h3>
+              <BookOpen className="w-6 h-6 text-blue-500" aria-hidden="true" />
+              <h3 id="lessons-completed-title" className="font-semibold text-gray-800">Leçons terminées</h3>
             </div>
-            <p className="text-3xl font-bold text-blue-600">{stats.completedCount}/{stats.totalLessons}</p>
+            <p className="text-3xl font-bold text-blue-600" aria-label={`${stats.completedCount} leçons terminées sur ${stats.totalLessons} au total`}>
+              {stats.completedCount}/{stats.totalLessons}
+            </p>
             <p className="text-sm text-gray-600 mt-1">{stats.progressPercentage}% du parcours</p>
           </div>
           
-          <div className="bg-white rounded-xl shadow-lg p-6">
+          <div className="bg-white rounded-xl shadow-lg p-6" role="article" aria-labelledby="average-score-title">
             <div className="flex items-center gap-3 mb-3">
-              <Target className="w-6 h-6 text-green-500" />
-              <h3 className="font-semibold text-gray-800">Score moyen</h3>
+              <Target className="w-6 h-6 text-green-500" aria-hidden="true" />
+              <h3 id="average-score-title" className="font-semibold text-gray-800">Score moyen</h3>
             </div>
-            <p className="text-3xl font-bold text-green-600">{stats.averageScore}%</p>
+            <p className="text-3xl font-bold text-green-600" aria-label={`Score moyen de ${stats.averageScore} pourcent`}>
+              {stats.averageScore}%
+            </p>
             <p className="text-sm text-gray-600 mt-1">
               {stats.averageScore >= 80 ? 'Excellent !' : stats.averageScore >= 70 ? 'Très bien !' : 'Continue !'}
             </p>
           </div>
           
-          <div className="bg-white rounded-xl shadow-lg p-6">
+          <div className="bg-white rounded-xl shadow-lg p-6" role="article" aria-labelledby="trophies-title">
             <div className="flex items-center gap-3 mb-3">
-              <Trophy className="w-6 h-6 text-yellow-500" />
-              <h3 className="font-semibold text-gray-800">Trophées</h3>
+              <Trophy className="w-6 h-6 text-yellow-500" aria-hidden="true" />
+              <h3 id="trophies-title" className="font-semibold text-gray-800">Trophées</h3>
             </div>
-            <p className="text-3xl font-bold text-yellow-600">{stats.completedCount}</p>
+            <p className="text-3xl font-bold text-yellow-600" aria-label={`${stats.completedCount} trophées obtenus`}>
+              {stats.completedCount}
+            </p>
             <p className="text-sm text-gray-600 mt-1">Leçons maîtrisées</p>
           </div>
 
-          <div className="bg-white rounded-xl shadow-lg p-6">
+          <div className="bg-white rounded-xl shadow-lg p-6" role="article" aria-labelledby="current-level-title">
             <div className="flex items-center gap-3 mb-3">
-              <Target className="w-6 h-6 text-purple-500" />
-              <h3 className="font-semibold text-gray-800">Niveau actuel</h3>
+              <Target className="w-6 h-6 text-purple-500" aria-hidden="true" />
+              <h3 id="current-level-title" className="font-semibold text-gray-800">Niveau actuel</h3>
             </div>
-            <p className="text-2xl font-bold text-purple-600">
+            <p className="text-2xl font-bold text-purple-600" aria-label={`Niveau actuel: ${stats.averageScore >= 90 ? 'Expert' : stats.averageScore >= 75 ? 'Avancé' : stats.averageScore >= 60 ? 'Intermédiaire' : 'Débutant'}`}>
               {stats.averageScore >= 90 ? 'Expert' : 
                stats.averageScore >= 75 ? 'Avancé' : 
                stats.averageScore >= 60 ? 'Intermédiaire' : 'Débutant'}
@@ -262,23 +281,34 @@ const Dashboard: React.FC<DashboardProps> = ({
         </div>
 
         {/* Statistiques par difficulté */}
-        <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
-          <h3 className="font-semibold text-gray-800 mb-4">Progression par niveau</h3>
+        <div className="bg-white rounded-xl shadow-lg p-6 mb-8" role="region" aria-labelledby="difficulty-progress-title">
+          <h3 id="difficulty-progress-title" className="font-semibold text-gray-800 mb-4">Progression par niveau</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {Object.entries(difficultyStats).map(([difficulty, stats]) => (
-              <div key={difficulty} className="text-center">
-                <div className={`inline-block px-3 py-1 rounded-full text-sm font-medium mb-2 ${getDifficultyColor(difficulty)}`}>
-                  {difficulty.charAt(0).toUpperCase() + difficulty.slice(1)}
-                </div>
-                <p className="text-lg font-bold text-gray-800">{stats.completed}/{stats.total}</p>
-                <div className="w-full bg-gray-200 rounded-full h-2 mt-1">
+            {Object.entries(difficultyStats).map(([difficulty, stats]) => {
+              const progressPercentage = stats.total > 0 ? (stats.completed / stats.total) * 100 : 0;
+              return (
+                <div key={difficulty} className="text-center" role="article" aria-labelledby={`difficulty-${difficulty}-title`}>
                   <div 
-                    className="bg-blue-500 h-2 rounded-full transition-all duration-300"
-                    style={{ width: `${stats.total > 0 ? (stats.completed / stats.total) * 100 : 0}%` }}
-                  />
+                    id={`difficulty-${difficulty}-title`}
+                    className={`inline-block px-3 py-1 rounded-full text-sm font-medium mb-2 ${getDifficultyColor(difficulty)}`}
+                  >
+                    {difficulty.charAt(0).toUpperCase() + difficulty.slice(1)}
+                  </div>
+                  <p 
+                    className="text-lg font-bold text-gray-800" 
+                    aria-label={`${stats.completed} leçons terminées sur ${stats.total} au niveau ${difficulty}`}
+                  >
+                    {stats.completed}/{stats.total}
+                  </p>
+                  <div className="w-full bg-gray-200 rounded-full h-2 mt-1" role="progressbar" aria-valuenow={progressPercentage} aria-valuemin={0} aria-valuemax={100} aria-label={`Progression niveau ${difficulty}: ${Math.round(progressPercentage)}%`}>
+                    <div 
+                      className="bg-blue-500 h-2 rounded-full transition-all duration-300"
+                      style={{ width: `${progressPercentage}%` }}
+                    />
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
 
@@ -293,11 +323,18 @@ const Dashboard: React.FC<DashboardProps> = ({
           <h3 className="font-semibold text-gray-800 mb-4">Filtrer les leçons</h3>
           <div className="flex flex-wrap gap-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">Niveau de difficulté</label>
+              <label 
+                htmlFor="difficulty-filter" 
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
+                Niveau de difficulté
+              </label>
               <select
+                id="difficulty-filter"
                 value={selectedDifficulty}
                 onChange={(e) => setSelectedDifficulty(e.target.value)}
                 className="px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                aria-describedby="difficulty-help"
               >
                 <option value="all">Tous les niveaux</option>
                 <option value="debutant">Débutant (CM1-CM2)</option>
@@ -305,13 +342,23 @@ const Dashboard: React.FC<DashboardProps> = ({
                 <option value="avance">Avancé (4e-3e)</option>
                 <option value="expert">Expert (Lycée)</option>
               </select>
+              <div id="difficulty-help" className="sr-only">
+                Filtrer les leçons par niveau de difficulté
+              </div>
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">Catégorie</label>
+              <label 
+                htmlFor="category-filter" 
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
+                Catégorie
+              </label>
               <select
+                id="category-filter"
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
                 className="px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                aria-describedby="category-help"
               >
                 <option value="all">Toutes les catégories</option>
                 <option value="orthographe">Orthographe</option>
@@ -319,7 +366,11 @@ const Dashboard: React.FC<DashboardProps> = ({
                 <option value="ponctuation">Ponctuation</option>
                 <option value="syntaxe">Syntaxe</option>
               </select>
+              <div id="category-help" className="sr-only">
+                Filtrer les leçons par catégorie de contenu
+              </div>
             </div>
+
           </div>
         </div>
 
@@ -341,6 +392,9 @@ const Dashboard: React.FC<DashboardProps> = ({
                   setSelectedCategory('all');
                 }}
                 className="text-sm text-blue-600 hover:text-blue-800 transition-colors"
+                {...getButtonAriaAttributes(
+                  'Réinitialiser tous les filtres - Supprime tous les filtres appliqués et affiche toutes les leçons'
+                )}
               >
                 Réinitialiser les filtres
               </button>
@@ -350,7 +404,7 @@ const Dashboard: React.FC<DashboardProps> = ({
             const isCompleted = lesson.completed;
             const isUnlocked = lesson.unlocked;
             const score = userProgress.scores[lesson.id];
-            const hasPassingScore = score && score >= (lesson.passingScore || 70);
+            const hasPassingScore = Boolean(score && score >= (lesson.passingScore || 70));
 
             return (
               <div
@@ -358,6 +412,13 @@ const Dashboard: React.FC<DashboardProps> = ({
                 className={`bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 lesson-card ${
                   isUnlocked ? 'hover:shadow-xl' : 'opacity-50'
                 }`}
+                {...getLessonCardAriaAttributes(
+                  lesson.title,
+                  isCompleted && hasPassingScore,
+                  !isUnlocked,
+                  lesson.difficulty
+                )}
+                onKeyDown={(e) => handleKeyboardActivation(e, () => isUnlocked && handleStartLesson(lesson.id))}
               >
                 <div className="p-6">
                   <div className="flex items-center justify-between">
@@ -413,7 +474,7 @@ const Dashboard: React.FC<DashboardProps> = ({
                       <button
                         onClick={() => handleSpeak(lesson.rule)}
                         className="p-2 text-gray-500 hover:text-blue-500 transition-colors"
-                        title="Écouter la règle"
+                        {...getAudioControlAriaAttributes(lesson.rule)}
                       >
                         <Volume2 className="w-5 h-5" />
                       </button>
@@ -425,6 +486,12 @@ const Dashboard: React.FC<DashboardProps> = ({
                             ? 'bg-blue-500 text-white hover:bg-blue-600'
                             : 'bg-gray-300 text-gray-500 cursor-not-allowed'
                         }`}
+                        {...getButtonAriaAttributes(
+                          `${isCompleted && hasPassingScore ? 'Réviser' : 
+                           isCompleted ? 'Améliorer' : 'Commencer'} la leçon ${lesson.title}`,
+                          undefined,
+                          !isUnlocked
+                        )}
                       >
                         <Play className="w-4 h-4" />
                         {isCompleted && hasPassingScore ? 'Réviser' : 

@@ -1,14 +1,16 @@
 import React from 'react';
 import { Lesson, AppState, UserProfile } from './types';
 import { ProgressManager } from './utils/progressManager';
-import { initAudio } from './utils/audio';
+import { initAudio, initializeVoices } from './utils/audio';
 import { getCurrentUser } from './utils/storage';
 import Dashboard from './components/Dashboard';
 import LessonView from './components/LessonView';
 import ExerciseView from './components/ExerciseView';
 import ResultsView from './components/ResultsView';
+import ErrorBoundary from './components/ErrorBoundary';
 import { showLessonCompleted } from './utils/notifications';
 import { ModularLessonSystem } from './data/index';
+import { lessonLazyLoader } from './utils/lazyLoader';
 import './data/utils/testMigration';
 
 /**
@@ -37,74 +39,72 @@ const App: React.FC = () => {
   React.useEffect(() => {
     const initializeApp = async () => {
       try {
-        // Initialize the new modular lesson system
+        // Initialize the new modular lesson system with lazy loading
         const lessonSystem = new ModularLessonSystem();
         
         await initAudio();
+        await initializeVoices();
         const currentUser = getCurrentUser();
         const userProgress = progressManager.getProgress();
         
-        // Load lessons using the new modular system
-        // Load all difficulty levels from modular structure
+        // Load lessons using lazy loading optimization
         let allLessons: Lesson[] = [];
         
         try {
-          // Load débutant lessons from new modular structure
-          const debutantLessons = await lessonSystem.getLessonsByDifficulty('debutant');
-          // Transform debutant lessons to include unlocked/completed properties
-          const transformedDebutantLessons = debutantLessons.map((lesson) => ({
-            ...lesson,
-            unlocked: false, // Will be set properly below
-            completed: false // Will be set properly below
-          }));
-          allLessons.push(...transformedDebutantLessons);
-        } catch (debutantError) {
-          console.warn('Could not load débutant lessons from modular structure:', debutantError);
+          // Use lazy loader for optimized loading
+          const lazyLoadedLessons = await lessonLazyLoader.loadAllLessons();
+          if (lazyLoadedLessons && lazyLoadedLessons.length > 0) {
+            allLessons = lazyLoadedLessons;
+          } else {
+            // Fallback to modular system
+            const difficulties = ['debutant', 'intermediaire', 'avance', 'expert'];
+            for (const difficulty of difficulties) {
+              try {
+                const lessons = await lessonSystem.getLessonsByDifficulty(difficulty);
+                allLessons.push(...lessons);
+              } catch (error) {
+                console.warn(`Could not load ${difficulty} lessons from modular structure:`, error);
+              }
+            }
+          }
+        } catch (lazyLoadError) {
+          console.warn('Lazy loading failed, using modular system:', lazyLoadError);
+          
+          // Fallback to modular system
+          try {
+            // Load débutant lessons from new modular structure
+            const debutantLessons = await lessonSystem.getLessonsByDifficulty('debutant');
+            allLessons.push(...debutantLessons);
+          } catch (debutantError) {
+            console.warn('Could not load débutant lessons from modular structure:', debutantError);
+          }
+          
+          try {
+            // Load intermediate lessons from new modular structure
+            const intermediateLessons = await lessonSystem.getLessonsByDifficulty('intermediaire');
+            allLessons.push(...intermediateLessons);
+          } catch (intermediateError) {
+            console.warn('Could not load intermediate lessons from modular structure:', intermediateError);
+          }
+          
+          try {
+            // Load avancé lessons from new modular structure
+            const avanceLessons = await lessonSystem.getLessonsByDifficulty('avance');
+            allLessons.push(...avanceLessons);
+          } catch (avanceError) {
+            console.warn('Could not load avancé lessons from modular structure:', avanceError);
+          }
+          
+          try {
+            // Load expert lessons from new modular structure
+            const expertLessons = await lessonSystem.getLessonsByDifficulty('expert');
+            allLessons.push(...expertLessons);
+          } catch (expertError) {
+            console.warn('Could not load expert lessons from modular structure:', expertError);
+          }
         }
         
-        try {
-          // Load intermediate lessons from new modular structure
-          const intermediateLessons = await lessonSystem.getLessonsByDifficulty('intermediaire');
-          // Transform intermediate lessons to include unlocked/completed properties
-          const transformedIntermediateLessons = intermediateLessons.map((lesson) => ({
-            ...lesson,
-            unlocked: false, // Will be set properly below
-            completed: false // Will be set properly below
-          }));
-          allLessons.push(...transformedIntermediateLessons);
-        } catch (intermediateError) {
-          console.warn('Could not load intermediate lessons from modular structure:', intermediateError);
-        }
-        
-        try {
-          // Load avancé lessons from new modular structure
-          const avanceLessons = await lessonSystem.getLessonsByDifficulty('avance');
-          // Transform avancé lessons to include unlocked/completed properties
-          const transformedAvanceLessons = avanceLessons.map((lesson) => ({
-            ...lesson,
-            unlocked: false, // Will be set properly below
-            completed: false // Will be set properly below
-          }));
-          allLessons.push(...transformedAvanceLessons);
-        } catch (avanceError) {
-          console.warn('Could not load avancé lessons from modular structure:', avanceError);
-        }
-        
-        try {
-          // Load expert lessons from new modular structure
-          const expertLessons = await lessonSystem.getLessonsByDifficulty('expert');
-          // Transform expert lessons to include unlocked/completed properties
-          const transformedExpertLessons = expertLessons.map((lesson) => ({
-            ...lesson,
-            unlocked: false, // Will be set properly below
-            completed: false // Will be set properly below
-          }));
-          allLessons.push(...transformedExpertLessons);
-        } catch (expertError) {
-          console.warn('Could not load expert lessons from modular structure:', expertError);
-        }
-        
-        // Fallback to legacy system if no lessons were loaded from modular structure
+        // Fallback to legacy system if no lessons were loaded
         if (allLessons.length === 0) {
           console.log('Falling back to legacy lessons.json');
           const lessonsModule = await import('./data/lessons.json');
@@ -143,10 +143,17 @@ const App: React.FC = () => {
     initializeApp();
   }, [progressManager]);
 
-  const handleStartLesson = (lessonId: string) => {
+  const handleStartLesson = async (lessonId: string) => {
     // Vérifie si la leçon peut être débloquée
     if (!progressManager.canAccessLesson(lessonId, appState.lessons)) {
       return;
+    }
+    
+    // Preload lesson content with lazy loading
+    try {
+      await lessonLazyLoader.preloadLesson(lessonId);
+    } catch (error) {
+      console.warn('Failed to preload lesson content:', error);
     }
     
     progressManager.updateLastPosition(lessonId);
@@ -305,13 +312,15 @@ const App: React.FC = () => {
     case 'dashboard':
     default:
       return (
-        <Dashboard
-          lessons={processedLessons}
-          userProgress={appState.userProgress}
-          onStartLesson={handleStartLesson}
-          onResetProgress={handleResetProgress}
-          onUpdateUserProfile={handleUpdateUserProfile}
-        />
+        <ErrorBoundary>
+          <Dashboard
+            lessons={processedLessons}
+            userProgress={appState.userProgress}
+            onStartLesson={handleStartLesson}
+            onResetProgress={handleResetProgress}
+            onUpdateUserProfile={handleUpdateUserProfile}
+          />
+        </ErrorBoundary>
       );
   }
 };

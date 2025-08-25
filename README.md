@@ -4,11 +4,12 @@
 
 Une application web éducative Progressive Web App (PWA) conçue pour aider les apprenants, notamment ceux présentant une dysorthographie, à maîtriser les règles fondamentales de l'orthographe française par la compréhension logique plutôt que par la mémorisation.
 
-![Version](https://img.shields.io/badge/version-1.1.0-blue.svg)
+![Version](https://img.shields.io/badge/version-1.2.3-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![React](https://img.shields.io/badge/React-18.3.1-61dafb.svg)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.5.3-blue.svg)
 ![PWA](https://img.shields.io/badge/PWA-Ready-purple.svg)
+![Architecture](https://img.shields.io/badge/Architecture-Modular-green.svg)
 
 ## 🎯 Objectifs Pédagogiques
 
@@ -23,6 +24,12 @@ Une application web éducative Progressive Web App (PWA) conçue pour aider les 
 **Secondaire** : Toute personne souhaitant renforcer ses bases en orthographe
 
 ## ✨ Fonctionnalités Principales
+
+### 🏗️ Architecture Modulaire Avancée
+- **Système modulaire complet** : Leçons organisées par niveaux de difficulté
+- **Chargement dynamique** : Performance optimisée avec chargement à la demande
+- **Cache intelligent** : Gestion mémoire optimisée avec cache LRU
+- **Validation automatique** : Contrôle d'intégrité des données en temps réel
 
 ### 📖 Parcours d'Apprentissage Progressif
 - **20 modules complets** : De l'accord sujet-verbe aux temps composés avancés
@@ -138,20 +145,39 @@ src/
 │   ├── Dashboard.tsx    # Tableau de bord principal
 │   ├── LessonView.tsx   # Interface des leçons
 │   ├── ExerciseView.tsx # Interface des exercices
-│   └── ResultsView.tsx  # Écran de résultats
-├── data/
-│   └── lessons.json     # Contenu pédagogique
+│   ├── ResultsView.tsx  # Écran de résultats
+│   ├── AuthModal.tsx    # Modal d'authentification
+│   ├── ProfileModal.tsx # Modal de profil utilisateur
+│   ├── UserMenu.tsx     # Menu utilisateur
+│   └── PWAInstallButton.tsx # Installation PWA
+├── data/                # Système modulaire de leçons
+│   ├── index.ts         # Point d'entrée principal
+│   ├── metadata.json    # Métadonnées centralisées
+│   ├── levels/          # Organisation par niveaux
+│   │   ├── debutant/    # Leçons CM1-CM2 (5 leçons)
+│   │   ├── intermediaire/ # Leçons 6e-5e (4 leçons)
+│   │   ├── avance/      # Leçons 4e-3e (4 leçons)
+│   │   └── expert/      # Leçons Lycée (7 leçons)
+│   └── utils/           # Utilitaires modulaires
+│       ├── lessonLoader.ts    # Chargement dynamique
+│       ├── lessonCache.ts     # Cache intelligent
+│       └── lessonValidator.ts # Validation données
 ├── types/
 │   └── index.ts         # Définitions TypeScript
 ├── utils/
 │   ├── audio.ts         # Gestion audio et synthèse vocale
 │   ├── storage.ts       # Sauvegarde localStorage
-│   └── progressManager.ts # Logique de progression
+│   ├── progressManager.ts # Logique de progression
+│   ├── notifications.ts # Notifications système
+│   └── pwa.ts          # Fonctionnalités PWA
 └── App.tsx              # Composant principal
 ```
 
 ### Gestion des Données
-- **Contenu** : Stocké dans `lessons.json` pour faciliter les mises à jour
+- **Architecture Modulaire** : Leçons organisées par niveaux dans `src/data/levels/`
+- **Chargement Dynamique** : Les leçons se chargent à la demande par niveau
+- **Cache Intelligent** : Cache LRU pour optimiser les performances
+- **Métadonnées Centralisées** : Configuration dans `metadata.json`
 - **Progression** : Sauvegardée localement via localStorage
 - **Pas de backend** : Application entièrement côté client
 
@@ -186,7 +212,26 @@ Les contributions sont les bienvenues ! Pour contribuer :
 5. Ouvrez une Pull Request
 
 ### Ajout de Contenu
-Pour ajouter de nouvelles leçons, modifiez `src/data/lessons.json` en suivant la structure existante.
+Pour ajouter de nouvelles leçons :
+1. **Créez un fichier JSON** dans le niveau approprié (`src/data/levels/[niveau]/[catégorie]/`)
+2. **Suivez la structure** des leçons existantes
+3. **Mettez à jour l'index** du niveau (`src/data/levels/[niveau]/index.ts`)
+4. **Testez la validation** avec les utilitaires intégrés
+
+### Structure d'une Leçon
+```json
+{
+  "id": "unique-lesson-id",
+  "title": "Titre de la leçon",
+  "level": 1,
+  "difficulty": "debutant",
+  "category": "orthographe",
+  "targetAudience": "CM1-CM2",
+  "rule": "Règle principale",
+  "explanation": "Explication détaillée",
+  "exercises": [...]
+}
+```
 
 ## 📄 License
 
