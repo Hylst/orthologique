@@ -74,11 +74,11 @@
       "id": "son-sont-4-qcm-3",
       "type": "qcm",
       "sentence": "... chaussures ... neuves.",
-      "options": ["Son, son", "Sont, sont", "Son, sont"],
-      "answer": "Son, sont",
-      "feedbackCorrect": "Bravo ! 'Ses chaussures' (possession) et 'sont neuves' (état).",
-      "feedbackIncorrect": "'Ses chaussures' marche (possession), 'étaient neuves' marche (état).",
-      "hint": "Possession + état de plusieurs objets"
+      "options": ["Son, son", "Sont, sont", "Ses, sont"],
+      "answer": "Ses, sont",
+      "feedbackCorrect": "Bravo ! 'Ses chaussures' (possession plurielle) et 'sont neuves' (état).",
+      "feedbackIncorrect": "'Ses chaussures' marche (possession plurielle), 'étaient neuves' marche (état).",
+      "hint": "Possession plurielle + état de plusieurs objets"
     },
     {
       "id": "son-sont-4-fill-1",

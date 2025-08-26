@@ -1,0 +1,179 @@
+{
+  "id": "ponctuation-base-23",
+  "title": "La Ponctuation de Base",
+  "level": 23,
+  "difficulty": "debutant",
+  "targetAudience": "CM1-CM2",
+  "category": "ponctuation",
+  "passingScore": 70,
+  "rule": "La ponctuation structure le texte et aide à la compréhension. Les signes de base sont : le point (.), la virgule (,), le point d'interrogation (?), le point d'exclamation (!) et les deux-points (:).",
+  "explanation": "Chaque signe de ponctuation a un rôle précis : le point termine une phrase, la virgule sépare des éléments, le point d'interrogation marque une question, le point d'exclamation exprime une émotion forte, et les deux-points introduisent une explication ou une énumération.",
+  "mnemonics": "PVCDE : Point-Virgule-Colon-Deux-points-Exclamation. Comme la respiration : point = arrêt, virgule = pause courte, ? = montée de voix, ! = émotion forte.",
+  "examples": [
+    {
+      "phrase": "Marie mange une pomme.",
+      "analysis": "Point final pour terminer une phrase déclarative"
+    },
+    {
+      "phrase": "J'aime les pommes, les poires et les oranges.",
+      "analysis": "Virgules pour séparer les éléments d'une énumération"
+    },
+    {
+      "phrase": "Comment allez-vous ?",
+      "analysis": "Point d'interrogation pour une question"
+    }
+  ],
+  "specialCases": [
+    {
+      "title": "Virgule avant 'et'",
+      "description": "On ne met généralement pas de virgule avant 'et' : 'Paul et Marie' mais on peut en mettre pour insister : 'Il court, et il gagne.'",
+      "examples": ["Paul et Marie", "Il court, et il gagne."]
+    },
+    {
+      "title": "Deux-points",
+      "description": "Introduisent une explication, une cause, une conséquence ou une énumération",
+      "examples": ["Il pleut : je prends mon parapluie.", "J'aime trois couleurs : rouge, bleu et vert."]
+    }
+  ],
+  "literaryExamples": [
+    {
+      "text": "\"Quel beau jour ! Le soleil brille, les oiseaux chantent : tout est parfait.\"",
+      "author": "Exemple littéraire",
+      "analysis": "Exclamation, virgule de séparation, deux-points d'explication"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ponctuation-23-qcm-1",
+      "type": "qcm",
+      "sentence": "Quel signe de ponctuation termine une question ?",
+      "options": [
+        "Le point (.)",
+        "Le point d'interrogation (?)",
+        "Le point d'exclamation (!)"
+      ],
+      "answer": "Le point d'interrogation (?)",
+      "feedbackCorrect": "Parfait ! Le point d'interrogation (?) termine toujours une question.",
+      "feedbackIncorrect": "Une question se termine toujours par un point d'interrogation (?).",
+      "hint": "Pensez au signe qui ressemble à un point avec une courbe"
+    },
+    {
+      "id": "ponctuation-23-fill-1",
+      "type": "fill-in-the-blank",
+      "sentence": "Bonjour Paul___ comment vas-tu___",
+      "answer": [
+        ", ?"
+      ],
+      "feedbackCorrect": "Excellent ! Virgule après 'Paul' et point d'interrogation après la question.",
+      "feedbackIncorrect": "'Paul' est suivi d'une virgule, et la question se termine par '?'.",
+      "hint": "Séparez le nom avec une virgule, terminez la question par ?"
+    },
+    {
+      "id": "ponctuation-23-qcm-2",
+      "type": "qcm",
+      "sentence": "Dans une énumération, quel signe sépare les éléments ?",
+      "options": [
+        "Le point",
+        "La virgule",
+        "Les deux-points"
+      ],
+      "answer": "La virgule",
+      "feedbackCorrect": "Bravo ! La virgule sépare les éléments d'une énumération.",
+      "feedbackIncorrect": "Pour séparer 'pommes, poires, oranges', on utilise des virgules.",
+      "hint": "Pensez à 'pommes, poires, oranges'"
+    },
+    {
+      "id": "ponctuation-23-fill-2",
+      "type": "fill-in-the-blank",
+      "sentence": "Quelle surprise___ Je ne t'attendais pas___",
+      "answer": [
+        "! ."
+      ],
+      "feedbackCorrect": "Parfait ! Point d'exclamation pour la surprise, point pour la phrase déclarative.",
+      "feedbackIncorrect": "'Quelle surprise' exprime une émotion (!), la seconde phrase est déclarative (.).",
+      "hint": "Première phrase = émotion, seconde phrase = affirmation"
+    },
+    {
+      "id": "ponctuation-23-qcm-3",
+      "type": "qcm",
+      "sentence": "Que font les deux-points (:) dans une phrase ?",
+      "options": [
+        "Ils terminent la phrase",
+        "Ils introduisent une explication ou une énumération",
+        "Ils remplacent la virgule"
+      ],
+      "answer": "Ils introduisent une explication ou une énumération",
+      "feedbackCorrect": "Exact ! Les deux-points introduisent ce qui suit : explication, énumération, citation.",
+      "feedbackIncorrect": "Les deux-points annoncent ce qui va suivre : une liste, une explication...",
+      "hint": "Ils annoncent ce qui va suivre"
+    },
+    {
+      "id": "ponctuation-23-fill-3",
+      "type": "fill-in-the-blank",
+      "sentence": "J'ai trois animaux___ un chat___ un chien et un oiseau___",
+      "answer": [
+        ": , ."
+      ],
+      "feedbackCorrect": "Excellent ! Deux-points pour introduire la liste, virgule pour séparer, point final.",
+      "feedbackIncorrect": "Deux-points avant la liste, virgule entre les éléments, point à la fin.",
+      "hint": "Introduisez la liste, séparez les éléments, terminez la phrase"
+    },
+    {
+      "id": "ponctuation-23-drag-1",
+      "type": "drag-and-drop",
+      "sentence": "Associez chaque phrase à sa ponctuation finale :",
+      "options": [
+        "Tu viens avec nous",
+        "Quel beau temps",
+        "Il fait froid aujourd'hui",
+        "Attention au chien"
+      ],
+      "answer": {
+        "Tu viens avec nous": "?",
+        "Quel beau temps": "!",
+        "Il fait froid aujourd'hui": ".",
+        "Attention au chien": "!"
+      },
+      "feedbackCorrect": "Parfait ! Vous savez identifier le bon signe selon le type de phrase.",
+      "feedbackIncorrect": "Réfléchissez : question (?), émotion (!), affirmation (.).",
+      "hint": "Question, émotion, affirmation, avertissement"
+    },
+    {
+      "id": "ponctuation-23-qcm-4",
+      "type": "qcm",
+      "sentence": "Quelle phrase est correctement ponctuée ?",
+      "options": [
+        "Bonjour, comment allez vous.",
+        "Bonjour comment allez-vous ?",
+        "Bonjour, comment allez-vous ?"
+      ],
+      "answer": "Bonjour, comment allez-vous ?",
+      "feedbackCorrect": "Bravo ! Virgule après 'Bonjour' et point d'interrogation après la question.",
+      "feedbackIncorrect": "Il faut une virgule après 'Bonjour' et un '?' après la question.",
+      "hint": "Séparez la salutation de la question"
+    },
+    {
+      "id": "ponctuation-23-transform-1",
+      "type": "transformation",
+      "sentence": "Ajoutez la ponctuation manquante : 'Marie Paul et Jean viennent demain'",
+      "answer": [
+        "Marie, Paul et Jean viennent demain.",
+        "Marie, Paul, et Jean viennent demain."
+      ],
+      "feedbackCorrect": "Parfait ! Virgules pour séparer les noms et point final.",
+      "feedbackIncorrect": "Séparez les noms par des virgules et terminez par un point.",
+      "hint": "Séparez les noms et terminez la phrase"
+    },
+    {
+      "id": "ponctuation-23-fill-4",
+      "type": "fill-in-the-blank",
+      "sentence": "Voici mes couleurs préférées___ rouge___ bleu___ vert et jaune___",
+      "answer": [
+        ": , , ."
+      ],
+      "feedbackCorrect": "Excellent ! Deux-points, virgules de séparation, point final.",
+      "feedbackIncorrect": "Deux-points pour introduire, virgules pour séparer, point pour terminer.",
+      "hint": "Introduisez la liste, séparez les couleurs, terminez"
+    }
+  ]
+}

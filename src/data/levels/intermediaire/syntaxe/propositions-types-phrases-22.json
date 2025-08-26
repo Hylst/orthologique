@@ -1,0 +1,176 @@
+{
+  "id": "propositions-types-phrases-22",
+  "title": "Les Propositions et Types de Phrases",
+  "level": 22,
+  "difficulty": "intermediaire",
+  "targetAudience": "6e-5e",
+  "category": "syntaxe",
+  "passingScore": 70,
+  "rule": "Une phrase peut être simple (une seule proposition) ou complexe (plusieurs propositions). Les propositions peuvent être indépendantes, principales ou subordonnées. Il existe quatre types de phrases : déclarative, interrogative, exclamative et impérative.",
+  "explanation": "Comprendre la structure des phrases et identifier les différents types permet de mieux maîtriser la ponctuation et l'expression écrite. Une proposition contient au minimum un verbe conjugué.",
+  "mnemonics": "PRS : Principale-Relative-Subordonnée. Comptez les verbes conjugués = nombre de propositions. La principale peut vivre seule, les subordonnées dépendent d'elle.",
+  "examples": [
+    "Le soleil brille. (phrase simple - Une seule proposition indépendante, type déclaratif)",
+    "Le soleil brille et les oiseaux chantent. (phrase complexe - Deux propositions indépendantes coordonnées par 'et')",
+    "Je pense que tu as raison. (phrase complexe - Proposition principale 'Je pense' + proposition subordonnée 'que tu as raison')"
+  ],
+  "specialCases": [
+    {
+      "title": "Proposition elliptique",
+      "description": "Le verbe peut être sous-entendu dans certaines constructions",
+      "examples": ["Moi, partir ? (= Moi, je partirais ?)", "Lui, mentir ? (= Lui, il mentirait ?)", "Toi, réussir ? (= Toi, tu réussirais ?)"]
+    },
+    {
+      "title": "Subordonnée relative",
+      "description": "Introduite par un pronom relatif qui reprend un antécédent",
+      "examples": ["Le livre que je lis est passionnant", "La personne qui arrive est mon ami", "La maison dont je parle est ancienne"]
+    }
+  ],
+  "literaryExamples": [
+    {
+      "text": "\"Que la montagne est belle ! Comme elle inspire la paix !\"",
+      "author": "Exemple littéraire",
+      "analysis": "Deux phrases exclamatives exprimant l'admiration"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "syntaxe-22-qcm-1",
+      "type": "qcm",
+      "sentence": "Combien de propositions y a-t-il dans : 'Je mange une pomme et je bois de l'eau' ?",
+      "options": [
+        "1 proposition",
+        "2 propositions",
+        "3 propositions"
+      ],
+      "answer": "2 propositions",
+      "feedbackCorrect": "Exact ! 'Je mange une pomme' et 'je bois de l'eau' sont deux propositions indépendantes.",
+      "feedbackIncorrect": "Comptez les verbes conjugués : 'mange' et 'bois' = 2 propositions.",
+      "hint": "Comptez les verbes conjugués"
+    },
+    {
+      "id": "syntaxe-22-qcm-2",
+      "type": "qcm",
+      "sentence": "Quel est le type de cette phrase : 'Ferme la porte !' ?",
+      "options": [
+        "Déclarative",
+        "Interrogative",
+        "Impérative"
+      ],
+      "answer": "Impérative",
+      "feedbackCorrect": "Parfait ! Cette phrase exprime un ordre, c'est une phrase impérative.",
+      "feedbackIncorrect": "Une phrase qui donne un ordre ou un conseil est impérative.",
+      "hint": "Cette phrase donne un ordre"
+    },
+    {
+      "id": "syntaxe-22-qcm-3",
+      "type": "qcm",
+      "sentence": "Dans 'Je sais que tu viendras', quelle est la nature de 'que tu viendras' ?",
+      "options": [
+        "Proposition principale",
+        "Proposition subordonnée",
+        "Proposition indépendante"
+      ],
+      "answer": "Proposition subordonnée",
+      "feedbackCorrect": "Bravo ! 'Que tu viendras' dépend de 'Je sais', c'est une subordonnée.",
+      "feedbackIncorrect": "Une proposition introduite par 'que' et qui dépend d'une autre est subordonnée.",
+      "hint": "Elle est introduite par 'que' et dépend de 'Je sais'"
+    },
+    {
+      "id": "syntaxe-22-fill-1",
+      "type": "fill-in-the-blank",
+      "sentence": "La phrase 'Quelle belle journée !' est de type ___.",
+      "answer": [
+        "exclamatif",
+        "exclamative"
+      ],
+      "feedbackCorrect": "Exact ! Le point d'exclamation et 'Quelle' indiquent une phrase exclamative.",
+      "feedbackIncorrect": "Une phrase qui exprime une émotion forte avec '!' est exclamative.",
+      "hint": "Regardez la ponctuation et l'émotion exprimée"
+    },
+    {
+      "id": "syntaxe-22-drag-1",
+      "type": "drag-and-drop",
+      "sentence": "Classez ces phrases selon leur type :",
+      "options": [
+        "Tu viens demain ?",
+        "Il fait beau.",
+        "Quel courage !",
+        "Écoute-moi."
+      ],
+      "answer": {
+        "Tu viens demain ?": "Interrogative",
+        "Il fait beau.": "Déclarative",
+        "Quel courage !": "Exclamative",
+        "Écoute-moi.": "Impérative"
+      },
+      "feedbackCorrect": "Excellent ! Vous maîtrisez les quatre types de phrases.",
+      "feedbackIncorrect": "Observez la ponctuation et l'intention : ?, !, ordre, affirmation.",
+      "hint": "Regardez la ponctuation et l'intention de chaque phrase"
+    },
+    {
+      "id": "syntaxe-22-qcm-4",
+      "type": "qcm",
+      "sentence": "Dans 'Le chat qui dort sur le canapé est mignon', combien y a-t-il de propositions ?",
+      "options": [
+        "1 proposition",
+        "2 propositions",
+        "3 propositions"
+      ],
+      "answer": "2 propositions",
+      "feedbackCorrect": "Parfait ! 'Le chat est mignon' (principale) et 'qui dort sur le canapé' (subordonnée relative).",
+      "feedbackIncorrect": "Comptez : 'est' (verbe principal) et 'dort' (verbe de la relative) = 2 propositions.",
+      "hint": "Cherchez les verbes conjugués : 'dort' et 'est'"
+    },
+    {
+      "id": "syntaxe-22-fill-2",
+      "type": "fill-in-the-blank",
+      "sentence": "Dans une phrase complexe, la proposition qui peut exister seule s'appelle proposition ___.",
+      "answer": [
+        "principale",
+        "indépendante"
+      ],
+      "feedbackCorrect": "Exact ! La proposition principale peut exister sans les autres.",
+      "feedbackIncorrect": "Une proposition qui a du sens seule est principale ou indépendante.",
+      "hint": "Elle peut exister sans les autres propositions"
+    },
+    {
+      "id": "syntaxe-22-transform-1",
+      "type": "transformation",
+      "sentence": "Transformez cette phrase déclarative en phrase interrogative : 'Tu aimes le chocolat.'",
+      "answer": [
+        "Aimes-tu le chocolat ?",
+        "Est-ce que tu aimes le chocolat ?",
+        "Tu aimes le chocolat ?"
+      ],
+      "feedbackCorrect": "Parfait ! Vous avez bien transformé la phrase en question.",
+      "feedbackIncorrect": "Pour interroger, on peut inverser, utiliser 'est-ce que' ou l'intonation.",
+      "hint": "Utilisez l'inversion, 'est-ce que' ou l'intonation"
+    },
+    {
+      "id": "syntaxe-22-qcm-5",
+      "type": "qcm",
+      "sentence": "Quelle phrase contient une proposition subordonnée ?",
+      "options": [
+        "Je mange et je bois.",
+        "Je pense donc je suis.",
+        "Je crois qu'il pleut."
+      ],
+      "answer": "Je crois qu'il pleut.",
+      "feedbackCorrect": "Bravo ! 'Qu'il pleut' est une subordonnée complétive introduite par 'que'.",
+      "feedbackIncorrect": "Cherchez la proposition introduite par 'que' qui dépend d'une autre.",
+      "hint": "Cherchez 'que' + proposition dépendante"
+    },
+    {
+      "id": "syntaxe-22-fill-3",
+      "type": "fill-in-the-blank",
+      "sentence": "Une phrase qui contient plusieurs propositions est dite ___.",
+      "answer": [
+        "complexe"
+      ],
+      "feedbackCorrect": "Exact ! Une phrase avec plusieurs propositions est complexe.",
+      "feedbackIncorrect": "Opposé de 'simple', une phrase avec plusieurs propositions est complexe.",
+      "hint": "Opposé de 'simple'"
+    }
+  ]
+}

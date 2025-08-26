@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowLeft, ArrowRight, Check, X, Volume2, HelpCircle, Move, RotateCcw } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Check, X, Volume2, HelpCircle, RotateCcw, Move } from 'lucide-react';
 import { Exercise, Lesson } from '../types';
 import { playSuccessSound, playErrorSound, speak } from '../utils/audio';
 import ProgressBar from './ProgressBar';

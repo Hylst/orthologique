@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { X, User, Mail, Calendar, FileText, Download, Upload, Palette, Volume2, VolumeX, Type } from 'lucide-react';
+import { X, User, FileText, Download, Upload, Palette, Volume2, VolumeX, Type } from 'lucide-react';
 import { UserProfile } from '../types';
 import { exportUserData, importUserData } from '../utils/storage';
 
@@ -229,7 +229,7 @@ export default function ProfileModal({ isOpen, onClose, user, onUpdateProfile }:
                     type="number"
                     min="6"
                     max="120"
-                    value={formData.age}
+                    value={formData.age || ''}
                     onChange={(e) => handleInputChange('age', parseInt(e.target.value))}
                     className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                   />
@@ -416,7 +416,7 @@ export default function ProfileModal({ isOpen, onClose, user, onUpdateProfile }:
                   <div className="space-y-2 text-sm text-gray-600">
                     <p><strong>ID :</strong> {user.id}</p>
                     <p><strong>Créé le :</strong> {new Date(user.createdAt).toLocaleDateString('fr-FR')}</p>
-                    <p><strong>Dernière connexion :</strong> {new Date(user.lastLogin).toLocaleDateString('fr-FR')}</p>
+                    <p><strong>Dernière connexion :</strong> {new Date(user.lastLoginAt).toLocaleDateString('fr-FR')}</p>
                   </div>
                 </div>
               </div>

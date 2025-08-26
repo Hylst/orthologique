@@ -1,0 +1,181 @@
+{
+  "id": "ponctuation-avancee-24",
+  "title": "Ponctuation Avancée et Nuances Stylistiques",
+  "level": 24,
+  "difficulty": "expert",
+  "targetAudience": "Lycée",
+  "category": "ponctuation",
+  "passingScore": 75,
+  "rule": "La ponctuation avancée inclut le point-virgule (;), les points de suspension (...), les tirets (—), les parenthèses (), les crochets [], les guillemets français (« »), et leurs usages stylistiques et expressifs.",
+  "explanation": "Maîtriser la ponctuation avancée permet d'enrichir son style, de nuancer sa pensée et de structurer des textes complexes. Chaque signe a des règles précises et des effets stylistiques particuliers.",
+  "mnemonics": "SPTIG : Point-virgule (;) = liaison, Points de suspension (...) = suspense, Tirets (—) = incise, Parenthèses () = précision, Guillemets « » = citation. Chaque signe a sa personnalité !",
+  "examples": [
+    {
+      "phrase": "Il pleut ; nous resterons à la maison.",
+      "analysis": "Point-virgule pour lier deux propositions indépendantes liées par le sens"
+    },
+    {
+      "phrase": "Elle hésita... puis accepta finalement.",
+      "analysis": "Points de suspension pour marquer une pause, une hésitation"
+    },
+    {
+      "phrase": "Victor Hugo — le grand écrivain — est né en 1802.",
+      "analysis": "Tirets pour encadrer une apposition, un commentaire"
+    }
+  ],
+  "specialCases": [
+    {
+      "case": "Point-virgule vs virgule",
+      "explanation": "Le point-virgule sépare des propositions plus indépendantes que celles séparées par une virgule"
+    },
+    {
+      "case": "Guillemets français",
+      "explanation": "En français, on utilise « » avec des espaces insécables, pas \"\" comme en anglais"
+    },
+    {
+      "case": "Points de suspension",
+      "explanation": "Toujours trois points (...), jamais plus, jamais moins"
+    }
+  ],
+  "literaryExamples": [
+    {
+      "text": "\"Le temps passe... les souvenirs demeurent ; mais l'espoir — lui — renaît toujours.\"",
+      "author": "Exemple littéraire",
+      "analysis": "Points de suspension (temps qui passe), point-virgule (opposition), tirets (mise en relief)"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ponctuation-24-qcm-1",
+      "type": "qcm",
+      "sentence": "Quel signe de ponctuation convient le mieux : 'Il fait beau___ allons nous promener' ?",
+      "options": [
+        "virgule (,)",
+        "point-virgule (;)",
+        "deux-points (:)"
+      ],
+      "answer": "point-virgule (;)",
+      "feedbackCorrect": "Parfait ! Le point-virgule lie deux propositions indépendantes mais liées par le sens.",
+      "feedbackIncorrect": "Deux propositions indépendantes liées logiquement se séparent par un point-virgule.",
+      "hint": "Deux propositions complètes mais liées par le sens"
+    },
+    {
+      "id": "ponctuation-24-fill-1",
+      "type": "fill-in-the-blank",
+      "sentence": "Elle murmura___ \"Je ne sais pas___\"",
+      "answer": [
+        " : ..."
+      ],
+      "feedbackCorrect": "Excellent ! Deux-points avant la citation, points de suspension pour l'hésitation.",
+      "feedbackIncorrect": "Deux-points introduisent la parole, points de suspension marquent l'incertitude.",
+      "hint": "Introduction de parole + hésitation"
+    },
+    {
+      "id": "ponctuation-24-qcm-2",
+      "type": "qcm",
+      "sentence": "Comment écrit-on correctement cette citation en français ?",
+      "options": [
+        "Il dit \"Bonjour\".",
+        "Il dit « Bonjour ».",
+        "Il dit: « Bonjour. »"
+      ],
+      "answer": "Il dit « Bonjour ».",
+      "feedbackCorrect": "Bravo ! En français, on utilise les guillemets français « » avec des espaces.",
+      "feedbackIncorrect": "En français, utilisez « » avec des espaces, pas les guillemets anglais.",
+      "hint": "Guillemets français avec espaces"
+    },
+    {
+      "id": "ponctuation-24-drag-1",
+      "type": "drag-and-drop",
+      "sentence": "Associez chaque usage à son signe de ponctuation :",
+      "options": [
+        "Marquer une hésitation",
+        "Encadrer un commentaire",
+        "Lier deux propositions indépendantes",
+        "Citer des paroles"
+      ],
+      "answer": {
+        "Marquer une hésitation": "Points de suspension (...)",
+        "Encadrer un commentaire": "Tirets (—)",
+        "Lier deux propositions indépendantes": "Point-virgule (;)",
+        "Citer des paroles": "Guillemets (« »)"
+      },
+      "feedbackCorrect": "Parfait ! Vous maîtrisez les usages de la ponctuation avancée.",
+      "feedbackIncorrect": "Révisez les usages spécifiques de chaque signe de ponctuation.",
+      "hint": "Chaque signe a un usage précis"
+    },
+    {
+      "id": "ponctuation-24-fill-2",
+      "type": "fill-in-the-blank",
+      "sentence": "Mon ami___ le plus fidèle___ m'a aidé dans cette épreuve___",
+      "answer": [
+        " — — ."
+      ],
+      "feedbackCorrect": "Excellent ! Tirets pour encadrer l'apposition, point final.",
+      "feedbackIncorrect": "Les tirets encadrent 'le plus fidèle' qui précise 'mon ami'.",
+      "hint": "Encadrez l'apposition qui précise 'mon ami'"
+    },
+    {
+      "id": "ponctuation-24-qcm-3",
+      "type": "qcm",
+      "sentence": "Combien de points contiennent les points de suspension ?",
+      "options": [
+        "2 points",
+        "3 points",
+        "4 points ou plus"
+      ],
+      "answer": "3 points",
+      "feedbackCorrect": "Exact ! Les points de suspension sont toujours composés de trois points.",
+      "feedbackIncorrect": "Les points de suspension sont toujours exactement trois points (...)",
+      "hint": "Ni plus, ni moins"
+    },
+    {
+      "id": "ponctuation-24-transform-1",
+      "type": "transformation",
+      "sentence": "Transformez cette phrase en utilisant un point-virgule : 'Il pleut, donc nous restons à la maison.'",
+      "answer": [
+        "Il pleut ; nous restons à la maison.",
+        "Il pleut ; nous resterons à la maison."
+      ],
+      "feedbackCorrect": "Parfait ! Le point-virgule remplace avantageusement 'donc' pour lier les propositions.",
+      "feedbackIncorrect": "Supprimez 'donc' et utilisez un point-virgule pour lier les deux propositions.",
+      "hint": "Remplacez ', donc' par ';'"
+    },
+    {
+      "id": "ponctuation-24-fill-3",
+      "type": "fill-in-the-blank",
+      "sentence": "\"Viendras-tu demain___\" demanda-t-elle___ \"Peut-être___\" répondit-il___",
+      "answer": [
+        " ? ; ..."
+      ],
+      "feedbackCorrect": "Excellent ! Point d'interrogation, point-virgule de liaison, points de suspension d'incertitude.",
+      "feedbackIncorrect": "Question (?), liaison (;), incertitude (...).",
+      "hint": "Question, liaison entre répliques, incertitude"
+    },
+    {
+      "id": "ponctuation-24-qcm-4",
+      "type": "qcm",
+      "sentence": "Dans quel cas utilise-t-on des crochets [ ] ?",
+      "options": [
+        "Pour remplacer les parenthèses",
+        "Pour indiquer une intervention dans une citation",
+        "Pour encadrer un titre"
+      ],
+      "answer": "Pour indiquer une intervention dans une citation",
+      "feedbackCorrect": "Parfait ! Les crochets indiquent une modification ou ajout dans une citation.",
+      "feedbackIncorrect": "Les crochets servent à indiquer une intervention de l'auteur dans une citation.",
+      "hint": "Modification dans une citation"
+    },
+    {
+      "id": "ponctuation-24-fill-4",
+      "type": "fill-in-the-blank",
+      "sentence": "La réunion aura lieu demain___ si le temps le permet___ à 14 heures___",
+      "answer": [
+        " (  ) ."
+      ],
+      "feedbackCorrect": "Excellent ! Parenthèses pour la condition, point final.",
+      "feedbackIncorrect": "Les parenthèses encadrent une information secondaire ou une condition.",
+      "hint": "Information secondaire entre parenthèses"
+    }
+  ]
+}

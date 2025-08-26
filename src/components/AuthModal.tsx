@@ -1,12 +1,11 @@
 import React from 'react';
-import { X, User, Mail, Calendar, FileText, Upload, Download } from 'lucide-react';
+import { X, User, Mail, Calendar, FileText, Upload } from 'lucide-react';
 import { UserProfile } from '../types';
 import { 
   saveUserProfile, 
   getUserByEmail, 
   setCurrentUser, 
   createDefaultProfile,
-  exportUserData,
   importUserData
 } from '../utils/storage';
 

@@ -1,0 +1,175 @@
+{
+  "id": "fonctions-grammaticales-21",
+  "title": "Les Fonctions Grammaticales de Base",
+  "level": 21,
+  "difficulty": "debutant",
+  "targetAudience": "CM1-CM2",
+  "category": "syntaxe",
+  "passingScore": 70,
+  "rule": "Chaque mot dans une phrase a une fonction grammaticale : sujet, verbe, complément d'objet direct (COD), complément d'objet indirect (COI), complément circonstanciel (CC).",
+  "explanation": "La fonction grammaticale indique le rôle que joue un mot ou un groupe de mots dans la phrase. Identifier ces fonctions aide à mieux comprendre le sens et à éviter les erreurs d'accord.",
+  "mnemonics": "SVCC : Sujet-Verbe-Complément-Circonstanciel. Pour trouver le sujet, demandez 'Qui est-ce qui ?' avant le verbe.",
+  "examples": [
+    "Le chat mange sa pâtée. ('Le chat' = sujet, 'mange' = verbe, 'sa pâtée' = COD)",
+    "Marie parle à son ami. ('Marie' = sujet, 'parle' = verbe, 'à son ami' = COI)",
+    "Les enfants jouent dans le jardin. ('Les enfants' = sujet, 'jouent' = verbe, 'dans le jardin' = CC de lieu)"
+  ],
+  "specialCases": [
+    {
+      "title": "Sujet inversé",
+      "description": "Dans les questions, le sujet peut être après le verbe",
+      "examples": ["Où vas-tu ? (tu = sujet)", "Que fais-tu ? (tu = sujet)", "Comment allez-vous ? (vous = sujet)"]
+    },
+    {
+      "title": "COD et COI ensemble",
+      "description": "Une phrase peut avoir les deux compléments",
+      "examples": ["Je donne un livre à Paul (un livre = COD, à Paul = COI)", "Elle offre des fleurs à sa mère", "Nous racontons une histoire aux enfants"]
+    }
+  ],
+  "literaryExamples": [
+    {
+      "text": "\"L'enfant regardait les étoiles avec émerveillement.\"",
+      "author": "Exemple littéraire",
+      "analysis": "Sujet : L'enfant, Verbe : regardait, COD : les étoiles, CC de manière : avec émerveillement"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "syntaxe-21-qcm-1",
+      "type": "qcm",
+      "sentence": "Dans 'Le chien court rapidement', quelle est la fonction de 'rapidement' ?",
+      "options": [
+        "Sujet",
+        "COD",
+        "Complément circonstanciel de manière"
+      ],
+      "answer": "Complément circonstanciel de manière",
+      "feedbackCorrect": "Exact ! 'Rapidement' indique comment le chien court, c'est un CC de manière.",
+      "feedbackIncorrect": "'Rapidement' précise la manière dont l'action se déroule, c'est un complément circonstanciel de manière.",
+      "hint": "Posez la question 'comment ?' au verbe"
+    },
+    {
+      "id": "syntaxe-21-qcm-2",
+      "type": "qcm",
+      "sentence": "Dans 'Paul donne des fleurs à sa mère', quelle est la fonction de 'des fleurs' ?",
+      "options": [
+        "Sujet",
+        "COD (Complément d'Objet Direct)",
+        "COI (Complément d'Objet Indirect)"
+      ],
+      "answer": "COD (Complément d'Objet Direct)",
+      "feedbackCorrect": "Parfait ! 'Des fleurs' répond à la question 'Paul donne quoi ?' = COD.",
+      "feedbackIncorrect": "'Des fleurs' répond à 'quoi ?' sans préposition, c'est un COD.",
+      "hint": "Posez la question 'quoi ?' au verbe"
+    },
+    {
+      "id": "syntaxe-21-qcm-3",
+      "type": "qcm",
+      "sentence": "Dans 'Les oiseaux chantent dans les arbres', quel est le sujet ?",
+      "options": [
+        "chantent",
+        "Les oiseaux",
+        "dans les arbres"
+      ],
+      "answer": "Les oiseaux",
+      "feedbackCorrect": "Bravo ! 'Les oiseaux' fait l'action de chanter, c'est le sujet.",
+      "feedbackIncorrect": "Le sujet fait l'action du verbe. Qui chante ? Les oiseaux.",
+      "hint": "Qui fait l'action ?"
+    },
+    {
+      "id": "syntaxe-21-fill-1",
+      "type": "fill-in-the-blank",
+      "sentence": "Dans 'Marie écrit une lettre', le mot 'Marie' a la fonction de ___.",
+      "answer": [
+        "sujet"
+      ],
+      "feedbackCorrect": "Exact ! 'Marie' fait l'action d'écrire, c'est le sujet.",
+      "feedbackIncorrect": "'Marie' fait l'action du verbe 'écrit', c'est donc le sujet.",
+      "hint": "Qui fait l'action d'écrire ?"
+    },
+    {
+      "id": "syntaxe-21-fill-2",
+      "type": "fill-in-the-blank",
+      "sentence": "Dans 'Je pense à toi', 'à toi' est un ___.",
+      "answer": [
+        "COI",
+        "complément d'objet indirect"
+      ],
+      "feedbackCorrect": "Parfait ! 'À toi' répond à 'à qui ?' avec une préposition, c'est un COI.",
+      "feedbackIncorrect": "'À toi' est introduit par la préposition 'à' et répond à 'à qui ?', c'est un COI.",
+      "hint": "Il y a une préposition 'à'"
+    },
+    {
+      "id": "syntaxe-21-drag-1",
+      "type": "drag-and-drop",
+      "sentence": "Associez chaque groupe de mots à sa fonction dans : 'Le professeur explique la leçon aux élèves'",
+      "options": [
+        "Le professeur",
+        "explique",
+        "la leçon",
+        "aux élèves"
+      ],
+      "answer": {
+        "Le professeur": "Sujet",
+        "explique": "Verbe",
+        "la leçon": "COD",
+        "aux élèves": "COI"
+      },
+      "feedbackCorrect": "Excellent ! Vous maîtrisez l'identification des fonctions grammaticales.",
+      "feedbackIncorrect": "Réfléchissez : qui fait l'action ? quoi ? à qui ?",
+      "hint": "Posez les questions : qui ? quoi ? à qui ?"
+    },
+    {
+      "id": "syntaxe-21-transform-1",
+      "type": "transformation",
+      "sentence": "Transformez cette phrase en question en gardant le même sens : 'Tu regardes la télévision.'",
+      "answer": [
+        "Regardes-tu la télévision ?",
+        "Est-ce que tu regardes la télévision ?"
+      ],
+      "feedbackCorrect": "Parfait ! Vous avez bien transformé la phrase en question.",
+      "feedbackIncorrect": "Pour former une question, on peut inverser sujet-verbe ou utiliser 'est-ce que'.",
+      "hint": "Inversez le sujet et le verbe ou utilisez 'est-ce que'"
+    },
+    {
+      "id": "syntaxe-21-qcm-4",
+      "type": "qcm",
+      "sentence": "Dans 'Hier, nous avons visité le musée', quelle est la fonction de 'hier' ?",
+      "options": [
+        "Sujet",
+        "COD",
+        "Complément circonstanciel de temps"
+      ],
+      "answer": "Complément circonstanciel de temps",
+      "feedbackCorrect": "Bravo ! 'Hier' indique quand l'action s'est déroulée.",
+      "feedbackIncorrect": "'Hier' répond à la question 'quand ?', c'est un complément circonstanciel de temps.",
+      "hint": "Posez la question 'quand ?' au verbe"
+    },
+    {
+      "id": "syntaxe-21-fill-3",
+      "type": "fill-in-the-blank",
+      "sentence": "Dans 'Les enfants jouent avec leurs amis', 'avec leurs amis' est un complément circonstanciel de ___.",
+      "answer": [
+        "accompagnement",
+        "manière"
+      ],
+      "feedbackCorrect": "Exact ! 'Avec leurs amis' indique avec qui ils jouent.",
+      "feedbackIncorrect": "'Avec leurs amis' précise l'accompagnement ou la manière de jouer.",
+      "hint": "Avec qui jouent-ils ?"
+    },
+    {
+      "id": "syntaxe-21-qcm-5",
+      "type": "qcm",
+      "sentence": "Combien de fonctions grammaticales différentes y a-t-il dans : 'Mon frère lit un livre dans sa chambre' ?",
+      "options": [
+        "3 fonctions",
+        "4 fonctions",
+        "5 fonctions"
+      ],
+      "answer": "4 fonctions",
+      "feedbackCorrect": "Parfait ! Sujet (Mon frère), verbe (lit), COD (un livre), CC de lieu (dans sa chambre).",
+      "feedbackIncorrect": "Comptez : sujet + verbe + COD + complément circonstanciel = 4 fonctions.",
+      "hint": "Identifiez : qui ? fait quoi ? quoi ? où ?"
+    }
+  ]
+}

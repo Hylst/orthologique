@@ -1,6 +1,6 @@
 /**
  * Expert level lessons export
- * Contains the most advanced French grammar and conjugation lessons
+ * Contains the most advanced French grammar, conjugation and punctuation lessons
  */
 
 // Orthographe lessons
@@ -14,8 +14,11 @@ import imperatifOrdreConseil18 from './conjugaison/imperatif-ordre-conseil-18.js
 import participePassePronominaux19 from './conjugaison/participe-passe-pronominaux-19.json';
 import tempsComposesAvances20 from './conjugaison/temps-composes-avances-20.json';
 
+// Ponctuation lessons
+import ponctuationAvancee24 from './ponctuation/ponctuation-avancee-24.json';
+
 /**
- * Array of all expert level lessons (levels 14-20)
+ * Array of all expert level lessons (levels 14-24)
  * These lessons target advanced high school students and adults
  */
 export const expertLessons = [
@@ -25,7 +28,8 @@ export const expertLessons = [
   conditionnelModesTemps17,
   imperatifOrdreConseil18,
   participePassePronominaux19,
-  tempsComposesAvances20
+  tempsComposesAvances20,
+  ponctuationAvancee24
 ];
 
 export default expertLessons;

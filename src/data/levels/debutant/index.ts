@@ -1,7 +1,7 @@
 /**
  * Débutant Level Lessons Index
- * Levels 1-5 (CM1-CM2)
- * All lessons focus on orthographe (spelling) fundamentals
+ * Levels 1-7 (CM1-CM2)
+ * Lessons focus on orthographe (spelling) fundamentals, basic syntax and punctuation
  */
 
 import { Lesson } from '../../../types';
@@ -12,6 +12,8 @@ import homophoneA2 from './orthographe/homophone-a-2.json';
 import homophoneEstEt3 from './orthographe/homophone-est-et-3.json';
 import homophoneSonSont4 from './orthographe/homophone-son-sont-4.json';
 import accordGn5 from './orthographe/accord-gn-5.json';
+import fonctionsGrammaticales21 from './syntaxe/fonctions-grammaticales-21.json';
+import ponctuationBase23 from './ponctuation/ponctuation-base-23.json';
 
 // Export all lessons as complete Lesson objects
 export const debutantLessons: Lesson[] = [
@@ -19,7 +21,9 @@ export const debutantLessons: Lesson[] = [
   { ...homophoneA2, unlocked: false, completed: false } as Lesson,
   { ...homophoneEstEt3, unlocked: false, completed: false } as Lesson,
   { ...homophoneSonSont4, unlocked: false, completed: false } as Lesson,
-  { ...accordGn5, unlocked: false, completed: false } as Lesson
+  { ...accordGn5, unlocked: false, completed: false } as Lesson,
+  { ...fonctionsGrammaticales21, unlocked: false, completed: false } as Lesson,
+  { ...ponctuationBase23, unlocked: false, completed: false } as Lesson
 ];
 
 export default debutantLessons;

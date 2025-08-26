@@ -1,5 +1,5 @@
 import React from 'react';
-import { Trophy, RotateCcw, Home, Star, Volume2, Target, BookOpen } from 'lucide-react';
+import { RotateCcw, Home, Volume2, Trophy, Target, Star, BookOpen } from 'lucide-react';
 import { speak, playProgressSound, clearSoundQueue } from '../utils/audio';
 import { playVictorySound } from '../utils/victoryAudio';
 import ConfettiAnimation from './ConfettiAnimation';

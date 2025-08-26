@@ -1,5 +1,5 @@
 import React from 'react';
-import { Play, RotateCcw, Trophy, BookOpen, Target, Volume2, Lock, CheckCircle, LogIn, Settings, Database, BarChart3 } from 'lucide-react';
+import { Play, RotateCcw, Trophy, Target, Volume2, Lock, CheckCircle, Database, BarChart3, LogIn, Settings, BookOpen } from 'lucide-react';
 import { Lesson, UserProgress, UserProfile } from '../types';
 import { ProgressManager } from '../utils/progressManager';
 import Logo from './Logo';
@@ -34,26 +34,40 @@ interface DashboardProps {
   onUpdateUserProfile: (profile: UserProfile) => void;
 }
 
-// Fonction utilitaire pour obtenir la couleur selon la difficulté
+// Fonction utilitaire pour obtenir la couleur selon la difficulté (couleurs douces)
 const getDifficultyColor = (difficulty: string) => {
   switch (difficulty) {
-    case 'debutant': return 'bg-green-100 text-green-800';
-    case 'intermediaire': return 'bg-yellow-100 text-yellow-800';
-    case 'avance': return 'bg-orange-100 text-orange-800';
-    case 'expert': return 'bg-red-100 text-red-800';
-    default: return 'bg-gray-100 text-gray-800';
+    case 'debutant': return 'bg-emerald-50 text-emerald-700 border border-emerald-200';
+    case 'intermediaire': return 'bg-amber-50 text-amber-700 border border-amber-200';
+    case 'avance': return 'bg-orange-50 text-orange-700 border border-orange-200';
+    case 'expert': return 'bg-rose-50 text-rose-700 border border-rose-200';
+    default: return 'bg-slate-50 text-slate-700 border border-slate-200';
   }
 };
 
-// Fonction utilitaire pour obtenir la couleur selon la catégorie
+// Fonction utilitaire pour obtenir la couleur selon la catégorie (couleurs douces)
 const getCategoryColor = (category: string) => {
   switch (category) {
-    case 'orthographe': return 'bg-blue-100 text-blue-800';
-    case 'conjugaison': return 'bg-purple-100 text-purple-800';
-    case 'ponctuation': return 'bg-indigo-100 text-indigo-800';
-    case 'syntaxe': return 'bg-pink-100 text-pink-800';
-    default: return 'bg-gray-100 text-gray-800';
+    case 'orthographe': return 'bg-sky-50 text-sky-700 border border-sky-200';
+    case 'conjugaison': return 'bg-violet-50 text-violet-700 border border-violet-200';
+    case 'ponctuation': return 'bg-indigo-50 text-indigo-700 border border-indigo-200';
+    case 'syntaxe': return 'bg-pink-50 text-pink-700 border border-pink-200';
+    default: return 'bg-slate-50 text-slate-700 border border-slate-200';
   }
+};
+
+// Fonction utilitaire pour obtenir la couleur de fond de la carte selon la difficulté
+const getCardBackgroundColor = (difficulty: string, isCompleted: boolean, hasPassingScore: boolean) => {
+  if (isCompleted && hasPassingScore) {
+    switch (difficulty) {
+      case 'debutant': return 'bg-gradient-to-br from-emerald-25 to-emerald-50';
+      case 'intermediaire': return 'bg-gradient-to-br from-amber-25 to-amber-50';
+      case 'avance': return 'bg-gradient-to-br from-orange-25 to-orange-50';
+      case 'expert': return 'bg-gradient-to-br from-rose-25 to-rose-50';
+      default: return 'bg-gradient-to-br from-slate-25 to-slate-50';
+    }
+  }
+  return 'bg-white';
 };
 
 const Dashboard: React.FC<DashboardProps> = ({
@@ -484,55 +498,137 @@ const Dashboard: React.FC<DashboardProps> = ({
         )}
 
         {/* Filtres */}
-        <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
-          <h3 className="font-semibold text-gray-800 mb-4">Filtrer les leçons</h3>
-          <div className="flex flex-wrap gap-4">
+        <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-[8px_8px_16px_rgba(0,0,0,0.1),-8px_-8px_16px_rgba(255,255,255,0.9)] p-8 mb-8 border border-gray-100/50">
+          <h3 className="font-semibold text-gray-800 mb-6 text-lg">Filtrer les leçons</h3>
+          <div className="space-y-6">
             <div>
-              <label 
-                htmlFor="difficulty-filter" 
-                className="block text-sm font-medium text-gray-700 mb-2"
-              >
+              <label className="block text-sm font-medium text-gray-700 mb-3">
                 Niveau de difficulté
               </label>
-              <select
-                id="difficulty-filter"
-                value={selectedDifficulty}
-                onChange={(e) => setSelectedDifficulty(e.target.value)}
-                className="px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                aria-describedby="difficulty-help"
-              >
-                <option value="all">Tous les niveaux</option>
-                <option value="debutant">Débutant (CM1-CM2)</option>
-                <option value="intermediaire">Intermédiaire (6e-5e)</option>
-                <option value="avance">Avancé (4e-3e)</option>
-                <option value="expert">Expert (Lycée)</option>
-              </select>
+              <div className="flex flex-wrap gap-3" role="group" aria-describedby="difficulty-help">
+                <button
+                  onClick={() => setSelectedDifficulty('all')}
+                  className={`px-4 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg ${
+                    selectedDifficulty === 'all'
+                      ? 'bg-gray-600 text-white shadow-[inset_4px_4px_8px_rgba(0,0,0,0.2)] scale-95'
+                      : 'bg-gradient-to-br from-gray-50 to-gray-100 text-gray-700 shadow-[4px_4px_8px_rgba(0,0,0,0.1),-2px_-2px_4px_rgba(255,255,255,0.9)] hover:shadow-[6px_6px_12px_rgba(0,0,0,0.15),-3px_-3px_6px_rgba(255,255,255,0.9)]'
+                  }`}
+                  aria-pressed={selectedDifficulty === 'all'}
+                >
+                  Tous les niveaux
+                </button>
+                <button
+                  onClick={() => setSelectedDifficulty('debutant')}
+                  className={`px-4 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg ${
+                    selectedDifficulty === 'debutant'
+                      ? 'bg-emerald-500 text-white shadow-[inset_4px_4px_8px_rgba(0,0,0,0.2)] scale-95'
+                      : 'bg-gradient-to-br from-emerald-50 to-emerald-100 text-emerald-700 border border-emerald-200 shadow-[4px_4px_8px_rgba(0,0,0,0.1),-2px_-2px_4px_rgba(255,255,255,0.9)] hover:shadow-[6px_6px_12px_rgba(0,0,0,0.15),-3px_-3px_6px_rgba(255,255,255,0.9)]'
+                  }`}
+                  aria-pressed={selectedDifficulty === 'debutant'}
+                >
+                  🌱 Débutant (CM1-CM2)
+                </button>
+                <button
+                  onClick={() => setSelectedDifficulty('intermediaire')}
+                  className={`px-4 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg ${
+                    selectedDifficulty === 'intermediaire'
+                      ? 'bg-amber-500 text-white shadow-[inset_4px_4px_8px_rgba(0,0,0,0.2)] scale-95'
+                      : 'bg-gradient-to-br from-amber-50 to-amber-100 text-amber-700 border border-amber-200 shadow-[4px_4px_8px_rgba(0,0,0,0.1),-2px_-2px_4px_rgba(255,255,255,0.9)] hover:shadow-[6px_6px_12px_rgba(0,0,0,0.15),-3px_-3px_6px_rgba(255,255,255,0.9)]'
+                  }`}
+                  aria-pressed={selectedDifficulty === 'intermediaire'}
+                >
+                  ⚡ Intermédiaire (6e-5e)
+                </button>
+                <button
+                  onClick={() => setSelectedDifficulty('avance')}
+                  className={`px-4 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg ${
+                    selectedDifficulty === 'avance'
+                      ? 'bg-orange-500 text-white shadow-[inset_4px_4px_8px_rgba(0,0,0,0.2)] scale-95'
+                      : 'bg-gradient-to-br from-orange-50 to-orange-100 text-orange-700 border border-orange-200 shadow-[4px_4px_8px_rgba(0,0,0,0.1),-2px_-2px_4px_rgba(255,255,255,0.9)] hover:shadow-[6px_6px_12px_rgba(0,0,0,0.15),-3px_-3px_6px_rgba(255,255,255,0.9)]'
+                  }`}
+                  aria-pressed={selectedDifficulty === 'avance'}
+                >
+                  🔥 Avancé (4e-3e)
+                </button>
+                <button
+                  onClick={() => setSelectedDifficulty('expert')}
+                  className={`px-4 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg ${
+                    selectedDifficulty === 'expert'
+                      ? 'bg-rose-500 text-white shadow-[inset_4px_4px_8px_rgba(0,0,0,0.2)] scale-95'
+                      : 'bg-gradient-to-br from-rose-50 to-rose-100 text-rose-700 border border-rose-200 shadow-[4px_4px_8px_rgba(0,0,0,0.1),-2px_-2px_4px_rgba(255,255,255,0.9)] hover:shadow-[6px_6px_12px_rgba(0,0,0,0.15),-3px_-3px_6px_rgba(255,255,255,0.9)]'
+                  }`}
+                  aria-pressed={selectedDifficulty === 'expert'}
+                >
+                  💎 Expert (Lycée)
+                </button>
+              </div>
               <div id="difficulty-help" className="sr-only">
-                Filtrer les leçons par niveau de difficulté
+                Filtrer les leçons par niveau de difficulté en utilisant les boutons colorés
               </div>
             </div>
             <div>
-              <label 
-                htmlFor="category-filter" 
-                className="block text-sm font-medium text-gray-700 mb-2"
-              >
+              <label className="block text-sm font-medium text-gray-700 mb-3">
                 Catégorie
               </label>
-              <select
-                id="category-filter"
-                value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                aria-describedby="category-help"
-              >
-                <option value="all">Toutes les catégories</option>
-                <option value="orthographe">Orthographe</option>
-                <option value="conjugaison">Conjugaison</option>
-                <option value="ponctuation">Ponctuation</option>
-                <option value="syntaxe">Syntaxe</option>
-              </select>
+              <div className="flex flex-wrap gap-3" role="group" aria-describedby="category-help">
+                <button
+                  onClick={() => setSelectedCategory('all')}
+                  className={`px-4 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg ${
+                    selectedCategory === 'all'
+                      ? 'bg-gray-600 text-white shadow-[inset_4px_4px_8px_rgba(0,0,0,0.2)] scale-95'
+                      : 'bg-gradient-to-br from-gray-50 to-gray-100 text-gray-700 shadow-[4px_4px_8px_rgba(0,0,0,0.1),-2px_-2px_4px_rgba(255,255,255,0.9)] hover:shadow-[6px_6px_12px_rgba(0,0,0,0.15),-3px_-3px_6px_rgba(255,255,255,0.9)]'
+                  }`}
+                  aria-pressed={selectedCategory === 'all'}
+                >
+                  Toutes
+                </button>
+                <button
+                  onClick={() => setSelectedCategory('orthographe')}
+                  className={`px-4 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg ${
+                    selectedCategory === 'orthographe'
+                      ? 'bg-sky-500 text-white shadow-[inset_4px_4px_8px_rgba(0,0,0,0.2)] scale-95'
+                      : 'bg-gradient-to-br from-sky-50 to-sky-100 text-sky-700 border border-sky-200 shadow-[4px_4px_8px_rgba(0,0,0,0.1),-2px_-2px_4px_rgba(255,255,255,0.9)] hover:shadow-[6px_6px_12px_rgba(0,0,0,0.15),-3px_-3px_6px_rgba(255,255,255,0.9)]'
+                  }`}
+                  aria-pressed={selectedCategory === 'orthographe'}
+                >
+                  📝 Orthographe
+                </button>
+                <button
+                  onClick={() => setSelectedCategory('conjugaison')}
+                  className={`px-4 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg ${
+                    selectedCategory === 'conjugaison'
+                      ? 'bg-violet-500 text-white shadow-[inset_4px_4px_8px_rgba(0,0,0,0.2)] scale-95'
+                      : 'bg-gradient-to-br from-violet-50 to-violet-100 text-violet-700 border border-violet-200 shadow-[4px_4px_8px_rgba(0,0,0,0.1),-2px_-2px_4px_rgba(255,255,255,0.9)] hover:shadow-[6px_6px_12px_rgba(0,0,0,0.15),-3px_-3px_6px_rgba(255,255,255,0.9)]'
+                  }`}
+                  aria-pressed={selectedCategory === 'conjugaison'}
+                >
+                  🔄 Conjugaison
+                </button>
+                <button
+                  onClick={() => setSelectedCategory('ponctuation')}
+                  className={`px-4 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg ${
+                    selectedCategory === 'ponctuation'
+                      ? 'bg-indigo-500 text-white shadow-[inset_4px_4px_8px_rgba(0,0,0,0.2)] scale-95'
+                      : 'bg-gradient-to-br from-indigo-50 to-indigo-100 text-indigo-700 border border-indigo-200 shadow-[4px_4px_8px_rgba(0,0,0,0.1),-2px_-2px_4px_rgba(255,255,255,0.9)] hover:shadow-[6px_6px_12px_rgba(0,0,0,0.15),-3px_-3px_6px_rgba(255,255,255,0.9)]'
+                  }`}
+                  aria-pressed={selectedCategory === 'ponctuation'}
+                >
+                  ❓ Ponctuation
+                </button>
+                <button
+                  onClick={() => setSelectedCategory('syntaxe')}
+                  className={`px-4 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg ${
+                    selectedCategory === 'syntaxe'
+                      ? 'bg-pink-500 text-white shadow-[inset_4px_4px_8px_rgba(0,0,0,0.2)] scale-95'
+                      : 'bg-gradient-to-br from-pink-50 to-pink-100 text-pink-700 border border-pink-200 shadow-[4px_4px_8px_rgba(0,0,0,0.1),-2px_-2px_4px_rgba(255,255,255,0.9)] hover:shadow-[6px_6px_12px_rgba(0,0,0,0.15),-3px_-3px_6px_rgba(255,255,255,0.9)]'
+                  }`}
+                  aria-pressed={selectedCategory === 'syntaxe'}
+                >
+                  🏗️ Syntaxe
+                </button>
+              </div>
               <div id="category-help" className="sr-only">
-                Filtrer les leçons par catégorie de contenu
+                Filtrer les leçons par catégorie de contenu en utilisant les boutons colorés
               </div>
             </div>
 
@@ -574,9 +670,9 @@ const Dashboard: React.FC<DashboardProps> = ({
             return (
               <div
                 key={lesson.id}
-                className={`bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 lesson-card ${
-                  isUnlocked ? 'hover:shadow-xl' : 'opacity-50'
-                }`}
+                className={`${getCardBackgroundColor(lesson.difficulty, isCompleted, hasPassingScore)} rounded-xl shadow-lg overflow-hidden transition-all duration-300 lesson-card ${
+                  isUnlocked ? 'hover:shadow-xl hover:scale-[1.02]' : 'opacity-50'
+                } border border-gray-100`}
                 {...getLessonCardAriaAttributes(
                   lesson.title,
                   isCompleted && hasPassingScore,
@@ -588,10 +684,10 @@ const Dashboard: React.FC<DashboardProps> = ({
                 <div className="p-6">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4">
-                      <div className={`w-12 h-12 rounded-full flex items-center justify-center font-bold text-white ${
-                        isCompleted && hasPassingScore ? 'bg-green-500' : 
-                        isCompleted ? 'bg-yellow-500' : 
-                        isUnlocked ? 'bg-blue-500' : 'bg-gray-400'
+                      <div className={`w-12 h-12 rounded-full flex items-center justify-center font-bold text-white shadow-md ${
+                        isCompleted && hasPassingScore ? 'bg-gradient-to-br from-emerald-400 to-emerald-500' : 
+                        isCompleted ? 'bg-gradient-to-br from-amber-400 to-amber-500' : 
+                        isUnlocked ? 'bg-gradient-to-br from-sky-400 to-sky-500' : 'bg-gradient-to-br from-slate-300 to-slate-400'
                       }`}>
                         {isCompleted && hasPassingScore ? (
                           <CheckCircle className="w-6 h-6" />
@@ -618,7 +714,7 @@ const Dashboard: React.FC<DashboardProps> = ({
                         {isCompleted && score && (
                           <div className="flex items-center gap-2 mt-1">
                             <p className={`text-sm font-medium ${
-                              hasPassingScore ? 'text-green-600' : 'text-yellow-600'
+                              hasPassingScore ? 'text-emerald-600' : 'text-amber-600'
                             }`}>
                               Score: {score}% {hasPassingScore ? '✓' : `(min. ${lesson.passingScore || 70}%)`}
                             </p>
